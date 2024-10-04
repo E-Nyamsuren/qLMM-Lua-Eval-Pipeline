@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderFP16_mbpp_617_min_Jumps.lua:3: attempt to perform arithmetic on a table value (local 'steps')
+stack traceback:
+	genOutput\MBPP\DSCoderFP16_mbpp_617_min_Jumps.lua:3: in local 'candidate'
+	genOutput\MBPP\DSCoderFP16_mbpp_617_min_Jumps.lua:10: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

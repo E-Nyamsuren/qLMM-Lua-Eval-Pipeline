@@ -1,0 +1,25 @@
+==== ==== STDOUT:
+Ij
+ifmmp
+Ifmmp Xpsme"""
+Qsphsbnnjoh jt gvo"
+Lffq dbmn boe dpef po"
+J mpwf dpejoh"
+Dpejoh jt bxftpnf"
+J bn mfbsojoh up dpef"
+J ibwf b mpu up ep"
+J xbou up cfdpnf b qsphsbnnfs"
+J xjmm cf b hsfbu qsphsbnnfs"
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\HumanEval\CodeQwenQ8_HumanEval_86_anti_shuffle.lua:39: expected: "Hi"
+actual: "Ij"
+stack traceback:
+	...utput\HumanEval\CodeQwenQ8_HumanEval_86_anti_shuffle.lua:39: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

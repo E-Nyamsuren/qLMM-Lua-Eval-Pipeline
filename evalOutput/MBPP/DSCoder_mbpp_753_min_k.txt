@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoder_mbpp_753_min_k.lua:3: attempt to compare two table values
+stack traceback:
+	genOutput\MBPP\DSCoder_mbpp_753_min_k.lua:3: in function <genOutput\MBPP\DSCoder_mbpp_753_min_k.lua:3>
+	[C]: in function 'table.sort'
+	genOutput\MBPP\DSCoder_mbpp_753_min_k.lua:3: in local 'candidate'
+	genOutput\MBPP\DSCoder_mbpp_753_min_k.lua:11: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

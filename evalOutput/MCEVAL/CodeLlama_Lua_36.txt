@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testMinTotalCost
+genOutput\MCEVAL\CodeLlama_Lua_36.lua:29: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\CodeLlama_Lua_36.lua:29: in function 'testMinTotalCost'
+
+Ran 1 tests in 0.003 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

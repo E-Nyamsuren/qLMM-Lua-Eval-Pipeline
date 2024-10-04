@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...HumanEval\StarCoderQ8_HumanEval_79_decimal_to_binary.lua:25: expected: "db0db"
+actual: "dbdb"
+stack traceback:
+	...HumanEval\StarCoderQ8_HumanEval_79_decimal_to_binary.lua:25: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

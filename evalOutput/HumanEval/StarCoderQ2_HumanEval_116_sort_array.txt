@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...utput\HumanEval\StarCoderQ2_HumanEval_116_sort_array.lua:14: attempt to index a nil value (global 'bit')
+stack traceback:
+	...utput\HumanEval\StarCoderQ2_HumanEval_116_sort_array.lua:14: in local 'candidate'
+	...utput\HumanEval\StarCoderQ2_HumanEval_116_sort_array.lua:36: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

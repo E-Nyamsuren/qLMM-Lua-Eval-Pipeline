@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ2_mbpp_440_find_adverb_position.lua:7: unexpected symbol near 'end'

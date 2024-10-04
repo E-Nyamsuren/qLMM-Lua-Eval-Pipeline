@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...umanEval\CodeGemmaQ2_HumanEval_118_get_closest_vowel.lua:16: syntax error near 'exorbit'

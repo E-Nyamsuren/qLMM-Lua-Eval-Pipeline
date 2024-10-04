@@ -1,0 +1,46 @@
+-- This function takes a table l and returns a table l' such that
+-- l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal
+-- to the values of the corresponding indicies of l, but sorted.
+-- >>> sort_third({1, 2, 3})
+-- {1, 2, 3}
+-- >>> sort_third({5, 6, 3, 4, 8, 9, 2})
+-- {2, 6, 3, 4, 8, 9, 5}
+local function sort_third(l)
+    local result = {}
+    local third_indices = {}
+    for i, v in ipairs(l) do
+        if i % 3 == 0 then
+            table.insert(third_indices, v)
+        else
+            table.insert(result, v)
+        end
+    end
+    table.sort(third_indices)
+    local third_index = 1
+    for i, v in ipairs(result) do
+        if i % 3 == 0 then
+            result[i] = third_indices[third_index]
+            third_index = third_index + 1
+        end
+    end
+    return result
+end
+print(sort_third({1, 2, 3}))
+print(sort_third({5, 6, 3, 4, 8, 9, 2}))
+print(sort_third({10, 15, 20, 25, 30, 35, 40, 45, 50}))
+print(sort_third({1, 2, 3, 4, 5, 6, 7, 8, 9, 10}))
+print(sort_third({11, 12, 13, 14, 15, 16, 17, 18, 19, 20}))
+print(sort_third({21, 22, 23, 24, 25, 26, 27, 28, 29, 30}))
+print(sort_third({31, 32, 33, 34, 35, 36
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = sort_third
+    lu.assertEquals(candidate({5, 6, 3, 4, 8, 9, 2}), {2, 6, 3, 4, 8, 9, 5})
+    lu.assertEquals(candidate({5, 8, 3, 4, 6, 9, 2}), {2, 8, 3, 4, 6, 9, 5})
+    lu.assertEquals(candidate({5, 6, 9, 4, 8, 3, 2}), {2, 6, 9, 4, 8, 3, 5})
+    lu.assertEquals(candidate({5, 6, 3, 4, 8, 9, 2, 1}), {2, 6, 3, 4, 8, 9, 5, 1})
+end
+
+os.exit(lu.LuaUnit.run())

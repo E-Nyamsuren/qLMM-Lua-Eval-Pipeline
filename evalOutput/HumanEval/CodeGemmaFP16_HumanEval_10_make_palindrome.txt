@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...HumanEval\CodeGemmaFP16_HumanEval_10_make_palindrome.lua:28: ')' expected (to close '(' at line 26) near 'lu'

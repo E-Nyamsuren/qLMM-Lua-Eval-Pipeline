@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaQ2_mbpp_598_armstrong_number.lua:14: 'end' expected (to close 'function' at line 2) near <eof>

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\CodeGemmaQ2_HumanEval_133_sum_squares.lua:16: syntax error near 'suspicam'

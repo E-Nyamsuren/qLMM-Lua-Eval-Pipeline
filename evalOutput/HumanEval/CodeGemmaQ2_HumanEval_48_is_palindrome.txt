@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...put\HumanEval\CodeGemmaQ2_HumanEval_48_is_palindrome.lua:11: syntax error near 'vagu'

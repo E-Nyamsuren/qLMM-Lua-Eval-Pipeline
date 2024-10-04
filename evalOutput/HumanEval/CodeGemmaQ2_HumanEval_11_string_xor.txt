@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeGemmaQ2_HumanEval_11_string_xor.lua:6: syntax error near 'pessi'

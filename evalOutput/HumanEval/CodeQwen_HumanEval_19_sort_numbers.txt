@@ -1,0 +1,9 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwen_HumanEval_19_sort_numbers.lua:26: attempt to concatenate a nil value (field '?')
+stack traceback:
+	genOutput\HumanEval\CodeQwen_HumanEval_19_sort_numbers.lua:26: in local 'sort_numbers'
+	genOutput\HumanEval\CodeQwen_HumanEval_19_sort_numbers.lua:30: in main chunk
+	[C]: in ?

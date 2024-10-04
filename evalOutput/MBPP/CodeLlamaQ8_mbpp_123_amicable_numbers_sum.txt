@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...utput\MBPP\CodeLlamaQ8_mbpp_123_amicable_numbers_sum.lua:5: attempt to call a nil value (global 'divisors_sum')
+stack traceback:
+	...utput\MBPP\CodeLlamaQ8_mbpp_123_amicable_numbers_sum.lua:5: in local 'candidate'
+	...utput\MBPP\CodeLlamaQ8_mbpp_123_amicable_numbers_sum.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

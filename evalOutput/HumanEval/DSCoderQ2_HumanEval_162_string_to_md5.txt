@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\DSCoderQ2_HumanEval_162_string_to_md5.lua:12: 'end' expected (to close 'if' at line 6) near 'lu'

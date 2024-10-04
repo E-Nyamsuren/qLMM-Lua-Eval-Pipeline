@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwen_mbpp_408_k_smallest_pairs.lua:19: unexpected symbol near '`'

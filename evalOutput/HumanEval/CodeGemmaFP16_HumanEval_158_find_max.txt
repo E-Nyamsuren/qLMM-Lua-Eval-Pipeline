@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\HumanEval\CodeGemmaFP16_HumanEval_158_find_max.lua:30: unexpected symbol near '<'

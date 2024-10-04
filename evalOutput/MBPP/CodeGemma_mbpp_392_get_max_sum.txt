@@ -1,0 +1,24 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:8: stack overflow
+stack traceback:
+	genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	...	(skipping 142836 levels)
+	genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:8: in local 'candidate'
+	genOutput\MBPP\CodeGemma_mbpp_392_get_max_sum.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.075 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

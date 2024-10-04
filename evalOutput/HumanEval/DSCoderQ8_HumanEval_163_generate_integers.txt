@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...\HumanEval\DSCoderQ8_HumanEval_163_generate_integers.lua:25: expected: {2, 4, 6, 8}
+actual: {2, 4, 6, 8, 10}
+stack traceback:
+	...\HumanEval\DSCoderQ8_HumanEval_163_generate_integers.lua:25: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ2_mbpp_284_check_element.lua:12: <eof> expected near 'lu'

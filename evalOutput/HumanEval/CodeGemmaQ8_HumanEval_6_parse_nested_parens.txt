@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...umanEval\CodeGemmaQ8_HumanEval_6_parse_nested_parens.lua:7: attempt to call a nil value (method 'split')
+stack traceback:
+	...umanEval\CodeGemmaQ8_HumanEval_6_parse_nested_parens.lua:7: in local 'candidate'
+	...umanEval\CodeGemmaQ8_HumanEval_6_parse_nested_parens.lua:27: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...manEval\CodeQwen_HumanEval_81_numerical_letter_grade.lua:41: ')' expected (to close '(' at line 39) near 'lu'

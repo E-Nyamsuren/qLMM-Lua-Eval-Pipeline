@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ8_mbpp_802_count_rotation.lua:17: <eof> expected near 'lu'

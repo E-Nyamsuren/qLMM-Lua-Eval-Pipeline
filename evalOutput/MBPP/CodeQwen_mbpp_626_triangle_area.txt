@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwen_mbpp_626_triangle_area.lua:12: expected: nil, actual: 0.43301270189222
+stack traceback:
+	genOutput\MBPP\CodeQwen_mbpp_626_triangle_area.lua:12: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

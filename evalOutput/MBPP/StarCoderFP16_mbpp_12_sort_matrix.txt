@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderFP16_mbpp_12_sort_matrix.lua:9: bad argument #1 to 'sort' (table expected, got nil)
+stack traceback:
+	genOutput\MBPP\StarCoderFP16_mbpp_12_sort_matrix.lua:9: in function <genOutput\MBPP\StarCoderFP16_mbpp_12_sort_matrix.lua:5>
+	[C]: in function 'table.sort'
+	genOutput\MBPP\StarCoderFP16_mbpp_12_sort_matrix.lua:12: in local 'candidate'
+	genOutput\MBPP\StarCoderFP16_mbpp_12_sort_matrix.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

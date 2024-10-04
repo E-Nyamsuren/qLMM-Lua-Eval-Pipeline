@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...manEval\CodeGemmaFP16_HumanEval_75_is_multiply_prime.lua:75: ',' expected near '='

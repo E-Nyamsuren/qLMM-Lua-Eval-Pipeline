@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwen_mbpp_271_even_Power_Sum.lua:13: <eof> expected near 'lu'

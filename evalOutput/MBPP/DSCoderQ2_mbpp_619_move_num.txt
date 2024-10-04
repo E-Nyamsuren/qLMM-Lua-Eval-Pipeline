@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ2_mbpp_619_move_num.lua:8: bad argument #1 to 'gmatch' (string expected, got nil)
+stack traceback:
+	genOutput\MBPP\DSCoderQ2_mbpp_619_move_num.lua:8: in local 'candidate'
+	genOutput\MBPP\DSCoderQ2_mbpp_619_move_num.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

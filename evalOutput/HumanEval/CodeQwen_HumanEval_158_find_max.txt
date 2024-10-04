@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwen_HumanEval_158_find_max.lua:39: syntax error near 'lu'

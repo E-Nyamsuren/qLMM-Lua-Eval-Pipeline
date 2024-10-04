@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwen_mbpp_723_count_same_pair.lua:26: '}' expected (to close '{' at line 22) near 'function'

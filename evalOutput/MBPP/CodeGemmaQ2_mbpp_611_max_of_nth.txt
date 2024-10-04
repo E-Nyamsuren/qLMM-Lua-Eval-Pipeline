@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaQ2_mbpp_611_max_of_nth.lua:3: syntax error near 'suspicam'

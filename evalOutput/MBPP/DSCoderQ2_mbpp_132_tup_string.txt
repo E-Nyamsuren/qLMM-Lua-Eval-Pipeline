@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderQ2_mbpp_132_tup_string.lua:10: unexpected symbol near 'return'

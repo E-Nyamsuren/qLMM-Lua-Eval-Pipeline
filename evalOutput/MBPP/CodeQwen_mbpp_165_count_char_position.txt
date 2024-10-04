@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwen_mbpp_165_count_char_position.lua:25: unfinished string near '"abcdefghijklmnopqrstuvwxyz'

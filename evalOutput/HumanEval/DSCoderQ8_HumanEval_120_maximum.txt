@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\DSCoderQ8_HumanEval_120_maximum.lua:17: attempt to call a nil value (global 'Heap')
+stack traceback:
+	genOutput\HumanEval\DSCoderQ8_HumanEval_120_maximum.lua:17: in local 'candidate'
+	genOutput\HumanEval\DSCoderQ8_HumanEval_120_maximum.lua:37: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

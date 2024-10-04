@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\DSCoderFP16_HumanEval_21_rescale_to_unit.lua:10: '}' expected (to close '{' at line 9) near 'for'

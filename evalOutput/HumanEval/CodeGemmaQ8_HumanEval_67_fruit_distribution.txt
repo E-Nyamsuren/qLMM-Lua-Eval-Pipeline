@@ -1,0 +1,10 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...umanEval\CodeGemmaQ8_HumanEval_67_fruit_distribution.lua:18: attempt to add a 'string' with a 'string'
+stack traceback:
+	[C]: in metamethod 'add'
+	...umanEval\CodeGemmaQ8_HumanEval_67_fruit_distribution.lua:18: in local 'fruit_distribution'
+	...umanEval\CodeGemmaQ8_HumanEval_67_fruit_distribution.lua:21: in main chunk
+	[C]: in ?

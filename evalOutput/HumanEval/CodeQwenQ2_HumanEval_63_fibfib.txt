@@ -1,0 +1,10 @@
+==== ==== STDOUT:
+0
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwenQ2_HumanEval_63_fibfib.lua:16: attempt to perform arithmetic on a nil value (field '?')
+stack traceback:
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_63_fibfib.lua:16: in local 'fibfib'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_63_fibfib.lua:21: in main chunk
+	[C]: in ?

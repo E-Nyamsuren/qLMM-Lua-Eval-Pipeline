@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaQ2_mbpp_396_check_char.lua:3: syntax error near 'pessi'

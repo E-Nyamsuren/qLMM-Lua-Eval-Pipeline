@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testMakeEqualAgain
+genOutput\MCEVAL\StarCoderQ2_Lua_34.lua:31: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\StarCoderQ2_Lua_34.lua:31: in function 'testMakeEqualAgain'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\HumanEval\DSCoder_HumanEval_95_check_dict_case.lua:39: expected: false, actual: true
+stack traceback:
+	...utput\HumanEval\DSCoder_HumanEval_95_check_dict_case.lua:39: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

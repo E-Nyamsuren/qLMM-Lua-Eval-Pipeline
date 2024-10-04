@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...HumanEval\CodeGemmaFP16_HumanEval_76_is_simple_power.lua:27: unexpected symbol near '<'

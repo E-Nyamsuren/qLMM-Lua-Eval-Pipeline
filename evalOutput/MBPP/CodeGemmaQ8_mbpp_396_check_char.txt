@@ -1,0 +1,61 @@
+==== ==== STDOUT:
+false
+false
+false
+false
+false
+false
+true
+false
+false
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaQ8_mbpp_396_check_char.lua:63: expected: "Valid"
+actual: true
+stack traceback:
+	genOutput\MBPP\CodeGemmaQ8_mbpp_396_check_char.lua:63: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

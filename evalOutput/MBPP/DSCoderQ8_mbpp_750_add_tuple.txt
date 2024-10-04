@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ8_mbpp_750_add_tuple.lua:4: attempt to index a number value (local 'v')
+stack traceback:
+	genOutput\MBPP\DSCoderQ8_mbpp_750_add_tuple.lua:4: in local 'candidate'
+	genOutput\MBPP\DSCoderQ8_mbpp_750_add_tuple.lua:17: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

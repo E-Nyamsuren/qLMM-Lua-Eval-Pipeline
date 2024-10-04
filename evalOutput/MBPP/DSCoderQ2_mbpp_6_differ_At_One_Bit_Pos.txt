@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ2_mbpp_6_differ_At_One_Bit_Pos.lua:3: attempt to call a nil value (global 'count_set_bits')
+stack traceback:
+	genOutput\MBPP\DSCoderQ2_mbpp_6_differ_At_One_Bit_Pos.lua:3: in local 'candidate'
+	genOutput\MBPP\DSCoderQ2_mbpp_6_differ_At_One_Bit_Pos.lua:10: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

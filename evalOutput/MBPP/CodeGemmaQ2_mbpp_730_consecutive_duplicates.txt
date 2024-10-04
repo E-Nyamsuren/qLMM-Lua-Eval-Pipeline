@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...put\MBPP\CodeGemmaQ2_mbpp_730_consecutive_duplicates.lua:3: syntax error near 'suspic'

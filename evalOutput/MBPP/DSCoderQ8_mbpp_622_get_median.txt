@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderQ8_mbpp_622_get_median.lua:4: unexpected symbol near '='

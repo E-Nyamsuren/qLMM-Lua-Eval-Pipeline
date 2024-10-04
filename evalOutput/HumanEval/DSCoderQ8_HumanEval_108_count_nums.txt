@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\DSCoderQ8_HumanEval_108_count_nums.lua:14: attempt to call a nil value (global 'sum_digits')
+stack traceback:
+	genOutput\HumanEval\DSCoderQ8_HumanEval_108_count_nums.lua:14: in local 'candidate'
+	genOutput\HumanEval\DSCoderQ8_HumanEval_108_count_nums.lua:26: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,34 @@
+==== ==== STDOUT:
+Not matched!
+Found a match!
+Found a match!
+Found a match!
+Not matched!
+Not matched!
+Not matched!
+Not matched!
+Not matched!
+Found a match!
+Found a match!
+Found a match!
+Found a match!
+Not matched!
+Not matched!
+Found a match!
+Found a match!
+Found a match!
+Found a match!
+Not matched!
+Not matched!
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwenQ2_mbpp_756_text_match_zero_one.lua:37: expected: false, actual: "Not matched!"
+stack traceback:
+	genOutput\MBPP\CodeQwenQ2_mbpp_756_text_match_zero_one.lua:37: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

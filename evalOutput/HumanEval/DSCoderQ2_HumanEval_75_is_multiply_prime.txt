@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\DSCoderQ2_HumanEval_75_is_multiply_prime.lua:40: 'end' expected (to close 'function' at line 8) near <eof>

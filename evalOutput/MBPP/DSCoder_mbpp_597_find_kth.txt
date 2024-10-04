@@ -1,0 +1,15 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoder_mbpp_597_find_kth.lua:19: attempt to call a nil value (field 'slice')
+stack traceback:
+	genOutput\MBPP\DSCoder_mbpp_597_find_kth.lua:19: in function <genOutput\MBPP\DSCoder_mbpp_597_find_kth.lua:2>
+	(...tail calls...)
+	genOutput\MBPP\DSCoder_mbpp_597_find_kth.lua:29: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

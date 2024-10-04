@@ -1,0 +1,51 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaQ8_mbpp_108_merge_sorted_list.lua:36: expected: {4, 5, 11, 15, 19, 20, 24, 24, 25, 25, 26, 29, 48, 54, 56, 110, 154, 233}
+actual: {19, 20, 11, 24, 25, 24, 15, 4, 5, 26, 29, 54, 48, 110, 56, 25, 233, 154}
+List difference analysis:
+* lists A (actual) and B (expected) have the same size
+* lists A and B start differing at index 1
+* Differing parts:
+  - A[1]: 19
+  + B[1]: 4
+  - A[2]: 20
+  + B[2]: 5
+  = A[3], B[3]: 11
+  - A[4]: 24
+  + B[4]: 15
+  - A[5]: 25
+  + B[5]: 19
+  - A[6]: 24
+  + B[6]: 20
+  - A[7]: 15
+  + B[7]: 24
+  - A[8]: 4
+  + B[8]: 24
+  - A[9]: 5
+  + B[9]: 25
+  - A[10]: 26
+  + B[10]: 25
+  - A[11]: 29
+  + B[11]: 26
+  - A[12]: 54
+  + B[12]: 29
+  = A[13], B[13]: 48
+  - A[14]: 110
+  + B[14]: 54
+  = A[15], B[15]: 56
+  - A[16]: 25
+  + B[16]: 110
+  - A[17]: 233
+  + B[17]: 154
+  - A[18]: 154
+  + B[18]: 233
+stack traceback:
+	genOutput\MBPP\CodeGemmaQ8_mbpp_108_merge_sorted_list.lua:36: in function 'test_humaneval'
+
+Ran 1 tests in 0.006 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...put\HumanEval\StarCoderFP16_HumanEval_160_do_algebra.lua:44: expected: 9, actual: 15
+stack traceback:
+	...put\HumanEval\StarCoderFP16_HumanEval_160_do_algebra.lua:44: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

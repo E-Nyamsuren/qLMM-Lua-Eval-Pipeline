@@ -1,0 +1,9 @@
+==== ==== STDOUT:
+table: 000001AD60C96510
+table: 000001AD60C97010
+.
+Ran 1 tests in 0.000 seconds, 1 success, 0 failures
+OK
+
+
+==== ====STDERR:

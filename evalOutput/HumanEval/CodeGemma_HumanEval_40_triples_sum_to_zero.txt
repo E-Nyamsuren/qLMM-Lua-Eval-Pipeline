@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...HumanEval\CodeGemma_HumanEval_40_triples_sum_to_zero.lua:73: 'end' expected (to close 'function' at line 14) near <eof>

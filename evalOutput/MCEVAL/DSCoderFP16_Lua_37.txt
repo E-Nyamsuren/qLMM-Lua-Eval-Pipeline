@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testCountHandshakes
+genOutput\MCEVAL\DSCoderFP16_Lua_37.lua:15: attempt to compare nil with number
+stack traceback:
+	genOutput\MCEVAL\DSCoderFP16_Lua_37.lua:15: in function 'countHandshakes'
+	genOutput\MCEVAL\DSCoderFP16_Lua_37.lua:27: in function 'testCountHandshakes'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaQ2_mbpp_803_is_perfect_square.lua:3: syntax error near 'suspicam'

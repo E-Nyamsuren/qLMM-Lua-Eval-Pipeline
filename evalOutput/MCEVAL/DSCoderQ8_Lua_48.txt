@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MCEVAL\DSCoderQ8_Lua_48.lua:12: 'do' expected near 'local'

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeLlamaQ2_mbpp_424_extract_rear.lua:10: expected: {"s", "r", "s"}
+actual: "Vers"
+stack traceback:
+	genOutput\MBPP\CodeLlamaQ2_mbpp_424_extract_rear.lua:10: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaQ2_mbpp_266_lateralsurface_cube.lua:3: 'end' expected (to close 'function' at line 2) near 'dora'

@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\MBPP\CodeQwenQ8_mbpp_100_next_smallest_palindrome.lua:23: expected: 101, actual: 100
+stack traceback:
+	...ut\MBPP\CodeQwenQ8_mbpp_100_next_smallest_palindrome.lua:23: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

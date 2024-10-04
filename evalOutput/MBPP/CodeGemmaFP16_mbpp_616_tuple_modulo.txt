@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaFP16_mbpp_616_tuple_modulo.lua:11: unexpected symbol near '<'

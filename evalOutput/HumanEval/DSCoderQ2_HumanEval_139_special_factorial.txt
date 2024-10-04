@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...\HumanEval\DSCoderQ2_HumanEval_139_special_factorial.lua:12: attempt to call a nil value (global 'factorial')
+stack traceback:
+	...\HumanEval\DSCoderQ2_HumanEval_139_special_factorial.lua:12: in local 'candidate'
+	...\HumanEval\DSCoderQ2_HumanEval_139_special_factorial.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

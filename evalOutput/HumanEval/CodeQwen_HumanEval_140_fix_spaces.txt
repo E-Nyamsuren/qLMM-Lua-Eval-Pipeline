@@ -1,0 +1,36 @@
+==== ==== STDOUT:
+_Example	1
+_Example_1	2
+_Example_2	2
+_Example_3	2
+_Example_4	2
+_Example_5	2
+_Example_6	2
+_Example_7	2
+_Example_8	2
+_Example_9	2
+_Example_10	2
+_Example_11	2
+_Example_12	2
+_Example_13	2
+_Example_14	2
+_Example_15	2
+_Example_16	2
+_Example_17	2
+_Example_18	2
+_Example_19	2
+_Example_20	2
+_Example_21	2
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\HumanEval\CodeQwen_HumanEval_140_fix_spaces.lua:46: expected: "Yellow_Yellow__Dirty__Fellow"
+actual: "Yellow_Yellow-Dirty-Fellow"
+stack traceback:
+	genOutput\HumanEval\CodeQwen_HumanEval_140_fix_spaces.lua:46: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

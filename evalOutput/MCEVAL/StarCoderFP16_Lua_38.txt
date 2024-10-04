@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testMaxModeSum
+genOutput\MCEVAL\StarCoderFP16_Lua_38.lua:29: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\StarCoderFP16_Lua_38.lua:29: in function 'testMaxModeSum'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ2_mbpp_597_find_kth.lua:7: attempt to compare two nil values
+stack traceback:
+	genOutput\MBPP\StarCoderQ2_mbpp_597_find_kth.lua:7: in local 'candidate'
+	genOutput\MBPP\StarCoderQ2_mbpp_597_find_kth.lua:25: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

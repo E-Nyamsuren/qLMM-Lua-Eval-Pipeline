@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MCEVAL\CodeQwenQ2_Lua_12.lua:42: '(' expected near 'extraNumber'

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ8_mbpp_479_first_Digit.lua:3: attempt to call a nil value (field 'log10')
+stack traceback:
+	genOutput\MBPP\StarCoderQ8_mbpp_479_first_Digit.lua:3: in local 'candidate'
+	genOutput\MBPP\StarCoderQ8_mbpp_479_first_Digit.lua:10: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

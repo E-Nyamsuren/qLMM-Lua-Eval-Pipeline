@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\HumanEval\CodeLlama_HumanEval_117_select_words.lua:43: expected: {"little"}
+actual: {"lttl"}
+stack traceback:
+	...utput\HumanEval\CodeLlama_HumanEval_117_select_words.lua:43: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

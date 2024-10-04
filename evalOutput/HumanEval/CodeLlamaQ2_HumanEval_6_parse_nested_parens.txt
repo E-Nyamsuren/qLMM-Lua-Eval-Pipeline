@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...umanEval\CodeLlamaQ2_HumanEval_6_parse_nested_parens.lua:19: attempt to call a nil value (global 'unpack')
+stack traceback:
+	...umanEval\CodeLlamaQ2_HumanEval_6_parse_nested_parens.lua:19: in local 'candidate'
+	...umanEval\CodeLlamaQ2_HumanEval_6_parse_nested_parens.lua:26: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

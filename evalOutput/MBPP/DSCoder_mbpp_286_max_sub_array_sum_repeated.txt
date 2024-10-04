@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...put\MBPP\DSCoder_mbpp_286_max_sub_array_sum_repeated.lua:25: attempt to call a nil value (global 'min_sub_array_sum_repeated')
+stack traceback:
+	...put\MBPP\DSCoder_mbpp_286_max_sub_array_sum_repeated.lua:25: in local 'candidate'
+	...put\MBPP\DSCoder_mbpp_286_max_sub_array_sum_repeated.lua:33: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

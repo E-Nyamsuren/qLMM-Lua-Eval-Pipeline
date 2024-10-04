@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MCEVAL\CodeQwenQ2_Lua_22.lua:53: 'then' expected near '='

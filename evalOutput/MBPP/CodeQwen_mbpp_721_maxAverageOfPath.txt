@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwen_mbpp_721_maxAverageOfPath.lua:40: '}' expected (to close '{' at line 36) near 'function'

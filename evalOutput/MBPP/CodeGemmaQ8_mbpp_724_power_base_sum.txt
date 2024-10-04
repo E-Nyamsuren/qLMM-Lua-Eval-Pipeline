@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaQ8_mbpp_724_power_base_sum.lua:38: ')' expected (to close '(' at line 36) near '='

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeGemmaQ2_HumanEval_62_derivative.lua:9: syntax error near 'miniatur'

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...HumanEval\CodeGemmaFP16_HumanEval_112_reverse_delete.lua:33: expected: {"cdedc", true}
+actual: {"cdedc", false}
+stack traceback:
+	...HumanEval\CodeGemmaFP16_HumanEval_112_reverse_delete.lua:33: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoder_mbpp_721_maxAverageOfPath.lua:27: attempt to perform arithmetic on a nil value (field 'integer index')
+stack traceback:
+	genOutput\MBPP\StarCoder_mbpp_721_maxAverageOfPath.lua:27: in local 'candidate'
+	genOutput\MBPP\StarCoder_mbpp_721_maxAverageOfPath.lua:39: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

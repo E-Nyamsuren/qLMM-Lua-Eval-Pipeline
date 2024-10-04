@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderQ2_mbpp_780_find_combinations.lua:20: 'end' expected (to close 'for' at line 5) near <eof>

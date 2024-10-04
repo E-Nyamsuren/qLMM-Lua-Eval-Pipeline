@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ2_mbpp_223_is_majority.lua:17: <eof> expected near 'lu'

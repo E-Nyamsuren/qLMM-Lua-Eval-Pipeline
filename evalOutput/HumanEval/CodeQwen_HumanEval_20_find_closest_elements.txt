@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...umanEval\CodeQwen_HumanEval_20_find_closest_elements.lua:24: unexpected symbol near '`'

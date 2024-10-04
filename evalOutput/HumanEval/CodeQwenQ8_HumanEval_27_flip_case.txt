@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwenQ8_HumanEval_27_flip_case.lua:33: unfinished string near ''aBcDe'

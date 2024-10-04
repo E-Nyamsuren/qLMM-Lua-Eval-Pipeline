@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\CodeQwenQ2_HumanEval_116_sort_array.lua:13: attempt to index a nil value (global 'bit')
+stack traceback:
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_116_sort_array.lua:13: in function <genOutput\HumanEval\CodeQwenQ2_HumanEval_116_sort_array.lua:12>
+	[C]: in function 'table.sort'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_116_sort_array.lua:12: in local 'candidate'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_116_sort_array.lua:28: in function 'test_humaneval'
+
+Ran 1 tests in 0.000 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

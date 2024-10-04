@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderQ2_mbpp_161_remove_elements.lua:20: 'end' expected (to close 'for' at line 3) near <eof>

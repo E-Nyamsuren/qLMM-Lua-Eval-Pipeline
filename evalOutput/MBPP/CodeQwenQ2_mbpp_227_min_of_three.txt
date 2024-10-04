@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ2_mbpp_227_min_of_three.lua:13: <eof> expected near 'lu'

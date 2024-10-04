@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...HumanEval\StarCoderFP16_HumanEval_112_reverse_delete.lua:32: expected: {"bcd", false}
+actual: "bcde"
+stack traceback:
+	...HumanEval\StarCoderFP16_HumanEval_112_reverse_delete.lua:32: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

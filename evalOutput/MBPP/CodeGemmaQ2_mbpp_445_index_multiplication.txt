@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\MBPP\CodeGemmaQ2_mbpp_445_index_multiplication.lua:3: syntax error near 'miniatur'

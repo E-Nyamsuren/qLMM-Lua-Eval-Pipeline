@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ2_mbpp_132_tup_string.lua:15: expected: "exercises"
+actual: "{ e x e r c i s e s }"
+stack traceback:
+	genOutput\MBPP\StarCoderQ2_mbpp_132_tup_string.lua:15: in function 'test_humaneval'
+
+Ran 1 tests in 0.004 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

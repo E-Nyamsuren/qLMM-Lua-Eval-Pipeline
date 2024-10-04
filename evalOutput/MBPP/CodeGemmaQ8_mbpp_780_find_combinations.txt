@@ -1,0 +1,15 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaQ8_mbpp_780_find_combinations.lua:9: attempt to compare table with number
+stack traceback:
+	genOutput\MBPP\CodeGemmaQ8_mbpp_780_find_combinations.lua:9: in local 'find_combinations_helper'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_780_find_combinations.lua:21: in local 'candidate'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_780_find_combinations.lua:29: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

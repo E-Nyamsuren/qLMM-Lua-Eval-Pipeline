@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\HumanEval\CodeGemmaQ2_HumanEval_44_change_base.lua:11: syntax error near 'suspicam'

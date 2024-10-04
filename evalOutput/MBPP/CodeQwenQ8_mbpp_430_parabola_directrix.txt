@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwenQ8_mbpp_430_parabola_directrix.lua:14: expected: -198, actual: 0.7
+stack traceback:
+	genOutput\MBPP\CodeQwenQ8_mbpp_430_parabola_directrix.lua:14: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

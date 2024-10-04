@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ2_mbpp_782_odd_length_sum.lua:6: bad argument #1 to 'concat' (table expected, got number)
+stack traceback:
+	genOutput\MBPP\StarCoderQ2_mbpp_782_odd_length_sum.lua:6: in local 'candidate'
+	genOutput\MBPP\StarCoderQ2_mbpp_782_odd_length_sum.lua:17: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

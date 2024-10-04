@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\HumanEval\CodeGemmaQ8_HumanEval_102_choose_num.lua:29: expected: 14, actual: 12
+stack traceback:
+	...utput\HumanEval\CodeGemmaQ8_HumanEval_102_choose_num.lua:29: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

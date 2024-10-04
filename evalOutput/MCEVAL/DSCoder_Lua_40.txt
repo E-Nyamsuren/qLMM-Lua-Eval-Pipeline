@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testCountPowerNumbers
+genOutput\MCEVAL\DSCoder_Lua_40.lua:42: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\DSCoder_Lua_40.lua:42: in function 'testCountPowerNumbers'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

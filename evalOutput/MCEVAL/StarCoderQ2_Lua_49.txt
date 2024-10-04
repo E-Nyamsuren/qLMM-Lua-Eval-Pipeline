@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testCanWinNim
+genOutput\MCEVAL\StarCoderQ2_Lua_49.lua:19: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\StarCoderQ2_Lua_49.lua:19: in function 'testCanWinNim'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

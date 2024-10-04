@@ -1,0 +1,17 @@
+-- Write a luathon function to find whether a number is divisible by 11.
+local function is_Diff(n)
+    return n % 11 == 0
+end
+print(is_Diff(11))
+<|file_separator|>
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = is_Diff
+    lu.assertEquals(candidate(12345), false)
+    lu.assertEquals(candidate(1212112), true)
+    lu.assertEquals(candidate(1212), false)
+end
+
+os.exit(lu.LuaUnit.run())

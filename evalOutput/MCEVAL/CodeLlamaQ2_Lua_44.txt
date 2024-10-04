@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testCountTriplets
+genOutput\MCEVAL\CodeLlamaQ2_Lua_44.lua:14: attempt to call a nil value (field 'gcd')
+stack traceback:
+	genOutput\MCEVAL\CodeLlamaQ2_Lua_44.lua:14: in function 'countTriplets'
+	genOutput\MCEVAL\CodeLlamaQ2_Lua_44.lua:27: in function 'testCountTriplets'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

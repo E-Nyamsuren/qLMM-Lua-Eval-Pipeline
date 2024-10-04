@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemma_mbpp_586_split_Arr.lua:13: unexpected symbol near '<'

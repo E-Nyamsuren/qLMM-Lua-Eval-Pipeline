@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ2_mbpp_470_add_pairwise.lua:5: attempt to perform arithmetic on a nil value (field '?')
+stack traceback:
+	genOutput\MBPP\StarCoderQ2_mbpp_470_add_pairwise.lua:5: in local 'candidate'
+	genOutput\MBPP\StarCoderQ2_mbpp_470_add_pairwise.lua:14: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

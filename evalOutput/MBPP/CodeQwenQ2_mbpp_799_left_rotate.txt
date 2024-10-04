@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ2_mbpp_799_left_rotate.lua:64: 'end' expected (to close 'function' at line 2) near <eof>

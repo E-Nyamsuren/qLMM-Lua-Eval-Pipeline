@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwen_mbpp_458_rectangle_area.lua:32: ')' expected (to close '(' at line 30) near '='

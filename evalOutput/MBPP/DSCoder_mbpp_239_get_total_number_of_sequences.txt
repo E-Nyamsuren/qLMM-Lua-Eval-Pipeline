@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...\MBPP\DSCoder_mbpp_239_get_total_number_of_sequences.lua:12: attempt to perform arithmetic on a nil value (global 'MOD')
+stack traceback:
+	...\MBPP\DSCoder_mbpp_239_get_total_number_of_sequences.lua:12: in local 'candidate'
+	...\MBPP\DSCoder_mbpp_239_get_total_number_of_sequences.lua:28: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

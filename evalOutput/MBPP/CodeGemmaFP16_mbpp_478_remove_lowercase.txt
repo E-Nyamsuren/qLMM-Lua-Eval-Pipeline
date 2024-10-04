@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaFP16_mbpp_478_remove_lowercase.lua:17: expected: "PYTH"
+actual: "on"
+stack traceback:
+	genOutput\MBPP\CodeGemmaFP16_mbpp_478_remove_lowercase.lua:17: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

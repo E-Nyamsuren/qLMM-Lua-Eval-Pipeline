@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwenQ8_mbpp_720_add_dict_to_tuple.lua:18: expected: {4, 5, 6, {MSAM=1, best=3, is=2}}
+actual: {4, 5, 6, "is", 2, "MSAM", 1, "best", 3}
+stack traceback:
+	genOutput\MBPP\CodeQwenQ8_mbpp_720_add_dict_to_tuple.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

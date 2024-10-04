@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeGemmaQ2_HumanEval_68_pluck.lua:27: syntax error near 'suspicam'

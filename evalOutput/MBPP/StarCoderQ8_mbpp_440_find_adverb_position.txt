@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\MBPP\StarCoderQ8_mbpp_440_find_adverb_position.lua:47: expected: {0, 7, "clearly"}
+actual: {}
+stack traceback:
+	...utput\MBPP\StarCoderQ8_mbpp_440_find_adverb_position.lua:47: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

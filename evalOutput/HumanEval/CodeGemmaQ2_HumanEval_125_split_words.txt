@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\CodeGemmaQ2_HumanEval_125_split_words.lua:12: syntax error near 'strick'

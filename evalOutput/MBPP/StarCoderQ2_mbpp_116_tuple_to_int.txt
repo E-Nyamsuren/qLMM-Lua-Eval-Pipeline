@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ2_mbpp_116_tuple_to_int.lua:3: attempt to call a nil value (field 'getn')
+stack traceback:
+	genOutput\MBPP\StarCoderQ2_mbpp_116_tuple_to_int.lua:3: in local 'candidate'
+	genOutput\MBPP\StarCoderQ2_mbpp_116_tuple_to_int.lua:15: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

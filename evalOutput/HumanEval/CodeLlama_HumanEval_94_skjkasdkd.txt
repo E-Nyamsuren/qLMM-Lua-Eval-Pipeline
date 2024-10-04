@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\CodeLlama_HumanEval_94_skjkasdkd.lua:24: attempt to get length of a number value (local 'max')
+stack traceback:
+	genOutput\HumanEval\CodeLlama_HumanEval_94_skjkasdkd.lua:24: in local 'candidate'
+	genOutput\HumanEval\CodeLlama_HumanEval_94_skjkasdkd.lua:34: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

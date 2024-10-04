@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\MBPP\CodeGemmaQ2_mbpp_644_reverse_Array_Upto_K.lua:3: syntax error near 'strick'

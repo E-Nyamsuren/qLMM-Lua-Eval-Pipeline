@@ -1,0 +1,24 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:8: stack overflow
+stack traceback:
+	genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:8: in upvalue 'bell_number'
+	genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:8: in upvalue 'bell_number'
+	genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:8: in upvalue 'bell_number'
+	genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:8: in upvalue 'bell_number'
+	genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:8: in upvalue 'bell_number'
+	genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:8: in upvalue 'bell_number'
+	genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:8: in upvalue 'bell_number'
+	genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:8: in upvalue 'bell_number'
+	genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:8: in upvalue 'bell_number'
+	...	(skipping 124980 levels)
+	genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:8: in local 'candidate'
+	genOutput\MBPP\CodeGemma_mbpp_67_bell_number.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.074 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,10 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwenQ8_HumanEval_84_solve.lua:20: invalid conversion '%b' to 'format'
+stack traceback:
+	[C]: in function 'string.format'
+	genOutput\HumanEval\CodeQwenQ8_HumanEval_84_solve.lua:20: in local 'solve'
+	genOutput\HumanEval\CodeQwenQ8_HumanEval_84_solve.lua:22: in main chunk
+	[C]: in ?

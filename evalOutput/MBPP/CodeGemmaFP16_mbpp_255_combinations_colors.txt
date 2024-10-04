@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\MBPP\CodeGemmaFP16_mbpp_255_combinations_colors.lua:24: 'end' expected (to close 'function' at line 2) near <eof>

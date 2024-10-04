@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\CodeGemma_HumanEval_79_decimal_to_binary.lua:75: 'end' expected (to close 'function' at line 11) near <eof>

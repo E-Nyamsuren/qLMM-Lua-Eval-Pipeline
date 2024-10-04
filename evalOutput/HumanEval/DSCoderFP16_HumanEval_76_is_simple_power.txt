@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...t\HumanEval\DSCoderFP16_HumanEval_76_is_simple_power.lua:33: expected: true, actual: false
+stack traceback:
+	...t\HumanEval\DSCoderFP16_HumanEval_76_is_simple_power.lua:33: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

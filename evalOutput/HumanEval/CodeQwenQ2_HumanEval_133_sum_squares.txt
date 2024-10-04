@@ -1,0 +1,9 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\HumanEval\CodeQwenQ2_HumanEval_133_sum_squares.lua:18: attempt to call a nil value (field 'pow')
+stack traceback:
+	...utput\HumanEval\CodeQwenQ2_HumanEval_133_sum_squares.lua:18: in local 'sum_squares'
+	...utput\HumanEval\CodeQwenQ2_HumanEval_133_sum_squares.lua:22: in main chunk
+	[C]: in ?

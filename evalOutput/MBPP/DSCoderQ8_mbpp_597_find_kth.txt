@@ -1,0 +1,15 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ8_mbpp_597_find_kth.lua:16: attempt to compare two nil values
+stack traceback:
+	genOutput\MBPP\DSCoderQ8_mbpp_597_find_kth.lua:16: in function <genOutput\MBPP\DSCoderQ8_mbpp_597_find_kth.lua:2>
+	(...tail calls...)
+	genOutput\MBPP\DSCoderQ8_mbpp_597_find_kth.lua:27: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MCEVAL\StarCoderFP16_Lua_42.lua:45: ')' expected near '='

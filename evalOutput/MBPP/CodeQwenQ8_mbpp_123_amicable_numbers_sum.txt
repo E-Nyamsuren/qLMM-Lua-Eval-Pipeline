@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ8_mbpp_123_amicable_numbers_sum.lua:25: 'end' expected (to close 'function' at line 2) near <eof>

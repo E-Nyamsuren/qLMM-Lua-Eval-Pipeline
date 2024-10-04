@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...tput\HumanEval\StarCoderQ8_HumanEval_64_vowels_count.lua:27: expected: 3, actual: 2
+stack traceback:
+	...tput\HumanEval\StarCoderQ8_HumanEval_64_vowels_count.lua:27: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

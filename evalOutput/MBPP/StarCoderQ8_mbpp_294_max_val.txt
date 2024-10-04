@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ8_mbpp_294_max_val.lua:5: attempt to compare string with number
+stack traceback:
+	genOutput\MBPP\StarCoderQ8_mbpp_294_max_val.lua:5: in local 'candidate'
+	genOutput\MBPP\StarCoderQ8_mbpp_294_max_val.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

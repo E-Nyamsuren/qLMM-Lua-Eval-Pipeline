@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemma_mbpp_79_word_len.lua:56: unfinished string near '"prolog'

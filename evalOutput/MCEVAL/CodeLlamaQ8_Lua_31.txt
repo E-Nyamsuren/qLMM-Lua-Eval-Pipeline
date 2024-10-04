@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testMinRoundsToSameChar
+genOutput\MCEVAL\CodeLlamaQ8_Lua_31.lua:14: attempt to perform arithmetic on a nil value (field '?')
+stack traceback:
+	genOutput\MCEVAL\CodeLlamaQ8_Lua_31.lua:14: in function 'minRoundsToSameChar'
+	genOutput\MCEVAL\CodeLlamaQ8_Lua_31.lua:29: in function 'testMinRoundsToSameChar'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ2_mbpp_555_difference.lua:9: attempt to perform arithmetic on a nil value (global 'sum_of_of_numbers')
+stack traceback:
+	genOutput\MBPP\DSCoderQ2_mbpp_555_difference.lua:9: in local 'candidate'
+	genOutput\MBPP\DSCoderQ2_mbpp_555_difference.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.000 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

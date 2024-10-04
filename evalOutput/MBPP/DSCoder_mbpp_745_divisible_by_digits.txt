@@ -1,0 +1,40 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoder_mbpp_745_divisible_by_digits.lua:27: expected: {1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22}
+actual: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 20, 22}
+List difference analysis:
+* list sizes differ: list A (actual) has 15 items, list B (expected) has 13 items
+* lists A and B start differing at index 10
+* lists A and B are equal again from index 15 for A, 13 for B
+* Common parts:
+  = A[1], B[1]: 1
+  = A[2], B[2]: 2
+  = A[3], B[3]: 3
+  = A[4], B[4]: 4
+  = A[5], B[5]: 5
+  = A[6], B[6]: 6
+  = A[7], B[7]: 7
+  = A[8], B[8]: 8
+  = A[9], B[9]: 9
+* Differing parts:
+  - A[10]: 10
+  + B[10]: 11
+  - A[11]: 11
+  + B[11]: 12
+  - A[12]: 12
+  + B[12]: 15
+* Present only in one list:
+  - A[13]: 15
+  - A[14]: 20
+* Common parts at the end of the lists
+  = A[15], B[13]: 22
+stack traceback:
+	genOutput\MBPP\DSCoder_mbpp_745_divisible_by_digits.lua:27: in function 'test_humaneval'
+
+Ran 1 tests in 0.006 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwen_mbpp_611_max_of_nth.lua:21: ')' expected (to close '(' at line 19) near 'lu'

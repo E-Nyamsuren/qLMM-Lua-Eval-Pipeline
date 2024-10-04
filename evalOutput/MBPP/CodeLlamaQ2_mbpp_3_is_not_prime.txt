@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeLlamaQ2_mbpp_3_is_not_prime.lua:6: attempt to call a nil value (global 'range')
+stack traceback:
+	genOutput\MBPP\CodeLlamaQ2_mbpp_3_is_not_prime.lua:6: in local 'candidate'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_3_is_not_prime.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

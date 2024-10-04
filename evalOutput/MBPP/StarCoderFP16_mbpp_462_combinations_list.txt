@@ -1,0 +1,567 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoderFP16_mbpp_462_combinations_list.lua:26: expected: 
+{
+    {},
+    {"orange"},
+    {"red"},
+    {"red", "orange"},
+    {"green"},
+    {"green", "orange"},
+    {"green", "red"},
+    {"green", "red", "orange"},
+    {"blue"},
+    {"blue", "orange"},
+    {"blue", "red"},
+    {"blue", "red", "orange"},
+    {"blue", "green"},
+    {"blue", "green", "orange"},
+    {"blue", "green", "red"},
+    {"blue", "green", "red", "orange"}
+}
+actual: 
+{
+    {"orange", "orange", "orange", "orange"},
+    {"orange", "orange", "orange", "red"},
+    {"orange", "orange", "orange", "green"},
+    {"orange", "orange", "orange", "blue"},
+    {"orange", "orange", "red", "orange"},
+    {"orange", "orange", "red", "red"},
+    {"orange", "orange", "red", "green"},
+    {"orange", "orange", "red", "blue"},
+    {"orange", "orange", "green", "orange"},
+    {"orange", "orange", "green", "red"},
+    {"orange", "orange", "green", "green"},
+    {"orange", "orange", "green", "blue"},
+    {"orange", "orange", "blue", "orange"},
+    {"orange", "orange", "blue", "red"},
+    {"orange", "orange", "blue", "green"},
+    {"orange", "orange", "blue", "blue"},
+    {"orange", "red", "orange", "orange"},
+    {"orange", "red", "orange", "red"},
+    {"orange", "red", "orange", "green"},
+    {"orange", "red", "orange", "blue"},
+    {"orange", "red", "red", "orange"},
+    {"orange", "red", "red", "red"},
+    {"orange", "red", "red", "green"},
+    {"orange", "red", "red", "blue"},
+    {"orange", "red", "green", "orange"},
+    {"orange", "red", "green", "red"},
+    {"orange", "red", "green", "green"},
+    {"orange", "red", "green", "blue"},
+    {"orange", "red", "blue", "orange"},
+    {"orange", "red", "blue", "red"},
+    {"orange", "red", "blue", "green"},
+    {"orange", "red", "blue", "blue"},
+    {"orange", "green", "orange", "orange"},
+    {"orange", "green", "orange", "red"},
+    {"orange", "green", "orange", "green"},
+    {"orange", "green", "orange", "blue"},
+    {"orange", "green", "red", "orange"},
+    {"orange", "green", "red", "red"},
+    {"orange", "green", "red", "green"},
+    {"orange", "green", "red", "blue"},
+    {"orange", "green", "green", "orange"},
+    {"orange", "green", "green", "red"},
+    {"orange", "green", "green", "green"},
+    {"orange", "green", "green", "blue"},
+    {"orange", "green", "blue", "orange"},
+    {"orange", "green", "blue", "red"},
+    {"orange", "green", "blue", "green"},
+    {"orange", "green", "blue", "blue"},
+    {"orange", "blue", "orange", "orange"},
+    {"orange", "blue", "orange", "red"},
+    {"orange", "blue", "orange", "green"},
+    {"orange", "blue", "orange", "blue"},
+    {"orange", "blue", "red", "orange"},
+    {"orange", "blue", "red", "red"},
+    {"orange", "blue", "red", "green"},
+    {"orange", "blue", "red", "blue"},
+    {"orange", "blue", "green", "orange"},
+    {"orange", "blue", "green", "red"},
+    {"orange", "blue", "green", "green"},
+    {"orange", "blue", "green", "blue"},
+    {"orange", "blue", "blue", "orange"},
+    {"orange", "blue", "blue", "red"},
+    {"orange", "blue", "blue", "green"},
+    {"orange", "blue", "blue", "blue"},
+    {"red", "orange", "orange", "orange"},
+    {"red", "orange", "orange", "red"},
+    {"red", "orange", "orange", "green"},
+    {"red", "orange", "orange", "blue"},
+    {"red", "orange", "red", "orange"},
+    {"red", "orange", "red", "red"},
+    {"red", "orange", "red", "green"},
+    {"red", "orange", "red", "blue"},
+    {"red", "orange", "green", "orange"},
+    {"red", "orange", "green", "red"},
+    {"red", "orange", "green", "green"},
+    {"red", "orange", "green", "blue"},
+    {"red", "orange", "blue", "orange"},
+    {"red", "orange", "blue", "red"},
+    {"red", "orange", "blue", "green"},
+    {"red", "orange", "blue", "blue"},
+    {"red", "red", "orange", "orange"},
+    {"red", "red", "orange", "red"},
+    {"red", "red", "orange", "green"},
+    {"red", "red", "orange", "blue"},
+    {"red", "red", "red", "orange"},
+    {"red", "red", "red", "red"},
+    {"red", "red", "red", "green"},
+    {"red", "red", "red", "blue"},
+    {"red", "red", "green", "orange"},
+    {"red", "red", "green", "red"},
+    {"red", "red", "green", "green"},
+    {"red", "red", "green", "blue"},
+    {"red", "red", "blue", "orange"},
+    {"red", "red", "blue", "red"},
+    {"red", "red", "blue", "green"},
+    {"red", "red", "blue", "blue"},
+    {"red", "green", "orange", "orange"},
+    {"red", "green", "orange", "red"},
+    {"red", "green", "orange", "green"},
+    {"red", "green", "orange", "blue"},
+    {"red", "green", "red", "orange"},
+    {"red", "green", "red", "red"},
+    {"red", "green", "red", "green"},
+    {"red", "green", "red", "blue"},
+    {"red", "green", "green", "orange"},
+    {"red", "green", "green", "red"},
+    {"red", "green", "green", "green"},
+    {"red", "green", "green", "blue"},
+    {"red", "green", "blue", "orange"},
+    {"red", "green", "blue", "red"},
+    {"red", "green", "blue", "green"},
+    {"red", "green", "blue", "blue"},
+    {"red", "blue", "orange", "orange"},
+    {"red", "blue", "orange", "red"},
+    {"red", "blue", "orange", "green"},
+    {"red", "blue", "orange", "blue"},
+    {"red", "blue", "red", "orange"},
+    {"red", "blue", "red", "red"},
+    {"red", "blue", "red", "green"},
+    {"red", "blue", "red", "blue"},
+    {"red", "blue", "green", "orange"},
+    {"red", "blue", "green", "red"},
+    {"red", "blue", "green", "green"},
+    {"red", "blue", "green", "blue"},
+    {"red", "blue", "blue", "orange"},
+    {"red", "blue", "blue", "red"},
+    {"red", "blue", "blue", "green"},
+    {"red", "blue", "blue", "blue"},
+    {"green", "orange", "orange", "orange"},
+    {"green", "orange", "orange", "red"},
+    {"green", "orange", "orange", "green"},
+    {"green", "orange", "orange", "blue"},
+    {"green", "orange", "red", "orange"},
+    {"green", "orange", "red", "red"},
+    {"green", "orange", "red", "green"},
+    {"green", "orange", "red", "blue"},
+    {"green", "orange", "green", "orange"},
+    {"green", "orange", "green", "red"},
+    {"green", "orange", "green", "green"},
+    {"green", "orange", "green", "blue"},
+    {"green", "orange", "blue", "orange"},
+    {"green", "orange", "blue", "red"},
+    {"green", "orange", "blue", "green"},
+    {"green", "orange", "blue", "blue"},
+    {"green", "red", "orange", "orange"},
+    {"green", "red", "orange", "red"},
+    {"green", "red", "orange", "green"},
+    {"green", "red", "orange", "blue"},
+    {"green", "red", "red", "orange"},
+    {"green", "red", "red", "red"},
+    {"green", "red", "red", "green"},
+    {"green", "red", "red", "blue"},
+    {"green", "red", "green", "orange"},
+    {"green", "red", "green", "red"},
+    {"green", "red", "green", "green"},
+    {"green", "red", "green", "blue"},
+    {"green", "red", "blue", "orange"},
+    {"green", "red", "blue", "red"},
+    {"green", "red", "blue", "green"},
+    {"green", "red", "blue", "blue"},
+    {"green", "green", "orange", "orange"},
+    {"green", "green", "orange", "red"},
+    {"green", "green", "orange", "green"},
+    {"green", "green", "orange", "blue"},
+    {"green", "green", "red", "orange"},
+    {"green", "green", "red", "red"},
+    {"green", "green", "red", "green"},
+    {"green", "green", "red", "blue"},
+    {"green", "green", "green", "orange"},
+    {"green", "green", "green", "red"},
+    {"green", "green", "green", "green"},
+    {"green", "green", "green", "blue"},
+    {"green", "green", "blue", "orange"},
+    {"green", "green", "blue", "red"},
+    {"green", "green", "blue", "green"},
+    {"green", "green", "blue", "blue"},
+    {"green", "blue", "orange", "orange"},
+    {"green", "blue", "orange", "red"},
+    {"green", "blue", "orange", "green"},
+    {"green", "blue", "orange", "blue"},
+    {"green", "blue", "red", "orange"},
+    {"green", "blue", "red", "red"},
+    {"green", "blue", "red", "green"},
+    {"green", "blue", "red", "blue"},
+    {"green", "blue", "green", "orange"},
+    {"green", "blue", "green", "red"},
+    {"green", "blue", "green", "green"},
+    {"green", "blue", "green", "blue"},
+    {"green", "blue", "blue", "orange"},
+    {"green", "blue", "blue", "red"},
+    {"green", "blue", "blue", "green"},
+    {"green", "blue", "blue", "blue"},
+    {"blue", "orange", "orange", "orange"},
+    {"blue", "orange", "orange", "red"},
+    {"blue", "orange", "orange", "green"},
+    {"blue", "orange", "orange", "blue"},
+    {"blue", "orange", "red", "orange"},
+    {"blue", "orange", "red", "red"},
+    {"blue", "orange", "red", "green"},
+    {"blue", "orange", "red", "blue"},
+    {"blue", "orange", "green", "orange"},
+    {"blue", "orange", "green", "red"},
+    {"blue", "orange", "green", "green"},
+    {"blue", "orange", "green", "blue"},
+    {"blue", "orange", "blue", "orange"},
+    {"blue", "orange", "blue", "red"},
+    {"blue", "orange", "blue", "green"},
+    {"blue", "orange", "blue", "blue"},
+    {"blue", "red", "orange", "orange"},
+    {"blue", "red", "orange", "red"},
+    {"blue", "red", "orange", "green"},
+    {"blue", "red", "orange", "blue"},
+    {"blue", "red", "red", "orange"},
+    {"blue", "red", "red", "red"},
+    {"blue", "red", "red", "green"},
+    {"blue", "red", "red", "blue"},
+    {"blue", "red", "green", "orange"},
+    {"blue", "red", "green", "red"},
+    {"blue", "red", "green", "green"},
+    {"blue", "red", "green", "blue"},
+    {"blue", "red", "blue", "orange"},
+    {"blue", "red", "blue", "red"},
+    {"blue", "red", "blue", "green"},
+    {"blue", "red", "blue", "blue"},
+    {"blue", "green", "orange", "orange"},
+    {"blue", "green", "orange", "red"},
+    {"blue", "green", "orange", "green"},
+    {"blue", "green", "orange", "blue"},
+    {"blue", "green", "red", "orange"},
+    {"blue", "green", "red", "red"},
+    {"blue", "green", "red", "green"},
+    {"blue", "green", "red", "blue"},
+    {"blue", "green", "green", "orange"},
+    {"blue", "green", "green", "red"},
+    {"blue", "green", "green", "green"},
+    {"blue", "green", "green", "blue"},
+    {"blue", "green", "blue", "orange"},
+    {"blue", "green", "blue", "red"},
+    {"blue", "green", "blue", "green"},
+    {"blue", "green", "blue", "blue"},
+    {"blue", "blue", "orange", "orange"},
+    {"blue", "blue", "orange", "red"},
+    {"blue", "blue", "orange", "green"},
+    {"blue", "blue", "orange", "blue"},
+    {"blue", "blue", "red", "orange"},
+    {"blue", "blue", "red", "red"},
+    {"blue", "blue", "red", "green"},
+    {"blue", "blue", "red", "blue"},
+    {"blue", "blue", "green", "orange"},
+    {"blue", "blue", "green", "red"},
+    {"blue", "blue", "green", "green"},
+    {"blue", "blue", "green", "blue"},
+    {"blue", "blue", "blue", "orange"},
+    {"blue", "blue", "blue", "red"},
+    {"blue", "blue", "blue", "green"},
+    {"blue", "blue", "blue", "blue"}
+}
+List difference analysis:
+* list sizes differ: list A (actual) has 256 items, list B (expected) has 16 items
+* lists A and B start differing at index 1
+* Differing parts:
+  - A[1]: {"orange", "orange", "orange", "orange"}
+  + B[1]: {}
+  - A[2]: {"orange", "orange", "orange", "red"}
+  + B[2]: {"orange"}
+  - A[3]: {"orange", "orange", "orange", "green"}
+  + B[3]: {"red"}
+  - A[4]: {"orange", "orange", "orange", "blue"}
+  + B[4]: {"red", "orange"}
+  - A[5]: {"orange", "orange", "red", "orange"}
+  + B[5]: {"green"}
+  - A[6]: {"orange", "orange", "red", "red"}
+  + B[6]: {"green", "orange"}
+  - A[7]: {"orange", "orange", "red", "green"}
+  + B[7]: {"green", "red"}
+  - A[8]: {"orange", "orange", "red", "blue"}
+  + B[8]: {"green", "red", "orange"}
+  - A[9]: {"orange", "orange", "green", "orange"}
+  + B[9]: {"blue"}
+  - A[10]: {"orange", "orange", "green", "red"}
+  + B[10]: {"blue", "orange"}
+  - A[11]: {"orange", "orange", "green", "green"}
+  + B[11]: {"blue", "red"}
+  - A[12]: {"orange", "orange", "green", "blue"}
+  + B[12]: {"blue", "red", "orange"}
+  - A[13]: {"orange", "orange", "blue", "orange"}
+  + B[13]: {"blue", "green"}
+  - A[14]: {"orange", "orange", "blue", "red"}
+  + B[14]: {"blue", "green", "orange"}
+  - A[15]: {"orange", "orange", "blue", "green"}
+  + B[15]: {"blue", "green", "red"}
+  - A[16]: {"orange", "orange", "blue", "blue"}
+  + B[16]: {"blue", "green", "red", "orange"}
+* Present only in one list:
+  - A[17]: {"orange", "red", "orange", "orange"}
+  - A[18]: {"orange", "red", "orange", "red"}
+  - A[19]: {"orange", "red", "orange", "green"}
+  - A[20]: {"orange", "red", "orange", "blue"}
+  - A[21]: {"orange", "red", "red", "orange"}
+  - A[22]: {"orange", "red", "red", "red"}
+  - A[23]: {"orange", "red", "red", "green"}
+  - A[24]: {"orange", "red", "red", "blue"}
+  - A[25]: {"orange", "red", "green", "orange"}
+  - A[26]: {"orange", "red", "green", "red"}
+  - A[27]: {"orange", "red", "green", "green"}
+  - A[28]: {"orange", "red", "green", "blue"}
+  - A[29]: {"orange", "red", "blue", "orange"}
+  - A[30]: {"orange", "red", "blue", "red"}
+  - A[31]: {"orange", "red", "blue", "green"}
+  - A[32]: {"orange", "red", "blue", "blue"}
+  - A[33]: {"orange", "green", "orange", "orange"}
+  - A[34]: {"orange", "green", "orange", "red"}
+  - A[35]: {"orange", "green", "orange", "green"}
+  - A[36]: {"orange", "green", "orange", "blue"}
+  - A[37]: {"orange", "green", "red", "orange"}
+  - A[38]: {"orange", "green", "red", "red"}
+  - A[39]: {"orange", "green", "red", "green"}
+  - A[40]: {"orange", "green", "red", "blue"}
+  - A[41]: {"orange", "green", "green", "orange"}
+  - A[42]: {"orange", "green", "green", "red"}
+  - A[43]: {"orange", "green", "green", "green"}
+  - A[44]: {"orange", "green", "green", "blue"}
+  - A[45]: {"orange", "green", "blue", "orange"}
+  - A[46]: {"orange", "green", "blue", "red"}
+  - A[47]: {"orange", "green", "blue", "green"}
+  - A[48]: {"orange", "green", "blue", "blue"}
+  - A[49]: {"orange", "blue", "orange", "orange"}
+  - A[50]: {"orange", "blue", "orange", "red"}
+  - A[51]: {"orange", "blue", "orange", "green"}
+  - A[52]: {"orange", "blue", "orange", "blue"}
+  - A[53]: {"orange", "blue", "red", "orange"}
+  - A[54]: {"orange", "blue", "red", "red"}
+  - A[55]: {"orange", "blue", "red", "green"}
+  - A[56]: {"orange", "blue", "red", "blue"}
+  - A[57]: {"orange", "blue", "green", "orange"}
+  - A[58]: {"orange", "blue", "green", "red"}
+  - A[59]: {"orange", "blue", "green", "green"}
+  - A[60]: {"orange", "blue", "green", "blue"}
+  - A[61]: {"orange", "blue", "blue", "orange"}
+  - A[62]: {"orange", "blue", "blue", "red"}
+  - A[63]: {"orange", "blue", "blue", "green"}
+  - A[64]: {"orange", "blue", "blue", "blue"}
+  - A[65]: {"red", "orange", "orange", "orange"}
+  - A[66]: {"red", "orange", "orange", "red"}
+  - A[67]: {"red", "orange", "orange", "green"}
+  - A[68]: {"red", "orange", "orange", "blue"}
+  - A[69]: {"red", "orange", "red", "orange"}
+  - A[70]: {"red", "orange", "red", "red"}
+  - A[71]: {"red", "orange", "red", "green"}
+  - A[72]: {"red", "orange", "red", "blue"}
+  - A[73]: {"red", "orange", "green", "orange"}
+  - A[74]: {"red", "orange", "green", "red"}
+  - A[75]: {"red", "orange", "green", "green"}
+  - A[76]: {"red", "orange", "green", "blue"}
+  - A[77]: {"red", "orange", "blue", "orange"}
+  - A[78]: {"red", "orange", "blue", "red"}
+  - A[79]: {"red", "orange", "blue", "green"}
+  - A[80]: {"red", "orange", "blue", "blue"}
+  - A[81]: {"red", "red", "orange", "orange"}
+  - A[82]: {"red", "red", "orange", "red"}
+  - A[83]: {"red", "red", "orange", "green"}
+  - A[84]: {"red", "red", "orange", "blue"}
+  - A[85]: {"red", "red", "red", "orange"}
+  - A[86]: {"red", "red", "red", "red"}
+  - A[87]: {"red", "red", "red", "green"}
+  - A[88]: {"red", "red", "red", "blue"}
+  - A[89]: {"red", "red", "green", "orange"}
+  - A[90]: {"red", "red", "green", "red"}
+  - A[91]: {"red", "red", "green", "green"}
+  - A[92]: {"red", "red", "green", "blue"}
+  - A[93]: {"red", "red", "blue", "orange"}
+  - A[94]: {"red", "red", "blue", "red"}
+  - A[95]: {"red", "red", "blue", "green"}
+  - A[96]: {"red", "red", "blue", "blue"}
+  - A[97]: {"red", "green", "orange", "orange"}
+  - A[98]: {"red", "green", "orange", "red"}
+  - A[99]: {"red", "green", "orange", "green"}
+  - A[100]: {"red", "green", "orange", "blue"}
+  - A[101]: {"red", "green", "red", "orange"}
+  - A[102]: {"red", "green", "red", "red"}
+  - A[103]: {"red", "green", "red", "green"}
+  - A[104]: {"red", "green", "red", "blue"}
+  - A[105]: {"red", "green", "green", "orange"}
+  - A[106]: {"red", "green", "green", "red"}
+  - A[107]: {"red", "green", "green", "green"}
+  - A[108]: {"red", "green", "green", "blue"}
+  - A[109]: {"red", "green", "blue", "orange"}
+  - A[110]: {"red", "green", "blue", "red"}
+  - A[111]: {"red", "green", "blue", "green"}
+  - A[112]: {"red", "green", "blue", "blue"}
+  - A[113]: {"red", "blue", "orange", "orange"}
+  - A[114]: {"red", "blue", "orange", "red"}
+  - A[115]: {"red", "blue", "orange", "green"}
+  - A[116]: {"red", "blue", "orange", "blue"}
+  - A[117]: {"red", "blue", "red", "orange"}
+  - A[118]: {"red", "blue", "red", "red"}
+  - A[119]: {"red", "blue", "red", "green"}
+  - A[120]: {"red", "blue", "red", "blue"}
+  - A[121]: {"red", "blue", "green", "orange"}
+  - A[122]: {"red", "blue", "green", "red"}
+  - A[123]: {"red", "blue", "green", "green"}
+  - A[124]: {"red", "blue", "green", "blue"}
+  - A[125]: {"red", "blue", "blue", "orange"}
+  - A[126]: {"red", "blue", "blue", "red"}
+  - A[127]: {"red", "blue", "blue", "green"}
+  - A[128]: {"red", "blue", "blue", "blue"}
+  - A[129]: {"green", "orange", "orange", "orange"}
+  - A[130]: {"green", "orange", "orange", "red"}
+  - A[131]: {"green", "orange", "orange", "green"}
+  - A[132]: {"green", "orange", "orange", "blue"}
+  - A[133]: {"green", "orange", "red", "orange"}
+  - A[134]: {"green", "orange", "red", "red"}
+  - A[135]: {"green", "orange", "red", "green"}
+  - A[136]: {"green", "orange", "red", "blue"}
+  - A[137]: {"green", "orange", "green", "orange"}
+  - A[138]: {"green", "orange", "green", "red"}
+  - A[139]: {"green", "orange", "green", "green"}
+  - A[140]: {"green", "orange", "green", "blue"}
+  - A[141]: {"green", "orange", "blue", "orange"}
+  - A[142]: {"green", "orange", "blue", "red"}
+  - A[143]: {"green", "orange", "blue", "green"}
+  - A[144]: {"green", "orange", "blue", "blue"}
+  - A[145]: {"green", "red", "orange", "orange"}
+  - A[146]: {"green", "red", "orange", "red"}
+  - A[147]: {"green", "red", "orange", "green"}
+  - A[148]: {"green", "red", "orange", "blue"}
+  - A[149]: {"green", "red", "red", "orange"}
+  - A[150]: {"green", "red", "red", "red"}
+  - A[151]: {"green", "red", "red", "green"}
+  - A[152]: {"green", "red", "red", "blue"}
+  - A[153]: {"green", "red", "green", "orange"}
+  - A[154]: {"green", "red", "green", "red"}
+  - A[155]: {"green", "red", "green", "green"}
+  - A[156]: {"green", "red", "green", "blue"}
+  - A[157]: {"green", "red", "blue", "orange"}
+  - A[158]: {"green", "red", "blue", "red"}
+  - A[159]: {"green", "red", "blue", "green"}
+  - A[160]: {"green", "red", "blue", "blue"}
+  - A[161]: {"green", "green", "orange", "orange"}
+  - A[162]: {"green", "green", "orange", "red"}
+  - A[163]: {"green", "green", "orange", "green"}
+  - A[164]: {"green", "green", "orange", "blue"}
+  - A[165]: {"green", "green", "red", "orange"}
+  - A[166]: {"green", "green", "red", "red"}
+  - A[167]: {"green", "green", "red", "green"}
+  - A[168]: {"green", "green", "red", "blue"}
+  - A[169]: {"green", "green", "green", "orange"}
+  - A[170]: {"green", "green", "green", "red"}
+  - A[171]: {"green", "green", "green", "green"}
+  - A[172]: {"green", "green", "green", "blue"}
+  - A[173]: {"green", "green", "blue", "orange"}
+  - A[174]: {"green", "green", "blue", "red"}
+  - A[175]: {"green", "green", "blue", "green"}
+  - A[176]: {"green", "green", "blue", "blue"}
+  - A[177]: {"green", "blue", "orange", "orange"}
+  - A[178]: {"green", "blue", "orange", "red"}
+  - A[179]: {"green", "blue", "orange", "green"}
+  - A[180]: {"green", "blue", "orange", "blue"}
+  - A[181]: {"green", "blue", "red", "orange"}
+  - A[182]: {"green", "blue", "red", "red"}
+  - A[183]: {"green", "blue", "red", "green"}
+  - A[184]: {"green", "blue", "red", "blue"}
+  - A[185]: {"green", "blue", "green", "orange"}
+  - A[186]: {"green", "blue", "green", "red"}
+  - A[187]: {"green", "blue", "green", "green"}
+  - A[188]: {"green", "blue", "green", "blue"}
+  - A[189]: {"green", "blue", "blue", "orange"}
+  - A[190]: {"green", "blue", "blue", "red"}
+  - A[191]: {"green", "blue", "blue", "green"}
+  - A[192]: {"green", "blue", "blue", "blue"}
+  - A[193]: {"blue", "orange", "orange", "orange"}
+  - A[194]: {"blue", "orange", "orange", "red"}
+  - A[195]: {"blue", "orange", "orange", "green"}
+  - A[196]: {"blue", "orange", "orange", "blue"}
+  - A[197]: {"blue", "orange", "red", "orange"}
+  - A[198]: {"blue", "orange", "red", "red"}
+  - A[199]: {"blue", "orange", "red", "green"}
+  - A[200]: {"blue", "orange", "red", "blue"}
+  - A[201]: {"blue", "orange", "green", "orange"}
+  - A[202]: {"blue", "orange", "green", "red"}
+  - A[203]: {"blue", "orange", "green", "green"}
+  - A[204]: {"blue", "orange", "green", "blue"}
+  - A[205]: {"blue", "orange", "blue", "orange"}
+  - A[206]: {"blue", "orange", "blue", "red"}
+  - A[207]: {"blue", "orange", "blue", "green"}
+  - A[208]: {"blue", "orange", "blue", "blue"}
+  - A[209]: {"blue", "red", "orange", "orange"}
+  - A[210]: {"blue", "red", "orange", "red"}
+  - A[211]: {"blue", "red", "orange", "green"}
+  - A[212]: {"blue", "red", "orange", "blue"}
+  - A[213]: {"blue", "red", "red", "orange"}
+  - A[214]: {"blue", "red", "red", "red"}
+  - A[215]: {"blue", "red", "red", "green"}
+  - A[216]: {"blue", "red", "red", "blue"}
+  - A[217]: {"blue", "red", "green", "orange"}
+  - A[218]: {"blue", "red", "green", "red"}
+  - A[219]: {"blue", "red", "green", "green"}
+  - A[220]: {"blue", "red", "green", "blue"}
+  - A[221]: {"blue", "red", "blue", "orange"}
+  - A[222]: {"blue", "red", "blue", "red"}
+  - A[223]: {"blue", "red", "blue", "green"}
+  - A[224]: {"blue", "red", "blue", "blue"}
+  - A[225]: {"blue", "green", "orange", "orange"}
+  - A[226]: {"blue", "green", "orange", "red"}
+  - A[227]: {"blue", "green", "orange", "green"}
+  - A[228]: {"blue", "green", "orange", "blue"}
+  - A[229]: {"blue", "green", "red", "orange"}
+  - A[230]: {"blue", "green", "red", "red"}
+  - A[231]: {"blue", "green", "red", "green"}
+  - A[232]: {"blue", "green", "red", "blue"}
+  - A[233]: {"blue", "green", "green", "orange"}
+  - A[234]: {"blue", "green", "green", "red"}
+  - A[235]: {"blue", "green", "green", "green"}
+  - A[236]: {"blue", "green", "green", "blue"}
+  - A[237]: {"blue", "green", "blue", "orange"}
+  - A[238]: {"blue", "green", "blue", "red"}
+  - A[239]: {"blue", "green", "blue", "green"}
+  - A[240]: {"blue", "green", "blue", "blue"}
+  - A[241]: {"blue", "blue", "orange", "orange"}
+  - A[242]: {"blue", "blue", "orange", "red"}
+  - A[243]: {"blue", "blue", "orange", "green"}
+  - A[244]: {"blue", "blue", "orange", "blue"}
+  - A[245]: {"blue", "blue", "red", "orange"}
+  - A[246]: {"blue", "blue", "red", "red"}
+  - A[247]: {"blue", "blue", "red", "green"}
+  - A[248]: {"blue", "blue", "red", "blue"}
+  - A[249]: {"blue", "blue", "green", "orange"}
+  - A[250]: {"blue", "blue", "green", "red"}
+  - A[251]: {"blue", "blue", "green", "green"}
+  - A[252]: {"blue", "blue", "green", "blue"}
+  - A[253]: {"blue", "blue", "blue", "orange"}
+  - A[254]: {"blue", "blue", "blue", "red"}
+  - A[255]: {"blue", "blue", "blue", "green"}
+  - A[256]: {"blue", "blue", "blue", "blue"}
+stack traceback:
+	genOutput\MBPP\StarCoderFP16_mbpp_462_combinations_list.lua:26: in function 'test_humaneval'
+
+Ran 1 tests in 3.104 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

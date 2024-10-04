@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\CodeGemmaQ2_HumanEval_142_sum_squares.lua:13: syntax error near 'miniatur'

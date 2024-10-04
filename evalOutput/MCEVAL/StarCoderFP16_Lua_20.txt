@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testAnswerQuestions
+genOutput\MCEVAL\StarCoderFP16_Lua_20.lua:40: attempt to call a nil value (global 'answer_question_1')
+stack traceback:
+	genOutput\MCEVAL\StarCoderFP16_Lua_20.lua:40: in function 'answer_questions'
+	genOutput\MCEVAL\StarCoderFP16_Lua_20.lua:53: in function 'testAnswerQuestions'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

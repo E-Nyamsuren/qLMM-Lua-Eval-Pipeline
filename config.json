@@ -1,0 +1,350 @@
+{
+    "models": [
+        {
+            "name": "CodeQwen",
+            "family": "CodeQwen",
+            "id": "Qwen/CodeQwen1.5-7B-Chat-GGUF/codeqwen-1_5-7b-chat-q4_k_m.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<|im_end|>"
+            ],
+            "qBits": 4,
+            "skip": 0
+        },
+        {
+            "name": "DSCoder",
+            "family": "DSCoder",
+            "id": "TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q4_K_M.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<|EOT|>"
+            ],
+            "qBits": 4,
+            "skip": 0
+        },
+        {
+            "name": "CodeLlama",
+            "family": "CodeLlama",
+            "id": "TheBloke/CodeLlama-7B-Instruct-GGUF/codellama-7b-instruct.Q4_K_M.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "</s>"
+            ],
+            "mid": "_<MID>",
+            "suf": "_<SUF>",
+            "pre": "_<PRE>",
+            "qBits": 4,
+            "skip": 0
+        },
+        {
+            "name": "CodeGemma",
+            "family": "CodeGemma",
+            "id": "bartowski/codegemma-7b-GGUF/codegemma-7b-Q4_K_M.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<eos>"
+            ],
+            "mid": "<|fim_middle|>",
+            "suf": "<|fim_suffix|>",
+            "pre": "<|fim_prefix|>",
+            "qBits": 4,
+            "skip": 0
+        },
+        {
+            "name": "StarCoder",
+            "family": "StarCoder",
+            "id": "bartowski/speechless-starcoder2-7b-GGUF/speechless-starcoder2-7b-Q4_K_M.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<|endoftext|>"
+            ],
+            "qBits": 4,
+            "skip": 0
+        },
+
+        {
+            "name": "CodeQwenQ2",
+            "family": "CodeQwen",
+            "id": "Qwen/CodeQwen1.5-7B-Chat-GGUF/codeqwen-1_5-7b-chat-q2_k.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<|im_end|>"
+            ],
+            "qBits": 2,
+            "skip": 0
+        },
+        {
+            "name": "DSCoderQ2",
+            "family": "DSCoder",
+            "id": "TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q2_K.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<|EOT|>"
+            ],
+            "qBits": 2,
+            "skip": 0
+        },
+        {
+            "name": "CodeLlamaQ2",
+            "family": "CodeLlama",
+            "id": "TheBloke/CodeLlama-7B-Instruct-GGUF/codellama-7b-instruct.Q2_K.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "</s>"
+            ],
+            "mid": "_<MID>",
+            "suf": "_<SUF>",
+            "pre": "_<PRE>",
+            "qBits": 2,
+            "skip": 0
+        },
+        {
+            "name": "CodeGemmaQ2",
+            "family": "CodeGemma",
+            "id": "bartowski/codegemma-7b-GGUF/codegemma-7b-Q2_K.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<eos>"
+            ],
+            "mid": "<|fim_middle|>",
+            "suf": "<|fim_suffix|>",
+            "pre": "<|fim_prefix|>",
+            "qBits": 2,
+            "skip": 0
+        },
+        {
+            "name": "StarCoderQ2",
+            "family": "StarCoder",
+            "id": "bartowski/speechless-starcoder2-7b-GGUF/speechless-starcoder2-7b-Q2_K.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [              "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<|endoftext|>"
+            ],
+            "qBits": 2,
+            "skip": 0
+        },
+
+        {
+            "name": "CodeQwenQ8",
+            "family": "CodeQwen",
+            "id": "Qwen/CodeQwen1.5-7B-Chat-GGUF/codeqwen-1_5-7b-chat-q8_0.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<|im_end|>"
+            ],
+            "qBits": 8,
+            "skip": 0
+        },
+        {
+            "name": "DSCoderQ8",
+            "family": "DSCoder",
+            "id": "TheBloke/deepseek-coder-6.7B-instruct-GGUF/deepseek-coder-6.7b-instruct.Q8_0.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<|EOT|>"
+            ],
+            "qBits": 8,
+            "skip": 0
+        },
+        {
+            "name": "CodeLlamaQ8",
+            "family": "CodeLlama",
+            "id": "TheBloke/CodeLlama-7B-Instruct-GGUF/codellama-7b-instruct.Q8_0.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "</s>"
+            ],
+            "mid": "_<MID>",
+            "suf": "_<SUF>",
+            "pre": "_<PRE>",
+            "qBits": 8,
+            "skip": 0
+        },
+        {
+            "name": "CodeGemmaQ8",
+            "family": "CodeGemma",
+            "id": "bartowski/codegemma-7b-GGUF/codegemma-7b-Q8_0.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<eos>"
+            ],
+            "mid": "<|fim_middle|>",
+            "suf": "<|fim_suffix|>",
+            "pre": "<|fim_prefix|>",
+            "qBits": 8,
+            "skip": 0
+        },
+        {
+            "name": "StarCoderQ8",
+            "family": "StarCoder",
+            "id": "bartowski/speechless-starcoder2-7b-GGUF/speechless-starcoder2-7b-Q8_0.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<|endoftext|>"
+            ],
+            "qBits": 8,
+            "skip": 0
+        },
+
+        {
+            "name": "DSCoderFP16",
+            "family": "DSCoder",
+            "id": "deepseek-ai/deepseek-coder-1.3b-instruct/deepseek-coder-1.3b-instruct-f16.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<|EOT|>"
+            ],
+            "qBits": 16,
+            "skip": 0
+        },
+        {
+            "name": "CodeGemmaFP16",
+            "family": "CodeGemma",
+            "id": "google/codegemma-2b-GGUF/codegemma-2b-f16.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<eos>"
+            ],
+            "qBits": 16,
+            "skip": 0
+        },
+        {
+            "name": "StarCoderFP16",
+            "family": "StarCoder",
+            "id": "bigcode/starcoder2-3b/starcoder2-3b-f16.gguf",
+            "max_tokens": 1024,
+            "temp": 0.1,
+            "top_k": 1,
+            "eos": [
+                "\nlocal",
+                "\nfunction",
+                "\n--",
+                "\n\n",
+                "<|endoftext|>"
+            ],
+            "qBits": 16,
+            "skip": 0
+        }
+    ],
+    "benchmarks": [
+        {
+            "name": "HumanEval",
+            "id": "lua_humaneval.json",
+            "sample": "None",
+            "skip": 0
+        },
+        {
+            "name": "MBPP",
+            "id": "lua_mbpp.json",
+            "sample": "None",
+            "skip": 0
+        },
+        {
+            "name": "MCEVAL",
+            "id": "lua_mceval.json",
+            "sample": "None",
+            "skip": 0
+        }
+    ]
+}

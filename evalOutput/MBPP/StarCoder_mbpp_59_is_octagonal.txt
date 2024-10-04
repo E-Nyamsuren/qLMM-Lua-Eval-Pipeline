@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoder_mbpp_59_is_octagonal.lua:12: expected: 65, actual: false
+stack traceback:
+	genOutput\MBPP\StarCoder_mbpp_59_is_octagonal.lua:12: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderFP16_mbpp_294_max_val.lua:18: 'end' expected (to close 'function' at line 2) near <eof>

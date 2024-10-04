@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...t\HumanEval\CodeLlama_HumanEval_154_cycpattern_check.lua:35: expected: true, actual: false
+stack traceback:
+	...t\HumanEval\CodeLlama_HumanEval_154_cycpattern_check.lua:35: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

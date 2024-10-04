@@ -1,0 +1,32 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...\MBPP\StarCoder_mbpp_778_pack_consecutive_duplicates.lua:23: expected: {{0, 0}, {1}, {2}, {3}, {4, 4}, {5}, {6, 6, 6}, {7}, {8}, {9}, {4, 4}}
+actual: {{0}, {1}, {2}, {3}, {4, 4}, {5}, {6, 6, 6}, {7}, {8}, {9}, {4, 4}}
+List difference analysis:
+* lists A (actual) and B (expected) have the same size
+* lists A and B start differing at index 1
+* lists A and B are equal again from index 2
+* Differing parts:
+  - A[1]: {0}
+  + B[1]: {0, 0}
+* Common parts at the end of the lists
+  = A[2], B[2]: {1}
+  = A[3], B[3]: {2}
+  = A[4], B[4]: {3}
+  = A[5], B[5]: {4, 4}
+  = A[6], B[6]: {5}
+  = A[7], B[7]: {6, 6, 6}
+  = A[8], B[8]: {7}
+  = A[9], B[9]: {8}
+  = A[10], B[10]: {9}
+  = A[11], B[11]: {4, 4}
+stack traceback:
+	...\MBPP\StarCoder_mbpp_778_pack_consecutive_duplicates.lua:23: in function 'test_humaneval'
+
+Ran 1 tests in 0.004 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

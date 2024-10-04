@@ -1,0 +1,41 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\HumanEval\DSCoderQ2_HumanEval_71_triangle_area.lua:25: expected: 6.0, actual: {
+    abs=function: 00007FF6839297B0,
+    acos=function: 00007FF683929810,
+    asin=function: 00007FF683929840,
+    atan=function: 00007FF683929870,
+    ceil=function: 00007FF6839298D0,
+    cos=function: 00007FF683929950,
+    deg=function: 00007FF683929980,
+    exp=function: 00007FF6839299C0,
+    floor=function: 00007FF683929A40,
+    fmod=function: 00007FF683929AC0,
+    huge=#Inf,
+    log=function: 00007FF683929BE0,
+    max=function: 00007FF683929C90,
+    maxinteger=9223372036854775807,
+    min=function: 00007FF683929D20,
+    mininteger=-9223372036854775808,
+    modf=function: 00007FF683929DB0,
+    pi=3.1415926535898,
+    rad=function: 00007FF683929E80,
+    random=function: 00000172F4547000,
+    randomseed=function: 00000172F45469C0,
+    sin=function: 00007FF683929EC0,
+    sqrt=function: 00007FF683929EF0,
+    tan=function: 00007FF683929F40,
+    tointeger=function: 00007FF6839299F0,
+    type=function: 00007FF683929F70,
+    ult=function: 00007FF683929BA0
+}
+stack traceback:
+	...utput\HumanEval\DSCoderQ2_HumanEval_71_triangle_area.lua:25: in function 'test_humaneval'
+
+Ran 1 tests in 0.019 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

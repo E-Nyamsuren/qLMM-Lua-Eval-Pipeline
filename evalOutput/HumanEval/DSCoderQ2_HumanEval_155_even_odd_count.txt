@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...put\HumanEval\DSCoderQ2_HumanEval_155_even_odd_count.lua:13: attempt to perform arithmetic on a nil value (local 'digit')
+stack traceback:
+	...put\HumanEval\DSCoderQ2_HumanEval_155_even_odd_count.lua:13: in local 'candidate'
+	...put\HumanEval\DSCoderQ2_HumanEval_155_even_odd_count.lua:27: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

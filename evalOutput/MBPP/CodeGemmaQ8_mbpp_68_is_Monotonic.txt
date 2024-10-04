@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaQ8_mbpp_68_is_Monotonic.lua:29: ')' expected (to close '(' at line 27) near '='

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\MBPP\DSCoderQ2_mbpp_391_convert_list_dictionary.lua:21: 'end' expected (to close 'for' at line 8) near <eof>

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...BPP\DSCoderQ2_mbpp_395_first_non_repeating_character.lua:24: 'end' expected (to close 'function' at line 2) near <eof>

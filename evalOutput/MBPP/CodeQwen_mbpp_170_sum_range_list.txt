@@ -1,0 +1,22 @@
+==== ==== STDOUT:
+25
+150
+315
+90
+100
+2500
+880
+150
+375
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwen_mbpp_170_sum_range_list.lua:23: expected: 29, actual: 30
+stack traceback:
+	genOutput\MBPP\CodeQwen_mbpp_170_sum_range_list.lua:23: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

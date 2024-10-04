@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\CodeGemmaQ2_HumanEval_76_is_simple_power.lua:18: syntax error near 'suspicam'

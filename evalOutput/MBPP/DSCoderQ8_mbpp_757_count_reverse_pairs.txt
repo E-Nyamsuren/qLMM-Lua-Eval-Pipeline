@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderQ8_mbpp_757_count_reverse_pairs.lua:15: 'end' expected (to close 'function' at line 2) near <eof>

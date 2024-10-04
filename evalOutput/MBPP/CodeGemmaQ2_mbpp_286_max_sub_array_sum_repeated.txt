@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...MBPP\CodeGemmaQ2_mbpp_286_max_sub_array_sum_repeated.lua:3: syntax error near 'suspic'

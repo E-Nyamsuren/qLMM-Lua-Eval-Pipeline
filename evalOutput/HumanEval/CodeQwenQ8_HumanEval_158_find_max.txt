@@ -1,0 +1,20 @@
+==== ==== STDOUT:
+
+
+
+
+
+
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\HumanEval\CodeQwenQ8_HumanEval_158_find_max.lua:41: expected: "string"
+actual: ""
+stack traceback:
+	genOutput\HumanEval\CodeQwenQ8_HumanEval_158_find_max.lua:41: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\HumanEval\CodeLlamaQ8_HumanEval_62_derivative.lua:20: expected: {1, 4, 12, 20}
+actual: {2, 6, 16, 25}
+stack traceback:
+	genOutput\HumanEval\CodeLlamaQ8_HumanEval_62_derivative.lua:20: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

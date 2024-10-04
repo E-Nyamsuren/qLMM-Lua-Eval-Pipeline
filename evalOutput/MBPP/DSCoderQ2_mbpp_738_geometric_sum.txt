@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderQ2_mbpp_738_geometric_sum.lua:216: 'end' expected (to close 'if' at line 3) near 'lu'

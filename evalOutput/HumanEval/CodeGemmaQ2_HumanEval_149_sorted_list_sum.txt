@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...\HumanEval\CodeGemmaQ2_HumanEval_149_sorted_list_sum.lua:17: syntax error near 'suspicum'

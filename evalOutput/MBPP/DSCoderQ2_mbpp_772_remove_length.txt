@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ2_mbpp_772_remove_length.lua:17: expected: "person is most value"
+actual: ""
+stack traceback:
+	genOutput\MBPP\DSCoderQ2_mbpp_772_remove_length.lua:17: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

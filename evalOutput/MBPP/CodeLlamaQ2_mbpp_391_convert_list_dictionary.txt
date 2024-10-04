@@ -1,0 +1,46 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\MBPP\CodeLlamaQ2_mbpp_391_convert_list_dictionary.lua:22: expected: 
+{
+    {S001={"Adina Park"=85}},
+    {S002={"Leyton Marsh"=98}},
+    {S003={"Duncan Boyle"=89}},
+    {S004={"Saim Richards"=92}}
+}
+actual: 
+{
+    S001={
+        "Adina Park"={85=85, 89=89, 92=92, 98=98},
+        "Duncan Boyle"={85=85, 89=89, 92=92, 98=98},
+        "Leyton Marsh"={85=85, 89=89, 92=92, 98=98},
+        "Saim Richards"={85=85, 89=89, 92=92, 98=98}
+    },
+    S002={
+        "Adina Park"={85=85, 89=89, 92=92, 98=98},
+        "Duncan Boyle"={85=85, 89=89, 92=92, 98=98},
+        "Leyton Marsh"={85=85, 89=89, 92=92, 98=98},
+        "Saim Richards"={85=85, 89=89, 92=92, 98=98}
+    },
+    S003={
+        "Adina Park"={85=85, 89=89, 92=92, 98=98},
+        "Duncan Boyle"={85=85, 89=89, 92=92, 98=98},
+        "Leyton Marsh"={85=85, 89=89, 92=92, 98=98},
+        "Saim Richards"={85=85, 89=89, 92=92, 98=98}
+    },
+    S004={
+        "Adina Park"={85=85, 89=89, 92=92, 98=98},
+        "Duncan Boyle"={85=85, 89=89, 92=92, 98=98},
+        "Leyton Marsh"={85=85, 89=89, 92=92, 98=98},
+        "Saim Richards"={85=85, 89=89, 92=92, 98=98}
+    }
+}
+stack traceback:
+	...ut\MBPP\CodeLlamaQ2_mbpp_391_convert_list_dictionary.lua:22: in function 'test_humaneval'
+
+Ran 1 tests in 0.008 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

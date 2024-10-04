@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemma_mbpp_594_diff_even_odd.lua:20: unexpected symbol near '<'

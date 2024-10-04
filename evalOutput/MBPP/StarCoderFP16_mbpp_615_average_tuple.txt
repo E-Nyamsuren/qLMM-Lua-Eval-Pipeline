@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoderFP16_mbpp_615_average_tuple.lua:18: expected: {30.5, 34.25, 27.0, 23.25}
+actual: {10.5, 44.0, 58.0, 2.5}
+stack traceback:
+	genOutput\MBPP\StarCoderFP16_mbpp_615_average_tuple.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

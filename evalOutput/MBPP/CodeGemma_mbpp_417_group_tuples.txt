@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemma_mbpp_417_group_tuples.lua:16: expected: {{"x", "y", "z"}, {"w", "t"}}
+actual: {w={{"w", "t"}}, x={{"x", "y"}, {"x", "z"}}}
+stack traceback:
+	genOutput\MBPP\CodeGemma_mbpp_417_group_tuples.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

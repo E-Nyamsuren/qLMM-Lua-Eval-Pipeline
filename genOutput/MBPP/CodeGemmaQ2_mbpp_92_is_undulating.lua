@@ -1,0 +1,16 @@
+-- Write a function to check whether the given number is undulating or not.
+local function is_undulating(n)
+ attent suspic suspicam suspic suspic suspicam suspic suspicam suspic suspicam suspic banan suspicam
+ suspic banan suspic banan suspic banan suspic banan suspic banan
+ suspic banan suspic banan banan banan banan suspic banan suspic banan suspic banan suspic banan suspic banan suspic banan suspic banan suspic banan suspic banan suspic banan suspic banan suspic banan banan banan suspic banan suspic banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan banan
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = is_undulating
+    lu.assertEquals(candidate(1212121), true)
+    lu.assertEquals(candidate(1991), false)
+    lu.assertEquals(candidate(121), true)
+end
+
+os.exit(lu.LuaUnit.run())

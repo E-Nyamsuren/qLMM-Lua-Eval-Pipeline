@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemma_mbpp_244_next_Perfect_Square.lua:44: ')' expected (to close '(' at line 42) near 'lu'

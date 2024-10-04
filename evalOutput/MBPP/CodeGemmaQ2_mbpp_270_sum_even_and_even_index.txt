@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...ut\MBPP\CodeGemmaQ2_mbpp_270_sum_even_and_even_index.lua:3: syntax error near 'suspic'

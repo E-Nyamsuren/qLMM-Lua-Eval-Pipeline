@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\HumanEval\CodeQwen_HumanEval_109_move_one_ball.lua:46: '}' expected (to close '{' at line 44) near 'lu'

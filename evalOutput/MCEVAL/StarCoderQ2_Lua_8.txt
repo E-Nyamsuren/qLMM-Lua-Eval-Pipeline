@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_hamming_distance
+genOutput\MCEVAL\StarCoderQ2_Lua_8.lua:16: attempt to index a nil value (global 'bit32')
+stack traceback:
+	genOutput\MCEVAL\StarCoderQ2_Lua_8.lua:16: in function 'hamming_distance'
+	genOutput\MCEVAL\StarCoderQ2_Lua_8.lua:30: in function 'test_hamming_distance'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

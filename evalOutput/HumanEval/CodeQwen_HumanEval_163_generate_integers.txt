@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...t\HumanEval\CodeQwen_HumanEval_163_generate_integers.lua:27: expected: {2, 4, 6, 8}
+actual: {2, 4, 6, 8, 10}
+stack traceback:
+	...t\HumanEval\CodeQwen_HumanEval_163_generate_integers.lua:27: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

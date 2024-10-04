@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeGemma_mbpp_401_add_nested_tuples.lua:5: attempt to perform arithmetic on a table value (field '?')
+stack traceback:
+	genOutput\MBPP\CodeGemma_mbpp_401_add_nested_tuples.lua:5: in local 'candidate'
+	genOutput\MBPP\CodeGemma_mbpp_401_add_nested_tuples.lua:14: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

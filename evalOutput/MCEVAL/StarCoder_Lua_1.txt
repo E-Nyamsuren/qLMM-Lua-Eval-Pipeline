@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testHelloMMCodeEval
+genOutput\MCEVAL\StarCoder_Lua_1.lua:11: expected: "Hello, MMCODEEVAL: Masssively Multilingual Code Evaluation"
+actual: "Hello, MMCODEEVAL: Massively Multilingual Code Evaluation"
+stack traceback:
+	genOutput\MCEVAL\StarCoder_Lua_1.lua:11: in function 'testHelloMMCodeEval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

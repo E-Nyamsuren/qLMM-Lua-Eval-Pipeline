@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...BPP\CodeGemmaQ8_mbpp_778_pack_consecutive_duplicates.lua:75: 'end' expected (to close 'function' at line 2) near <eof>

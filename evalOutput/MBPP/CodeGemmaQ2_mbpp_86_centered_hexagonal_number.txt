@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\MBPP\CodeGemmaQ2_mbpp_86_centered_hexagonal_number.lua:3: '(' expected near 'pessi'

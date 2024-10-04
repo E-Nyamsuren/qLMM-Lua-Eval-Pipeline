@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\CodeQwenQ2_HumanEval_48_is_palindrome.lua:19: <eof> expected near 'end'

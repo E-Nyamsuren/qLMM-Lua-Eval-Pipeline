@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\HumanEval\CodeQwen_HumanEval_2_truncate_number.lua:31: ')' expected (to close '(' at line 29) near 'lu'

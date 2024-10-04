@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ2_mbpp_162_sum_series.lua:39: ')' expected (to close '(' at line 37) near 'lu'

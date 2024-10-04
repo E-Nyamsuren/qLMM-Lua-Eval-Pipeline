@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...anEval\StarCoderQ8_HumanEval_107_even_odd_palindrome.lua:24: expected: {8, 13}
+actual: nil
+stack traceback:
+	...anEval\StarCoderQ8_HumanEval_107_even_odd_palindrome.lua:24: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

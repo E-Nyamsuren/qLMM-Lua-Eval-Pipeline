@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...ut\HumanEval\DSCoderQ2_HumanEval_149_sorted_list_sum.lua:19: attempt to add a 'number' with a 'string'
+stack traceback:
+	...ut\HumanEval\DSCoderQ2_HumanEval_149_sorted_list_sum.lua:19: in local 'candidate'
+	...ut\HumanEval\DSCoderQ2_HumanEval_149_sorted_list_sum.lua:28: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

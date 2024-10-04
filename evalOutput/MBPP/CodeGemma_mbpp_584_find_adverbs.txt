@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeGemma_mbpp_584_find_adverbs.lua:4: attempt to call a nil value (method 'split')
+stack traceback:
+	genOutput\MBPP\CodeGemma_mbpp_584_find_adverbs.lua:4: in local 'candidate'
+	genOutput\MBPP\CodeGemma_mbpp_584_find_adverbs.lua:17: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+true
+F
+Failed tests:
+-------------
+1) test_humaneval
+...HumanEval\CodeGemmaQ8_HumanEval_75_is_multiply_prime.lua:49: expected: true, actual: false
+stack traceback:
+	...HumanEval\CodeGemmaQ8_HumanEval_75_is_multiply_prime.lua:49: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...put\MBPP\CodeQwenQ8_mbpp_138_is_Sum_Of_Powers_Of_Two.lua:30: expected: false, actual: true
+stack traceback:
+	...put\MBPP\CodeQwenQ8_mbpp_138_is_Sum_Of_Powers_Of_Two.lua:30: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

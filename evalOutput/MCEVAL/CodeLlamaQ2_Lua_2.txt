@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testCalculateTriangleArea
+genOutput\MCEVAL\CodeLlamaQ2_Lua_2.lua:28: attempt to perform arithmetic on a nil value (local 'area')
+stack traceback:
+	genOutput\MCEVAL\CodeLlamaQ2_Lua_2.lua:28: in function 'testCalculateTriangleArea'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\DSCoderQ8_HumanEval_39_prime_fib.lua:17: attempt to perform arithmetic on a nil value (field '?')
+stack traceback:
+	genOutput\HumanEval\DSCoderQ8_HumanEval_39_prime_fib.lua:17: in local 'candidate'
+	genOutput\HumanEval\DSCoderQ8_HumanEval_39_prime_fib.lua:30: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+Found at position: 	1	 and index: 	1
+Found at position: 	21	 and index: 	2
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ2_mbpp_773_occurance_substring.lua:7: attempt to perform arithmetic on a nil value (local 'pos')
+stack traceback:
+	genOutput\MBPP\StarCoderQ2_mbpp_773_occurance_substring.lua:7: in local 'candidate'
+	genOutput\MBPP\StarCoderQ2_mbpp_773_occurance_substring.lua:23: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

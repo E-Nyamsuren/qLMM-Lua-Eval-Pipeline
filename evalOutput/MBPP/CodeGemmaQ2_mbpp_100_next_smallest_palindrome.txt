@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\MBPP\CodeGemmaQ2_mbpp_100_next_smallest_palindrome.lua:3: syntax error near 'suspicful'

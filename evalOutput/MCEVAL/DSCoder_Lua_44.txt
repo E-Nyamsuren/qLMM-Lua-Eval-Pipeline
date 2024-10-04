@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testCountTriplets
+genOutput\MCEVAL\DSCoder_Lua_44.lua:45: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\DSCoder_Lua_44.lua:45: in function 'testCountTriplets'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

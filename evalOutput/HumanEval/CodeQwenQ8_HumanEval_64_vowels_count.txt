@@ -1,0 +1,27 @@
+==== ==== STDOUT:
+2
+1
+0
+1
+3
+0
+1
+0
+1
+1
+1
+1
+1
+1
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\HumanEval\CodeQwenQ8_HumanEval_64_vowels_count.lua:44: expected: 3, actual: 2
+stack traceback:
+	...utput\HumanEval\CodeQwenQ8_HumanEval_64_vowels_count.lua:44: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

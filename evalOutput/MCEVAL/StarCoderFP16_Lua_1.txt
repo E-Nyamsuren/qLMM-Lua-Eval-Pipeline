@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MCEVAL\StarCoderFP16_Lua_1.lua:3: unexpected symbol near '{'

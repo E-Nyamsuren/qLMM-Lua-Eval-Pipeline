@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaFP16_mbpp_61_count_Substrings.lua:12: bad argument #1 to 'sub' (number expected, got nil)
+stack traceback:
+	genOutput\MBPP\CodeGemmaFP16_mbpp_61_count_Substrings.lua:12: in local 'candidate'
+	genOutput\MBPP\CodeGemmaFP16_mbpp_61_count_Substrings.lua:28: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

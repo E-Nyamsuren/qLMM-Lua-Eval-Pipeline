@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+30
+0
+-2
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\HumanEval\CodeQwenQ2_HumanEval_142_sum_squares.lua:33: expected: 6, actual: 30
+stack traceback:
+	...utput\HumanEval\CodeQwenQ2_HumanEval_142_sum_squares.lua:33: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

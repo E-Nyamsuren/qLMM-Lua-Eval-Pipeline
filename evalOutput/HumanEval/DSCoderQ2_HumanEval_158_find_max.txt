@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\DSCoderQ2_HumanEval_158_find_max.lua:15: attempt to call a nil value (global 'count_unique_chars')
+stack traceback:
+	genOutput\HumanEval\DSCoderQ2_HumanEval_158_find_max.lua:15: in local 'candidate'
+	genOutput\HumanEval\DSCoderQ2_HumanEval_158_find_max.lua:28: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

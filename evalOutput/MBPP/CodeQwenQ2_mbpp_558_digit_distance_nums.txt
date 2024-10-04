@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeQwenQ2_mbpp_558_digit_distance_nums.lua:5: attempt to get length of a number value (local 'n1')
+stack traceback:
+	genOutput\MBPP\CodeQwenQ2_mbpp_558_digit_distance_nums.lua:5: in local 'candidate'
+	genOutput\MBPP\CodeQwenQ2_mbpp_558_digit_distance_nums.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

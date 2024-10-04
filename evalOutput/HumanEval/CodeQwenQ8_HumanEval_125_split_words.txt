@@ -1,0 +1,9 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\HumanEval\CodeQwenQ8_HumanEval_125_split_words.lua:13: attempt to call a nil value (field 'split')
+stack traceback:
+	...utput\HumanEval\CodeQwenQ8_HumanEval_125_split_words.lua:13: in local 'split_words'
+	...utput\HumanEval\CodeQwenQ8_HumanEval_125_split_words.lua:30: in main chunk
+	[C]: in ?

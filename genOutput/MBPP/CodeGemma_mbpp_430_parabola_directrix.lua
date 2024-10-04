@@ -1,0 +1,51 @@
+-- Write a function to find the directrix of a parabola.
+local function parabola_directrix(a, b, c)
+  local d = -b / (2 * a)
+  local e = -b * b / (4 * a)
+  local f = -4 * a * c
+  local g = e + f
+  local h = -g / (4 * a)
+  local i = -g / (4 * a)
+  local j = -g / (4 * a)
+  local k = -g / (4 * a)
+  local l = -g / (4 * a)
+  local m = -g / (4 * a)
+  local n = -g / (4 * a)
+  local o = -g / (4 * a)
+  local p = -g / (4 * a)
+  local q = -g / (4 * a)
+  local r = -g / (4 * a)
+  local s = -g / (4 * a)
+  local t = -g / (4 * a)
+  local u = -g / (4 * a)
+  local v = -g / (4 * a)
+  local w = -g / (4 * a)
+  local x = -g / (4 * a)
+  local y = -g / (4 * a)
+  local z = -g / (4 * a)
+  local A = -g / (4 * a)
+  local B = -g / (4 * a)
+  local C = -g / (4 * a)
+  local D = -g / (4 * a)
+  local E = -g / (4 * a)
+  local F = -g / (4 * a)
+  local G = -g / (4 * a)
+  local H = -g / (4 * a)
+  local I = -g / (4 * a)
+  local J = -g / (4 * a)
+  local K = -g / (4 * a)
+  local L = -g / (4 * a)
+  local M = -g / (4 * a)
+  local N = -g / (4 * a)
+  local O = -g /
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = parabola_directrix
+    lu.assertEquals(candidate(5, 3, 2), -198)
+    lu.assertEquals(candidate(9, 8, 4), -2336)
+    lu.assertEquals(candidate(2, 4, 6), -130)
+end
+
+os.exit(lu.LuaUnit.run())

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...\HumanEval\CodeQwenQ8_HumanEval_79_decimal_to_binary.lua:35: syntax error near 'lu'

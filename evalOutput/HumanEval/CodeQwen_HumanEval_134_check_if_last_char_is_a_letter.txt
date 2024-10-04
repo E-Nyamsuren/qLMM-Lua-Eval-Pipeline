@@ -1,0 +1,17 @@
+==== ==== STDOUT:
+false
+true
+false
+false
+F
+Failed tests:
+-------------
+1) test_humaneval
+...odeQwen_HumanEval_134_check_if_last_char_is_a_letter.lua:39: expected: true, actual: false
+stack traceback:
+	...odeQwen_HumanEval_134_check_if_last_char_is_a_letter.lua:39: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

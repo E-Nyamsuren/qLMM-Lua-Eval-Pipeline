@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\DSCoderFP16_HumanEval_84_solve.lua:18: syntax error near '10'

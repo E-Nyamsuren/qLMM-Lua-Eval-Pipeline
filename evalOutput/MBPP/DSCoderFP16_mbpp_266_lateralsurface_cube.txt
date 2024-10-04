@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoderFP16_mbpp_266_lateralsurface_cube.lua:10: expected: 100, actual: 150
+stack traceback:
+	genOutput\MBPP\DSCoderFP16_mbpp_266_lateralsurface_cube.lua:10: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

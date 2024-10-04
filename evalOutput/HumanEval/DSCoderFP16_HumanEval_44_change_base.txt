@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...utput\HumanEval\DSCoderFP16_HumanEval_44_change_base.lua:23: bad argument #1 to 'sub' (number has no integer representation)
+stack traceback:
+	...utput\HumanEval\DSCoderFP16_HumanEval_44_change_base.lua:23: in local 'candidate'
+	...utput\HumanEval\DSCoderFP16_HumanEval_44_change_base.lua:31: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\HumanEval\CodeGemmaQ2_HumanEval_160_do_algebra.lua:20: syntax error near 'pessi'

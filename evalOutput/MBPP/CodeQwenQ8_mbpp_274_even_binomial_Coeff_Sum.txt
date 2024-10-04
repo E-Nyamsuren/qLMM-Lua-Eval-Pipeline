@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...put\MBPP\CodeQwenQ8_mbpp_274_even_binomial_Coeff_Sum.lua:8: attempt to call a nil value (field 'pow')
+stack traceback:
+	...put\MBPP\CodeQwenQ8_mbpp_274_even_binomial_Coeff_Sum.lua:8: in local 'candidate'
+	...put\MBPP\CodeQwenQ8_mbpp_274_even_binomial_Coeff_Sum.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

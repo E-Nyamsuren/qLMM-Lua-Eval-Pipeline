@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeLlama_mbpp_738_geometric_sum.lua:13: expected: 1.9921875, actual: 5040
+stack traceback:
+	genOutput\MBPP\CodeLlama_mbpp_738_geometric_sum.lua:13: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

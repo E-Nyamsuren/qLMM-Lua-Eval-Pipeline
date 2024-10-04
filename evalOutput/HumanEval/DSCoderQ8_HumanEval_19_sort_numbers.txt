@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\DSCoderQ8_HumanEval_19_sort_numbers.lua:36: attempt to call a nil value (field 'find')
+stack traceback:
+	genOutput\HumanEval\DSCoderQ8_HumanEval_19_sort_numbers.lua:36: in function <genOutput\HumanEval\DSCoderQ8_HumanEval_19_sort_numbers.lua:35>
+	[C]: in function 'table.sort'
+	genOutput\HumanEval\DSCoderQ8_HumanEval_19_sort_numbers.lua:35: in local 'candidate'
+	genOutput\HumanEval\DSCoderQ8_HumanEval_19_sort_numbers.lua:47: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...ut\HumanEval\CodeQwenQ2_HumanEval_10_make_palindrome.lua:50: ')' expected (to close '(' at line 48) near 'lu'

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwen_mbpp_444_trim_tuple.lua:21: expected: {{2}, {9}, {2}, {2}}
+actual: {{5, 3}, {3, 4}, {9, 1}, {4, 8}}
+stack traceback:
+	genOutput\MBPP\CodeQwen_mbpp_444_trim_tuple.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

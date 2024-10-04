@@ -1,0 +1,27 @@
+lu = require('luaunit')
+
+function testCanWinNim()
+    local candidate = canWinNim
+    lu.assertTrue(candidate(1) == true)
+    lu.assertTrue(candidate(2) == true)
+    lu.assertTrue(candidate(3) == true)
+    lu.assertTrue(candidate(4) == false)
+    lu.assertTrue(candidate(5) == true)
+    lu.assertTrue(candidate(6) == true)
+    lu.assertTrue(candidate(7) == true)
+    lu.assertTrue(candidate(8) == false)
+    lu.assertTrue(candidate(9) == true)
+    lu.assertTrue(candidate(10) == true)
+    lu.assertTrue(candidate(11) == true)
+    lu.assertTrue(candidate(12) == false)
+    lu.assertTrue(candidate(13) == true)
+    lu.assertTrue(candidate(14) == true)
+    lu.assertTrue(candidate(15) == true)
+    lu.assertTrue(candidate(16) == false)
+    lu.assertTrue(candidate(17) == true)
+    lu.assertTrue(candidate(18) == true)
+    lu.assertTrue(candidate(19) == true)
+    lu.assertTrue(candidate(20) == false)
+end
+
+os.exit(lu.LuaUnit.run())

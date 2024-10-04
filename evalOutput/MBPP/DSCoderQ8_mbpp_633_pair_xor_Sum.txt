@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderQ8_mbpp_633_pair_xor_Sum.lua:4: ',' expected near 'to'

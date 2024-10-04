@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...ut\HumanEval\DSCoderQ8_HumanEval_141_file_name_check.lua:26: attempt to get length of a function value
+stack traceback:
+	...ut\HumanEval\DSCoderQ8_HumanEval_141_file_name_check.lua:26: in local 'candidate'
+	...ut\HumanEval\DSCoderQ8_HumanEval_141_file_name_check.lua:36: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

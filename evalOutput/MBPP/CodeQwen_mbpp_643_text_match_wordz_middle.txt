@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\MBPP\CodeQwen_mbpp_643_text_match_wordz_middle.lua:31: ')' expected (to close '(' at line 29) near 'lu'

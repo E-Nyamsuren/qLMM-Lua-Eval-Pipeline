@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\DSCoder_HumanEval_129_minPath.lua:50: 'end' expected (to close 'for' at line 27) near <eof>

@@ -1,0 +1,40 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeLlama_mbpp_462_combinations_list.lua:16: expected: 
+{
+    {},
+    {"orange"},
+    {"red"},
+    {"red", "orange"},
+    {"green"},
+    {"green", "orange"},
+    {"green", "red"},
+    {"green", "red", "orange"},
+    {"blue"},
+    {"blue", "orange"},
+    {"blue", "red"},
+    {"blue", "red", "orange"},
+    {"blue", "green"},
+    {"blue", "green", "orange"},
+    {"blue", "green", "red"},
+    {"blue", "green", "red", "orange"}
+}
+actual: 
+{
+    {"orange", "red"},
+    {"orange", "green"},
+    {"orange", "blue"},
+    {"red", "green"},
+    {"red", "blue"},
+    {"green", "blue"}
+}
+stack traceback:
+	genOutput\MBPP\CodeLlama_mbpp_462_combinations_list.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.004 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ8_mbpp_244_next_Perfect_Square.lua:18: expected: 36, actual: -1
+stack traceback:
+	genOutput\MBPP\DSCoderQ8_mbpp_244_next_Perfect_Square.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

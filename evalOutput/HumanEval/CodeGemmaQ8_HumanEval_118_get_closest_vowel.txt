@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...umanEval\CodeGemmaQ8_HumanEval_118_get_closest_vowel.lua:25: attempt to call a nil value (field 'contains')
+stack traceback:
+	...umanEval\CodeGemmaQ8_HumanEval_118_get_closest_vowel.lua:25: in local 'candidate'
+	...umanEval\CodeGemmaQ8_HumanEval_118_get_closest_vowel.lua:49: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

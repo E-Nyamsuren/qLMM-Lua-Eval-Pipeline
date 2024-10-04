@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\CodeQwenQ2_HumanEval_101_words_string.lua:17: <eof> expected near 'lu'

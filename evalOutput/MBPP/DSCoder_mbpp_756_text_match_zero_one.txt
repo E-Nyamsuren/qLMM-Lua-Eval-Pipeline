@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoder_mbpp_756_text_match_zero_one.lua:10: expected: false, actual: "a"
+stack traceback:
+	genOutput\MBPP\DSCoder_mbpp_756_text_match_zero_one.lua:10: in function 'test_humaneval'
+
+Ran 1 tests in 0.003 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

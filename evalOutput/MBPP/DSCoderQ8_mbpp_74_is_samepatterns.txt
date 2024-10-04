@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ8_mbpp_74_is_samepatterns.lua:15: table index is nil
+stack traceback:
+	genOutput\MBPP\DSCoderQ8_mbpp_74_is_samepatterns.lua:15: in local 'candidate'
+	genOutput\MBPP\DSCoderQ8_mbpp_74_is_samepatterns.lua:26: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

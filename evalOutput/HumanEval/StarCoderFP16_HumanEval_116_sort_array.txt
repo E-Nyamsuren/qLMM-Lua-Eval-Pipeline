@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...put\HumanEval\StarCoderFP16_HumanEval_116_sort_array.lua:17: attempt to get length of a number value (local 'a')
+stack traceback:
+	...put\HumanEval\StarCoderFP16_HumanEval_116_sort_array.lua:17: in function <...put\HumanEval\StarCoderFP16_HumanEval_116_sort_array.lua:12>
+	[C]: in function 'table.sort'
+	...put\HumanEval\StarCoderFP16_HumanEval_116_sort_array.lua:33: in local 'candidate'
+	...put\HumanEval\StarCoderFP16_HumanEval_116_sort_array.lua:41: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

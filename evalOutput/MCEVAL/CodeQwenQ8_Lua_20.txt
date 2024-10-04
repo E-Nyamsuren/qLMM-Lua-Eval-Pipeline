@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testAnswerQuestions
+genOutput\MCEVAL\CodeQwenQ8_Lua_20.lua:47: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\CodeQwenQ8_Lua_20.lua:47: in function 'testAnswerQuestions'
+
+Ran 1 tests in 0.000 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

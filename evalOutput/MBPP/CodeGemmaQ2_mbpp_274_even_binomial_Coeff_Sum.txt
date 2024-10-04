@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...ut\MBPP\CodeGemmaQ2_mbpp_274_even_binomial_Coeff_Sum.lua:3: syntax error near 'Coefficients'

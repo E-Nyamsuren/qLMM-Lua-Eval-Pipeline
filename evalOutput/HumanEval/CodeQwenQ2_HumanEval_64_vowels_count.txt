@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\HumanEval\CodeQwenQ2_HumanEval_64_vowels_count.lua:35: unfinished string near ''Y'

@@ -1,0 +1,12 @@
+==== ==== STDOUT:
+table: 000001FE5CF26B50
+table: 000001FE5CF26A90
+table: 000001FE5CF26BD0
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwen_HumanEval_88_sort_array.lua:16: attempt to perform arithmetic on a nil value (field 'integer index')
+stack traceback:
+	genOutput\HumanEval\CodeQwen_HumanEval_88_sort_array.lua:16: in local 'sort_array'
+	genOutput\HumanEval\CodeQwen_HumanEval_88_sort_array.lua:27: in main chunk
+	[C]: in ?

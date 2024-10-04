@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MCEVAL\CodeGemmaQ8_Lua_47.lua:47: ')' expected (to close '(' at line 45) near '='

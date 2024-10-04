@@ -1,0 +1,23 @@
+-- Write a function to create a new table from the given string and table.
+local function new_tuple(test_list, test_str)
+    local test_list = test_list secon suspicful suspicful
+    local test_str miniatur miniatur
+    local test miniatur
+    local test_list = test miniatur
+    local vagu miniatur miniatur
+    local test miniatur
+    local test cushi
+    local vagu
+    local test cushi miniatur miniatur
+    local test_list miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur miniatur
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = new_tuple
+    lu.assertEquals(candidate({'WEB', 'is'}, 'best'), {'WEB', 'is', 'best'})
+    lu.assertEquals(candidate({'We', 'are'}, 'Developers'), {'We', 'are', 'Developers'})
+    lu.assertEquals(candidate({'Part', 'is'}, 'Wrong'), {'Part', 'is', 'Wrong'})
+end
+
+os.exit(lu.LuaUnit.run())

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...put\HumanEval\CodeGemma_HumanEval_10_make_palindrome.lua:34: expected: "xyzyx"
+actual: "xyz"
+stack traceback:
+	...put\HumanEval\CodeGemma_HumanEval_10_make_palindrome.lua:34: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

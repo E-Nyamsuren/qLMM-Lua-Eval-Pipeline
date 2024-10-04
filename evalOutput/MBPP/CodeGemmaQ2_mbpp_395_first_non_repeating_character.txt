@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...P\CodeGemmaQ2_mbpp_395_first_non_repeating_character.lua:3: syntax error near 'suspic'

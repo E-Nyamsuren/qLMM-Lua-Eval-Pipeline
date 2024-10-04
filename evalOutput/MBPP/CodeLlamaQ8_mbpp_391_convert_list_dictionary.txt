@@ -1,0 +1,46 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\MBPP\CodeLlamaQ8_mbpp_391_convert_list_dictionary.lua:20: expected: 
+{
+    {S001={"Adina Park"=85}},
+    {S002={"Leyton Marsh"=98}},
+    {S003={"Duncan Boyle"=89}},
+    {S004={"Saim Richards"=92}}
+}
+actual: 
+{
+    S001={
+        "Adina Park"={85=true, 89=true, 92=true, 98=true},
+        "Duncan Boyle"={85=true, 89=true, 92=true, 98=true},
+        "Leyton Marsh"={85=true, 89=true, 92=true, 98=true},
+        "Saim Richards"={85=true, 89=true, 92=true, 98=true}
+    },
+    S002={
+        "Adina Park"={85=true, 89=true, 92=true, 98=true},
+        "Duncan Boyle"={85=true, 89=true, 92=true, 98=true},
+        "Leyton Marsh"={85=true, 89=true, 92=true, 98=true},
+        "Saim Richards"={85=true, 89=true, 92=true, 98=true}
+    },
+    S003={
+        "Adina Park"={85=true, 89=true, 92=true, 98=true},
+        "Duncan Boyle"={85=true, 89=true, 92=true, 98=true},
+        "Leyton Marsh"={85=true, 89=true, 92=true, 98=true},
+        "Saim Richards"={85=true, 89=true, 92=true, 98=true}
+    },
+    S004={
+        "Adina Park"={85=true, 89=true, 92=true, 98=true},
+        "Duncan Boyle"={85=true, 89=true, 92=true, 98=true},
+        "Leyton Marsh"={85=true, 89=true, 92=true, 98=true},
+        "Saim Richards"={85=true, 89=true, 92=true, 98=true}
+    }
+}
+stack traceback:
+	...ut\MBPP\CodeLlamaQ8_mbpp_391_convert_list_dictionary.lua:20: in function 'test_humaneval'
+
+Ran 1 tests in 0.009 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

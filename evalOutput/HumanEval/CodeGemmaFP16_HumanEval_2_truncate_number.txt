@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...\HumanEval\CodeGemmaFP16_HumanEval_2_truncate_number.lua:12: unexpected symbol near '<'

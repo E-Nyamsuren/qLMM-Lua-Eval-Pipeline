@@ -1,0 +1,21 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ8_mbpp_780_find_combinations.lua:26: expected: 
+{{8, 11}, {7, 5}, {8, 14}, {11, 8}, {12, 17}, {11, 11}}
+actual: 
+<table 08> {
+    <table 04> {<table 01> {2, 4}, <table 03> {6, 7}, <table 02> {5, 1}},
+    <table 05> {<table 01>, <table 02>},
+    <table 06> {<table 03>, <table 02>},
+    <table 07> {<table 02>}
+}
+stack traceback:
+	genOutput\MBPP\StarCoderQ8_mbpp_780_find_combinations.lua:26: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

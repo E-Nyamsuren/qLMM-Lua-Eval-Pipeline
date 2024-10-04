@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...put\HumanEval\CodeGemmaQ2_HumanEval_51_remove_vowels.lua:13: unexpected symbol near '<'

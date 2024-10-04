@@ -1,0 +1,68 @@
+-- Write a function to check whether the given string starts and ends with the same character or not.
+local function check_char(string)
+    local first_char = string:sub(1,1)
+    local last_char = string:sub(#string,#string)
+    if first_char == last_char then
+        return true
+    else
+        return false
+    end
+end
+print(check_char("hello"))
+print(check_char("world"))
+print(check_char("python"))
+print(check_char("java"))
+print(check_char("ruby"))
+print(check_char("javascript"))
+print(check_char("php"))
+print(check_char("c++"))
+print(check_char("c#"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+print(check_char("c"))
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = check_char
+    lu.assertEquals(candidate('abba'), 'Valid')
+    lu.assertEquals(candidate('a'), 'Valid')
+    lu.assertEquals(candidate('abcd'), 'Invalid')
+end
+
+os.exit(lu.LuaUnit.run())

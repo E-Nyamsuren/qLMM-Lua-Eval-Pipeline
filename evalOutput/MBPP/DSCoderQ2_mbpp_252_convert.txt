@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ2_mbpp_252_convert.lua:4: attempt to get length of a number value (local 'numbers')
+stack traceback:
+	genOutput\MBPP\DSCoderQ2_mbpp_252_convert.lua:4: in local 'candidate'
+	genOutput\MBPP\DSCoderQ2_mbpp_252_convert.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

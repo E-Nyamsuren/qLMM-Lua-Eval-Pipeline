@@ -1,0 +1,15 @@
+==== ==== STDOUT:
+table: 000001E6C56E8480
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaQ8_mbpp_612_merge.lua:19: expected: {{"x", "a", "m"}, {"y", "b", "n"}, {"z", "c", "o"}}
+actual: {{"x", "a", "m"}, {"y", "b", "n"}}
+stack traceback:
+	genOutput\MBPP\CodeGemmaQ8_mbpp_612_merge.lua:19: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

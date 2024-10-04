@@ -1,0 +1,39 @@
+==== ==== STDOUT:
+20
+0
+10
+0
+50
+75
+25
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwen_mbpp_452_loss_amount.lua:40: expected: 0, actual: 300
+stack traceback:
+	genOutput\MBPP\CodeQwen_mbpp_452_loss_amount.lua:40: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

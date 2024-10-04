@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_count_permutations_of_binary_string
+genOutput\MCEVAL\DSCoderFP16_Lua_19.lua:28: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\DSCoderFP16_Lua_19.lua:28: in function 'test_count_permutations_of_binary_string'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

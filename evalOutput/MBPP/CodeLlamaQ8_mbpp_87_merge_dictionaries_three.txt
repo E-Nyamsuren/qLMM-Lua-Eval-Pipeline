@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\MBPP\CodeLlamaQ8_mbpp_87_merge_dictionaries_three.lua:21: expected: {B="Black", G="Green", L="lavender", P="Pink", R="Red", W="White"}
+actual: {B="Blue", G="Green", L="lavender", P="Pink", R="Red", W="White"}
+stack traceback:
+	...ut\MBPP\CodeLlamaQ8_mbpp_87_merge_dictionaries_three.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.003 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

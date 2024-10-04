@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\MBPP\CodeGemmaQ2_mbpp_425_count_element_in_list.lua:3: syntax error near 'suspicify'

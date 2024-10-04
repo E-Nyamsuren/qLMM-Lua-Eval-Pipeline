@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\MBPP\CodeGemmaQ2_mbpp_422_find_Average_Of_Cube.lua:3: syntax error near 'suspicat'

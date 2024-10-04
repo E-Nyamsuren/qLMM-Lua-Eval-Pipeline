@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...val\CodeGemmaFP16_HumanEval_157_right_angle_triangle.lua:13: unexpected symbol near '<'

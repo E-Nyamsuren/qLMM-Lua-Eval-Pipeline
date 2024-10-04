@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaFP16_mbpp_64_subject_marks.lua:16: expected: {{"Social sciences", 82}, {"English", 88}, {"Science", 90}, {"Maths", 97}}
+actual: {English=88, Maths=97, Science=90, "Social sciences"=82}
+stack traceback:
+	genOutput\MBPP\CodeGemmaFP16_mbpp_64_subject_marks.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

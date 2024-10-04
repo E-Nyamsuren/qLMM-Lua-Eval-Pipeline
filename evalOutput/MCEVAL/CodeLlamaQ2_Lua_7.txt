@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_calculate_triangle_area
+genOutput\MCEVAL\CodeLlamaQ2_Lua_7.lua:20: attempt to call a nil value (field 'round')
+stack traceback:
+	genOutput\MCEVAL\CodeLlamaQ2_Lua_7.lua:20: in function 'calculate_triangle_area'
+	genOutput\MCEVAL\CodeLlamaQ2_Lua_7.lua:27: in function 'test_calculate_triangle_area'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

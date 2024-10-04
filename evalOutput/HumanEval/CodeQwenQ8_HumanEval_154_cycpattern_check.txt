@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...\HumanEval\CodeQwenQ8_HumanEval_154_cycpattern_check.lua:34: unexpected symbol near '`'

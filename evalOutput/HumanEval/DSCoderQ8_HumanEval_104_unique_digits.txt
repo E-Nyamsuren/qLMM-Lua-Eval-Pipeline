@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...tput\HumanEval\DSCoderQ8_HumanEval_104_unique_digits.lua:13: attempt to index a number value (local 'num')
+stack traceback:
+	...tput\HumanEval\DSCoderQ8_HumanEval_104_unique_digits.lua:13: in local 'candidate'
+	...tput\HumanEval\DSCoderQ8_HumanEval_104_unique_digits.lua:31: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

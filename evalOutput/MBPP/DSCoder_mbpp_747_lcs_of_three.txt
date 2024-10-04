@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoder_mbpp_747_lcs_of_three.lua:25: 'end' expected (to close 'function' at line 2) near <eof>

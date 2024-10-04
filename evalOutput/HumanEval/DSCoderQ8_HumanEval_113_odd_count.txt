@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\HumanEval\DSCoderQ8_HumanEval_113_odd_count.lua:27: expected: {"the number of odd elements 4n the str4ng 4 of the 4nput."}
+actual: {"the number of odd elements in the string 4 of the input."}
+stack traceback:
+	genOutput\HumanEval\DSCoderQ8_HumanEval_113_odd_count.lua:27: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\CodeGemmaQ2_HumanEval_114_minSubArraySum.lua:9: syntax error near 'vagu'

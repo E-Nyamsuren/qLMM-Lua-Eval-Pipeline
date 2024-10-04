@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderFP16_mbpp_399_bitwise_xor.lua:5: syntax error near 'test_tup2'

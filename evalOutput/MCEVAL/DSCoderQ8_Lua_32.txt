@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testApocalypseYear
+genOutput\MCEVAL\DSCoderQ8_Lua_32.lua:13: attempt to call a nil value (global 'sort')
+stack traceback:
+	genOutput\MCEVAL\DSCoderQ8_Lua_32.lua:13: in function 'apocalypseYear'
+	genOutput\MCEVAL\DSCoderQ8_Lua_32.lua:24: in function 'testApocalypseYear'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

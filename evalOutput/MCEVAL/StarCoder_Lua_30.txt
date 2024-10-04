@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_check_two_equal_digits
+genOutput\MCEVAL\StarCoder_Lua_30.lua:36: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\StarCoder_Lua_30.lua:36: in function 'test_check_two_equal_digits'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

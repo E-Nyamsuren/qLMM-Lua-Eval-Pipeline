@@ -1,0 +1,23 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoderFP16_mbpp_255_combinations_colors.lua:32: expected: 
+{
+    {"Red", "Red"},
+    {"Red", "Green"},
+    {"Red", "Blue"},
+    {"Green", "Green"},
+    {"Green", "Blue"},
+    {"Blue", "Blue"}
+}
+actual: 
+{}
+stack traceback:
+	genOutput\MBPP\DSCoderFP16_mbpp_255_combinations_colors.lua:32: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

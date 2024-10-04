@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\DSCoder_HumanEval_34_unique.lua:9: attempt to call a nil value (global 'keys')
+stack traceback:
+	genOutput\HumanEval\DSCoder_HumanEval_34_unique.lua:9: in local 'candidate'
+	genOutput\HumanEval\DSCoder_HumanEval_34_unique.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

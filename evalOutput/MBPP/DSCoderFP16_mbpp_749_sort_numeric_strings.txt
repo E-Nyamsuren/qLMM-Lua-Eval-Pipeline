@@ -1,0 +1,35 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\MBPP\DSCoderFP16_mbpp_749_sort_numeric_strings.lua:20: expected: 
+{-500, -12, 0, 4, 7, 12, 45, 100, 200}
+actual: 
+{
+    "4",
+    "12",
+    "45",
+    "7",
+    "0",
+    "100",
+    "200",
+    "-12",
+    "-500",
+    "-500",
+    "-12",
+    "0",
+    "4",
+    "7",
+    "12",
+    "45",
+    "100",
+    "200"
+}
+stack traceback:
+	...utput\MBPP\DSCoderFP16_mbpp_749_sort_numeric_strings.lua:20: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

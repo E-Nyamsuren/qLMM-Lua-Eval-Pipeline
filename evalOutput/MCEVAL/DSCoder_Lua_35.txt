@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testGameWinner
+genOutput\MCEVAL\DSCoder_Lua_35.lua:23: attempt to index a nil value (field '?')
+stack traceback:
+	genOutput\MCEVAL\DSCoder_Lua_35.lua:23: in function 'gameWinner'
+	genOutput\MCEVAL\DSCoder_Lua_35.lua:33: in function 'testGameWinner'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

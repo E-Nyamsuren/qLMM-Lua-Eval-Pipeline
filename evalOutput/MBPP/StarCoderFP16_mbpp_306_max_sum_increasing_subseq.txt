@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...BPP\StarCoderFP16_mbpp_306_max_sum_increasing_subseq.lua:8: attempt to compare nil with number
+stack traceback:
+	...BPP\StarCoderFP16_mbpp_306_max_sum_increasing_subseq.lua:8: in upvalue 'max_sum_increasing_subseq'
+	...BPP\StarCoderFP16_mbpp_306_max_sum_increasing_subseq.lua:9: in upvalue 'max_sum_increasing_subseq'
+	...BPP\StarCoderFP16_mbpp_306_max_sum_increasing_subseq.lua:9: in local 'candidate'
+	...BPP\StarCoderFP16_mbpp_306_max_sum_increasing_subseq.lua:22: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,11 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwenQ8_HumanEval_116_sort_array.lua:13: attempt to index a nil value (global 'bit32')
+stack traceback:
+	genOutput\HumanEval\CodeQwenQ8_HumanEval_116_sort_array.lua:13: in function <genOutput\HumanEval\CodeQwenQ8_HumanEval_116_sort_array.lua:12>
+	[C]: in function 'table.sort'
+	genOutput\HumanEval\CodeQwenQ8_HumanEval_116_sort_array.lua:12: in local 'sort_array'
+	genOutput\HumanEval\CodeQwenQ8_HumanEval_116_sort_array.lua:23: in main chunk
+	[C]: in ?

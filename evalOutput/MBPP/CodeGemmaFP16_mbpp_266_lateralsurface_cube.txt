@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\MBPP\CodeGemmaFP16_mbpp_266_lateralsurface_cube.lua:6: unexpected symbol near '<'

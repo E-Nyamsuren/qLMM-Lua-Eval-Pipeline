@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoderFP16_mbpp_785_tuple_str_int.lua:18: expected: {7, 8, 9}
+actual: {{}, {}, {}}
+stack traceback:
+	genOutput\MBPP\DSCoderFP16_mbpp_785_tuple_str_int.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

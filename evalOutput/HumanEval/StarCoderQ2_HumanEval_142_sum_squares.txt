@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\StarCoderQ2_HumanEval_142_sum_squares.lua:32: 'end' expected (to close 'function' at line 12) near <eof>

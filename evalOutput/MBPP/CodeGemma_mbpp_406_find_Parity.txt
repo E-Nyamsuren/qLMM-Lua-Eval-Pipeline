@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemma_mbpp_406_find_Parity.lua:67: ')' expected (to close '(' at line 65) near '='

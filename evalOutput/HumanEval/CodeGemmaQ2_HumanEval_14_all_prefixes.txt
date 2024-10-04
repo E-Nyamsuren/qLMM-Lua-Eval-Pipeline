@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\CodeGemmaQ2_HumanEval_14_all_prefixes.lua:5: syntax error near 'suspic'

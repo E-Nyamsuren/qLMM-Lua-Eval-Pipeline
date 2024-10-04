@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+is
+go for
+programming
+the prime words
+Prime numbers are fun
+the prime words in the
+the prime words in the prime lengths
+the prime words in the prime lengths and prime numbers
+the prime words in the prime lengths and prime numbers and prime
+.
+Ran 1 tests in 0.001 seconds, 1 success, 0 failures
+OK
+
+
+==== ====STDERR:

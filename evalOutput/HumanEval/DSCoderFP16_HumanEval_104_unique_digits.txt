@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\HumanEval\DSCoderFP16_HumanEval_104_unique_digits.lua:33: expected: {1, 15, 33}
+actual: {1, 15, 33, 1422}
+stack traceback:
+	...ut\HumanEval\DSCoderFP16_HumanEval_104_unique_digits.lua:33: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

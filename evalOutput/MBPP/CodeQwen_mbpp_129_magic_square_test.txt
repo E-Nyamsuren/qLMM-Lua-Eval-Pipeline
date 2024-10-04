@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwen_mbpp_129_magic_square_test.lua:68: 'end' expected (to close 'function' at line 2) near 'lu'

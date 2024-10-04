@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\CodeGemmaFP16_HumanEval_117_select_words.lua:39: unexpected symbol near '<'

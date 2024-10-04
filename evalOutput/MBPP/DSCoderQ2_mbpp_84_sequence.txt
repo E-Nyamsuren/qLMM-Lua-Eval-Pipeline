@@ -1,0 +1,24 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:6: stack overflow
+stack traceback:
+	genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:6: in upvalue 'sequence'
+	genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:6: in upvalue 'sequence'
+	genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:6: in upvalue 'sequence'
+	genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:6: in upvalue 'sequence'
+	genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:6: in upvalue 'sequence'
+	genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:6: in upvalue 'sequence'
+	genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:6: in upvalue 'sequence'
+	genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:6: in upvalue 'sequence'
+	genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:6: in upvalue 'sequence'
+	...	(skipping 333299 levels)
+	genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:6: in local 'candidate'
+	genOutput\MBPP\DSCoderQ2_mbpp_84_sequence.lua:14: in function 'test_humaneval'
+
+Ran 1 tests in 0.229 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

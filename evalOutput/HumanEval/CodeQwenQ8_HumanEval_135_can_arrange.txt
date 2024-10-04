@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\HumanEval\CodeQwenQ8_HumanEval_135_can_arrange.lua:34: '}' expected (to close '{' at line 30) near 'function'

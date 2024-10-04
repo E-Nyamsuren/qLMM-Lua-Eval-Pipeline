@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ8_mbpp_608_bell_Number.lua:8: attempt to perform arithmetic on a nil value (field '?')
+stack traceback:
+	genOutput\MBPP\DSCoderQ8_mbpp_608_bell_Number.lua:8: in local 'candidate'
+	genOutput\MBPP\DSCoderQ8_mbpp_608_bell_Number.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

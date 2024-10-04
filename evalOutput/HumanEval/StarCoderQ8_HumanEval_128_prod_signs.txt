@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...utput\HumanEval\StarCoderQ8_HumanEval_128_prod_signs.lua:19: attempt to call a nil value (field 'sign')
+stack traceback:
+	...utput\HumanEval\StarCoderQ8_HumanEval_128_prod_signs.lua:19: in local 'candidate'
+	...utput\HumanEval\StarCoderQ8_HumanEval_128_prod_signs.lua:30: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

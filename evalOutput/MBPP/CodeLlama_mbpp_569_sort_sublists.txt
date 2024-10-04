@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeLlama_mbpp_569_sort_sublists.lua:7: attempt to compare two table values
+stack traceback:
+	genOutput\MBPP\CodeLlama_mbpp_569_sort_sublists.lua:7: in function <genOutput\MBPP\CodeLlama_mbpp_569_sort_sublists.lua:7>
+	[C]: in function 'table.sort'
+	genOutput\MBPP\CodeLlama_mbpp_569_sort_sublists.lua:7: in local 'candidate'
+	genOutput\MBPP\CodeLlama_mbpp_569_sort_sublists.lua:15: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

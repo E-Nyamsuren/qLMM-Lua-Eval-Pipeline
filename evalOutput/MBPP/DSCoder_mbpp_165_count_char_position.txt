@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoder_mbpp_165_count_char_position.lua:6: attempt to index a nil value (global 'alphabet')
+stack traceback:
+	genOutput\MBPP\DSCoder_mbpp_165_count_char_position.lua:6: in local 'candidate'
+	genOutput\MBPP\DSCoder_mbpp_165_count_char_position.lua:17: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

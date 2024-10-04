@@ -1,0 +1,5484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Readable version of the 'MCEVAL - Lua - Generation'</title>
+    <style>
+      
+                    body {
+                        background-color: #000;
+                        color: #fff;
+                        font-size: 20px;
+                    }
+                    
+                    .mainC {
+                        background-color: black;
+                        border: solid, 5px;
+                        margin-top: 15px; 
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+                    
+                    .section {
+                        margin-bottom: 50px;
+                    }
+                    
+                    .secLabel {
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                    
+    </style>
+  </head>
+  <body>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/1</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+-- Return "Hello, MMCODEEVAL: Masssively Multilingual Code Evaluation"
+function hello_mmcodeeval()</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function hello_mmcodeeval()` to solve the following problem:
+Return "Hello, MMCODEEVAL: Masssively Multilingual Code Evaluation"</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>return "Hello, MMCODEEVAL: Masssively Multilingual Code Evaluation";
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testHelloMMCodeEval()
+    local candidate = hello_mmcodeeval
+    lu.assertEquals(candidate(), "Hello, MMCODEEVAL: Masssively Multilingual Code Evaluation")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testHelloMMCodeEval()
+    assert(hello_mmcodeeval() == "Hello, MMCODEEVAL: Masssively Multilingual Code Evaluation")
+end</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/2</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Calculate the area of a triangle given its three sides.
+
+Parameters:
+- a (number): Length of side 'a'.
+- b (number): Length of side 'b'.
+- c (number): Length of side 'c'.
+
+Returns:
+- number: If the provided sides form a triangle, returns the calculated area 
+          with 2 decimal places. Otherwise, returns -1 to indicate invalid input.
+
+Examples:
+    print(calculate_triangle_area(3, 5, 4)) -- Should print 6
+    print(calculate_triangle_area(1, 1, 4)) -- Should print -1 for not a triangle
+--]]
+function calculate_triangle_area(a, b, c)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function calculate_triangle_area(a, b, c)` to solve the following problem:
+Calculate the area of a triangle given its three sides.
+
+Parameters:
+- a (number): Length of side 'a'.
+- b (number): Length of side 'b'.
+- c (number): Length of side 'c'.
+
+Returns:
+- number: If the provided sides form a triangle, returns the calculated area with 2 decimal places. Otherwise, returns -1 to indicate invalid input.
+
+Examples:
+    print(calculate_triangle_area(3, 5, 4)) -- Should print 6
+    print(calculate_triangle_area(1, 1, 4)) -- Should print -1 for not a triangle
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>-- Check if sides can form a triangle
+    if a + b > c and a + c > b and b + c > a then
+        -- Heron's formula
+        local s = (a + b + c) / 2.0
+        return math.sqrt(s * (s - a) * (s - b) * (s - c))
+    else
+        -- Not a triangle
+        return -1
+    end
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCalculateTriangleArea()
+    local candidate = calculate_triangle_area
+    -- Triangle with sides 3, 5, 4 should return area close to 6
+    local area = candidate(3, 5, 4)
+    lu.assertTrue(math.abs(area - 6) < 1e-6)
+
+    -- Not a triangle with sides 1, 1, 4
+    area = candidate(1, 1, 4)
+    lu.assertTrue(area == -1)
+
+    -- Triangle with sides 7, 24, 25 should return area close to 84
+    area = candidate(7, 24, 25)
+    lu.assertTrue(math.abs(area - 84) < 1e-6)
+
+    -- Triangle with sides 10.5, 6.2, 7.3 should return a correct area
+    area = candidate(10.5, 6.2, 7.3)
+    -- Assuming the test is for an area close to an expected value due to precision
+    lu.assertTrue(math.abs(area - 22.15) < 1e-2)
+
+    -- print("All tests passed successfully.")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testCalculateTriangleArea()
+    -- Triangle with sides 3, 5, 4 should return area close to 6
+    local area = calculate_triangle_area(3, 5, 4)
+    assert(math.abs(area - 6) < 1e-6)
+
+    -- Not a triangle with sides 1, 1, 4
+    area = calculate_triangle_area(1, 1, 4)
+    assert(area == -1)
+
+    -- Triangle with sides 7, 24, 25 should return area close to 84
+    area = calculate_triangle_area(7, 24, 25)
+    assert(math.abs(area - 84) < 1e-6)
+
+    -- Triangle with sides 10.5, 6.2, 7.3 should return a correct area
+    area = calculate_triangle_area(10.5, 6.2, 7.3)
+    -- Assuming the test is for an area close to an expected value due to precision
+    assert(math.abs(area - 22.15) < 1e-2)
+
+    -- print("All tests passed successfully.")
+end
+
+testCalculateTriangleArea()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/3</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>middle</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Calculate the value of the function for a given input.
+    Parameters:
+      - x (integer): Input value for the function.
+    Returns:
+      - number or string: If x is not in the defined domain, the returned value is "Not define".
+      Otherwise, the function returns the calculated value rounded to 5 decimal places.
+
+    Function Definitions:
+      - For 0 <= x < 10: y = cos(x + 3.0)
+      - For 10 <= x < 20: y = (cos(x + 7.5))^2
+      - For 20 <= x < 30: y = (cos(x + 4.0))^4
+      Example Usage:
+        print(calculate_function_value(5))  -- Expected Output: y represented as a string rounded to 5 decimal places
+        print(calculate_function_value(40)) -- Expected Output: "Not define"
+]]--
+function calculate_function_value(x)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function calculate_function_value(x)` to solve the following problem:
+Calculate the value of the function for a given input.
+    Parameters:
+      - x (integer): Input value for the function.
+    Returns:
+      - number or string: If x is not in the defined domain, the returned value is "Not define".
+      Otherwise, the function returns the calculated value rounded to 5 decimal places.
+
+    Function Definitions:
+      - For 0 <= x < 10: y = cos(x + 3.0)
+      - For 10 <= x < 20: y = (cos(x + 7.5))^2
+      - For 20 <= x < 30: y = (cos(x + 4.0))^4
+      Example Usage:
+        print(calculate_function_value(5))  -- Expected Output: y represented as a string rounded to 5 decimal places
+        print(calculate_function_value(40)) -- Expected Output: "Not define"</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local output
+    if 0 <= x and x < 10 then
+        output = string.format("%.5f", math.cos(x + 3.0))
+    elseif 10 <= x and x < 20 then
+        output = string.format("%.5f", math.pow(math.cos(x + 7.5), 2.0))
+    elseif 20 <= x and x < 30 then
+        output = string.format("%.5f", math.pow(math.cos(x + 4.0), 4.0))
+    else
+        return "Not define"
+    end
+    return output
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function test_calculate_function_value()
+    local candidate = calculate_function_value
+    lu.assertEquals(candidate(40), "Not define")
+    lu.assertEquals(candidate(5), "-0.14550")
+    lu.assertEquals(candidate(15), "0.76266")
+    lu.assertEquals(candidate(25), "0.31314")
+    lu.assertEquals(candidate(-1), "Not define")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function test_calculate_function_value()
+    assert(calculate_function_value(40) == "Not define")
+    assert(calculate_function_value(5) == "-0.14550")
+    assert(calculate_function_value(15) == "0.76266")
+    assert(calculate_function_value(25) == "0.31314")
+    assert(calculate_function_value(-1) == "Not define")
+end
+
+test_calculate_function_value()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/4</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>middle</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Find the maximum and minimum of three distinct integers.
+
+Parameters:
+a (int): The first integer.
+b (int): The second integer.
+c (int): The third integer.
+
+Returns:
+A table with the maximum and minimum values, with "max" as the key for the maximum value and "min" as the key for the minimum value.
+
+Example call:
+local result = find_max_min(1,2,3)
+assert(result.max == 3 and result.min == 1)
+]]--
+function find_max_min(a, b, c)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function find_max_min(a, b, c)` to solve the following problem:
+Find the maximum and minimum of three distinct integers.
+
+Parameters:
+a (int): The first integer.
+b (int): The second integer.
+c (int): The third integer.
+
+Returns:
+A table with the maximum and minimum values, with "max" as the key for the maximum value and "min" as the key for the minimum value.
+
+Example call:
+local result = find_max_min(1,2,3)
+assert(result.max == 3 and result.min == 1)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local max, min
+    if a > b then
+        if a > c then
+            max = a
+            min = (b < c) and b or c
+        else
+            max = c
+            min = b
+        end
+    else
+        if b > c then
+            max = b
+            min = (a < c) and a or c
+        else
+            max = c
+            min = a
+        end
+    end
+    return {max = max, min = min}
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testFindMaxMin()
+    local candidate = find_max_min
+    local result
+
+    result = candidate(1, 2, 3)
+    lu.assertTrue(result.max == 3 and result.min == 1)
+
+    -- Additional tests
+    result = candidate(5, 3, 4)
+    lu.assertTrue(result.max == 5 and result.min == 3)
+
+    result = candidate(10, -2, 7)
+    lu.assertTrue(result.max == 10 and result.min == -2)
+
+    result = candidate(-1, -3, -2)
+    lu.assertTrue(result.max == -1 and result.min == -3)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testFindMaxMin()
+    local result
+
+    result = find_max_min(1, 2, 3)
+    assert(result.max == 3 and result.min == 1)
+
+    -- Additional tests
+    result = find_max_min(5, 3, 4)
+    assert(result.max == 5 and result.min == 3)
+
+    result = find_max_min(10, -2, 7)
+    assert(result.max == 10 and result.min == -2)
+
+    result = find_max_min(-1, -3, -2)
+    assert(result.max == -1 and result.min == -3)
+end
+
+testFindMaxMin()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/5</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Calculate the distance between two points A (xa, ya) and B (xb, yb).
+Parameters:
+- xa (double): x-coordinate of point A.
+- ya (double): y-coordinate of point A.
+- xb (double): x-coordinate of point B.
+- yb (double): y-coordinate of point B.
+
+Returns:
+double: The distance between points A and B.
+Usage examples:
+print(calculate_distance(0, 0, 3, 4)) -- Output: 5
+]]--
+function calculate_distance(xa, ya, xb, yb)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function calculate_distance(xa, ya, xb, yb)` to solve the following problem:
+Calculate the distance between two points A (xa, ya) and B (xb, yb).
+Parameters:
+- xa (double): x-coordinate of point A.
+- ya (double): y-coordinate of point A.
+- xb (double): x-coordinate of point B.
+- yb (double): y-coordinate of point B.
+
+Returns:
+double: The distance between points A and B.
+Usage examples:
+print(calculate_distance(0, 0, 3, 4)) -- Output: 5
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>return math.sqrt((xa - xb) ^ 2 + (ya - yb) ^ 2)
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCalculateDistance()
+    local candidate = calculate_distance
+    lu.assertTrue(math.abs(candidate(0, 0, 3, 4) - 5) < 1e-6)
+    lu.assertTrue(math.abs(candidate(0, 0, 0, 0) - 0) < 1e-6)
+    lu.assertTrue(math.abs(candidate(-1, -1, 2, 2) - 4.242640687) < 1e-6)
+    lu.assertTrue(math.abs(candidate(1.5, 3.9, 4.2, -1.1) - 5.68243) < 1e-6)
+    -- print("All test cases passed!")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testCalculateDistance()
+    assert(math.abs(calculate_distance(0, 0, 3, 4) - 5) < 1e-6)
+    assert(math.abs(calculate_distance(0, 0, 0, 0) - 0) < 1e-6)
+    assert(math.abs(calculate_distance(-1, -1, 2, 2) - 4.242640687) < 1e-6)
+    assert(math.abs(calculate_distance(1.5, 3.9, 4.2, -1.1) - 5.68243) < 1e-6)
+    -- print("All test cases passed!")
+end
+
+testCalculateDistance()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/6</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+    Find the factorial of N and take the modulo 10007 of the result.
+​    
+    Parameters:
+    - N: An integer representing the input value (N <= 10000).
+    
+    Returns:
+    - The result after taking the modulo 10007 of the output.
+
+    Examples:
+    assert(process_request(1) == 1)
+    assert(process_request(5) == 10)
+]]
+function process_request(n)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function process_request(n)` to solve the following problem:
+Find the factorial of N and take the modulo 10007 of the result.
+
+    Parameters:
+    - N: An integer representing the input value (N <= 10000).
+
+    Returns:
+    - The result after taking the modulo 10007 of the output.
+
+    Examples:
+    assert(process_request(1) == 1)
+    assert(process_request(5) == 120)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>if n == 0 then
+        return 1
+    end
+    local a = {1, 1}
+    for i = 2, 10000 do
+        a[i] = (a[i - 1] * i) % 10007
+    end
+    return a[n]
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function test_process_request()
+    local candidate = process_request
+    lu.assertTrue(candidate(0) == 1) -- Added test for boundary condition
+    lu.assertTrue(candidate(1) == 1)
+    lu.assertTrue(candidate(2) == 2)
+    lu.assertTrue(candidate(3) == 6)
+    lu.assertTrue(candidate(4) == 24)
+    lu.assertTrue(candidate(10) == 6266) -- 10! % 10007 = 3628800 % 10007 = 6266
+    lu.assertTrue(candidate(10000) == 6991) -- Added a test for upper boundary condition
+end
+-- No equivalent in Lua for printf statement to indicate test status, as assert will automatically throw an error when a test fails.
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>local function test_process_request()
+    assert(process_request(0) == 1) -- Added test for boundary condition
+    assert(process_request(1) == 1)
+    assert(process_request(2) == 2)
+    assert(process_request(3) == 6)
+    assert(process_request(4) == 24)
+    assert(process_request(10) == 6266) -- 10! % 10007 = 3628800 % 10007 = 6266
+    assert(process_request(10000) == 6991) -- Added a test for upper boundary condition
+end
+
+test_process_request()
+-- No equivalent in Lua for printf statement to indicate test status, as assert will automatically throw an error when a test fails.</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/7</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Calculates the area of a triangle given its base and height.
+
+Parameters:
+- base (number): The base length of the triangle.
+- height (number): The height of the triangle.
+
+Returns:
+- number: The calculated area of the triangle, rounded to one decimal place.
+
+Examples:
+local area = calculate_triangle_area(1, 2)
+print(area)  -- Output: 1.0
+
+local area = calculate_triangle_area(3, 4)
+print(area)  -- Output: 6.0
+--]]
+function calculate_triangle_area(base, height)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function calculate_triangle_area(base, height)` to solve the following problem:
+Calculates the area of a triangle given its base and height.
+
+Parameters:
+- base (number): The base length of the triangle.
+- height (number): The height of the triangle.
+
+Returns:
+- number: The calculated area of the triangle, rounded to one decimal place.
+
+Examples:
+local area = calculate_triangle_area(1, 2)
+print(area)  -- Output: 1.0
+
+local area = calculate_triangle_area(3, 4)
+print(area)  -- Output: 6.0
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>return base * height / 2.0  -- The area of a triangle formula
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function test_calculate_triangle_area()
+    local candidate = calculate_triangle_area
+    lu.assertTrue(math.abs(candidate(1, 2) - 1.0) < 1e-6)
+    lu.assertTrue(math.abs(candidate(3, 4) - 6.0) < 1e-6)
+    lu.assertTrue(math.abs(candidate(5, 8) - 20.0) < 1e-6)
+    lu.assertTrue(math.abs(candidate(7, 3) - 10.5) < 1e-6)
+    lu.assertTrue(math.abs(candidate(10, 10) - 50.0) < 1e-6)
+
+    -- print("All tests passed.")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>local function test_calculate_triangle_area()
+    assert(math.abs(calculate_triangle_area(1, 2) - 1.0) < 1e-6)
+    assert(math.abs(calculate_triangle_area(3, 4) - 6.0) < 1e-6)
+    assert(math.abs(calculate_triangle_area(5, 8) - 20.0) < 1e-6)
+    assert(math.abs(calculate_triangle_area(7, 3) - 10.5) < 1e-6)
+    assert(math.abs(calculate_triangle_area(10, 10) - 50.0) < 1e-6)
+
+    -- print("All tests passed.")
+end
+
+test_calculate_triangle_area()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/8</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Calculate the Hamming distance between two integers in binary representation.
+Parameters:
+- x (int): The first positive integer (x <= 1,000,000,000).
+- y (int): The second positive integer (y <= 1,000,000,000).
+Returns:
+int: The Hamming distance between x and y, i.e., the number of bits that need to be flipped
+     to transform x into y in binary.
+    >>> hamming_distance(1,2)
+    2
+]]--
+function hamming_distance(x, y)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function hamming_distance(x, y)` to solve the following problem:
+Calculate the Hamming distance between two integers in binary representation.
+Parameters:
+- x (int): The first positive integer (x <= 1,000,000,000).
+- y (int): The second positive integer (y <= 1,000,000,000).
+Returns:
+int: The Hamming distance between x and y, i.e., the number of bits that need to be flipped
+to transform x into y in binary.
+    >>> hamming_distance(1,2)
+    2
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local distance = 0
+    local xor_result = x ~ y  -- XOR x and y to get a number where set bits are the differences
+    while xor_result ~= 0 do
+        if xor_result & 1 == 1 then
+            distance = distance + 1
+        end
+        xor_result = xor_result >> 1
+    end
+    return distance
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function test_hamming_distance()
+    local candidate = hamming_distance
+    lu.assertTrue(candidate(1, 2) == 2) -- 01 and 10 have 2 different bits
+    lu.assertTrue(candidate(4, 7) == 2) -- 100 and 111 have 2 different bits
+    lu.assertTrue(candidate(25, 30) == 3) -- Additional test: 11001 and 11110 have 3 different bits
+    lu.assertTrue(candidate(0, 0) == 0) -- Additional test: Same numbers have 0 different bits
+    lu.assertTrue(candidate(0xFFFFFFF, 0x0000000) == 28) -- Additional test: Max unsigned int and 0 have 32 different bits
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>assert(hamming_distance(1, 2) == 2) -- 01 and 10 have 2 different bits
+assert(hamming_distance(4, 7) == 2) -- 100 and 111 have 2 different bits
+assert(hamming_distance(25, 30) == 3) -- Additional test: 11001 and 11110 have 3 different bits
+assert(hamming_distance(0, 0) == 0) -- Additional test: Same numbers have 0 different bits
+assert(hamming_distance(0xFFFFFFF, 0x0000000) == 28) -- Additional test: Max unsigned int and 0 have 32 different bits</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/9</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Count the number of odd integers in a given list of numbers.
+
+Parameters:
+- count (int): The count of numbers to analyze.
+- ... (int): A sequence of integers.
+
+Returns:
+int: The count of odd numbers in the provided sequence.
+
+Examples:
+    count_odd_numbers(5, 1, 4, 3, 2, 5) -- returns 3
+    count_odd_numbers(4, 2, 2, 0, 0) -- returns 0
+    count_odd_numbers(6, 7, 7, 8, 1, 9, 10) -- returns 4
+]]--
+function count_odd_numbers(count, ...)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function count_odd_numbers(count, ...)` to solve the following problem:
+Count the number of odd integers in a given list of numbers.
+
+Parameters:
+- count (int): The count of numbers to analyze.
+- ... (int): A sequence of integers.
+
+Returns:
+int: The count of odd numbers in the provided sequence.
+
+Examples:
+    count_odd_numbers(5, 1, 4, 3, 2, 5) -- returns 3
+    count_odd_numbers(4, 2, 2, 0, 0) -- returns 0
+    count_odd_numbers(6, 7, 7, 8, 1, 9, 10) -- returns 4
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local args = {...}
+    local ans = 0
+    for i = 1, count do
+        local num = args[i]
+        if num % 2 ~= 0 then
+            ans = ans + 1
+        end
+    end
+    return ans
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCountOddNumbers()
+    local candidate = count_odd_numbers
+    lu.assertTrue(candidate(5, 1, 4, 3, 2, 5) == 3)
+    lu.assertTrue(candidate(4, 2, 2, 0, 0) == 0)
+    lu.assertTrue(candidate(6, 7, 7, 8, 1, 9, 10) == 4) -- Additional Test Sample
+
+    -- print("All tests passed!")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testCountOddNumbers()
+    assert(count_odd_numbers(5, 1, 4, 3, 2, 5) == 3)
+    assert(count_odd_numbers(4, 2, 2, 0, 0) == 0)
+    assert(count_odd_numbers(6, 7, 7, 8, 1, 9, 10) == 4) -- Additional Test Sample
+
+    -- print("All tests passed!")
+end
+
+testCountOddNumbers()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/10</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>-- No imports needed for Lua
+--[[
+Calculate the sum of even numbers in a given list.
+    Parameters:
+- numbers (list): A list of integers.
+- size (int): The size of the list.
+    Returns:
+    int: The sum of even numbers in the input list.
+    >>> calculate_even_sum({1,4,3,2,5}, 5)
+    6
+]]--
+function calculate_even_sum(numbers, size)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function calculate_even_sum(numbers, size)` to solve the following problem:
+Calculate the sum of even numbers in a given list.
+    Parameters:
+- numbers (list): A list of integers.
+- size (int): The size of the list.
+    Returns:
+    int: The sum of even numbers in the input list.
+    >>> calculate_even_sum({1,4,3,2,5}, 5)
+    6</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local ans = 0
+    for i = 1, size do
+        if (numbers[i] % 2) == 0 then -- Only sum the even numbers
+            ans = ans + numbers[i]
+        end
+    end
+    return ans
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function test_calculate_even_sum()
+    local candidate = calculate_even_sum
+    local sample1 = {1, 4, 3, 2, 5}
+    local sample2 = {2, 2, 0, 0}
+    local sample3 = {7, 11, 19} -- Additional test with no even numbers
+    local sample4 = {12, 14, 16, 18, 20} -- Additional test with all even numbers
+
+    lu.assertTrue(candidate(sample1, 5) == 6)
+    lu.assertTrue(candidate(sample2, 4) == 4)
+    lu.assertTrue(candidate(sample3, 3) == 0) -- Should return 0 because there are no even numbers
+    lu.assertTrue(candidate(sample4, 5) == 12 + 14 + 16 + 18 + 20)
+
+    -- print("All tests passed successfully.")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>do
+    local sample1 = {1, 4, 3, 2, 5}
+    local sample2 = {2, 2, 0, 0}
+    local sample3 = {7, 11, 19} -- Additional test with no even numbers
+    local sample4 = {12, 14, 16, 18, 20} -- Additional test with all even numbers
+
+    assert(calculate_even_sum(sample1, 5) == 6)
+    assert(calculate_even_sum(sample2, 4) == 4)
+    assert(calculate_even_sum(sample3, 3) == 0) -- Should return 0 because there are no even numbers
+    assert(calculate_even_sum(sample4, 5) == 12 + 14 + 16 + 18 + 20)
+
+    -- print("All tests passed successfully.")
+end</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/11</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Determine if two closed intervals intersect.
+    Arguments:
+    a, b: Representing the first closed interval [a, b] where 0 <= a <= b <= 1000.
+    c, d: Representing the second closed interval [c, d] where 0 <= c <= d <= 1000.
+    Returns:
+    boolean: true if the intervals intersect, false otherwise.
+]]
+function are_intervals_intersecting(a, b, c, d)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function are_intervals_intersecting(a, b, c, d)` to solve the following problem:
+Determine if two closed intervals intersect.
+    Arguments:
+    a, b: Representing the first closed interval [a, b] where 0 <= a <= b <= 1000.
+    c, d: Representing the second closed interval [c, d] where 0 <= c <= d <= 1000.
+    Returns:
+    boolean: true if the intervals intersect, false otherwise.
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>if (c <= a and b <= d) or
+       (a <= c and c <= b and b <= d) or
+       (a <= c and d <= b) or
+       (c <= a and a <= d and d <= b) then
+        return true  -- Yes
+    else
+        return false  -- No
+    end
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function test_are_intervals_intersecting()
+    local candidate = are_intervals_intersecting
+    lu.assertTrue(candidate(1, 1, 1, 2) == true)
+    lu.assertTrue(candidate(3, 5, 2, 6) == true)
+    lu.assertTrue(candidate(3, 5, 4, 7) == true)
+    lu.assertTrue(candidate(3, 5, 6, 7) == false)
+    -- Additional test cases
+    lu.assertTrue(candidate(0, 0, 0, 0) == true)
+    lu.assertTrue(candidate(1, 3, 2, 4) == true)
+    lu.assertTrue(candidate(1, 3, 4, 6) == false)
+    lu.assertTrue(candidate(10, 20, 20, 30) == true)
+    lu.assertTrue(candidate(10, 20, 21, 30) == false)
+    
+    -- print("All tests passed.")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function test_are_intervals_intersecting()
+    assert(are_intervals_intersecting(1, 1, 1, 2) == true)
+    assert(are_intervals_intersecting(3, 5, 2, 6) == true)
+    assert(are_intervals_intersecting(3, 5, 4, 7) == true)
+    assert(are_intervals_intersecting(3, 5, 6, 7) == false)
+    -- Additional test cases
+    assert(are_intervals_intersecting(0, 0, 0, 0) == true)
+    assert(are_intervals_intersecting(1, 3, 2, 4) == true)
+    assert(are_intervals_intersecting(1, 3, 4, 6) == false)
+    assert(are_intervals_intersecting(10, 20, 20, 30) == true)
+    assert(are_intervals_intersecting(10, 20, 21, 30) == false)
+    
+    -- print("All tests passed.")
+end
+
+test_are_intervals_intersecting()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/12</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+You are given three digits a, b, c. Two of them are equal, but the third one is different from the other two.
+Find the value that occurs exactly once.
+Examples:
+    extraNumber(0, 0, 1) returns 1
+    extraNumber(4, 3, 4) returns 3
+]]--
+function extraNumber(a, b, c)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function extraNumber(a, b, c)` to solve the following problem:
+You are given three digits a, b, c. Two of them are equal, but the third one is different from the other two.
+Find the value that occurs exactly once.
+Examples:
+    extraNumber(0, 0, 1) returns 1
+    extraNumber(4, 3, 4) returns 3
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>if a == b then
+        return c
+    elseif a == c then
+        return b
+    else
+        return a
+    end
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>function extraNumber(a, b, c)if a == b then
+        return c
+    elseif a == c then
+        return b
+    else
+        return a
+    end
+end
+
+lu = require('luaunit')
+
+function testExtraNumber()
+    local candidate = extraNumber
+    lu.assertTrue(candidate(2, 7, 2) == 7)
+    lu.assertTrue(candidate(3, 2, 2) == 3)
+    lu.assertTrue(candidate(5, 5, 1) == 1)
+    lu.assertTrue(candidate(500000000, 3, 500000000) == 3)
+    lu.assertTrue(candidate(500000000, 500000000, 3) == 3)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testExtraNumber()
+    assert(extraNumber(2, 7, 2) == 7)
+    assert(extraNumber(3, 2, 2) == 3)
+    assert(extraNumber(5, 5, 1) == 1)
+    assert(extraNumber(500000000, 3, 500000000) == 3)
+    assert(extraNumber(500000000, 500000000, 3) == 3)
+end
+
+testExtraNumber()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/13</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Calculate the total score for a student based on the scores in different subjects.
+    Parameters:
+    - subject_scores (list): A list containing the scores for each subject.
+    Returns:
+    int: The total score obtained by summing up the scores in all subjects.
+    Example usage:
+    print(calculate_total_score(100,100,100,100,100)) -- Output: 500
+--]]
+function calculate_total_score(score1, score2, score3, score4, score5)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function calculate_total_score(score1, score2, score3, score4, score5)` to solve the following problem:
+Calculate the total score for a student based on the scores in different subjects.
+    Parameters:
+    - subject_scores (list): A list containing the scores for each subject.
+    Returns:
+    int: The total score obtained by summing up the scores in all subjects.
+    Example usage:
+    print(calculate_total_score(100,100,100,100,100)) -- Output: 500
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>return score1 + score2 + score3 + score4 + score5
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCalculateTotalScore()
+    local candidate = calculate_total_score
+    lu.assertTrue(candidate(100,100,100,100,100) == 500)
+    lu.assertTrue(candidate(0,0,0,0,0) == 0)
+    lu.assertTrue(candidate(20, 30, 40, 10, 50) == 150)
+    lu.assertTrue(candidate(23, 45, 67, 89, 12) == 236)
+    lu.assertTrue(candidate(5, 5, 5, 5, 5) == 25)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testCalculateTotalScore()
+    assert(calculate_total_score(100,100,100,100,100) == 500)
+    assert(calculate_total_score(0,0,0,0,0) == 0)
+    assert(calculate_total_score(20, 30, 40, 10, 50) == 150)
+    assert(calculate_total_score(23, 45, 67, 89, 12) == 236)
+    assert(calculate_total_score(5, 5, 5, 5, 5) == 25)
+end
+
+testCalculateTotalScore()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/14</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Decode a series of numbers to reveal the pattern and understand the actual values
+each digit represents.
+0000=4 8888=8 1234=1 5678=3 9012=2 1357=0 2468=4
+
+Parameters:
+- data_str: A string representing a series of numbers.
+
+Returns:
+The result of each data string corresponding to the right-hand side of the equation.
+
+Example usage:
+assert(decode_numbers("0000") == 4);
+]]--
+function decode_numbers(data_str)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function decode_numbers(data_str)` to solve the following problem:
+Decode a series of numbers to reveal the pattern and understand the actual values
+each digit represents.
+0000=4 8888=8 1234=1 5678=3 9012=2 1357=0 2468=4
+
+Parameters:
+- data_str: A string representing a series of numbers.
+
+Returns:
+The result of each data string corresponding to the right-hand side of the equation.
+
+Example usage:
+assert(decode_numbers("0000") == 4);</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local a = {1, 0, 0, 0, 1, 0, 1, 0, 2, 1}
+    local ans = 0
+    for i = 1, #data_str do
+        local num = tonumber(data_str:sub(i,i))
+        ans = ans + a[num + 1]
+    end
+    return ans
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testDecodeNumbers()
+    local candidate = decode_numbers
+    lu.assertTrue(candidate("0000") == 4)
+    lu.assertTrue(candidate("8888") == 8)
+    lu.assertTrue(candidate("1234") == 1)
+    lu.assertTrue(candidate("5678") == 3)
+    lu.assertTrue(candidate("9012") == 2)
+    lu.assertTrue(candidate("1357") == 0)
+    lu.assertTrue(candidate("2468") == 4)
+    -- Additional test samples
+    lu.assertTrue(candidate("9999") == 4)
+    lu.assertTrue(candidate("1111") == 0)
+    lu.assertTrue(candidate("2222") == 0)
+    lu.assertTrue(candidate("3333") == 0)
+    lu.assertTrue(candidate("4444") == 4)
+    lu.assertTrue(candidate("5555") == 0)
+    lu.assertTrue(candidate("6666") == 4)
+    lu.assertTrue(candidate("7777") == 0)
+    lu.assertTrue(candidate("0001") == 3)
+    lu.assertTrue(candidate("2301") == 1)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testDecodeNumbers()
+    assert(decode_numbers("0000") == 4)
+    assert(decode_numbers("8888") == 8)
+    assert(decode_numbers("1234") == 1)
+    assert(decode_numbers("5678") == 3)
+    assert(decode_numbers("9012") == 2)
+    assert(decode_numbers("1357") == 0)
+    assert(decode_numbers("2468") == 4)
+    -- Additional test samples
+    assert(decode_numbers("9999") == 4)
+    assert(decode_numbers("1111") == 0)
+    assert(decode_numbers("2222") == 0)
+    assert(decode_numbers("3333") == 0)
+    assert(decode_numbers("4444") == 4)
+    assert(decode_numbers("5555") == 0)
+    assert(decode_numbers("6666") == 4)
+    assert(decode_numbers("7777") == 0)
+    assert(decode_numbers("0001") == 3)
+    assert(decode_numbers("2301") == 1)
+end
+
+testDecodeNumbers()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/15</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>middle</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Counts the number of different coloring methods for 'n' squares with 'm' colors,
+considering the requirement that adjacent squares and the first/last squares
+must have different colors.
+
+Args:
+- n (int): The number of squares.
+- m (int): The number of colors.
+
+Returns:
+int: The count of different coloring methods satisfying the specified conditions.
+Result is modulo 1000003.
+
+Examples:
+extraNumber(1, 1) => 1
+
+--]]
+function count_coloring_methods(n, m)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function count_coloring_methods(n, m)` to solve the following problem:
+Counts the number of different coloring methods for 'n' squares with 'm' colors,
+considering the requirement that adjacent squares and the first/last squares
+must have different colors.
+
+Args:
+- n (int): The number of squares.
+- m (int): The number of colors.
+
+Returns:
+int: The count of different coloring methods satisfying the specified conditions.
+Result is modulo 1000003.
+
+Examples:
+extraNumber(1, 1) => 1
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local f = {} -- Array to store results
+    if n == 1 then return m end
+    if n == 2 then return (m * (m - 1)) % 1000003 end
+    
+    -- Initialize the first three elements
+    f[1] = m
+    f[2] = (m * (m - 1)) % 1000003
+    f[3] = (f[2] * (m - 2)) % 1000003
+    
+    for i = 4, n do
+        f[i] = ((f[i - 1] * (m - 2)) % 1000003 + (f[i - 2] * (m - 1)) % 1000003) % 1000003
+    end
+    
+    return f[n]
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCountColoringMethods()
+    local candidate = count_coloring_methods
+    lu.assertTrue(candidate(1, 1) == 1)
+    lu.assertTrue(candidate(2, 2) == 2)
+    lu.assertTrue(candidate(3, 3) == 6)
+    lu.assertTrue(candidate(4, 2) == 2)
+    -- The following test is an example, as the expected result is not provided
+    lu.assertTrue(candidate(1000, 10) == 566585)
+    
+    -- Additional test cases
+    lu.assertTrue(candidate(2, 3) == 6)
+    lu.assertTrue(candidate(1000, 1000) == 67911)
+    lu.assertTrue(candidate(999, 66) == 501817)
+    lu.assertTrue(candidate(5, 3) == 30) -- Example of an expected output
+
+    -- print("All tests passed!")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testCountColoringMethods()
+    assert(count_coloring_methods(1, 1) == 1)
+    assert(count_coloring_methods(2, 2) == 2)
+    assert(count_coloring_methods(3, 3) == 6)
+    assert(count_coloring_methods(4, 2) == 2)
+    -- The following test is an example, as the expected result is not provided
+    assert(count_coloring_methods(1000, 10) == 566585)
+    
+    -- Additional test cases
+    assert(count_coloring_methods(2, 3) == 6)
+    assert(count_coloring_methods(1000, 1000) == 67911)
+    assert(count_coloring_methods(999, 66) == 501817)
+    assert(count_coloring_methods(5, 3) == 30) -- Example of an expected output
+
+    -- print("All tests passed!")
+end
+
+testCountColoringMethods()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/16</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>middle</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Count the number of valid coin toss sequences with no consecutive heads in n tosses.
+
+Parameters:
+- n (int): The number of coin toss sequences.
+
+Returns:
+unsigned long long: The count of valid sequences.
+
+Examples:
+extraNumber(1) -- returns 2
+extraNumber(2) -- returns 3
+]]
+function count_valid_coin_toss_sequences(n)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function count_valid_coin_toss_sequences(n)` to solve the following problem:
+Count the number of valid coin toss sequences with no consecutive heads in n tosses.
+
+Parameters:
+- n (int): The number of coin toss sequences.
+
+Returns:
+unsigned long long: The count of valid sequences.
+
+Examples:
+extraNumber(1) -- returns 2
+extraNumber(2) -- returns 3
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local a = {}
+    
+    -- Set the base case for 1 toss
+    a[1] = {1, 1}
+    
+    -- Compute the number of sequences for each number of tosses
+    for i = 2, n do
+        a[i] = {}
+        a[i][1] = a[i - 1][2] + a[i - 1][1]
+        a[i][2] = a[i - 1][1]
+    end
+    
+    -- The total for 'n' is the sum of the sequences ending in tails and the sequences ending in heads
+    return a[n][1] + a[n][2]
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCountValidCoinTossSequences()
+    local candidate = count_valid_coin_toss_sequences
+    lu.assertTrue(candidate(1) == 2)
+    lu.assertTrue(candidate(2) == 3)
+    lu.assertTrue(candidate(3) == 5)
+    lu.assertTrue(candidate(4) == 8) -- Additional test
+    lu.assertTrue(candidate(5) == 13) -- Additional test
+    -- Feel free to add more tests here
+    lu.assertTrue(candidate(40) == 267914296) -- Additional test
+    lu.assertTrue(candidate(39) == 165580141)
+    lu.assertTrue(candidate(38) == 102334155)
+    -- print("All tests passed!")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testCountValidCoinTossSequences()
+    assert(count_valid_coin_toss_sequences(1) == 2)
+    assert(count_valid_coin_toss_sequences(2) == 3)
+    assert(count_valid_coin_toss_sequences(3) == 5)
+    assert(count_valid_coin_toss_sequences(4) == 8) -- Additional test
+    assert(count_valid_coin_toss_sequences(5) == 13) -- Additional test
+    -- Feel free to add more tests here
+    assert(count_valid_coin_toss_sequences(40) == 267914296) -- Additional test
+    assert(count_valid_coin_toss_sequences(39) == 165580141)
+    assert(count_valid_coin_toss_sequences(38) == 102334155)
+    -- print("All tests passed!")
+end
+
+testCountValidCoinTossSequences()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/17</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Find the length of the longest consecutive sequence of 1s in the binary representation of a non-negative integer.
+Parameters:
+- n: A non-negative integer (0 ≤ n ≤ 2^64 - 1).
+
+Returns:
+- The length of the longest consecutive sequence of 1s in the binary representation of the given integer.
+
+Examples:
+extraNumber(7)    -- returns 3
+]]--
+function find_longest_consecutive_ones_length(n)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function find_longest_consecutive_ones_length(n)` to solve the following problem:
+Find the length of the longest consecutive sequence of 1s in the binary representation of a non-negative integer.
+Parameters:
+- n: A non-negative integer (0 ≤ n ≤ 2^64 - 1).
+
+Returns:
+- The length of the longest consecutive sequence of 1s in the binary representation of the given integer.
+
+Examples:
+extraNumber(7)    -- returns 3
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local max = 0
+    local ans = 0
+    while n ~= 0 do
+        if n & 1 == 1 then
+            ans = ans + 1
+        else
+            if ans > max then
+                max = ans
+            end
+            ans = 0
+        end
+        n = math.floor(n / 2)
+    end
+    if ans > max then
+        max = ans
+    end
+    return max
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testFindLongestConsecutiveOnesLength()
+    local candidate = find_longest_consecutive_ones_length
+    lu.assertTrue(candidate(7) == 3)
+    lu.assertTrue(candidate(13) == 2)
+    lu.assertTrue(candidate(12345) == 3)
+    -- lu.assertTrue(candidate(0xb111101111) == 4)
+    lu.assertTrue(candidate(0xFFFFFFFF) == 32)
+    lu.assertTrue(candidate(0) == 0)
+
+    -- Uncomment the following line to print a success message
+    -- print("All tests passed!")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testFindLongestConsecutiveOnesLength()
+    assert(find_longest_consecutive_ones_length(7) == 3)
+    assert(find_longest_consecutive_ones_length(13) == 2)
+    assert(find_longest_consecutive_ones_length(12345) == 3)
+    -- assert(find_longest_consecutive_ones_length(0xb111101111) == 4)
+    assert(find_longest_consecutive_ones_length(0xFFFFFFFF) == 32)
+    assert(find_longest_consecutive_ones_length(0) == 0)
+
+    -- Uncomment the following line to print a success message
+    -- print("All tests passed!")
+end
+
+testFindLongestConsecutiveOnesLength()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/18</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>hard</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Creates an ID by combining two words in a specific manner.
+Parameters:
+- word1 (string): The first word to be used in the ID.
+- word2 (string): The second word to be used in the ID.
+Returns:
+string: A divine ID formed by reversing every other character of the second 
+        word and combining it with the first word.
+e.g.:
+    >>> create_id("fish","cat")
+    "ftiasch"
+]]
+function create_id(word1, word2)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function create_id(word1, word2)` to solve the following problem:
+Creates an ID by combining two words in a specific manner.
+Parameters:
+- word1 (string): The first word to be used in the ID.
+- word2 (string): The second word to be used in the ID.
+Returns:
+string: A divine ID formed by reversing every other character of the second word and combining it with the first word.
+e.g.:
+    >>> create_id("fish","cat")
+    "ftiasch"
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local length1 = #word1
+    local length2 = #word2
+    local total_length = length1 + length2
+    local id = {}
+
+    local j, k = 1, length2
+
+    for i = 1, total_length do
+        if i % 2 == 0 then
+            id[i] = string.sub(word2, k, k) -- Take character from word2 in reverse
+            k = k - 1
+        else
+            id[i] = string.sub(word1, j, j) -- Take character from word1
+            j = j + 1
+        end
+    end
+
+    return table.concat(id) -- Concatenate table into string and return
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function test_create_id()
+    local candidate = create_id
+    lu.assertTrue(candidate("fish", "cat") == "ftiasch")
+    lu.assertTrue(candidate("icpc", "acm") == "imccpac")
+    lu.assertTrue(candidate("oo", "w") == "owo")
+    lu.assertTrue(candidate("hello", "world") == "hdellrloow")
+    lu.assertTrue(candidate("abc", "def") == "afbecd")
+    lu.assertTrue(candidate("buaanb", "nbbuaa") == "bauaauabnbbn")
+    lu.assertTrue(candidate("xtuisgood", "ilovextu") == "xuttuxiesvgooloid")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function test_create_id()
+    assert(create_id("fish", "cat") == "ftiasch")
+    assert(create_id("icpc", "acm") == "imccpac")
+    assert(create_id("oo", "w") == "owo")
+    assert(create_id("hello", "world") == "hdellrloow")
+    assert(create_id("abc", "def") == "afbecd")
+    assert(create_id("buaanb", "nbbuaa") == "bauaauabnbbn")
+    assert(create_id("xtuisgood", "ilovextu") == "xuttuxiesvgooloid")
+end
+
+test_create_id()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/19</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>hard</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Count the number of different permutation schemes for a binary string of length n,
+where the number of '1's is m and the number of '0's is n - m.
+
+Parameters:
+- n (int): Length of the binary string.
+- m (int): Number of '1's in the binary string.
+
+Returns:
+int: The total number of different permutation schemes.
+--]]
+function count_permutations_of_binary_string(n, m)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function count_permutations_of_binary_string(n, m)` to solve the following problem:
+Count the number of different permutation schemes for a binary string of length n,
+where the number of '1's is m and the number of '0's is n - m.
+
+Parameters:
+- n (int): Length of the binary string.
+- m (int): Number of '1's in the binary string.
+
+Returns:
+int: The total number of different permutation schemes.</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local factorial = 1.0
+    local i
+
+    -- Calculate n factorial (n!)
+    for i = 2, n do
+        factorial = factorial * i
+    end
+
+    local numerator = factorial -- n!
+
+    -- Calculate (n+m)/2 factorial
+    factorial = 1.0
+    for i = 2, (n + m) // 2 do
+        factorial = factorial * i
+    end
+
+    local denominator1 = factorial -- ((n+m)/2)!
+
+    -- Calculate (n-m)/2 factorial
+    factorial = 1.0
+    for i = 2, (n - m) // 2 do
+        factorial = factorial * i
+    end
+
+    local denominator2 = factorial -- ((n-m)/2)!
+
+    if ((n + m) % 2) ~= 0 then
+        return 0
+    elseif n == m then
+        return 1
+    else
+        -- Calculating the number of permutations using the factorial values
+        return math.floor(numerator / denominator1 / denominator2 + 0.5)
+    end
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function test_count_permutations_of_binary_string()
+    local candidate = count_permutations_of_binary_string
+    lu.assertTrue(candidate(2, 0) == 2)
+    lu.assertTrue(candidate(2, 1) == 0)
+    lu.assertTrue(candidate(3, 0) == 0)
+    lu.assertTrue(candidate(3, 1) == 3)
+    lu.assertTrue(candidate(3, 2) == 0)
+    lu.assertTrue(candidate(30, 2) == 145422675)
+    lu.assertTrue(candidate(4, 2) == 4)
+    lu.assertTrue(candidate(5, 5) == 1)
+    lu.assertTrue(candidate(33, 17) == 13884156)
+    lu.assertTrue(candidate(1000, 1000) == 1)
+    -- Add more test cases if necessary
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>do
+    assert(count_permutations_of_binary_string(2, 0) == 2)
+    assert(count_permutations_of_binary_string(2, 1) == 0)
+    assert(count_permutations_of_binary_string(3, 0) == 0)
+    assert(count_permutations_of_binary_string(3, 1) == 3)
+    assert(count_permutations_of_binary_string(3, 2) == 0)
+    assert(count_permutations_of_binary_string(30, 2) == 145422675)
+    assert(count_permutations_of_binary_string(4, 2) == 4)
+    assert(count_permutations_of_binary_string(5, 5) == 1)
+    assert(count_permutations_of_binary_string(33, 17) == 13884156)
+    assert(count_permutations_of_binary_string(1000, 1000) == 1)
+    -- Add more test cases if necessary
+end</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/20</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+    Answer a series of questions by providing choices A, B, C, or D for each question.
+    Question 1:
+    Constants like 1e6 belong to which data type?
+        A. unsigned int
+        B. int
+        C. float
+        D. double
+    Question 2:
+    Given 21! = 51,090,942,171,709,440,000, which data type can be used to store this value?
+        A. int
+        B. long long
+        C. double
+        D. None of the above
+    Question 3:
+    Which statement about left values in expressions is incorrect?
+        A. Variable name expressions are left values.
+        B. Increment operation requires the operand to be a left value.
+        C. Pointer dereference expressions are left values.
+        D. Prefix increment operation expressions are left values.
+    Question 4:
+    Which statement about functions is incorrect?
+        A. Formal parameters of a function are local variables.
+        B. Local variables are allocated space in the stack.
+        C. The function type is the same as the return value type.
+        D. A function can call itself from within its body.
+    Question 5:
+    Which statement about pointers is incorrect?
+        A. Subtracting two pointers equals the difference in their address values.
+        B. Pointer dereference involves resolving based on the pointer's type.
+        C. int *p[4], p is an array of int pointers.
+        D. Function names can be assigned to function pointers.
+    >>> answer_questions()
+    AAAAA
+You're supposed to only return strings similar to "AAAAA", which stand for the choices of the question.
+]]--
+function answer_questions()</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function answer_questions()` to solve the following problem:
+Answer a series of questions by providing choices A, B, C, or D for each question.
+    Question 1:
+    Constants like 1e6 belong to which data type?
+        A. unsigned int
+        B. int
+        C. float
+        D. double
+    Question 2:
+    Given 21! = 51,090,942,171,709,440,000, which data type can be used to store this value?
+        A. int
+        B. long long
+        C. double
+        D. None of the above
+    Question 3:
+    Which statement about left values in expressions is incorrect?
+        A. Variable name expressions are left values.
+        B. Increment operation requires the operand to be a left value.
+        C. Pointer dereference expressions are left values.
+        D. Prefix increment operation expressions are left values.
+    Question 4:
+    Which statement about functions is incorrect?
+        A. Formal parameters of a function are local variables.
+        B. Local variables are allocated space in the stack.
+        C. The function type is the same as the return value type.
+        D. A function can call itself from within its body.
+    Question 5:
+    Which statement about pointers is incorrect?
+        A. Subtracting two pointers equals the difference in their address values.
+        B. Pointer dereference involves resolving based on the pointer's type.
+        C. int *p[4], p is an array of int pointers.
+        D. Function names can be assigned to function pointers.
+    >>> answer_questions()
+    AAAAA
+You're supposed to only return strings similar to "AAAAA", which stand for the choices of the question.</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>return "DDDBA"
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testAnswerQuestions()
+    local candidate = answer_questions
+    local expected_answers = "DDDBA"
+    lu.assertTrue(candidate() == expected_answers)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testAnswerQuestions()
+    local expected_answers = "DDDBA"
+    assert(answer_questions() == expected_answers)
+end
+
+testAnswerQuestions()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/21</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+The task is to determine if it is possible to assemble the wooden squares from n buckets,
+where each bucket contains a_i squares with a side length of 1, into a single larger square.
+Input: length of list, array of numbers
+    >>> Is_Square(1, {9})
+    true
+    >>> Is_Square(2, {14, 2})
+    true
+    >>> Is_Square(2, {7, 7})
+    false
+]]--
+function Is_Square(length, squares)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function Is_Square(length, squares)` to solve the following problem:
+The task is to determine if it is possible to assemble the wooden squares from n buckets,
+where each bucket contains a_i squares with a side length of 1, into a single larger square.
+Input: length of list, array of numbers
+    >>> Is_Square(1, {9})
+    true
+    >>> Is_Square(2, {14, 2})
+    true
+    >>> Is_Square(2, {7, 7})
+    false</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local sum = 0
+    for i = 1, length do
+        sum = sum + squares[i]
+    end
+    local root = math.floor(math.sqrt(sum))
+    return root * root == sum
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testIsSquare()
+    local candidate = Is_Square
+    lu.assertTrue(candidate(1, {9}) == true)
+    lu.assertTrue(candidate(2, {14, 2}) == true)
+    lu.assertTrue(candidate(2, {7, 7}) == false)
+    lu.assertTrue(candidate(7, {1, 2, 3, 4, 5, 6, 7}) == false)
+    lu.assertTrue(candidate(6, {1, 3, 5, 7, 9, 11}) == true)
+    lu.assertTrue(candidate(4, {2, 2, 2, 2}) == false)
+
+    -- Additional test cases
+    lu.assertTrue(candidate(3, {4, 5, 6}) == false)
+    lu.assertTrue(candidate(4, {16, 9, 4, 1}) == false)
+    lu.assertTrue(candidate(5, {1, 1, 1, 1, 1}) == false)
+    lu.assertTrue(candidate(2, {25, 25}) == false)
+    lu.assertTrue(candidate(3, {10, 10, 5}) == true)
+
+    -- print("All tests passed!")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>local function testIsSquare()
+    assert(Is_Square(1, {9}) == true)
+    assert(Is_Square(2, {14, 2}) == true)
+    assert(Is_Square(2, {7, 7}) == false)
+    assert(Is_Square(7, {1, 2, 3, 4, 5, 6, 7}) == false)
+    assert(Is_Square(6, {1, 3, 5, 7, 9, 11}) == true)
+    assert(Is_Square(4, {2, 2, 2, 2}) == false)
+
+    -- Additional test cases
+    assert(Is_Square(3, {4, 5, 6}) == false)
+    assert(Is_Square(4, {16, 9, 4, 1}) == false)
+    assert(Is_Square(5, {1, 1, 1, 1, 1}) == false)
+    assert(Is_Square(2, {25, 25}) == false)
+    assert(Is_Square(3, {10, 10, 5}) == true)
+
+    -- print("All tests passed!")
+end
+
+testIsSquare()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/22</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given integers c and d, where a + b = c and a * b = d, find and return the possible value of a (a <= b).
+If there are multiple groups, output the group with the smallest a.
+If valid values for a and b do not exist, the function will return -1.
+
+Parameters:
+- c (int): The sum of a and b.
+- d (int): The product of a and b.
+
+Returns:
+Optional[int]: A possible value of a.
+
+Usage:
+    print(find_integers(7, 11))  -- Output: -1
+]]--
+function find_integers(c, d)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function find_integers(c, d)` to solve the following problem:
+Given integers c and d, where a + b = c and a * b = d, find and return the possible value of a (a <= b).
+If there are multiple groups, output the group with the smallest a.
+If valid values for a and b do not exist, the function will return -1.
+
+Parameters:
+- c (int): The sum of a and b.
+- d (int): The product of a and b.
+
+Returns:
+Optional[int]: A possible value of a.
+
+Usage:
+    print(find_integers(7, 11))  -- Output: -1</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>for i = 0, math.floor(c / 2) do
+        if i * (c - i) == d then
+            return i
+        end
+    end
+    return -1 -- Return -1 if no valid pairs (a, b) are found.
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testFindIntegers()
+    local candidate = find_integers
+    lu.assertTrue(candidate(5, 6) == 2)
+    lu.assertTrue(candidate(6, 9) == 3)
+    lu.assertTrue(candidate(7, 12) == 3)
+    lu.assertTrue(candidate(7, 11) == -1)
+    lu.assertTrue(candidate(9, 8) == 1)
+    lu.assertTrue(candidate(10, 25) == 5)
+    lu.assertTrue(candidate(10000, 8765) == -1)
+    
+    -- print("All tests passed successfully.")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testFindIntegers()
+    assert(find_integers(5, 6) == 2)
+    assert(find_integers(6, 9) == 3)
+    assert(find_integers(7, 12) == 3)
+    assert(find_integers(7, 11) == -1)
+    assert(find_integers(9, 8) == 1)
+    assert(find_integers(10, 25) == 5)
+    assert(find_integers(10000, 8765) == -1)
+    
+    -- print("All tests passed successfully.")
+end
+
+testFindIntegers()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/23</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>middle</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Count the number of acute-angled triangles that can be formed by selecting any 3 edges out of a given set of edges.
+
+Args:
+- edges: A table containing integer values representing the lengths of the edges.
+
+Returns:
+int: The count of distinct acute-angled triangles that can be formed.
+
+Examples:
+>>> count_acute_triangles({1, 1, 1, 1})
+4
+]]
+function count_acute_triangles(edges)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function count_acute_triangles(edges)` to solve the following problem:
+Count the number of acute-angled triangles that can be formed by selecting any 3 edges out of a given set of edges.
+
+Args:
+- edges: A table containing integer values representing the lengths of the edges.
+
+Returns:
+int: The count of distinct acute-angled triangles that can be formed.
+
+Examples:
+>>> count_acute_triangles({1, 1, 1, 1})
+4</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>table.sort(edges)
+
+    local sum = 0
+    local edges_count = #edges
+    for i=1, edges_count - 2 do
+        for j=i + 1, edges_count - 1 do
+            for k=j + 1, edges_count do
+                local x = edges[i]
+                local y = edges[j]
+                local z = edges[k]
+                if x + y > z and (x * x + y * y) > (z * z) then
+                    sum = sum + 1
+                end
+            end
+        end
+    end
+    return sum
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCountAcuteTriangles()
+    local candidate = count_acute_triangles
+    lu.assertTrue(candidate({1, 1, 1, 1}) == 4)
+    lu.assertTrue(candidate({1, 2, 3}) == 0)
+    -- Additional tests to ensure correctness
+    lu.assertTrue(candidate({3, 4, 5, 7, 10}) == 0)
+    lu.assertTrue(candidate({6, 8, 10, 5, 5, 5}) == 4)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testCountAcuteTriangles()
+    assert(count_acute_triangles({1, 1, 1, 1}) == 4)
+    assert(count_acute_triangles({1, 2, 3}) == 0)
+    -- Additional tests to ensure correctness
+    assert(count_acute_triangles({3, 4, 5, 7, 10}) == 0)
+    assert(count_acute_triangles({6, 8, 10, 5, 5, 5}) == 4)
+end
+
+testCountAcuteTriangles()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/24</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Reads an integer and a character, then returns them as a formatted string separated by a comma.
+Parameters:
+- integer_value (number): The input integer.
+- char_value (string): The input character.
+
+Returns:
+- string: A string containing the integer and character separated by a comma.
+
+Example usage:
+local result = process_integer_and_char(234,'H')
+print(result) -- Output: 234,H
+]]
+function process_integer_and_char(integer_value, char_value)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function process_integer_and_char(integer_value, char_value)` to solve the following problem:
+Reads an integer and a character, then returns them as a formatted string separated by a comma.
+Parameters:
+- integer_value (number): The input integer.
+- char_value (string): The input character.
+
+Returns:
+- string: A string containing the integer and character separated by a comma.
+
+Example usage:
+local result = process_integer_and_char(234,'H')
+print(result) -- Output: 234,H
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>-- Format the string with the integer and character separated by a comma.
+    local result = string.format("%d,%s", integer_value, char_value)
+    return result
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testProcessIntegerAndChar()
+    local candidate = process_integer_and_char
+    lu.assertTrue(candidate(234, 'H') == "234,H")
+    lu.assertTrue(candidate(123, 'A') == "123,A")
+    lu.assertTrue(candidate(0, 'Z') == "0,Z")
+
+    -- Additional tests can be added here with different input values.
+end
+
+-- Run the tests to verify that the function works as intended.
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testProcessIntegerAndChar()
+    assert(process_integer_and_char(234, 'H') == "234,H")
+    assert(process_integer_and_char(123, 'A') == "123,A")
+    assert(process_integer_and_char(0, 'Z') == "0,Z")
+
+    -- Additional tests can be added here with different input values.
+end
+
+-- Run the tests to verify that the function works as intended.
+testProcessIntegerAndChar()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/25</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>middle</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Shifts all characters by 5 positions in alphabetical order. Only letters are replaced, and all letters are in uppercase.
+
+Parameters:
+text (str): The input text to be processed.
+
+Returns:
+str: The transformed text with characters shifted by 5 positions.
+
+Examples:
+shift_characters("NS BFW, JAJSYX TK NRUTWYFSHJ FWJ YMJ WJXZQY TK YWNANFQ HFZXJX")
+-- Expected: "IN WAR, EVENTS OF IMPORTANCE ARE THE RESULT OF TRIVIAL CAUSES"
+]]--
+function shift_characters(text)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function shift_characters(text)` to solve the following problem:
+Shifts all characters by 5 positions in alphabetical order. Only letters are replaced, and all letters are in uppercase.
+
+Parameters:
+text (str): The input text to be processed.
+
+Returns:
+str: The transformed text with characters shifted by 5 positions.
+
+Examples:
+shift_characters("NS BFW, JAJSYX TK NRUTWYFSHJ FWJ YMJ WJXZQY TK YWNANFQ HFZXJX")
+-- Expected: "IN WAR, EVENTS OF IMPORTANCE ARE THE RESULT OF TRIVIAL CAUSES"</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local shifted_text = {}
+  for i = 1, #text do
+    local char = text:sub(i, i)
+    local byte = string.byte(char)
+    -- Only shift uppercase letters
+    if byte >= 65 and byte <= 90 then
+      if byte <= 69 then -- 'A' to 'E'
+        byte = byte + 21
+      else -- 'F' to 'Z'
+        byte = byte - 5
+      end
+    end
+    table.insert(shifted_text, string.char(byte))
+  end
+  return table.concat(shifted_text)
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testShiftCharacters()
+  local candidate = shift_characters
+  local test1 = "NS BFW, JAJSYX TK NRUTWYFSHJ FWJ YMJ WJXZQY TK YWNANFQ HFZXJX"
+  local test2 = "N BTZQI WFYMJW GJ KNWXY NS F QNYYQJ NGJWNFS ANQQFLJ YMFS XJHTSI NS WTRJ"
+  local test3 = "IFSLJW PSTBX KZQQ BJQQ YMFY HFJXFW NX RTWJ IFSLJWTZX YMFS MJ"
+  lu.assertTrue(candidate(test1) == "IN WAR, EVENTS OF IMPORTANCE ARE THE RESULT OF TRIVIAL CAUSES")
+  lu.assertTrue(candidate(test2) == "I WOULD RATHER BE FIRST IN A LITTLE IBERIAN VILLAGE THAN SECOND IN ROME")
+  lu.assertTrue(candidate(test3) == "DANGER KNOWS FULL WELL THAT CAESAR IS MORE DANGEROUS THAN HE")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testShiftCharacters()
+  local test1 = "NS BFW, JAJSYX TK NRUTWYFSHJ FWJ YMJ WJXZQY TK YWNANFQ HFZXJX"
+  local test2 = "N BTZQI WFYMJW GJ KNWXY NS F QNYYQJ NGJWNFS ANQQFLJ YMFS XJHTSI NS WTRJ"
+  local test3 = "IFSLJW PSTBX KZQQ BJQQ YMFY HFJXFW NX RTWJ IFSLJWTZX YMFS MJ"
+  assert(shift_characters(test1) == "IN WAR, EVENTS OF IMPORTANCE ARE THE RESULT OF TRIVIAL CAUSES")
+  assert(shift_characters(test2) == "I WOULD RATHER BE FIRST IN A LITTLE IBERIAN VILLAGE THAN SECOND IN ROME")
+  assert(shift_characters(test3) == "DANGER KNOWS FULL WELL THAT CAESAR IS MORE DANGEROUS THAN HE")
+end
+
+testShiftCharacters()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/26</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>middle</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Classify the integer x based on the following method:
+If x is a single-digit number, x belongs to its own class.
+Otherwise, sum the digits of x, get a new x, and iterate until the class is determined.
+
+Parameters:
+- x (string): The integer to be classified as a string.
+    
+Returns:
+- int: The class to which the integer x belongs.
+
+Example usage:
+classify_integer("24") --> 6
+]]
+function classify_integer(x)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function classify_integer(x)` to solve the following problem:
+Classify the integer x based on the following method:
+If x is a single-digit number, x belongs to its own class.
+Otherwise, sum the digits of x, get a new x, and iterate until the class is determined.
+
+Parameters:
+- x (string): The integer to be classified as a string.
+    
+Returns:
+- int: The class to which the integer x belongs.
+
+Example usage:
+classify_integer("24") --> 6
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local n = 0
+    for i = 1, #x do
+        n = n + tonumber(x:sub(i, i)) -- Convert the character to a number and add it to n
+    end
+    while n > 9 do
+        local t = n
+        local a = 0
+        while t > 0 do
+            a = a + t % 10 -- Sum the digits of t
+            t = math.floor(t / 10) -- Remove the last digit from t
+        end
+        n = a
+    end
+    return n
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testClassifyInteger()
+    local candidate = classify_integer
+    lu.assertTrue(candidate("24") == 6)
+    lu.assertTrue(candidate("39") == 3)
+    lu.assertTrue(candidate("123456789") == 9)
+    lu.assertTrue(candidate("123456789012345678901234567890") == 9)
+    lu.assertTrue(candidate("12345") == 6)
+    lu.assertTrue(candidate("999999999") == 9)
+    -- print("All tests passed!")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testClassifyInteger()
+    assert(classify_integer("24") == 6)
+    assert(classify_integer("39") == 3)
+    assert(classify_integer("123456789") == 9)
+    assert(classify_integer("123456789012345678901234567890") == 9)
+    assert(classify_integer("12345") == 6)
+    assert(classify_integer("999999999") == 9)
+    -- print("All tests passed!")
+end
+
+testClassifyInteger()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/27</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+    Transforms the case of a given letter.
+    Parameters:
+    - letter (string): The input letter to be transformed.
+    Returns:
+    - string: The letter with its case reversed. If the input is lowercase, it returns the uppercase version,
+    and if the input is uppercase, it returns the lowercase version.
+
+    Example usage:
+    print(transform_letter_case('b')) -- Outputs: B
+    print(transform_letter_case('Z')) -- Outputs: z
+--]]
+function transform_letter_case(letter)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function transform_letter_case(letter)` to solve the following problem:
+Transforms the case of a given letter.
+    Parameters:
+    - letter (string): The input letter to be transformed.
+    Returns:
+    - string: The letter with its case reversed. If the input is lowercase, it returns the uppercase version,
+    and if the input is uppercase, it returns the lowercase version.
+
+    Example usage:
+    print(transform_letter_case('b')) -- Outputs: B
+    print(transform_letter_case('Z')) -- Outputs: z
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>if letter:match("%u") then
+        return letter:lower()
+    elseif letter:match("%l") then
+        return letter:upper()
+    else
+        -- Non-alphabetic characters are returned unchanged
+        return letter
+    end
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function test_transform_letter_case()
+    local candidate = transform_letter_case
+    lu.assertTrue(candidate('b') == 'B')
+    lu.assertTrue(candidate('B') == 'b')
+
+    -- Additional test cases
+    lu.assertTrue(candidate('z') == 'Z')
+    lu.assertTrue(candidate('Z') == 'z')
+    lu.assertTrue(candidate('m') == 'M')
+    lu.assertTrue(candidate('M') == 'm')
+    lu.assertTrue(candidate('1') == '1') -- Non-alphabetic, should be unchanged
+    lu.assertTrue(candidate('!') == '!') -- Non-alphabetic, should be unchanged
+
+    -- print("All tests passed successfully.")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function test_transform_letter_case()
+    assert(transform_letter_case('b') == 'B')
+    assert(transform_letter_case('B') == 'b')
+
+    -- Additional test cases
+    assert(transform_letter_case('z') == 'Z')
+    assert(transform_letter_case('Z') == 'z')
+    assert(transform_letter_case('m') == 'M')
+    assert(transform_letter_case('M') == 'm')
+    assert(transform_letter_case('1') == '1') -- Non-alphabetic, should be unchanged
+    assert(transform_letter_case('!') == '!') -- Non-alphabetic, should be unchanged
+
+    -- print("All tests passed successfully.")
+end
+
+test_transform_letter_case()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/28</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Display the ASCII information for a given character.
+    
+Parameters:
+- character: The input character for which ASCII information is to be displayed.
+    
+Returns:
+- The corresponding ASCII code
+
+Example:
+display_ascii_info('A') -- Returns 65
+]]--
+function display_ascii_info(character)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function display_ascii_info(character)` to solve the following problem:
+Display the ASCII information for a given character.
+
+Parameters:
+- character: The input character for which ASCII information is to be displayed.
+
+Returns:
+- The corresponding ASCII code
+
+Example:
+display_ascii_info('A') -- Returns 65
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>return string.byte(character)
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testDisplayAsciiInfo()
+    local candidate = display_ascii_info
+    lu.assertTrue(candidate('A') == 65)
+    lu.assertTrue(candidate('B') == 66) -- Additional test case
+    lu.assertTrue(candidate('0') == 48) -- Additional test case
+    lu.assertTrue(candidate(' ') == 32) -- Additional test case
+    -- print("All tests passed.")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testDisplayAsciiInfo()
+    assert(display_ascii_info('A') == 65)
+    assert(display_ascii_info('B') == 66) -- Additional test case
+    assert(display_ascii_info('0') == 48) -- Additional test case
+    assert(display_ascii_info(' ') == 32) -- Additional test case
+    -- print("All tests passed.")
+end
+
+testDisplayAsciiInfo()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/29</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>-- No imports required for Lua
+--[[
+Evaluate the grade for an input integer.
+
+Parameters:
+- score (integer): The integer score to be evaluated.
+
+Returns:
+​​    char: The grade corresponding to the input score.
+​​         If the score is between 90 and 100 (inclusive), returns 'A'.
+​​         Otherwise, returns 'B'.
+
+Example usage:
+    print(evaluate_integer_grade(90)) -- Output: A
+--]]
+function evaluate_integer_grade(score)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function evaluate_integer_grade(score)` to solve the following problem:
+Evaluate the grade for an input integer.
+
+Parameters:
+- score (integer): The integer score to be evaluated.
+
+Returns:
+    char: The grade corresponding to the input score.
+    If the score is between 90 and 100 (inclusive), returns 'A'.
+    Otherwise, returns 'B'.
+
+Example usage:
+    print(evaluate_integer_grade(90)) -- Output: A
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>if 90 <= score and score <= 100 then
+        return 'A'
+    else
+        return 'B'
+    end
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function test_evaluate_integer_grade()
+    local candidate = evaluate_integer_grade
+    lu.assertTrue(candidate(90) == 'A') -- Corrected the assertion to compare against character literals
+    lu.assertTrue(candidate(89) == 'B') -- Additional test for a score less than 90
+    lu.assertTrue(candidate(95) == 'A') -- Additional test within the 'A' range
+    lu.assertTrue(candidate(100) == 'A') -- Additional test for the boundary condition
+    lu.assertTrue(candidate(101) == 'B') -- Additional test for a score greater than 100
+
+    -- Print "All tests passed" if all assertions hold true (optional)
+    -- print("All tests passed")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function test_evaluate_integer_grade()
+    assert(evaluate_integer_grade(90) == 'A') -- Corrected the assertion to compare against character literals
+    assert(evaluate_integer_grade(89) == 'B') -- Additional test for a score less than 90
+    assert(evaluate_integer_grade(95) == 'A') -- Additional test within the 'A' range
+    assert(evaluate_integer_grade(100) == 'A') -- Additional test for the boundary condition
+    assert(evaluate_integer_grade(101) == 'B') -- Additional test for a score greater than 100
+
+    -- Print "All tests passed" if all assertions hold true (optional)
+    -- print("All tests passed")
+end
+
+test_evaluate_integer_grade()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/30</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Checks if a three-character string has exactly two characters that are the same.
+
+Args:
+    s (string): The three-character string to be checked.
+
+Returns:
+    string: Returns 'Yes' if the input has exactly two equal characters, otherwise 'No'.
+    Examples:
+    check_two_equal_digits("112") --> "Yes"
+    check_two_equal_digits("123") --> "No"
+]]--
+function check_two_equal_digits(s)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function check_two_equal_digits(s)` to solve the following problem:
+Checks if a three-character string has exactly two characters that are the same.
+
+Args:
+    s (string): The three-character string to be checked.
+
+Returns:
+    string: Returns 'Yes' if the input has exactly two equal characters, otherwise 'No'.
+    Examples:
+    check_two_equal_digits("112") --> "Yes"
+    check_two_equal_digits("123") --> "No"</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>if (s:sub(1, 1) == s:sub(2, 2) and s:sub(1, 1) ~= s:sub(3, 3)) or
+       (s:sub(1, 1) == s:sub(3, 3) and s:sub(1, 1) ~= s:sub(2, 2)) or
+       (s:sub(2, 2) == s:sub(3, 3) and s:sub(1, 1) ~= s:sub(2, 2)) then
+        return "Yes"
+    else
+        return "No"
+    end
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function test_check_two_equal_digits()
+    local candidate = check_two_equal_digits
+    lu.assertTrue(candidate("112") == "Yes")
+    lu.assertTrue(candidate("123") == "No")
+    lu.assertTrue(candidate("232") == "Yes")
+    lu.assertTrue(candidate("444") == "No") -- All three characters are equal, not two.
+    lu.assertTrue(candidate("121") == "Yes")
+
+    -- Additional test cases to cover more scenarios
+    lu.assertTrue(candidate("787") == "Yes")
+    lu.assertTrue(candidate("999") == "No") -- All three characters are equal
+    lu.assertTrue(candidate("890") == "No")
+    lu.assertTrue(candidate("556") == "Yes")
+    lu.assertTrue(candidate("353") == "Yes")
+    
+    -- print("All tests passed successfully.")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function test_check_two_equal_digits()
+    assert(check_two_equal_digits("112") == "Yes")
+    assert(check_two_equal_digits("123") == "No")
+    assert(check_two_equal_digits("232") == "Yes")
+    assert(check_two_equal_digits("444") == "No") -- All three characters are equal, not two.
+    assert(check_two_equal_digits("121") == "Yes")
+
+    -- Additional test cases to cover more scenarios
+    assert(check_two_equal_digits("787") == "Yes")
+    assert(check_two_equal_digits("999") == "No") -- All three characters are equal
+    assert(check_two_equal_digits("890") == "No")
+    assert(check_two_equal_digits("556") == "Yes")
+    assert(check_two_equal_digits("353") == "Yes")
+    
+    -- print("All tests passed successfully.")
+end
+
+test_check_two_equal_digits()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/31</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given a string consisting of lowercase English letters, in each round you
+can change one of the characters to another character. The question is: what
+is the minimum number of rounds needed to make the string composed of the 
+same character?
+
+Examples:
+    -- minRoundsToSameChar("aab") should return 1
+--]]
+function minRoundsToSameChar(s)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function minRoundsToSameChar(s)` to solve the following problem:
+Given a string consisting of lowercase English letters, in each round you
+can change one of the characters to another character. The question is: what
+is the minimum number of rounds needed to make the string composed of the same character?
+
+Examples:
+    minRoundsToSameChar("aab") should return 1</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local charCount = {}
+    for char in s:gmatch(".") do
+        charCount[char] = (charCount[char] or 0) + 1
+    end
+
+    local maxCount = 0
+    for _, count in pairs(charCount) do
+        if count > 0 then
+            maxCount = maxCount + 1
+        end
+    end
+
+    return maxCount - 1
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testMinRoundsToSameChar()
+    local candidate = minRoundsToSameChar
+    lu.assertTrue(candidate("aab") == 1)
+    lu.assertTrue(candidate("abc") == 2)
+    lu.assertTrue(candidate("aaa") == 0)
+    lu.assertTrue(candidate("abab") == 1)
+    lu.assertTrue(candidate("zzzzz") == 0)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testMinRoundsToSameChar()
+    assert(minRoundsToSameChar("aab") == 1)
+    assert(minRoundsToSameChar("abc") == 2)
+    assert(minRoundsToSameChar("aaa") == 0)
+    assert(minRoundsToSameChar("abab") == 1)
+    assert(minRoundsToSameChar("zzzzz") == 0)
+end
+
+testMinRoundsToSameChar()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/32</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given a sequence of n events, each occurring with a periodicity of a_i years,
+the problem is to find the year Y_n when the n-th event occurs, under the condition
+that the countdown for event i+1 can only commence in the year immediately following
+the occurrence of event i.
+
+    >>> apocalypseYear(6, {3, 2, 4, 5, 9, 18})
+    36
+]]--
+function apocalypseYear(n, signs)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function apocalypseYear(n, signs)` to solve the following problem:
+Given a sequence of n events, each occurring with a periodicity of a_i years, the problem is to find the year Y_n when the n-th event occurs, under the condition that the countdown for event i+1 can only commence in the year immediately following the occurrence of event i.
+
+    >>> apocalypseYear(6, {3, 2, 4, 5, 9, 18})
+    36
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local year = 0
+    for i = 1, n do
+        local period = signs[i]
+        local nextOccurrence = math.floor(year / period + 1) * period
+        year = nextOccurrence
+    end
+    return year
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testApocalypseYear()
+    local candidate = apocalypseYear
+    lu.assertTrue(candidate(6, {3, 2, 4, 5, 9, 18}) == 36)
+    lu.assertTrue(candidate(5, {1, 2, 3, 4, 5}) == 5)
+    lu.assertTrue(candidate(5, {1, 1, 1, 1, 1}) == 5)
+    lu.assertTrue(candidate(6, {50, 30, 711, 200, 503, 1006}) == 2012)
+    lu.assertTrue(candidate(2, {1, 2}) == 2)
+    lu.assertTrue(candidate(3, {3, 1, 2}) == 6)
+    lu.assertTrue(candidate(3, {2, 3, 4}) == 4)
+    lu.assertTrue(candidate(4, {1, 2, 3, 4}) == 4)
+    lu.assertTrue(candidate(4, {5, 7, 11, 13}) == 13)
+    lu.assertTrue(candidate(5, {2, 2, 2, 2, 2}) == 10)
+    lu.assertTrue(candidate(3, {6, 10, 15}) == 15)
+    lu.assertTrue(candidate(3, {4, 6, 14}) == 14)
+    lu.assertTrue(candidate(4, {50, 30, 711, 200}) == 800)
+    lu.assertTrue(candidate(6, {1, 1, 1, 1, 1, 1}) == 6)
+    lu.assertTrue(candidate(2, {1000000, 999999}) == 1999998)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testApocalypseYear()
+    assert(apocalypseYear(6, {3, 2, 4, 5, 9, 18}) == 36)
+    assert(apocalypseYear(5, {1, 2, 3, 4, 5}) == 5)
+    assert(apocalypseYear(5, {1, 1, 1, 1, 1}) == 5)
+    assert(apocalypseYear(6, {50, 30, 711, 200, 503, 1006}) == 2012)
+    assert(apocalypseYear(2, {1, 2}) == 2)
+    assert(apocalypseYear(3, {3, 1, 2}) == 6)
+    assert(apocalypseYear(3, {2, 3, 4}) == 4)
+    assert(apocalypseYear(4, {1, 2, 3, 4}) == 4)
+    assert(apocalypseYear(4, {5, 7, 11, 13}) == 13)
+    assert(apocalypseYear(5, {2, 2, 2, 2, 2}) == 10)
+    assert(apocalypseYear(3, {6, 10, 15}) == 15)
+    assert(apocalypseYear(3, {4, 6, 14}) == 14)
+    assert(apocalypseYear(4, {50, 30, 711, 200}) == 800)
+    assert(apocalypseYear(6, {1, 1, 1, 1, 1, 1}) == 6)
+    assert(apocalypseYear(2, {1000000, 999999}) == 1999998)
+end
+
+testApocalypseYear()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/33</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+This problem introduces a new modulo operation, denoted by the symbol "⊕". When calculating x ⊕ y,
+if x is not a multiple of y, the result is the remainder of x divided by y. Otherwise, divide x by y
+repeatedly until x is no longer a multiple of y, denoting the final value as x'. Then the result is
+the remainder of x' divided by y. For example, 4⊕5=4, 20⊕5=4, 100⊕5=4. Given a prime number p, there
+will be several queries. For each query, an integer n is given, and you need to compute the value of
+n! ⊕ p, where n! is the factorial of n, i.e., the product of all positive integers less than or
+equal to n.
+
+Examples:
+    >>> newModuloFactorial(3, 7)
+    6
+]]--
+function newModuloFactorial(n, p)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function newModuloFactorial(n, p)` to solve the following problem:
+This problem introduces a new modulo operation, denoted by the symbol "⊕". When calculating x ⊕ y,
+if x is not a multiple of y, the result is the remainder of x divided by y. Otherwise, divide x by y
+repeatedly until x is no longer a multiple of y, denoting the final value as x'. Then the result is
+the remainder of x' divided by y. For example, 4⊕5=4, 20⊕5=4, 100⊕5=4. Given a prime number p, there
+will be several queries. For each query, an integer n is given, and you need to compute the value of
+n! ⊕ p, where n! is the factorial of n, i.e., the product of all positive integers less than or
+equal to n.
+
+Examples:
+    >>> newModuloFactorial(3, 7)
+    6
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local pj = {1, 1}
+    for i = 2, p - 1 do
+        pj[i + 1] = (i * pj[i]) % p
+    end
+
+    local ans = 1
+    while n > 0 do
+        ans = ans * pj[n % p + 1] % p
+        ans = ((math.floor(n / p)) % 2) == 1 and (p - ans) or ans
+        n = math.floor(n / p)
+    end
+    return ans
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testNewModuloFactorial()
+    local candidate = newModuloFactorial
+    lu.assertTrue(candidate(3, 7) == 6)
+    lu.assertTrue(candidate(10, 3) == 1)
+    lu.assertTrue(candidate(11, 7) == 4)
+    lu.assertTrue(candidate(45, 7) == 1)
+    lu.assertTrue(candidate(14, 7) == 2)
+    lu.assertTrue(candidate(1919, 10007) == 3152)
+    lu.assertTrue(candidate(810, 10007) == 3679)
+    lu.assertTrue(candidate(3, 7) == 6)
+    lu.assertTrue(candidate(10, 3) == 1)
+    lu.assertTrue(candidate(1, 2) == 1)
+    lu.assertTrue(candidate(5, 11) == 10)
+    lu.assertTrue(candidate(6, 13) == 5)
+    lu.assertTrue(candidate(8, 17) == 13)
+    lu.assertTrue(candidate(15, 19) == 16)
+    lu.assertTrue(candidate(21, 23) == 1)
+    lu.assertTrue(candidate(30, 29) == 28)
+    lu.assertTrue(candidate(100, 101) == 100)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>do
+    assert(newModuloFactorial(3, 7) == 6)
+    assert(newModuloFactorial(10, 3) == 1)
+    assert(newModuloFactorial(11, 7) == 4)
+    assert(newModuloFactorial(45, 7) == 1)
+    assert(newModuloFactorial(14, 7) == 2)
+    assert(newModuloFactorial(1919, 10007) == 3152)
+    assert(newModuloFactorial(810, 10007) == 3679)
+    assert(newModuloFactorial(3, 7) == 6)
+    assert(newModuloFactorial(10, 3) == 1)
+    assert(newModuloFactorial(1, 2) == 1)
+    assert(newModuloFactorial(5, 11) == 10)
+    assert(newModuloFactorial(6, 13) == 5)
+    assert(newModuloFactorial(8, 17) == 13)
+    assert(newModuloFactorial(15, 19) == 16)
+    assert(newModuloFactorial(21, 23) == 1)
+    assert(newModuloFactorial(30, 29) == 28)
+    assert(newModuloFactorial(100, 101) == 100)
+end</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/34</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>hard</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+You are given an array a of n integers. You can perform at most one operation where you select three integers i, j, x (1 <= i <= j <= n) and replace all elements from a[i] to a[j] with x, at a cost of (j - i + 1).
+Find the minimum cost to make all elements in the array equal.
+    >>> makeEqualAgain(3, {1, 2, 1})
+    1
+    >>> makeEqualAgain(5, {5, 5, 1, 5, 5})
+    1
+--]]
+function makeEqualAgain(n, b)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function makeEqualAgain(n, b)` to solve the following problem:
+You are given an array a of n integers. You can perform at most one operation where you select three integers i, j, x (1 <= i <= j <= n) and replace all elements from a[i] to a[j] with x, at a cost of (j - i + 1).
+Find the minimum cost to make all elements in the array equal.
+    >>> makeEqualAgain(3, {1, 2, 1})
+    1
+    >>> makeEqualAgain(5, {5, 5, 1, 5, 5})
+    1
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local j = 0
+    local p = 1
+    q = 0
+    local c, d = 0, 0
+    local k = n
+    a = {}  -- 定义a数组
+
+    a[0] = b[1]  -- 设置a[0]等于b[1]
+
+    for i = 1, #b - 1 do  -- 遍历b数组的剩余元素
+        a[i] = b[i + 1]  -- 设置a[i]等于b[i+1]
+    end
+        
+    p = 1
+    while p < k do
+        if a[p] ~= a[p - 1] then
+            break
+        end
+        p = p + 1
+    end
+
+    q = k - 1
+    while q > p do
+        if a[q] ~= a[p - 1] then
+            break
+        end
+        q = q - 1
+    end
+
+    d = k - 2
+    while d >= 0 do
+        if a[d] ~= a[d + 1] then
+            break
+        end
+        d = d - 1
+    end
+
+    c = 0
+    while c < d do
+        if a[c] ~= a[c + 1] then
+            break
+        end
+        c = c + 1
+    end
+    if q - p + 1 < d - c + 1 then
+        return q - p + 1
+    else
+        return d - c + 1
+    end
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testMakeEqualAgain()
+    local candidate = makeEqualAgain
+    lu.assertTrue(candidate(6, {1,2,3,4,5,1}) == 4)
+    lu.assertTrue(candidate(7, {1,1,1,1,1,1,1}) == 0)
+    lu.assertTrue(candidate(8, {8,8,8,1,2,8,8,8}) == 2)
+    lu.assertTrue(candidate(3, {1,2,3}) == 2)
+    lu.assertTrue(candidate(7, {4,3,2,7,1,1,3}) == 6)
+    lu.assertTrue(candidate(9, {9,9,2,9,2,5,5,5,3}) == 7)
+    lu.assertTrue(candidate(3, {1, 2, 1}) == 1)
+    lu.assertTrue(candidate(5, {5, 5, 1, 5, 5}) == 1)
+    lu.assertTrue(candidate(4, {1, 1, 1, 1}) == 0)
+    lu.assertTrue(candidate(6, {2, 2, 2, 3, 2, 2}) == 1)
+    lu.assertTrue(candidate(1, {1}) == 0)
+    lu.assertTrue(candidate(2, {1, 2}) == 1)
+    lu.assertTrue(candidate(4, {1, 2, 2, 1}) == 2)
+    lu.assertTrue(candidate(7, {4, 4, 4, 3, 3, 4, 4}) == 2)
+    lu.assertTrue(candidate(6, {5, 4, 4, 4, 5, 5}) == 3)
+    lu.assertTrue(candidate(7, {1, 2, 1, 2, 1, 2, 1}) == 5)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testMakeEqualAgain()
+    assert(makeEqualAgain(6, {1,2,3,4,5,1}) == 4)
+    assert(makeEqualAgain(7, {1,1,1,1,1,1,1}) == 0)
+    assert(makeEqualAgain(8, {8,8,8,1,2,8,8,8}) == 2)
+    assert(makeEqualAgain(3, {1,2,3}) == 2)
+    assert(makeEqualAgain(7, {4,3,2,7,1,1,3}) == 6)
+    assert(makeEqualAgain(9, {9,9,2,9,2,5,5,5,3}) == 7)
+    assert(makeEqualAgain(3, {1, 2, 1}) == 1)
+    assert(makeEqualAgain(5, {5, 5, 1, 5, 5}) == 1)
+    assert(makeEqualAgain(4, {1, 1, 1, 1}) == 0)
+    assert(makeEqualAgain(6, {2, 2, 2, 3, 2, 2}) == 1)
+    assert(makeEqualAgain(1, {1}) == 0)
+    assert(makeEqualAgain(2, {1, 2}) == 1)
+    assert(makeEqualAgain(4, {1, 2, 2, 1}) == 2)
+    assert(makeEqualAgain(7, {4, 4, 4, 3, 3, 4, 4}) == 2)
+    assert(makeEqualAgain(6, {5, 4, 4, 4, 5, 5}) == 3)
+    assert(makeEqualAgain(7, {1, 2, 1, 2, 1, 2, 1}) == 5)
+end
+
+testMakeEqualAgain()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/35</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>middle</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given a sequence of N piles of stones numbered from 1 to N,
+with each pile containing a positive number of stones, determine 
+the winner of a game played by Charlie and Dan. Charlie goes first, 
+and they take turns moving a positive number of stones from the 
+leftmost non-empty pile to the adjacent right pile. The player who 
+can only move stones in the last pile loses. Assuming both players 
+use the best possible strategy, find out who will win the game.
+
+    >>> gameWinner(3, {1, 2, 2})
+    "Dan"
+--]]
+function gameWinner(n, piles)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function gameWinner(n, piles)` to solve the following problem:
+Given a sequence of N piles of stones numbered from 1 to N,
+with each pile containing a positive number of stones, determine 
+the winner of a game played by Charlie and Dan. Charlie goes first, 
+and they take turns moving a positive number of stones from the 
+leftmost non-empty pile to the adjacent right pile. The player who 
+can only move stones in the last pile loses. Assuming both players 
+use the best possible strategy, find out who will win the game.
+
+    >>> gameWinner(3, {1, 2, 2})
+    "Dan"</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>-- Only the first pile's stone count is needed to determine the winner.
+    local firstPileStones = piles[1]
+    if n == 2 then -- With only two piles, Charlie always wins.
+        return "Charlie"
+    end
+    if firstPileStones == 1 then -- If the first pile has only one stone, Dan wins.
+        return "Dan"
+    end
+    return "Charlie" -- In all other cases, Charlie wins.
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testGameWinner()
+    local candidate = gameWinner
+    lu.assertTrue(candidate(3, {1, 2, 2}) == "Dan")
+    lu.assertTrue(candidate(5, {5, 5, 5, 5, 5}) == "Charlie")
+    lu.assertTrue(candidate(3, {2, 1, 2}) == "Charlie")
+    lu.assertTrue(candidate(4, {3, 3, 3, 3}) == "Charlie")
+    lu.assertTrue(candidate(2, {1, 1}) == "Charlie")
+    lu.assertTrue(candidate(2, {2, 1}) == "Charlie")
+    lu.assertTrue(candidate(11, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}) == "Dan")
+    lu.assertTrue(candidate(10, {2, 2, 2, 2, 2, 2, 2, 2, 2, 1}) == "Charlie")
+    lu.assertTrue(candidate(10, {10, 10, 10, 10, 10, 10, 10, 10, 10, 10}) == "Charlie")
+    lu.assertTrue(candidate(10, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) == "Dan")
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testGameWinner()
+    assert(gameWinner(3, {1, 2, 2}) == "Dan")
+    assert(gameWinner(5, {5, 5, 5, 5, 5}) == "Charlie")
+    assert(gameWinner(3, {2, 1, 2}) == "Charlie")
+    assert(gameWinner(4, {3, 3, 3, 3}) == "Charlie")
+    assert(gameWinner(2, {1, 1}) == "Charlie")
+    assert(gameWinner(2, {2, 1}) == "Charlie")
+    assert(gameWinner(11, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}) == "Dan")
+    assert(gameWinner(10, {2, 2, 2, 2, 2, 2, 2, 2, 2, 1}) == "Charlie")
+    assert(gameWinner(10, {10, 10, 10, 10, 10, 10, 10, 10, 10, 10}) == "Charlie")
+    assert(gameWinner(10, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}) == "Dan")
+end
+
+testGameWinner()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/36</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[ 
+Given n doors arranged in a circle, the player starts in front of door 1. 
+Each turn, the player can choose a number i and pay a cost C_i to move i steps to the right 
+and then open the door at that position. It is guaranteed that C_i >= C_{i+1} for 1 <= i < n.
+The task is to determine the minimum total cost required to open all doors.
+
+Example:
+    >>> minTotalCost(3, {1, 1, 1})
+    3
+]]
+function minTotalCost(n, C)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function minTotalCost(n, C)` to solve the following problem:
+Given n doors arranged in a circle, the player starts in front of door 1. Each turn, the player can choose a number i and pay a cost C_i to move i steps to the right and then open the door at that position. It is guaranteed that C_i >= C_{i+1} for 1 <= i < n. The task is to determine the minimum total cost required to open all doors.
+
+Example:
+    >>> minTotalCost(3, {1, 1, 1})
+    3
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>return C[n-1] * (n - 1) + C[n]
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testMinTotalCost()
+	local candidate = minTotalCost
+	lu.assertTrue(candidate(5, {4, 3, 3, 3, 3}) == 15)
+	lu.assertTrue(candidate(3, {1, 1, 1}) == 3)
+	lu.assertTrue(candidate(4, {5, 4, 3, 2}) == 11)
+	lu.assertTrue(candidate(4, {100, 99, 98, 97}) == 391)
+	lu.assertTrue(candidate(6, {10, 9, 8, 7, 6, 5}) == 35)
+	lu.assertTrue(candidate(7, {2, 2, 2, 2, 2, 2, 2}) == 14)
+	lu.assertTrue(candidate(8, {9, 7, 7, 7, 7, 7, 7, 7}) == 56)
+	lu.assertTrue(candidate(9, {3, 2, 2, 2, 2, 2, 2, 2, 2}) == 18)
+	lu.assertTrue(candidate(10, {6, 5, 5, 5, 5, 5, 5, 5, 5, 5}) == 50)
+	lu.assertTrue(candidate(11, {8, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}) == 11)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testMinTotalCost()
+	assert(minTotalCost(5, {4, 3, 3, 3, 3}) == 15)
+	assert(minTotalCost(3, {1, 1, 1}) == 3)
+	assert(minTotalCost(4, {5, 4, 3, 2}) == 11)
+	assert(minTotalCost(4, {100, 99, 98, 97}) == 391)
+	assert(minTotalCost(6, {10, 9, 8, 7, 6, 5}) == 35)
+	assert(minTotalCost(7, {2, 2, 2, 2, 2, 2, 2}) == 14)
+	assert(minTotalCost(8, {9, 7, 7, 7, 7, 7, 7, 7}) == 56)
+	assert(minTotalCost(9, {3, 2, 2, 2, 2, 2, 2, 2, 2}) == 18)
+	assert(minTotalCost(10, {6, 5, 5, 5, 5, 5, 5, 5, 5, 5}) == 50)
+	assert(minTotalCost(11, {8, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}) == 11)
+end
+
+testMinTotalCost()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/37</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>middle</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given a sequence of student IDs entering a classroom, where the IDs range from 0 to N-1, calculate the total number of 
+handshakes that occur. Each student will shake hands with every student already in the classroom with a smaller ID number.
+The sequence represents the order in which students enter the classroom.
+
+Examples:
+    >>> countHandshakes(3, {2, 1, 0})
+    0
+]]--
+function countHandshakes(n, order)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function countHandshakes(n, order)` to solve the following problem:
+Given a sequence of student IDs entering a classroom, where the IDs range from 0 to N-1, calculate the total number of handshakes that occur. Each student will shake hands with every student already in the classroom with a smaller ID number. The sequence represents the order in which students enter the classroom.
+
+Examples:
+    >>> countHandshakes(3, {2, 1, 0})
+    0
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local ans = 0
+    local tr = {}
+    for i = 1, n do -- Lua arrays are 1-indexed
+        tr[i] = 0
+    end
+    for i, x in ipairs(order) do
+        x = x + 1 -- Convert 0-indexed to 1-indexed
+        local j = x - 1
+        while j > 0 do
+            ans = ans + (tr[j] or 0)
+            j = j - (j & -j)
+        end
+        j = x
+        while j <= n do
+            tr[j] = (tr[j] or 0) + 1
+            j = j + (j & -j)
+        end
+    end
+    return ans
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCountHandshakes()
+    local candidate = countHandshakes
+    lu.assertTrue(candidate(4, {2, 1, 3, 0}) == 2)
+    lu.assertTrue(candidate(6, {0, 1, 2, 3, 4, 5}) == 15)
+    lu.assertTrue(candidate(3, {1, 2, 0}) == 1)
+
+    lu.assertTrue(candidate(4, {3, 2, 1, 0}) == 0)
+    lu.assertTrue(candidate(4, {0, 1, 2, 3}) == 6)
+    lu.assertTrue(candidate(6, {5, 4, 3, 2, 1, 0}) == 0)
+
+    lu.assertTrue(candidate(4, {0, 2, 1, 3}) == 5)
+    lu.assertTrue(candidate(5, {3, 1, 4, 2, 0}) == 3)
+    lu.assertTrue(candidate(4, {1, 0, 3, 2}) == 4)
+
+    lu.assertTrue(candidate(3, {2, 0, 1}) == 1)
+    lu.assertTrue(candidate(5, {1, 3, 0, 2, 4}) == 7)
+    lu.assertTrue(candidate(5, {4, 3, 2, 1, 0}) == 0)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testCountHandshakes()
+    assert(countHandshakes(4, {2, 1, 3, 0}) == 2)
+    assert(countHandshakes(6, {0, 1, 2, 3, 4, 5}) == 15)
+    assert(countHandshakes(3, {1, 2, 0}) == 1)
+
+    assert(countHandshakes(4, {3, 2, 1, 0}) == 0)
+    assert(countHandshakes(4, {0, 1, 2, 3}) == 6)
+    assert(countHandshakes(6, {5, 4, 3, 2, 1, 0}) == 0)
+
+    assert(countHandshakes(4, {0, 2, 1, 3}) == 5)
+    assert(countHandshakes(5, {3, 1, 4, 2, 0}) == 3)
+    assert(countHandshakes(4, {1, 0, 3, 2}) == 4)
+
+    assert(countHandshakes(3, {2, 0, 1}) == 1)
+    assert(countHandshakes(5, {1, 3, 0, 2, 4}) == 7)
+    assert(countHandshakes(5, {4, 3, 2, 1, 0}) == 0)
+end
+
+testCountHandshakes()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/38</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given n positive integers representing the count of each number from 1 to n,
+find the maximum sum of the mode (most frequent element) for all prefixes of
+a sequence constructed from these numbers. The mode is the largest number among
+the most frequent elements in a sequence.
+    >>> maxModeSum(3, {1, 2, 3})
+    17
+    A sequence that reaches its maximum value is (3,2,3,1,2,2).
+]]--
+function maxModeSum(n, counts)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function maxModeSum(n, counts)` to solve the following problem:
+Given n positive integers representing the count of each number from 1 to n,
+find the maximum sum of the mode (most frequent element) for all prefixes of
+a sequence constructed from these numbers. The mode is the largest number among
+the most frequent elements in a sequence.
+    >>> maxModeSum(3, {1, 2, 3})
+    17
+    A sequence that reaches its maximum value is (3,2,3,1,2,2).</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local ans = 0
+    local mx = 0
+    local f = {}
+    for i = 0, n do
+        f[i] = 0
+    end
+
+    for i = n, 1, -1 do
+        while mx < counts[i] do
+            mx = mx + 1
+            f[mx] = f[mx - 1] + i
+        end
+        ans = ans + f[counts[i]]
+    end
+    return ans
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testMaxModeSum()
+    local candidate = maxModeSum
+    lu.assertTrue(candidate(3, {1, 3, 2}) == 17)
+    lu.assertTrue(candidate(4, {4, 1, 2, 3}) == 37)
+    lu.assertTrue(candidate(2, {1, 1}) == 4)
+    lu.assertTrue(candidate(5, {1, 2, 3, 4, 5}) == 75)
+    lu.assertTrue(candidate(1, {100000}) == 100000)
+    lu.assertTrue(candidate(5, {5, 3, 2, 4, 1}) == 62)
+    lu.assertTrue(candidate(3, {100000, 100000, 100000}) == 900000)
+    lu.assertTrue(candidate(3, {2, 2, 5}) == 27)
+    lu.assertTrue(candidate(4, {4, 4, 4, 4}) == 64)
+    lu.assertTrue(candidate(6, {1, 2, 3, 4, 5, 6}) == 126)
+    lu.assertTrue(candidate(3, {3, 1, 2}) == 16)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testMaxModeSum()
+    assert(maxModeSum(3, {1, 3, 2}) == 17)
+    assert(maxModeSum(4, {4, 1, 2, 3}) == 37)
+    assert(maxModeSum(2, {1, 1}) == 4)
+    assert(maxModeSum(5, {1, 2, 3, 4, 5}) == 75)
+    assert(maxModeSum(1, {100000}) == 100000)
+    assert(maxModeSum(5, {5, 3, 2, 4, 1}) == 62)
+    assert(maxModeSum(3, {100000, 100000, 100000}) == 900000)
+    assert(maxModeSum(3, {2, 2, 5}) == 27)
+    assert(maxModeSum(4, {4, 4, 4, 4}) == 64)
+    assert(maxModeSum(6, {1, 2, 3, 4, 5, 6}) == 126)
+    assert(maxModeSum(3, {3, 1, 2}) == 16)
+end
+
+testMaxModeSum()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/39</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>middle</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given an array A of integers, the task is to calculate the sum of the XOR of all subarrays.
+A subarray is defined by a pair of indices (L, R) such that 1 <= L <= R <= n, where n is the size of the array.
+The XOR sum of a subarray is the result of XORing all elements from L to R.
+The final result is the sum of the XOR sums for all possible subarrays.
+
+Example cases:
+    >>> sumOfXorSubarrays({1, 2, 3, 4, 5}, 5)
+    39
+]]--
+function sumOfXorSubarrays(A)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function sumOfXorSubarrays(A)` to solve the following problem:
+Given an array A of integers, the task is to calculate the sum of the XOR of all subarrays.
+A subarray is defined by a pair of indices (L, R) such that 1 <= L <= R <= n, where n is the size of the array.
+The XOR sum of a subarray is the result of XORing all elements from L to R.
+The final result is the sum of the XOR sums for all possible subarrays.
+
+Example cases:
+    >>> sumOfXorSubarrays({1, 2, 3, 4, 5}, 5)
+    39
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local n = #A
+    local q, w, ans = {}, {}, 0
+    for i = 0, 100010 do
+        q[i] = 0
+        w[i] = {0, 0}
+    end
+    
+    for i = 1, n do
+        q[i] = q[i - 1] ~ A[i]
+    end
+    
+    for i = 0, n do
+        for j = 20, 0, -1 do
+            local bitPosition = (q[i] >> j) & 1
+            w[j][bitPosition+1] = w[j][bitPosition+1] + 1
+        end
+    end
+    
+    for i = 0, 20 do
+        ans = ans + w[i][1] * w[i][2] * (1 << i)
+    end
+    return ans
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testSumOfXorSubarrays()
+    local candidate = sumOfXorSubarrays
+    lu.assertTrue(candidate({1, 2, 3, 4, 5}) == 39)
+    lu.assertTrue(candidate({1, 1, 1}) == 4)
+    lu.assertTrue(candidate({2, 3, 1}) == 9)
+    lu.assertTrue(candidate({4, 5, 7, 9}) == 74)
+    lu.assertTrue(candidate({0, 0, 0, 0}) == 0)
+    lu.assertTrue(candidate({8, 8, 8, 8, 8}) == 72)
+    lu.assertTrue(candidate({3, 6, 9, 12, 15}) == 125)
+    lu.assertTrue(candidate({10, 20, 30, 40, 50}) == 390)
+    lu.assertTrue(candidate({16, 16, 16, 16, 16, 16}) == 192)
+    lu.assertTrue(candidate({1, 3, 5, 7, 9, 11, 13}) == 192)
+    lu.assertTrue(candidate({0, 1, 2, 3, 4, 5, 6, 7, 8, 9}) == 218)
+end
+
+os.exit(lu.LuaUnit.run())
+
+
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>do
+    local function testSumOfXorSubarrays()
+        assert(sumOfXorSubarrays({1, 2, 3, 4, 5}) == 39)
+        assert(sumOfXorSubarrays({1, 1, 1}) == 4)
+        assert(sumOfXorSubarrays({2, 3, 1}) == 9)
+        assert(sumOfXorSubarrays({4, 5, 7, 9}) == 74)
+        assert(sumOfXorSubarrays({0, 0, 0, 0}) == 0)
+        assert(sumOfXorSubarrays({8, 8, 8, 8, 8}) == 72)
+        assert(sumOfXorSubarrays({3, 6, 9, 12, 15}) == 125)
+        assert(sumOfXorSubarrays({10, 20, 30, 40, 50}) == 390)
+        assert(sumOfXorSubarrays({16, 16, 16, 16, 16, 16}) == 192)
+        assert(sumOfXorSubarrays({1, 3, 5, 7, 9, 11, 13}) == 192)
+        assert(sumOfXorSubarrays({0, 1, 2, 3, 4, 5, 6, 7, 8, 9}) == 218)
+    end
+    testSumOfXorSubarrays()
+end</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/40</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>hard</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given two positive integers n and k, find the number of positive integers x, 
+where 1 <= x <= n, that can be expressed as x = a^b with a and b being positive 
+integers and b >= k. Different legal representations of the same number are 
+counted only once.
+
+    >>> countPowerNumbers(99, 1)
+    99
+]]--
+function countPowerNumbers(n, k)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function countPowerNumbers(n, k)` to solve the following problem:
+Given two positive integers n and k, find the number of positive integers x, where 1 <= x <= n, that can be expressed as x = a^b with a and b being positive integers and b >= k. Different legal representations of the same number are counted only once.
+
+    >>> countPowerNumbers(99, 1)
+    99
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local count = 0
+    local x = 0
+    local mp = {}
+    for i = 0, n+1 do
+        mp[i] = false
+    end
+
+    i = 2
+    while i * i * i <= n do
+        local t = i * i
+        local m = 2
+        while t <= n / i do
+            t = t * i
+            m = m + 1
+            if m < k or mp[t] then
+                goto continue
+            end
+            if math.floor(math.sqrt(t)) == math.sqrt(t) then
+                x = x + 1
+            end
+            mp[t] = true
+            count = count + 1
+            ::continue::
+        end
+        i = i + 1
+    end
+    if k == 1 then
+        count = n
+    elseif k >= 3 then
+        count = count + 1
+    else
+        count = count + math.floor(math.sqrt(n)) - x
+    end
+    return count
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCountPowerNumbers()
+    local candidate = countPowerNumbers
+    lu.assertTrue(candidate(99, 1) == 99)
+    lu.assertTrue(candidate(99, 3) == 7)
+    lu.assertTrue(candidate(99, 2) == 12)
+    lu.assertTrue(candidate(10, 1) == 10)
+    lu.assertTrue(candidate(10, 2) == 4)
+    lu.assertTrue(candidate(500, 1) == 500)
+    lu.assertTrue(candidate(500, 2) == 30)
+    lu.assertTrue(candidate(500, 3) == 13)
+    lu.assertTrue(candidate(1000, 1) == 1000)
+    lu.assertTrue(candidate(1000, 2) == 41)
+    lu.assertTrue(candidate(1000, 3) == 17)
+    lu.assertTrue(candidate(1000, 93) == 1)
+    lu.assertTrue(candidate(50, 2) == 10)
+    lu.assertTrue(candidate(50, 3) == 5)
+    lu.assertTrue(candidate(2, 3) == 1)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testCountPowerNumbers()
+    assert(countPowerNumbers(99, 1) == 99)
+    assert(countPowerNumbers(99, 3) == 7)
+    assert(countPowerNumbers(99, 2) == 12)
+    assert(countPowerNumbers(10, 1) == 10)
+    assert(countPowerNumbers(10, 2) == 4)
+    assert(countPowerNumbers(500, 1) == 500)
+    assert(countPowerNumbers(500, 2) == 30)
+    assert(countPowerNumbers(500, 3) == 13)
+    assert(countPowerNumbers(1000, 1) == 1000)
+    assert(countPowerNumbers(1000, 2) == 41)
+    assert(countPowerNumbers(1000, 3) == 17)
+    assert(countPowerNumbers(1000, 93) == 1)
+    assert(countPowerNumbers(50, 2) == 10)
+    assert(countPowerNumbers(50, 3) == 5)
+    assert(countPowerNumbers(2, 3) == 1)
+end
+
+testCountPowerNumbers()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/41</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>hard</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given three integers n, m, and k, find the number of sequences consisting of n '(' and m ')', such that
+the longest balanced subsequence is of length 2 * k. The result should be calculated modulo
+1,000,000,007 (10^9 + 7).
+
+For example:
+    >>> countBalancedSubsequences(2, 2, 2)
+    2
+]]--
+function countBalancedSubsequences(n, m, k)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function countBalancedSubsequences(n, m, k)` to solve the following problem:
+Given three integers n, m, and k, find the number of sequences consisting of n '(' and m ')', such that
+the longest balanced subsequence is of length 2 * k. The result should be calculated modulo
+1,000,000,007 (10^9 + 7).
+
+For example:
+    >>> countBalancedSubsequences(2, 2, 2)
+    2
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local P = 1000000000 + 7
+    local C = {}
+    for i = 0, n + m + 2 do
+        C[i] = {}
+        C[i][0] = 1
+    end
+
+    -- Compute binomial coefficients only once.
+    for i = 1, n + m + 2 do
+        for j = 1, i do
+            if C[i-1][j] == nil then
+                C[i-1][j] = 0
+            end
+            C[i][j] = (C[i - 1][j - 1] + C[i - 1][j]) % P
+        end
+    end
+    
+    -- Calculate the number of balanced subsequences.
+    if k > n or k > m then return 0 end
+    return (C[n + m][k] - C[n + m][k - 1] + P) % P
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCountBalancedSubsequences()
+    local candidate = countBalancedSubsequences
+    lu.assertTrue(candidate(2, 2, 2) == 2)
+    lu.assertTrue(candidate(3, 2, 3) == 0)
+    lu.assertTrue(candidate(3, 2, 1) == 4)
+    lu.assertTrue(candidate(4, 3, 2) == 14)
+    lu.assertTrue(candidate(5, 5, 2) == 35)
+    lu.assertTrue(candidate(6, 1, 1) == 6)
+    lu.assertTrue(candidate(1, 6, 1) == 6)
+    lu.assertTrue(candidate(7, 2, 2) == 27)
+    lu.assertTrue(candidate(8, 3, 3) == 110)
+    lu.assertTrue(candidate(10, 10, 5) == 10659)
+    lu.assertTrue(candidate(20, 20, 10) == 574221648)
+    lu.assertTrue(candidate(2000, 2000, 1000) == 854104531)
+    lu.assertTrue(candidate(2000, 1999, 1000) == 334874485)
+    lu.assertTrue(candidate(2000, 2000, 1999) == 259428024)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testCountBalancedSubsequences()
+    assert(countBalancedSubsequences(2, 2, 2) == 2)
+    assert(countBalancedSubsequences(3, 2, 3) == 0)
+    assert(countBalancedSubsequences(3, 2, 1) == 4)
+    assert(countBalancedSubsequences(4, 3, 2) == 14)
+    assert(countBalancedSubsequences(5, 5, 2) == 35)
+    assert(countBalancedSubsequences(6, 1, 1) == 6)
+    assert(countBalancedSubsequences(1, 6, 1) == 6)
+    assert(countBalancedSubsequences(7, 2, 2) == 27)
+    assert(countBalancedSubsequences(8, 3, 3) == 110)
+    assert(countBalancedSubsequences(10, 10, 5) == 10659)
+    assert(countBalancedSubsequences(20, 20, 10) == 574221648)
+    assert(countBalancedSubsequences(2000, 2000, 1000) == 854104531)
+    assert(countBalancedSubsequences(2000, 1999, 1000) == 334874485)
+    assert(countBalancedSubsequences(2000, 2000, 1999) == 259428024)
+end
+
+testCountBalancedSubsequences()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/42</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>hard</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given a rectangle paper of size n x m placed on a plane Cartesian coordinate system with its bottom-left corner at (0,0) and top-right corner at (n,m),
+you need to calculate the expected number of operations to cut the paper such that the remaining area is less than k. 
+In each operation, a line is randomly chosen that is parallel to the axes, passes through points with integer coordinates, 
+and cuts through (not just touching the edge) the paper. The bottom or right part of the paper along this line is then discarded.
+The answer should be modulo 10^9+7.
+
+For example:
+    >>> expectedCuts(3, 3, 4)
+    3
+    >>> expectedCuts(5, 5, 12)
+    2
+--]]
+function expectedCuts(n, m, k)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function expectedCuts(n, m, k)` to solve the following problem:
+Given a rectangle paper of size n x m placed on a plane Cartesian coordinate system with its bottom-left corner at (0,0) and top-right corner at (n,m),
+you need to calculate the expected number of operations to cut the paper such that the remaining area is less than k. 
+In each operation, a line is randomly chosen that is parallel to the axes, passes through points with integer coordinates, 
+and cuts through (not just touching the edge) the paper. The bottom or right part of the paper along this line is then discarded.
+The answer should be modulo 10^9+7.
+
+For example:
+    >>> expectedCuts(3, 3, 4)
+    3
+    >>> expectedCuts(5, 5, 12)
+    2
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local MD = 1000000007
+    local N = 1000000
+    local vv = {}
+    local i, j
+    local ans = 1
+    
+    vv[1] = 1
+    for i = 2, N * 2 do
+        vv[i] = (vv[i - MD % i] * (MD // i + 1)) % MD
+    end
+    
+    if k > n * m then
+        return 0
+    end
+    
+    for i = (k + m - 1) // m, n - 1 do
+        ans = (ans + vv[i + (k + i - 1) // i - 1]) % MD
+    end
+    for j = (k + n - 1) // n, m - 1 do
+        ans = (ans + vv[(k + j - 1) // j + j - 1]) % MD
+    end
+    
+    return ans
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testExpectedCuts()
+    local candidate = expectedCuts
+    lu.assertTrue(candidate(2, 4, 10) == 0)
+    lu.assertTrue(candidate(2, 4, 8) == 1)
+    lu.assertTrue(candidate(2, 4, 2) == 833333342)
+    lu.assertTrue(candidate(2, 4, 6) == 250000003)
+    lu.assertTrue(candidate(3, 3, 4) == 666666673)
+    lu.assertTrue(candidate(5, 5, 12) == 666666673)
+    lu.assertTrue(candidate(6, 7, 20) == 722222229)
+    lu.assertTrue(candidate(8, 8, 30) == 72727275)
+    lu.assertTrue(candidate(10, 10, 50) == 714285721)
+    lu.assertTrue(candidate(1, 10, 5) == 945634929)
+    lu.assertTrue(candidate(10, 1, 5) == 945634929)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testExpectedCuts()
+    assert(expectedCuts(2, 4, 10) == 0)
+    assert(expectedCuts(2, 4, 8) == 1)
+    assert(expectedCuts(2, 4, 2) == 833333342)
+    assert(expectedCuts(2, 4, 6) == 250000003)
+    assert(expectedCuts(3, 3, 4) == 666666673)
+    assert(expectedCuts(5, 5, 12) == 666666673)
+    assert(expectedCuts(6, 7, 20) == 722222229)
+    assert(expectedCuts(8, 8, 30) == 72727275)
+    assert(expectedCuts(10, 10, 50) == 714285721)
+    assert(expectedCuts(1, 10, 5) == 945634929)
+    assert(expectedCuts(10, 1, 5) == 945634929)
+end
+
+testExpectedCuts()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/43</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>hard</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given a permutation q of n elements and an integer k, find the number of permutations p of n elements
+such that f(p) = q, where f(p) is the lexicographically smallest permutation that can be obtained by
+dividing p into exactly k non-empty contiguous segments and sorting each segment (that is, choose k-1 
+breakpoints 1 <= x1 < x2 < ... < x(k-1) < n, and divide p into [1, x1], (x1, x2], ..., (x(k-1), n]).
+The result should be modulo 998244353. 
+
+    >>> countPermutations(2, 1, {1, 2})
+    2
+--]]
+function countPermutations(n, k, qq)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function countPermutations(n, k, qq)` to solve the following problem:
+Given a permutation q of n elements and an integer k, find the number of permutations p of n elements
+such that f(p) = q, where f(p) is the lexicographically smallest permutation that can be obtained by
+dividing p into exactly k non-empty contiguous segments and sorting each segment (that is, choose k-1 
+breakpoints 1 <= x1 < x2 < ... < x(k-1) < n, and divide p into [1, x1], (x1, x2], ..., (x(k-1), n]).
+The result should be modulo 998244353. 
+
+    >>> countPermutations(2, 1, {1, 2})
+    2
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local N = 505
+    local P = 998244353
+    local q = {}
+    local dp = {}
+    local jc = {}
+    local f = {}
+    local ans = 0
+
+    for i=0, N do
+        q[i] = 0
+        jc[i] = 0
+        f[i] = 0
+        dp[i] = {}
+        for j=0, N do
+            dp[i][j] = 0
+        end
+    end
+
+    for i=1, n do
+        q[i] = qq[i]
+    end
+    dp[0][0] = 1
+    f[0] = 1
+    jc[0] = 1
+
+    for i=1, n do
+        jc[i] = 1 * jc[i-1] * i % P
+    end
+
+    for i=1, n do
+        f[i] = jc[i]
+        for j=1, i-1 do
+            f[i] = (f[i] + P - 1 * f[j] * jc[i-j] % P) % P
+        end
+    end
+
+    for i=1, n do
+        for j=0, i-1 do
+            for k=1, n do
+                dp[i][k] = (dp[i][k] + dp[j][k-1] * 1 * f[i-j] % P) % P
+            end
+        end
+    end
+
+    local m = 0
+    for i=1, n do
+        if q[i] > q[i+1] then
+            m = i
+            break
+        end
+    end
+
+    if m == n then
+        for i=k, n do
+            ans = (ans + dp[n][i]) % P
+        end
+    else
+        for i=m+1, n do
+            if i ~= m+1 and (q[i-1] > q[i] or q[i] < q[m]) then
+                break
+            end
+            local c = k + i - n - 1
+            if c >= 0 then
+                ans = (ans + dp[m][c] * 1 * jc[i-m-1] % P) % P
+            end
+        end
+    end
+
+    return ans
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCountPermutations()
+    local candidate = countPermutations
+    local q1 = {1, 2}
+    lu.assertTrue(candidate(2, 1, q1) == 2)
+
+    local q2 = {3, 1, 2}
+    lu.assertTrue(candidate(3, 3, q2) == 1)
+
+    local q3 = {1, 2, 3, 6, 5, 4}
+    lu.assertTrue(candidate(6, 3, q3) == 13)
+
+    local q4 = {1, 2, 3, 4, 5, 6}
+    lu.assertTrue(candidate(6, 1, q4) == 720)
+
+    local q5 = {1, 2, 5, 3, 4, 5}
+    lu.assertTrue(candidate(6, 3, q5) == 0)
+
+    local q6 = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+    lu.assertTrue(candidate(9, 9, q6) == 1)
+
+    local q7 = {1, 2, 3, 4, 5, 6, 7, 9, 8}
+    lu.assertTrue(candidate(9, 2, q7) == 29093)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>local function testCountPermutations()
+    local q1 = {1, 2}
+    assert(countPermutations(2, 1, q1) == 2)
+
+    local q2 = {3, 1, 2}
+    assert(countPermutations(3, 3, q2) == 1)
+
+    local q3 = {1, 2, 3, 6, 5, 4}
+    assert(countPermutations(6, 3, q3) == 13)
+
+    local q4 = {1, 2, 3, 4, 5, 6}
+    assert(countPermutations(6, 1, q4) == 720)
+
+    local q5 = {1, 2, 5, 3, 4, 5}
+    assert(countPermutations(6, 3, q5) == 0)
+
+    local q6 = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+    assert(countPermutations(9, 9, q6) == 1)
+
+    local q7 = {1, 2, 3, 4, 5, 6, 7, 9, 8}
+    assert(countPermutations(9, 2, q7) == 29093)
+end
+
+testCountPermutations()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/44</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>hard</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given an array of n distinct integers representing the heights of Kira's friends, 
+find the number of ways to choose a triplet (a, b, c) such that the greatest common divisor (GCD) 
+of the maximum and minimum values of the triplet is 1.
+    >>> countTriplets({1, 5, 7})
+    1
+]]--
+function countTriplets(heights)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function countTriplets(heights)` to solve the following problem:
+Given an array of n distinct integers representing the heights of Kira's friends, find the number of ways to choose a triplet (a, b, c) such that the greatest common divisor (GCD) of the maximum and minimum values of the triplet is 1.
+    >>> countTriplets({1, 5, 7})
+    1
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local count = 0
+    local n = #heights
+    for i=1, n do
+        for j=i+1, n do
+            for k=j+1, n do
+                local minVal = math.min(heights[i], heights[j], heights[k])
+                local maxVal = math.max(heights[i], heights[j], heights[k])
+                
+                -- Euclidean algorithm to find GCD
+                local a = minVal
+                local b = maxVal
+                while b ~= 0 do
+                    local t = b
+                    b = a % b
+                    a = t
+                end
+                if a == 1 then
+                    count = count + 1
+                end
+            end
+        end
+    end
+    return count
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCountTriplets()
+    local candidate = countTriplets
+    lu.assertTrue(candidate({1, 5, 7}) == 1)
+    lu.assertTrue(candidate({1, 6, 2, 3}) == 3)
+    lu.assertTrue(candidate({16, 4, 8, 2}) == 0)
+    lu.assertTrue(candidate({10, 1, 6, 7, 9, 8, 4, 3, 5, 2}) == 77)
+    lu.assertTrue(candidate({4, 5, 9, 11, 14}) == 7)
+    lu.assertTrue(candidate({15, 10, 6, 9, 7, 3, 12, 8, 11, 1, 2}) == 104)
+    lu.assertTrue(candidate({3, 7, 11, 13}) == 4)
+    lu.assertTrue(candidate({5, 12, 13, 17, 19}) == 10)
+    lu.assertTrue(candidate({2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}) == 87)
+    lu.assertTrue(candidate({1, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17}) == 122)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testCountTriplets()
+    assert(countTriplets({1, 5, 7}) == 1)
+    assert(countTriplets({1, 6, 2, 3}) == 3)
+    assert(countTriplets({16, 4, 8, 2}) == 0)
+    assert(countTriplets({10, 1, 6, 7, 9, 8, 4, 3, 5, 2}) == 77)
+    assert(countTriplets({4, 5, 9, 11, 14}) == 7)
+    assert(countTriplets({15, 10, 6, 9, 7, 3, 12, 8, 11, 1, 2}) == 104)
+    assert(countTriplets({3, 7, 11, 13}) == 4)
+    assert(countTriplets({5, 12, 13, 17, 19}) == 10)
+    assert(countTriplets({2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}) == 87)
+    assert(countTriplets({1, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17}) == 122)
+end
+
+testCountTriplets()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/45</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>hard</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+You are given a 1 by n pixel image, where each pixel has a color represented by an integer. You can perform an operation where you pick a color and change all connected pixels of the same color to the chosen color. Two pixels are connected if they are adjacent and have the same color. Find the minimum number of operations required to make all pixels the same color.
+
+Note: For each color, there are at most 20 pixels of that color.
+
+Examples:
+    >>> minOperations(5, {1, 2, 3, 2, 1})
+    2
+]]--
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function minOperations(n, pixelArray)` to solve the following problem:
+You are given a 1 by n pixel image, where each pixel has a color represented by an integer. You can perform an operation where you pick a color and change all connected pixels of the same color to the chosen color. Two pixels are connected if they are adjacent and have the same color. Find the minimum number of operations required to make all pixels the same color.
+
+Note: For each color, there are at most 20 pixels of that color.
+
+Examples:
+    >>> minOperations(5, {1, 2, 3, 2, 1})
+    2
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>function minOperations(n, pixels)
+    local pre = {}
+    local u = {}
+    local f = {}
+    for i = 1, n do
+        pre[i] = 0
+        u[i] = 0
+        f[i] = {}
+        for j = 1, n do
+            f[i][j] = i ~= j and 1000000000 or 0
+        end
+    end
+    for i = 1, n do
+        pre[i] = u[pixels[i]]
+        u[pixels[i]] = i
+    end
+    for len = 2, n do
+        for i = 1, n - len + 1 do
+            local j = i + len - 1
+            f[i][j] = f[i][j - 1] + 1
+            -- for l = pre[j], i, -1 do
+            l = pre[j]
+            while l >= i do
+                f[i][j] = math.min(f[i][j], f[i][l] + f[l + 1][j])
+                l = pre[l]
+            end
+        end
+    end
+    return f[1][n]
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testMinOperations()
+    local candidate = minOperations
+    lu.assertTrue(candidate(5, {1, 2, 3, 2, 1}) == 2)
+    lu.assertTrue(candidate(4, {1, 1, 2, 2}) == 1)
+    lu.assertTrue(candidate(5, {1, 2, 1, 4, 2}) == 3)
+    lu.assertTrue(candidate(5, {5, 5, 5, 5, 5}) == 0)
+    lu.assertTrue(candidate(6, {1, 1, 1, 2, 2, 2}) == 1)
+    lu.assertTrue(candidate(7, {1, 3, 3, 3, 2, 2, 2}) == 2)
+    lu.assertTrue(candidate(8, {4, 4, 4, 4, 3, 3, 3, 3}) == 1)
+    lu.assertTrue(candidate(9, {1, 2, 3, 4, 5, 6, 7, 8, 9}) == 8)
+    lu.assertTrue(candidate(10, {1, 2, 1, 2, 1, 2, 1, 2, 1, 2}) == 5)
+    lu.assertTrue(candidate(3, {3, 3, 3}) == 0)
+    lu.assertTrue(candidate(4, {2, 1, 1, 2}) == 1)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>local function testMinOperations()
+    assert(minOperations(5, {1, 2, 3, 2, 1}) == 2)
+    assert(minOperations(4, {1, 1, 2, 2}) == 1)
+    assert(minOperations(5, {1, 2, 1, 4, 2}) == 3)
+    assert(minOperations(5, {5, 5, 5, 5, 5}) == 0)
+    assert(minOperations(6, {1, 1, 1, 2, 2, 2}) == 1)
+    assert(minOperations(7, {1, 3, 3, 3, 2, 2, 2}) == 2)
+    assert(minOperations(8, {4, 4, 4, 4, 3, 3, 3, 3}) == 1)
+    assert(minOperations(9, {1, 2, 3, 4, 5, 6, 7, 8, 9}) == 8)
+    assert(minOperations(10, {1, 2, 1, 2, 1, 2, 1, 2, 1, 2}) == 5)
+    assert(minOperations(3, {3, 3, 3}) == 0)
+    assert(minOperations(4, {2, 1, 1, 2}) == 1)
+end
+
+testMinOperations()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/46</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[ 
+Given an integer n, write a function to compute the sum of all numbers from 1 to n that are multiples 
+of either 3 or 5. If a number is a multiple of both 3 and 5, it should only be counted once.
+For example:
+    >>> sumOfMultiples(10)
+    33 -- (3 + 5 + 6 + 9 + 10)
+]]
+function sumOfMultiples(n)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function sumOfMultiples(n)` to solve the following problem:
+Given an integer n, write a function to compute the sum of all numbers from 1 to n that are multiples of either 3 or 5. If a number is a multiple of both 3 and 5, it should only be counted once.
+For example:
+    >>> sumOfMultiples(10)
+    33 -- (3 + 5 + 6 + 9 + 10)
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local sum = 0
+    for i = 1, n do
+        if i % 3 == 0 or i % 5 == 0 then
+            sum = sum + i
+        end
+    end
+    return sum
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testSumOfMultiples()
+    local candidate = sumOfMultiples
+    lu.assertTrue(candidate(10) == 33)
+    lu.assertTrue(candidate(15) == 60)
+    lu.assertTrue(candidate(20) == 98)
+    lu.assertTrue(candidate(5) == 8)
+    lu.assertTrue(candidate(3) == 3)
+    lu.assertTrue(candidate(6) == 14)
+    lu.assertTrue(candidate(9) == 23)
+    lu.assertTrue(candidate(12) == 45)
+    lu.assertTrue(candidate(17) == 60)
+    lu.assertTrue(candidate(21) == 119)
+    lu.assertTrue(candidate(25) == 168)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testSumOfMultiples()
+    assert(sumOfMultiples(10) == 33)
+    assert(sumOfMultiples(15) == 60)
+    assert(sumOfMultiples(20) == 98)
+    assert(sumOfMultiples(5) == 8)
+    assert(sumOfMultiples(3) == 3)
+    assert(sumOfMultiples(6) == 14)
+    assert(sumOfMultiples(9) == 23)
+    assert(sumOfMultiples(12) == 45)
+    assert(sumOfMultiples(17) == 60)
+    assert(sumOfMultiples(21) == 119)
+    assert(sumOfMultiples(25) == 168)
+end
+
+testSumOfMultiples()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/47</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>hard</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Determine if a given string is a palindrome. A palindrome is a word, phrase, number, or other 
+sequence of characters that reads the same forward and backward (ignoring spaces, 
+punctuation, and capitalization).
+    >>> isPalindrome("racecar") -- true
+]]--
+function isPalindrome(str)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function isPalindrome(str)` to solve the following problem:
+Determine if a given string is a palindrome. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward (ignoring spaces, punctuation, and capitalization).
+    >>> isPalindrome("racecar") -- true
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local start = 1
+    local endd = #str
+
+    while start < endd do
+        -- Skip non-alphanumeric characters and handle case insensitivity
+        while not str:sub(start, start):match("%w") and start < endd do start = start + 1 end
+        while not str:sub(endd, endd):match("%w") and start < endd do endd = endd - 1 end
+        if str:sub(start, start):lower() ~= str:sub(endd, endd):lower() then
+            return false
+        end
+        start = start + 1
+        endd = endd - 1
+    end
+    return true
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testIsPalindrome()
+    local candidate = isPalindrome
+    lu.assertTrue(candidate("A man a plan a canal Panama") == true)
+    lu.assertTrue(candidate("No lemon, no melon") == true)
+    lu.assertTrue(candidate("Was it a car or a cat I saw") == true)
+    lu.assertTrue(candidate("Madam, in Eden, I'm Adam") == true)
+    lu.assertTrue(candidate("Never odd or even") == true)
+    lu.assertTrue(candidate("Eva, can I see bees in a cave") == true)
+    lu.assertTrue(candidate("hello") == false)
+    lu.assertTrue(candidate("GitHub") == false)
+    lu.assertTrue(candidate("programming") == false)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testIsPalindrome()
+    assert(isPalindrome("A man a plan a canal Panama") == true)
+    assert(isPalindrome("No lemon, no melon") == true)
+    assert(isPalindrome("Was it a car or a cat I saw") == true)
+    assert(isPalindrome("Madam, in Eden, I'm Adam") == true)
+    assert(isPalindrome("Never odd or even") == true)
+    assert(isPalindrome("Eva, can I see bees in a cave") == true)
+    assert(isPalindrome("hello") == false)
+    assert(isPalindrome("GitHub") == false)
+    assert(isPalindrome("programming") == false)
+end
+
+testIsPalindrome()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/48</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given a non-negative integer num, repeatedly add all its digits until
+the result has only one digit.
+For example:
+    >>> addDigits(38)
+    2
+    Because 3 + 8 = 11, and 1 + 1 = 2. Since 2 has only one digit, 2 is the result.
+]]--
+function addDigits(num)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function addDigits(num)` to solve the following problem:
+Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+For example:
+    >>> addDigits(38)
+    2
+    Because 3 + 8 = 11, and 1 + 1 = 2. Since 2 has only one digit, 2 is the result.</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>while num >= 10 do
+        local sum = 0
+        while num > 0 do
+            sum = sum + (num % 10)
+            num = math.floor(num / 10)
+        end
+        num = sum
+    end
+    return num
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testAddDigits()
+    local candidate = addDigits
+    lu.assertTrue(candidate(38) == 2)
+    lu.assertTrue(candidate(0) == 0)
+    lu.assertTrue(candidate(9) == 9)
+    lu.assertTrue(candidate(123) == 6)
+    lu.assertTrue(candidate(456) == 6)
+    lu.assertTrue(candidate(9999) == 9)
+    lu.assertTrue(candidate(100) == 1)
+    lu.assertTrue(candidate(1010) == 2)
+    lu.assertTrue(candidate(1234) == 1)
+    lu.assertTrue(candidate(9876) == 3)
+    lu.assertTrue(candidate(199) == 1)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testAddDigits()
+    assert(addDigits(38) == 2)
+    assert(addDigits(0) == 0)
+    assert(addDigits(9) == 9)
+    assert(addDigits(123) == 6)
+    assert(addDigits(456) == 6)
+    assert(addDigits(9999) == 9)
+    assert(addDigits(100) == 1)
+    assert(addDigits(1010) == 2)
+    assert(addDigits(1234) == 1)
+    assert(addDigits(9876) == 3)
+    assert(addDigits(199) == 1)
+end
+testAddDigits()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/49</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+You are playing a game called Nim. In this game, you start with a pile of n stones, and you and your opponent take turns to remove 1 to 3 stones from the pile. The one who removes the last stone wins the game. Given the number of stones n, determine if you can win the game assuming both you and your opponent play optimally.
+Note: You always take the first turn.
+
+Here are some cases:
+    >>> canWinNim(1)
+    true
+]]--
+function canWinNim(n)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function canWinNim(n)` to solve the following problem:
+You are playing a game called Nim. In this game, you start with a pile of n stones, and you and your opponent take turns to remove 1 to 3 stones from the pile. The one who removes the last stone wins the game. Given the number of stones n, determine if you can win the game assuming both you and your opponent play optimally.
+Note: You always take the first turn.
+
+Here are some cases:
+    >>> canWinNim(1)
+    true</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>return n % 4 ~= 0
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testCanWinNim()
+    local candidate = canWinNim
+    lu.assertTrue(candidate(1) == true)
+    lu.assertTrue(candidate(2) == true)
+    lu.assertTrue(candidate(3) == true)
+    lu.assertTrue(candidate(4) == false)
+    lu.assertTrue(candidate(5) == true)
+    lu.assertTrue(candidate(6) == true)
+    lu.assertTrue(candidate(7) == true)
+    lu.assertTrue(candidate(8) == false)
+    lu.assertTrue(candidate(9) == true)
+    lu.assertTrue(candidate(10) == true)
+    lu.assertTrue(candidate(11) == true)
+    lu.assertTrue(candidate(12) == false)
+    lu.assertTrue(candidate(13) == true)
+    lu.assertTrue(candidate(14) == true)
+    lu.assertTrue(candidate(15) == true)
+    lu.assertTrue(candidate(16) == false)
+    lu.assertTrue(candidate(17) == true)
+    lu.assertTrue(candidate(18) == true)
+    lu.assertTrue(candidate(19) == true)
+    lu.assertTrue(candidate(20) == false)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>local function testCanWinNim()
+    assert(canWinNim(1) == true)
+    assert(canWinNim(2) == true)
+    assert(canWinNim(3) == true)
+    assert(canWinNim(4) == false)
+    assert(canWinNim(5) == true)
+    assert(canWinNim(6) == true)
+    assert(canWinNim(7) == true)
+    assert(canWinNim(8) == false)
+    assert(canWinNim(9) == true)
+    assert(canWinNim(10) == true)
+    assert(canWinNim(11) == true)
+    assert(canWinNim(12) == false)
+    assert(canWinNim(13) == true)
+    assert(canWinNim(14) == true)
+    assert(canWinNim(15) == true)
+    assert(canWinNim(16) == false)
+    assert(canWinNim(17) == true)
+    assert(canWinNim(18) == true)
+    assert(canWinNim(19) == true)
+    assert(canWinNim(20) == false)
+end
+
+testCanWinNim()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          task_id
+        </label>
+        <pre>Lua/50</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          level
+        </label>
+        <pre>easy</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+--[[
+Given two integers a and b, return the sum if the sum is even, or return the product of a and b if the sum is odd.
+
+Examples:
+    evenSumOrOddProduct(2, 3) -- returns 6
+]]--
+function evenSumOrOddProduct(a, b)</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          instruction
+        </label>
+        <pre>Write a Lua function `function evenSumOrOddProduct(a, b)` to solve the following problem:
+Given two integers a and b, return the sum if the sum is even, or return the product of a and b if the sum is odd.
+
+Examples:
+    evenSumOrOddProduct(2, 3) -- returns 6
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          canonical_solution
+        </label>
+        <pre>local sum = a + b
+    if sum % 2 == 0 then
+        return sum
+    else
+        return a * b
+    end
+end</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>lu = require('luaunit')
+
+function testEvenSumOrOddProduct()
+    local candidate = evenSumOrOddProduct
+    lu.assertTrue(candidate(2, 3) == 6)
+    lu.assertTrue(candidate(5, 5) == 10)
+    lu.assertTrue(candidate(1, 1) == 2)
+    lu.assertTrue(candidate(0, 0) == 0)
+    lu.assertTrue(candidate(-1, -1) == -2)
+    lu.assertTrue(candidate(100, 200) == 300)
+    lu.assertTrue(candidate(3, 4) == 12)
+    lu.assertTrue(candidate(-5, 5) == 0)
+    lu.assertTrue(candidate(7, 8) == 56)
+    lu.assertTrue(candidate(9, 10) == 90)
+    lu.assertTrue(candidate(11, 14) == 154)
+end
+
+os.exit(lu.LuaUnit.run())</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          oldTest
+        </label>
+        <pre>function testEvenSumOrOddProduct()
+    assert(evenSumOrOddProduct(2, 3) == 6)
+    assert(evenSumOrOddProduct(5, 5) == 10)
+    assert(evenSumOrOddProduct(1, 1) == 2)
+    assert(evenSumOrOddProduct(0, 0) == 0)
+    assert(evenSumOrOddProduct(-1, -1) == -2)
+    assert(evenSumOrOddProduct(100, 200) == 300)
+    assert(evenSumOrOddProduct(3, 4) == 12)
+    assert(evenSumOrOddProduct(-5, 5) == 0)
+    assert(evenSumOrOddProduct(7, 8) == 56)
+    assert(evenSumOrOddProduct(9, 10) == 90)
+    assert(evenSumOrOddProduct(11, 14) == 154)
+end
+
+testEvenSumOrOddProduct()</pre>
+      </div>
+    </div>
+  </body>
+</html>

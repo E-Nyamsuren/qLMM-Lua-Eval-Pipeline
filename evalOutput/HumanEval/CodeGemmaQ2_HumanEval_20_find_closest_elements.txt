@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...nEval\CodeGemmaQ2_HumanEval_20_find_closest_elements.lua:8: syntax error near 'pessi'

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaFP16_mbpp_770_odd_num_sum.lua:10: unexpected symbol near '<'

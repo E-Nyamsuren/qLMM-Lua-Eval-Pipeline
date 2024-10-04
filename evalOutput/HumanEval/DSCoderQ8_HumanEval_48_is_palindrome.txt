@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...utput\HumanEval\DSCoderQ8_HumanEval_48_is_palindrome.lua:12: attempt to call a nil value (global 'range')
+stack traceback:
+	...utput\HumanEval\DSCoderQ8_HumanEval_48_is_palindrome.lua:12: in local 'candidate'
+	...utput\HumanEval\DSCoderQ8_HumanEval_48_is_palindrome.lua:24: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

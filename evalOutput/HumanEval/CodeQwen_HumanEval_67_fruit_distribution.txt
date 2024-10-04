@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\CodeQwen_HumanEval_67_fruit_distribution.lua:23: unexpected symbol near '`'

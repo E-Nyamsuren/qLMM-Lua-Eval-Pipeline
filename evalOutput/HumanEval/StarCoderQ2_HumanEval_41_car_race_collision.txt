@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...umanEval\StarCoderQ2_HumanEval_41_car_race_collision.lua:17: expected: 4, actual: nil
+stack traceback:
+	...umanEval\StarCoderQ2_HumanEval_41_car_race_collision.lua:17: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

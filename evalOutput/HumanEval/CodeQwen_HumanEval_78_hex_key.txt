@@ -1,0 +1,12 @@
+==== ==== STDOUT:
+1
+2
+4
+6
+2
+.
+Ran 1 tests in 0.001 seconds, 1 success, 0 failures
+OK
+
+
+==== ====STDERR:

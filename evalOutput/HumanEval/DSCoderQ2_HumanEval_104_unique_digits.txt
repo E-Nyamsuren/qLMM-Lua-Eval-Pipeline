@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\DSCoderQ2_HumanEval_104_unique_digits.lua:32: 'end' expected (to close 'for' at line 11) near <eof>

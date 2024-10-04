@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MCEVAL\CodeGemmaQ2_Lua_31.lua:11: syntax error near 'strick'

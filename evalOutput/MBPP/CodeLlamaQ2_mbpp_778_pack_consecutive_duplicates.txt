@@ -1,0 +1,77 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...BPP\CodeLlamaQ2_mbpp_778_pack_consecutive_duplicates.lua:21: expected: 
+{{0, 0}, {1}, {2}, {3}, {4, 4}, {5}, {6, 6, 6}, {7}, {8}, {9}, {4, 4}}
+actual: 
+{
+    0,
+    {2, 2},
+    1,
+    {4, 3},
+    2,
+    {5, 4},
+    3,
+    {6, 5},
+    4,
+    {7, 7},
+    5,
+    {9, 8},
+    6,
+    {10, 11},
+    7,
+    {13, 12},
+    8,
+    {14, 13},
+    9,
+    {15, 14},
+    4,
+    {16, 16}
+}
+List difference analysis:
+* list sizes differ: list A (actual) has 22 items, list B (expected) has 11 items
+* lists A and B start differing at index 1
+* Differing parts:
+  - A[1]: 0
+  + B[1]: {0, 0}
+  - A[2]: {2, 2}
+  + B[2]: {1}
+  - A[3]: 1
+  + B[3]: {2}
+  - A[4]: {4, 3}
+  + B[4]: {3}
+  - A[5]: 2
+  + B[5]: {4, 4}
+  - A[6]: {5, 4}
+  + B[6]: {5}
+  - A[7]: 3
+  + B[7]: {6, 6, 6}
+  - A[8]: {6, 5}
+  + B[8]: {7}
+  - A[9]: 4
+  + B[9]: {8}
+  - A[10]: {7, 7}
+  + B[10]: {9}
+  - A[11]: 5
+  + B[11]: {4, 4}
+* Present only in one list:
+  - A[12]: {9, 8}
+  - A[13]: 6
+  - A[14]: {10, 11}
+  - A[15]: 7
+  - A[16]: {13, 12}
+  - A[17]: 8
+  - A[18]: {14, 13}
+  - A[19]: 9
+  - A[20]: {15, 14}
+  - A[21]: 4
+  - A[22]: {16, 16}
+stack traceback:
+	...BPP\CodeLlamaQ2_mbpp_778_pack_consecutive_duplicates.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.009 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...Eval\CodeGemmaQ2_HumanEval_81_numerical_letter_grade.lua:24: syntax error near 'miniatur'

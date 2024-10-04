@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MCEVAL\CodeGemmaFP16_Lua_45.lua:11: syntax error near 'minOperations'

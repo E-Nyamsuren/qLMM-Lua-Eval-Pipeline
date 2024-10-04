@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ2_mbpp_72_dif_Square.lua:48: 'end' expected (to close 'function' at line 2) near <eof>

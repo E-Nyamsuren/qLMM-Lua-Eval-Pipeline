@@ -1,0 +1,47 @@
+==== ==== STDOUT:
+nil
+hello z
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+hello zzz
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaFP16_mbpp_454_text_match_wordz.lua:45: expected: true, actual: "pythonz."
+stack traceback:
+	genOutput\MBPP\CodeGemmaFP16_mbpp_454_text_match_wordz.lua:45: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

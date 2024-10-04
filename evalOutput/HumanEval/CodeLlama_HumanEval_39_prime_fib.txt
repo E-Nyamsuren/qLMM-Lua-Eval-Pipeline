@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\CodeLlama_HumanEval_39_prime_fib.lua:16: attempt to call a nil value (global 'is_prime')
+stack traceback:
+	genOutput\HumanEval\CodeLlama_HumanEval_39_prime_fib.lua:16: in local 'candidate'
+	genOutput\HumanEval\CodeLlama_HumanEval_39_prime_fib.lua:26: in function 'test_humaneval'
+
+Ran 1 tests in 0.000 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\CodeGemmaQ2_HumanEval_95_check_dict_case.lua:16: unexpected symbol near '<'

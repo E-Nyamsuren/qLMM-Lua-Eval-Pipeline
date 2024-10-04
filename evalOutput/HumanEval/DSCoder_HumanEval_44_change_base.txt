@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\DSCoder_HumanEval_44_change_base.lua:11: attempt to call a nil value (global 'base_conversion')
+stack traceback:
+	genOutput\HumanEval\DSCoder_HumanEval_44_change_base.lua:11: in local 'candidate'
+	genOutput\HumanEval\DSCoder_HumanEval_44_change_base.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

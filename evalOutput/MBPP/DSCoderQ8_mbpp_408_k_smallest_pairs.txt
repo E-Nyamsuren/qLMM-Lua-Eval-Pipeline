@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ8_mbpp_408_k_smallest_pairs.lua:16: attempt to call a nil value (global 'min_heapify')
+stack traceback:
+	genOutput\MBPP\DSCoderQ8_mbpp_408_k_smallest_pairs.lua:16: in local 'candidate'
+	genOutput\MBPP\DSCoderQ8_mbpp_408_k_smallest_pairs.lua:36: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

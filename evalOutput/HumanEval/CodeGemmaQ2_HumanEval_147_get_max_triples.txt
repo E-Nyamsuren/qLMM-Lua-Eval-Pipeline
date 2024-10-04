@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...\HumanEval\CodeGemmaQ2_HumanEval_147_get_max_triples.lua:12: syntax error near 'suspicam'

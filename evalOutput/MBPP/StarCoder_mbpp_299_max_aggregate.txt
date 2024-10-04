@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoder_mbpp_299_max_aggregate.lua:7: attempt to add a 'number' with a 'string'
+stack traceback:
+	genOutput\MBPP\StarCoder_mbpp_299_max_aggregate.lua:7: in local 'candidate'
+	genOutput\MBPP\StarCoder_mbpp_299_max_aggregate.lua:20: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

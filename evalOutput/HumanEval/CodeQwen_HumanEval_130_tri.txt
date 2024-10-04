@@ -1,0 +1,9 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwen_HumanEval_130_tri.lua:26: attempt to perform arithmetic on a nil value (local 'c')
+stack traceback:
+	genOutput\HumanEval\CodeQwen_HumanEval_130_tri.lua:26: in local 'tri'
+	genOutput\HumanEval\CodeQwen_HumanEval_130_tri.lua:31: in main chunk
+	[C]: in ?

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...t\HumanEval\CodeLlamaQ2_HumanEval_10_make_palindrome.lua:22: attempt to index a nil value (global 'suffix')
+stack traceback:
+	...t\HumanEval\CodeLlamaQ2_HumanEval_10_make_palindrome.lua:22: in local 'candidate'
+	...t\HumanEval\CodeLlamaQ2_HumanEval_10_make_palindrome.lua:29: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

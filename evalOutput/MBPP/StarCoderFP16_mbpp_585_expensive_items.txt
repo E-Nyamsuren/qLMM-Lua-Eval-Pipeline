@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderFP16_mbpp_585_expensive_items.lua:7: attempt to compare two table values
+stack traceback:
+	genOutput\MBPP\StarCoderFP16_mbpp_585_expensive_items.lua:7: in function <genOutput\MBPP\StarCoderFP16_mbpp_585_expensive_items.lua:7>
+	[C]: in function 'table.sort'
+	genOutput\MBPP\StarCoderFP16_mbpp_585_expensive_items.lua:7: in local 'candidate'
+	genOutput\MBPP\StarCoderFP16_mbpp_585_expensive_items.lua:15: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

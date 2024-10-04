@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\MBPP\CodeGemmaQ2_mbpp_463_max_subarray_product.lua:3: syntax error near 'suspicam'

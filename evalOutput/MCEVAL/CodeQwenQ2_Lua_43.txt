@@ -1,0 +1,15 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testCountPermutations
+genOutput\MCEVAL\CodeQwenQ2_Lua_43.lua:21: attempt to call a number value (local 'count')
+stack traceback:
+	genOutput\MCEVAL\CodeQwenQ2_Lua_43.lua:21: in local 'count'
+	genOutput\MCEVAL\CodeQwenQ2_Lua_43.lua:28: in function 'countPermutations'
+	genOutput\MCEVAL\CodeQwenQ2_Lua_43.lua:38: in function 'testCountPermutations'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

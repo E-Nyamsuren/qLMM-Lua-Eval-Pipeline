@@ -1,0 +1,21 @@
+-- Write a function to remove odd characters in a string.
+local function remove_odd(str1)
+    local str2 = ""
+    for i = 1, #str1 do
+        if string.sub(str1, i, i):match("%w") then
+            str2 = str2 .. string.sub(str1, i, i)
+        end
+    end
+    return str2
+end
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = remove_odd
+    lu.assertEquals(candidate('python'), 'yhn')
+    lu.assertEquals(candidate('program'), 'rga')
+    lu.assertEquals(candidate('language'), 'agae')
+end
+
+os.exit(lu.LuaUnit.run())

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\CodeGemmaFP16_HumanEval_48_is_palindrome.lua:14: unexpected symbol near '<'

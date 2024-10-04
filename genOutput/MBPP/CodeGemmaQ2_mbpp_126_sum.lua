@@ -1,0 +1,14 @@
+-- Write a luathon function to find the sum of common divisors of two given numbers.
+local function sum(a, b)
+ attent suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful suspicful
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = sum
+    lu.assertEquals(candidate(10, 15), 6)
+    lu.assertEquals(candidate(100, 150), 93)
+    lu.assertEquals(candidate(4, 6), 3)
+end
+
+os.exit(lu.LuaUnit.run())

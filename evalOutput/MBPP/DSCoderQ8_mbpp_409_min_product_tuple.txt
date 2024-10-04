@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ8_mbpp_409_min_product_tuple.lua:19: expected: 8, actual: {1, 8}
+stack traceback:
+	genOutput\MBPP\DSCoderQ8_mbpp_409_min_product_tuple.lua:19: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

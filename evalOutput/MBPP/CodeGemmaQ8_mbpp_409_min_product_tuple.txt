@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaQ8_mbpp_409_min_product_tuple.lua:18: expected: 8, actual: 1
+stack traceback:
+	genOutput\MBPP\CodeGemmaQ8_mbpp_409_min_product_tuple.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

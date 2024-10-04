@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\HumanEval\CodeGemma_HumanEval_51_remove_vowels.lua:32: expected: "cB"
+actual: "cBAA"
+stack traceback:
+	...utput\HumanEval\CodeGemma_HumanEval_51_remove_vowels.lua:32: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

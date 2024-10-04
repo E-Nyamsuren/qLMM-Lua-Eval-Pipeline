@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...put\HumanEval\DSCoderQ8_HumanEval_114_minSubArraySum.lua:30: 'end' expected (to close 'function' at line 8) near <eof>

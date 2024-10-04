@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ2_mbpp_388_highest_Power_of_2.lua:15: expected: 8, actual: 4
+stack traceback:
+	genOutput\MBPP\StarCoderQ2_mbpp_388_highest_Power_of_2.lua:15: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

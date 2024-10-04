@@ -1,0 +1,25 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:10: stack overflow
+stack traceback:
+	genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:10: in upvalue 'conway'
+	genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:10: in upvalue 'conway'
+	genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:10: in upvalue 'conway'
+	genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:10: in upvalue 'conway'
+	genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:10: in upvalue 'conway'
+	genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:10: in upvalue 'conway'
+	genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:10: in upvalue 'conway'
+	genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:10: in upvalue 'conway'
+	genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:10: in upvalue 'conway'
+	...	(skipping 124980 levels)
+	genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:10: in function <genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:3>
+	(...tail calls...)
+	genOutput\MBPP\StarCoder_mbpp_84_sequence.lua:22: in function 'test_humaneval'
+
+Ran 1 tests in 0.142 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemma_mbpp_607_find_literals.lua:80: 'end' expected (to close 'function' at line 2) near <eof>

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaFP16_mbpp_17_square_perimeter.lua:6: unexpected symbol near '<'

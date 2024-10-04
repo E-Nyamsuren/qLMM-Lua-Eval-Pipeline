@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoder_mbpp_777_find_sum.lua:24: expected: 21, actual: 20
+stack traceback:
+	genOutput\MBPP\DSCoder_mbpp_777_find_sum.lua:24: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

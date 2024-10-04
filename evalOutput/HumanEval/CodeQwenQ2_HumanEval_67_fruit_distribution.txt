@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...HumanEval\CodeQwenQ2_HumanEval_67_fruit_distribution.lua:18: attempt to perform arithmetic on a nil value (local 'apples')
+stack traceback:
+	...HumanEval\CodeQwenQ2_HumanEval_67_fruit_distribution.lua:18: in local 'candidate'
+	...HumanEval\CodeQwenQ2_HumanEval_67_fruit_distribution.lua:25: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

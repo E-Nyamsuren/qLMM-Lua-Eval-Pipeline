@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaFP16_mbpp_563_extract_values.lua:8: attempt to add a 'string' with a 'number'
+stack traceback:
+	genOutput\MBPP\CodeGemmaFP16_mbpp_563_extract_values.lua:8: in local 'candidate'
+	genOutput\MBPP\CodeGemmaFP16_mbpp_563_extract_values.lua:17: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

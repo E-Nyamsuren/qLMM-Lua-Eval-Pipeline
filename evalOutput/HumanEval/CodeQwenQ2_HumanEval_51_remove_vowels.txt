@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\CodeQwenQ2_HumanEval_51_remove_vowels.lua:23: <eof> expected near 'end'

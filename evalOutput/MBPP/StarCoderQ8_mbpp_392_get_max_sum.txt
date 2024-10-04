@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ8_mbpp_392_get_max_sum.lua:13: attempt to perform arithmetic on a nil value (field '?')
+stack traceback:
+	genOutput\MBPP\StarCoderQ8_mbpp_392_get_max_sum.lua:13: in local 'candidate'
+	genOutput\MBPP\StarCoderQ8_mbpp_392_get_max_sum.lua:25: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

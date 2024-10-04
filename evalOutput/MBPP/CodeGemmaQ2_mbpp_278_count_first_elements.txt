@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\MBPP\CodeGemmaQ2_mbpp_278_count_first_elements.lua:3: syntax error near 'miniatur'

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderFP16_mbpp_731_lateralsurface_cone.lua:16: 'end' expected (to close 'function' at line 2) near <eof>

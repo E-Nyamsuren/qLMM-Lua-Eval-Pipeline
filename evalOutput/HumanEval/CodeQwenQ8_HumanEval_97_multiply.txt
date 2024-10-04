@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwenQ8_HumanEval_97_multiply.lua:18: <eof> expected near 'lu'

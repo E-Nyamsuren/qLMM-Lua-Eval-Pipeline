@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaFP16_mbpp_251_insert_element.lua:15: expected: {"c", "Red", "c", "Green", "c", "Black"}
+actual: {"c", "c", "c", "Black", "Green", "Red"}
+stack traceback:
+	genOutput\MBPP\CodeGemmaFP16_mbpp_251_insert_element.lua:15: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

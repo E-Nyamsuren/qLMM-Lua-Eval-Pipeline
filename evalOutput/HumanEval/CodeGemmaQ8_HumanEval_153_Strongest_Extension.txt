@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...anEval\CodeGemmaQ8_HumanEval_153_Strongest_Extension.lua:22: attempt to get length of a number value (local 'extension')
+stack traceback:
+	...anEval\CodeGemmaQ8_HumanEval_153_Strongest_Extension.lua:22: in local 'candidate'
+	...anEval\CodeGemmaQ8_HumanEval_153_Strongest_Extension.lua:41: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\DSCoderQ2_HumanEval_126_is_sorted.lua:24: attempt to compare number with nil
+stack traceback:
+	genOutput\HumanEval\DSCoderQ2_HumanEval_126_is_sorted.lua:24: in local 'candidate'
+	genOutput\HumanEval\DSCoderQ2_HumanEval_126_is_sorted.lua:37: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

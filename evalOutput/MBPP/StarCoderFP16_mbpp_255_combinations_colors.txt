@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...tput\MBPP\StarCoderFP16_mbpp_255_combinations_colors.lua:21: expected: {{"Red"}, {"Green"}, {"Blue"}}
+actual: <table 02> {<table 01> {}, <table 01>, <table 01>}
+stack traceback:
+	...tput\MBPP\StarCoderFP16_mbpp_255_combinations_colors.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

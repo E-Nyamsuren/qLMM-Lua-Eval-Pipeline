@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaQ8_mbpp_585_expensive_items.lua:23: expected: {{name="Item-2", price=555.22}, {name="Item-1", price=101.1}}
+actual: {{name="Item-1", price=101.1}, {name="Item-2", price=555.22}}
+stack traceback:
+	genOutput\MBPP\CodeGemmaQ8_mbpp_585_expensive_items.lua:23: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

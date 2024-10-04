@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaFP16_mbpp_799_left_rotate.lua:43: ')' expected (to close '(' at line 41) near '='

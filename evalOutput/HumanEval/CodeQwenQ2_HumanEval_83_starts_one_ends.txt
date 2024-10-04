@@ -1,0 +1,33 @@
+==== ==== STDOUT:
+18
+324
+5832
+104976
+1889568
+34012224
+612220032
+11019960576
+198359290368
+3570467226624
+64268410079232
+1156831381426176
+20822964865671168
+374813367582081024
+6746640616477458432
+-7687677419372609536
+9195759040969441280
+-497033925936021504
+-8946610666848387072
+4981704660114997248
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\HumanEval\CodeQwenQ2_HumanEval_83_starts_one_ends.lua:37: expected: 180, actual: 324
+stack traceback:
+	...ut\HumanEval\CodeQwenQ2_HumanEval_83_starts_one_ends.lua:37: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,27 @@
+==== ==== STDOUT:
+true	3
+false	-1
+false	-1
+true	1
+true	5
+true	2
+true	4
+true	3
+false	-1
+false	-1
+false	-1
+false	-1
+false	-1
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwen_mbpp_280_sequential_search.lua:28: expected: {true, 3}
+actual: true
+stack traceback:
+	genOutput\MBPP\CodeQwen_mbpp_280_sequential_search.lua:28: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

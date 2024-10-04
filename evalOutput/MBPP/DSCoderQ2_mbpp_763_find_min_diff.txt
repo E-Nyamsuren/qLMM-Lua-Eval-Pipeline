@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderQ2_mbpp_763_find_min_diff.lua:15: 'end' expected (to close 'function' at line 2) near <eof>

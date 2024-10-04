@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...BPP\CodeGemmaFP16_mbpp_306_max_sum_increasing_subseq.lua:13: attempt to perform arithmetic on a nil value (field '?')
+stack traceback:
+	...BPP\CodeGemmaFP16_mbpp_306_max_sum_increasing_subseq.lua:13: in local 'candidate'
+	...BPP\CodeGemmaFP16_mbpp_306_max_sum_increasing_subseq.lua:23: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

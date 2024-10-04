@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...tput\HumanEval\StarCoderQ8_HumanEval_86_anti_shuffle.lua:39: expected: "ehllo"
+actual: "hello"
+stack traceback:
+	...tput\HumanEval\StarCoderQ8_HumanEval_86_anti_shuffle.lua:39: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

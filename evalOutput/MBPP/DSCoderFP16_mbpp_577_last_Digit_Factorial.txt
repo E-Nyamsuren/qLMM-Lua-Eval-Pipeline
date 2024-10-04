@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\MBPP\DSCoderFP16_mbpp_577_last_Digit_Factorial.lua:4: ',' expected near 'to'

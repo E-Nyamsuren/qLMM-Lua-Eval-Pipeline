@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...manEval\DSCoderQ8_HumanEval_20_find_closest_elements.lua:29: expected: {3.9, 4.0}
+actual: {1, 2}
+stack traceback:
+	...manEval\DSCoderQ8_HumanEval_20_find_closest_elements.lua:29: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

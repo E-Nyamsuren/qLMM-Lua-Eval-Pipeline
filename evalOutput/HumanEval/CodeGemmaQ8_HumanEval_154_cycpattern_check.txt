@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...HumanEval\CodeGemmaQ8_HumanEval_154_cycpattern_check.lua:38: unexpected symbol near '<'

@@ -1,0 +1,23 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoder_mbpp_780_find_combinations.lua:17: expected: 
+{{8, 11}, {7, 5}, {8, 14}, {11, 8}, {12, 17}, {11, 11}}
+actual: 
+<table 11> {
+    <table 05> {<table 01> {2, 4}, <table 02> {6, 7}},
+    <table 06> {<table 01>, <table 03> {5, 1}},
+    <table 07> {<table 01>, <table 04> {6, 10}},
+    <table 08> {<table 02>, <table 03>},
+    <table 09> {<table 02>, <table 04>},
+    <table 10> {<table 03>, <table 04>}
+}
+stack traceback:
+	genOutput\MBPP\DSCoder_mbpp_780_find_combinations.lua:17: in function 'test_humaneval'
+
+Ran 1 tests in 0.005 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

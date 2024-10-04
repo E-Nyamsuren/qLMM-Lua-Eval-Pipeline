@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\MBPP\DSCoderQ2_mbpp_730_consecutive_duplicates.lua:21: 'end' expected (to close 'if' at line 5) near <eof>

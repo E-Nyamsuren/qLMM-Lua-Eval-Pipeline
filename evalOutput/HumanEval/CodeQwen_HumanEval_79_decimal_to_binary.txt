@@ -1,0 +1,28 @@
+==== ==== STDOUT:
+db1111db
+db100000db
+db1000000db
+db10000000db
+db100000000db
+db1000000000db
+db10000000000db
+db100000000000db
+db1000000000000db
+db10000000000000db
+db100000000000000db
+db1000000000000000db
+db10000000000000000db
+db100000000000000000db
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\HumanEval\CodeQwen_HumanEval_79_decimal_to_binary.lua:39: expected: "db0db"
+actual: "dbdb"
+stack traceback:
+	...ut\HumanEval\CodeQwen_HumanEval_79_decimal_to_binary.lua:39: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

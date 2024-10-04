@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testCountBalancedSubsequences
+genOutput\MCEVAL\DSCoder_Lua_41.lua:26: attempt to perform arithmetic on a nil value (field '?')
+stack traceback:
+	genOutput\MCEVAL\DSCoder_Lua_41.lua:26: in function 'countBalancedSubsequences'
+	genOutput\MCEVAL\DSCoder_Lua_41.lua:41: in function 'testCountBalancedSubsequences'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

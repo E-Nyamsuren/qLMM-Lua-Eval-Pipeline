@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testCountPermutations
+genOutput\MCEVAL\CodeQwen_Lua_43.lua:44: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\CodeQwen_Lua_43.lua:44: in function 'testCountPermutations'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

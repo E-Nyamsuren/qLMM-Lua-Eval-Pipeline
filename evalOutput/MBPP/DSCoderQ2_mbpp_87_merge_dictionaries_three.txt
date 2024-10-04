@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\MBPP\DSCoderQ2_mbpp_87_merge_dictionaries_three.lua:14: 'end' expected (to close 'function' at line 2) near <eof>

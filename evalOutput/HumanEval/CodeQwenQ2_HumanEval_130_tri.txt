@@ -1,0 +1,29 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:25: stack overflow
+stack traceback:
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:25: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:22: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:22: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:27: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:22: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:27: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:22: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:27: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:22: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:27: in upvalue 'tri_rec'
+	...	(skipping 222196 levels)
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:27: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:22: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:27: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:22: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:27: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:22: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:27: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:22: in upvalue 'tri_rec'
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:27: in function <genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:18>
+	(...tail calls...)
+	genOutput\HumanEval\CodeQwenQ2_HumanEval_130_tri.lua:34: in main chunk
+	[C]: in ?

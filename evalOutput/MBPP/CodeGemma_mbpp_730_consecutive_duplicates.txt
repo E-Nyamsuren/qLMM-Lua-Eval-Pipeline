@@ -1,0 +1,47 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\MBPP\CodeGemma_mbpp_730_consecutive_duplicates.lua:22: expected: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 4}
+actual: {1, 2, 3, 4, 5, 6, 7, 8, 9, 4, 6, 7, 8, 9, 4, 4}
+List difference analysis:
+* list sizes differ: list A (actual) has 16 items, list B (expected) has 11 items
+* lists A and B start differing at index 1
+* lists A and B are equal again from index 16 for A, 11 for B
+* Differing parts:
+  - A[1]: 1
+  + B[1]: 0
+  - A[2]: 2
+  + B[2]: 1
+  - A[3]: 3
+  + B[3]: 2
+  - A[4]: 4
+  + B[4]: 3
+  - A[5]: 5
+  + B[5]: 4
+  - A[6]: 6
+  + B[6]: 5
+  - A[7]: 7
+  + B[7]: 6
+  - A[8]: 8
+  + B[8]: 7
+  - A[9]: 9
+  + B[9]: 8
+  - A[10]: 4
+  + B[10]: 9
+* Present only in one list:
+  - A[11]: 6
+  - A[12]: 7
+  - A[13]: 8
+  - A[14]: 9
+  - A[15]: 4
+* Common parts at the end of the lists
+  = A[16], B[11]: 4
+stack traceback:
+	...utput\MBPP\CodeGemma_mbpp_730_consecutive_duplicates.lua:22: in function 'test_humaneval'
+
+Ran 1 tests in 0.006 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

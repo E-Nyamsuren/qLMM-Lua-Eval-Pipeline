@@ -1,0 +1,42 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ2_mbpp_255_combinations_colors.lua:33: expected: 
+{
+    {"Red", "Red"},
+    {"Red", "Green"},
+    {"Red", "Blue"},
+    {"Green", "Green"},
+    {"Green", "Blue"},
+    {"Blue", "Blue"}
+}
+actual: 
+{
+    {"Red"},
+    {"Green"},
+    {"Blue"},
+    {"Red"},
+    {"Green"},
+    {"Blue"},
+    {"Red"},
+    {"Green"},
+    {"Blue"},
+    {"Red"},
+    {"Green"},
+    {"Blue"},
+    {"Red"},
+    {"Green"},
+    {"Blue"},
+    {"Red"},
+    {"Green"},
+    {"Blue"}
+}
+stack traceback:
+	genOutput\MBPP\StarCoderQ2_mbpp_255_combinations_colors.lua:33: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

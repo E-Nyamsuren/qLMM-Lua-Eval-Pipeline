@@ -1,0 +1,15 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeGemma_mbpp_780_find_combinations.lua:12: attempt to perform arithmetic on a table value (local 'value')
+stack traceback:
+	genOutput\MBPP\CodeGemma_mbpp_780_find_combinations.lua:12: in local 'helper'
+	genOutput\MBPP\CodeGemma_mbpp_780_find_combinations.lua:15: in local 'candidate'
+	genOutput\MBPP\CodeGemma_mbpp_780_find_combinations.lua:23: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

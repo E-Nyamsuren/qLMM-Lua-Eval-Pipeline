@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ8_mbpp_109_odd_Equivalent.lua:5: attempt to call a nil value (global 'rotate_right')
+stack traceback:
+	genOutput\MBPP\DSCoderQ8_mbpp_109_odd_Equivalent.lua:5: in local 'candidate'
+	genOutput\MBPP\DSCoderQ8_mbpp_109_odd_Equivalent.lua:19: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

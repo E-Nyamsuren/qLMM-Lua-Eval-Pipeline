@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...tput\HumanEval\CodeGemmaQ8_HumanEval_137_compare_one.lua:29: attempt to compare string with number
+stack traceback:
+	...tput\HumanEval\CodeGemmaQ8_HumanEval_137_compare_one.lua:29: in local 'candidate'
+	...tput\HumanEval\CodeGemmaQ8_HumanEval_137_compare_one.lua:51: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,33 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\HumanEval\CodeGemmaFP16_HumanEval_37_sort_even.lua:27: expected: {-10, 3, -5, 2, -3, 3, 5, 0, 9, 1, 123}
+actual: {5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10}
+List difference analysis:
+* lists A (actual) and B (expected) have the same size
+* lists A and B start differing at index 1
+* Differing parts:
+  - A[1]: 5
+  + B[1]: -10
+  = A[2], B[2]: 3
+  = A[3], B[3]: -5
+  = A[4], B[4]: 2
+  = A[5], B[5]: -3
+  = A[6], B[6]: 3
+  - A[7]: 9
+  + B[7]: 5
+  = A[8], B[8]: 0
+  - A[9]: 123
+  + B[9]: 9
+  = A[10], B[10]: 1
+  - A[11]: -10
+  + B[11]: 123
+stack traceback:
+	...utput\HumanEval\CodeGemmaFP16_HumanEval_37_sort_even.lua:27: in function 'test_humaneval'
+
+Ran 1 tests in 0.003 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

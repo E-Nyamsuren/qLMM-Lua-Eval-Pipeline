@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testMinOperations
+genOutput\MCEVAL\DSCoderFP16_Lua_45.lua:17: attempt to call a nil value (local 'candidate')
+stack traceback:
+	genOutput\MCEVAL\DSCoderFP16_Lua_45.lua:17: in function 'testMinOperations'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...\HumanEval\CodeQwenQ8_HumanEval_75_is_multiply_prime.lua:50: ')' expected (to close '(' at line 48) near 'lu'

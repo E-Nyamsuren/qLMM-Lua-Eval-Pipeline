@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...\MBPP\CodeGemmaFP16_mbpp_643_text_match_wordz_middle.lua:38: syntax error near 'lu'

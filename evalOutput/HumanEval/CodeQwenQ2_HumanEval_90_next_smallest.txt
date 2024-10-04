@@ -1,0 +1,17 @@
+==== ==== STDOUT:
+2
+2
+nil
+nil
+F
+Failed tests:
+-------------
+1) test_humaneval
+...tput\HumanEval\CodeQwenQ2_HumanEval_90_next_smallest.lua:41: expected: 1, actual: nil
+stack traceback:
+	...tput\HumanEval\CodeQwenQ2_HumanEval_90_next_smallest.lua:41: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

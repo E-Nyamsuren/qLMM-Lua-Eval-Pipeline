@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...\HumanEval\CodeLlamaQ8_HumanEval_145_order_by_points.lua:35: expected: {-1, -11, 1, -12, 11}
+actual: {-12, -11, -1, 1, 11}
+stack traceback:
+	...\HumanEval\CodeLlamaQ8_HumanEval_145_order_by_points.lua:35: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

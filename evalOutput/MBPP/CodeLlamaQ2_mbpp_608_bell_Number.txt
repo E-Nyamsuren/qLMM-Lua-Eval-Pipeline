@@ -1,0 +1,24 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:6: stack overflow
+stack traceback:
+	genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:6: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:6: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:6: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:6: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:6: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:6: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:6: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:6: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:6: in upvalue 'bell_Number'
+	...	(skipping 499954 levels)
+	genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:6: in local 'candidate'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_608_bell_Number.lua:14: in function 'test_humaneval'
+
+Ran 1 tests in 0.392 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,9 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemma_mbpp_772_remove_length.lua:11: attempt to concatenate a nil value (field '?')
+stack traceback:
+	genOutput\MBPP\CodeGemma_mbpp_772_remove_length.lua:11: in local 'remove_length'
+	genOutput\MBPP\CodeGemma_mbpp_772_remove_length.lua:25: in main chunk
+	[C]: in ?

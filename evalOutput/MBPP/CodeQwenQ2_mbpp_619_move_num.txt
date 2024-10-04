@@ -1,0 +1,27 @@
+==== ==== STDOUT:
+abc123
+abc123
+abc123
+abc
+123
+abcd1234
+abc1234
+abc1234
+abc123
+
+a
+1
+a1
+a1
+ab1
+b1
+ba1
+b1
+b1
+ba1
+.
+Ran 1 tests in 0.001 seconds, 1 success, 0 failures
+OK
+
+
+==== ====STDERR:

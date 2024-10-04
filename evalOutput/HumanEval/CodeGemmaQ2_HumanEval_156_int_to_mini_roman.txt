@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...umanEval\CodeGemmaQ2_HumanEval_156_int_to_mini_roman.lua:12: syntax error near 'suspicam'

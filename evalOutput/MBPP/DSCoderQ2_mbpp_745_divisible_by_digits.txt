@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderQ2_mbpp_745_divisible_by_digits.lua:25: 'end' expected (to close 'for' at line 4) near <eof>

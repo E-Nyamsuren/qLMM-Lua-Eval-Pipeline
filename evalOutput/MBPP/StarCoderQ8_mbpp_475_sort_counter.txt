@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ8_mbpp_475_sort_counter.lua:19: expected: {{"Chemistry", 87}, {"Physics", 83}, {"Math", 81}}
+actual: {Chemistry=87, Math=81, Physics=83}
+stack traceback:
+	genOutput\MBPP\StarCoderQ8_mbpp_475_sort_counter.lua:19: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

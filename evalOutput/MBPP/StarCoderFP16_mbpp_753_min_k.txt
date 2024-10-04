@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\StarCoderFP16_mbpp_753_min_k.lua:28: unexpected symbol near '='

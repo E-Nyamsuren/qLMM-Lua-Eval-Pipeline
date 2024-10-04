@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testMinOperations
+genOutput\MCEVAL\CodeGemma_Lua_45.lua:27: table index is nil
+stack traceback:
+	genOutput\MCEVAL\CodeGemma_Lua_45.lua:27: in function 'minOperations'
+	genOutput\MCEVAL\CodeGemma_Lua_45.lua:46: in function 'testMinOperations'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testMaxModeSum
+genOutput\MCEVAL\CodeGemmaQ8_Lua_38.lua:24: attempt to call a nil value (global 'max')
+stack traceback:
+	genOutput\MCEVAL\CodeGemmaQ8_Lua_38.lua:24: in function 'maxModeSum'
+	genOutput\MCEVAL\CodeGemmaQ8_Lua_38.lua:34: in function 'testMaxModeSum'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

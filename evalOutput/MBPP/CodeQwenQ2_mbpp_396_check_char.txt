@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwenQ2_mbpp_396_check_char.lua:16: expected: "Valid"
+actual: true
+stack traceback:
+	genOutput\MBPP\CodeQwenQ2_mbpp_396_check_char.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

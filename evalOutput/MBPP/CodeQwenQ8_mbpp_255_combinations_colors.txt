@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeQwenQ8_mbpp_255_combinations_colors.lua:5: bad argument #1 to 'insert' (table expected, got nil)
+stack traceback:
+	genOutput\MBPP\CodeQwenQ8_mbpp_255_combinations_colors.lua:5: in upvalue 'helper'
+	genOutput\MBPP\CodeQwenQ8_mbpp_255_combinations_colors.lua:10: in local 'helper'
+	genOutput\MBPP\CodeQwenQ8_mbpp_255_combinations_colors.lua:15: in local 'candidate'
+	genOutput\MBPP\CodeQwenQ8_mbpp_255_combinations_colors.lua:23: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

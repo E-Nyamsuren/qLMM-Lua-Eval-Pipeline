@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...ut\MBPP\CodeGemmaQ2_mbpp_643_text_match_wordz_middle.lua:3: syntax error near 'suspic'

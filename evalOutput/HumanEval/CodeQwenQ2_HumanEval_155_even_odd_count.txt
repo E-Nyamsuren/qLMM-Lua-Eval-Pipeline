@@ -1,0 +1,31 @@
+==== ==== STDOUT:
+table: 00000209E4626F30
+table: 00000209E46265F0
+table: 00000209E4626FB0
+table: 00000209E4626670
+table: 00000209E46270F0
+table: 00000209E4626B30
+table: 00000209E4626B70
+table: 00000209E4626BF0
+table: 00000209E4626CB0
+table: 00000209E45F6760
+table: 00000209E46361F0
+table: 00000209E4636DF0
+table: 00000209E4636A30
+table: 00000209E4636CB0
+table: 00000209E4636630
+table: 00000209E46362B0
+table: 00000209E4636B30
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\HumanEval\CodeQwenQ2_HumanEval_155_even_odd_count.lua:51: expected: {1, 0}
+actual: {0, 0}
+stack traceback:
+	...ut\HumanEval\CodeQwenQ2_HumanEval_155_even_odd_count.lua:51: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

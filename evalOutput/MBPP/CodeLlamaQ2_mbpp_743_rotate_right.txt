@@ -1,0 +1,35 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeLlamaQ2_mbpp_743_rotate_right.lua:17: expected: {8, 9, 10, 1, 2, 3, 4, 5, 6, 7}
+actual: {4, 9, 6, 1, 8, 3, 10, 5, 2, 7}
+List difference analysis:
+* lists A (actual) and B (expected) have the same size
+* lists A and B start differing at index 1
+* lists A and B are equal again from index 10
+* Differing parts:
+  - A[1]: 4
+  + B[1]: 8
+  = A[2], B[2]: 9
+  - A[3]: 6
+  + B[3]: 10
+  = A[4], B[4]: 1
+  - A[5]: 8
+  + B[5]: 2
+  = A[6], B[6]: 3
+  - A[7]: 10
+  + B[7]: 4
+  = A[8], B[8]: 5
+  - A[9]: 2
+  + B[9]: 6
+* Common parts at the end of the lists
+  = A[10], B[10]: 7
+stack traceback:
+	genOutput\MBPP\CodeLlamaQ2_mbpp_743_rotate_right.lua:17: in function 'test_humaneval'
+
+Ran 1 tests in 0.003 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

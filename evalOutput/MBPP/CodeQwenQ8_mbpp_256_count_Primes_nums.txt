@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ8_mbpp_256_count_Primes_nums.lua:20: <eof> expected near 'lu'

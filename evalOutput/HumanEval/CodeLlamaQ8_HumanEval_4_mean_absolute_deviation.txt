@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...Eval\CodeLlamaQ8_HumanEval_4_mean_absolute_deviation.lua:9: attempt to call a nil value (global 'mean')
+stack traceback:
+	...Eval\CodeLlamaQ8_HumanEval_4_mean_absolute_deviation.lua:9: in local 'candidate'
+	...Eval\CodeLlamaQ8_HumanEval_4_mean_absolute_deviation.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

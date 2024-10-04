@@ -1,0 +1,37 @@
+==== ==== STDOUT:
+I
+Z
+N
+N
+F
+S
+A
+G
+M
+S
+Y
+K
+Q
+W
+C
+I
+O
+U
+A
+G
+M
+S
+Y
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwenQ2_mbpp_83_get_Char.lua:37: expected: "f"
+actual: "I"
+stack traceback:
+	genOutput\MBPP\CodeQwenQ2_mbpp_83_get_Char.lua:37: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

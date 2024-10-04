@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaFP16_mbpp_271_even_Power_Sum.lua:10: unexpected symbol near '<'

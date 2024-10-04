@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...HumanEval\CodeGemmaQ2_HumanEval_0_has_close_elements.lua:8: syntax error near 'suspicful'

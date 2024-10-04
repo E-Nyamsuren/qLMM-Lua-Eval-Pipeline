@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...nEval\StarCoderQ2_HumanEval_157_right_angle_triangle.lua:53: 'end' expected (to close 'function' at line 33) near <eof>

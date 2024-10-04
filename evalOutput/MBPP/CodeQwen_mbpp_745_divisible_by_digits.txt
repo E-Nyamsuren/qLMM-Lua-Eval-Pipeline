@@ -1,0 +1,9 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwen_mbpp_745_divisible_by_digits.lua:13: attempt to perform 'n%0'
+stack traceback:
+	genOutput\MBPP\CodeQwen_mbpp_745_divisible_by_digits.lua:13: in local 'divisible_by_digits'
+	genOutput\MBPP\CodeQwen_mbpp_745_divisible_by_digits.lua:24: in main chunk
+	[C]: in ?

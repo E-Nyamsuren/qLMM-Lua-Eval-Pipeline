@@ -1,0 +1,33 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwenQ2_mbpp_462_combinations_list.lua:21: expected: 
+{
+    {},
+    {"orange"},
+    {"red"},
+    {"red", "orange"},
+    {"green"},
+    {"green", "orange"},
+    {"green", "red"},
+    {"green", "red", "orange"},
+    {"blue"},
+    {"blue", "orange"},
+    {"blue", "red"},
+    {"blue", "red", "orange"},
+    {"blue", "green"},
+    {"blue", "green", "orange"},
+    {"blue", "green", "red"},
+    {"blue", "green", "red", "orange"}
+}
+actual: 
+{{"orange", "red", "green", "blue"}}
+stack traceback:
+	genOutput\MBPP\CodeQwenQ2_mbpp_462_combinations_list.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testCalculateTriangleArea
+genOutput\MCEVAL\StarCoderFP16_Lua_2.lua:41: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\StarCoderFP16_Lua_2.lua:41: in function 'testCalculateTriangleArea'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...manEval\CodeGemmaQ2_HumanEval_40_triples_sum_to_zero.lua:15: syntax error near 'suspicful'

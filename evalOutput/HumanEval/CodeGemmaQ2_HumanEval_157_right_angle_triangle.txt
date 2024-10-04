@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...nEval\CodeGemmaQ2_HumanEval_157_right_angle_triangle.lua:11: syntax error near 'exorbit'

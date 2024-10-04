@@ -1,0 +1,9 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ2_mbpp_291_count_no_of_ways.lua:15: attempt to index a nil value (field '?')
+stack traceback:
+	genOutput\MBPP\CodeQwenQ2_mbpp_291_count_no_of_ways.lua:15: in local 'count_no_of_ways'
+	genOutput\MBPP\CodeQwenQ2_mbpp_291_count_no_of_ways.lua:20: in main chunk
+	[C]: in ?

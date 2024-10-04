@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...anEval\CodeQwen_HumanEval_13_greatest_common_divisor.lua:34: ')' expected (to close '(' at line 32) near 'lu'

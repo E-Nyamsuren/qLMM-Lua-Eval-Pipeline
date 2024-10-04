@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...put\HumanEval\StarCoderFP16_HumanEval_72_will_it_fly.lua:23: attempt to call a nil value (global 'is_palindrome')
+stack traceback:
+	...put\HumanEval\StarCoderFP16_HumanEval_72_will_it_fly.lua:23: in local 'candidate'
+	...put\HumanEval\StarCoderFP16_HumanEval_72_will_it_fly.lua:30: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,15 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testExpectedCuts
+genOutput\MCEVAL\StarCoder_Lua_42.lua:41: attempt to index a nil value (global 'fact')
+stack traceback:
+	genOutput\MCEVAL\StarCoder_Lua_42.lua:41: in local 'C'
+	genOutput\MCEVAL\StarCoder_Lua_42.lua:50: in function 'expectedCuts'
+	genOutput\MCEVAL\StarCoder_Lua_42.lua:60: in function 'testExpectedCuts'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...ut\HumanEval\StarCoderFP16_HumanEval_137_compare_one.lua:31: attempt to compare nil with number
+stack traceback:
+	...ut\HumanEval\StarCoderFP16_HumanEval_137_compare_one.lua:31: in local 'candidate'
+	...ut\HumanEval\StarCoderFP16_HumanEval_137_compare_one.lua:57: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

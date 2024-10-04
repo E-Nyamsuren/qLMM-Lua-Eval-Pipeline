@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...manEval\CodeQwen_HumanEval_4_mean_absolute_deviation.lua:30: '}' expected (to close '{' at line 26) near 'function'

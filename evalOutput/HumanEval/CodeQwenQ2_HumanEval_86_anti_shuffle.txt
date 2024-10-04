@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\HumanEval\CodeQwenQ2_HumanEval_86_anti_shuffle.lua:50: ')' expected (to close '(' at line 48) near 'lu'

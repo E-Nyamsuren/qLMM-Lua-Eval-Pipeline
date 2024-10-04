@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...HumanEval\CodeQwenQ2_HumanEval_118_get_closest_vowel.lua:20: bad argument #2 to 'find' (string expected, got nil)
+stack traceback:
+	...HumanEval\CodeQwenQ2_HumanEval_118_get_closest_vowel.lua:20: in local 'candidate'
+	...HumanEval\CodeQwenQ2_HumanEval_118_get_closest_vowel.lua:35: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

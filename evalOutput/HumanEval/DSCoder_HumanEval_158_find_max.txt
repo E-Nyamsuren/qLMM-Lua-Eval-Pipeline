@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\DSCoder_HumanEval_158_find_max.lua:15: bad argument #2 to 'unpack' (string expected, got no value)
+stack traceback:
+	genOutput\HumanEval\DSCoder_HumanEval_158_find_max.lua:15: in local 'candidate'
+	genOutput\HumanEval\DSCoder_HumanEval_158_find_max.lua:28: in function 'test_humaneval'
+
+Ran 1 tests in 0.000 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

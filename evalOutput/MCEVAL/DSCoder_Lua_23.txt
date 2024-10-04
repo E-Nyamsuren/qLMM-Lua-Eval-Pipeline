@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MCEVAL\DSCoder_Lua_23.lua:30: 'end' expected (to close 'function' at line 15) near <eof>

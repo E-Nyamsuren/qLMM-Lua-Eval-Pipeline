@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\StarCoderFP16_HumanEval_49_modp.lua:13: attempt to perform arithmetic on a boolean value
+stack traceback:
+	genOutput\HumanEval\StarCoderFP16_HumanEval_49_modp.lua:13: in local 'candidate'
+	genOutput\HumanEval\StarCoderFP16_HumanEval_49_modp.lua:20: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

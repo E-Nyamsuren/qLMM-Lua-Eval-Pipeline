@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...put\MBPP\CodeGemma_mbpp_100_next_smallest_palindrome.lua:37: 'end' expected (to close 'function' at line 2) near <eof>

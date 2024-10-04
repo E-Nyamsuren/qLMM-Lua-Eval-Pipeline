@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...ut\HumanEval\CodeGemmaQ2_HumanEval_2_truncate_number.lua:8: syntax error near 'suspicam'

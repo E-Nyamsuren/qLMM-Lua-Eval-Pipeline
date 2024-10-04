@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderFP16_mbpp_434_text_match_one.lua:3: malformed pattern (missing arguments to '%b')
+stack traceback:
+	genOutput\MBPP\StarCoderFP16_mbpp_434_text_match_one.lua:3: in local 'candidate'
+	genOutput\MBPP\StarCoderFP16_mbpp_434_text_match_one.lua:10: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

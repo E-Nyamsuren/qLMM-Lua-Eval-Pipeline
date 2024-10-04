@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+table: 0000018DF4E46660
+table: 0000018DF4E466E0
+F
+Failed tests:
+-------------
+1) test_humaneval
+...tput\HumanEval\CodeQwenQ8_HumanEval_101_words_string.lua:22: expected: {"Hi", "my", "name", "is", "John"}
+actual: {"Hi,", "my", "name", "is", "John"}
+stack traceback:
+	...tput\HumanEval\CodeQwenQ8_HumanEval_101_words_string.lua:22: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...BPP\CodeGemmaQ2_mbpp_778_pack_consecutive_duplicates.lua:3: syntax error near 'strick'

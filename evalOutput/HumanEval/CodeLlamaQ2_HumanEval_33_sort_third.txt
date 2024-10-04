@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\CodeLlamaQ2_HumanEval_33_sort_third.lua:15: bad argument #1 to 'sort' (table expected, got number)
+stack traceback:
+	genOutput\HumanEval\CodeLlamaQ2_HumanEval_33_sort_third.lua:15: in local 'candidate'
+	genOutput\HumanEval\CodeLlamaQ2_HumanEval_33_sort_third.lua:25: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

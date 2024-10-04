@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\CodeQwen_HumanEval_77_iscube.lua:19: attempt to call a nil value (field 'pow')
+stack traceback:
+	genOutput\HumanEval\CodeQwen_HumanEval_77_iscube.lua:19: in local 'candidate'
+	genOutput\HumanEval\CodeQwen_HumanEval_77_iscube.lua:27: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

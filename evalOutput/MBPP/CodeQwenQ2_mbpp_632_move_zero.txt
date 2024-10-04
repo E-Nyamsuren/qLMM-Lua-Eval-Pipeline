@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwenQ2_mbpp_632_move_zero.lua:29: '}' expected (to close '{' at line 25) near 'function'

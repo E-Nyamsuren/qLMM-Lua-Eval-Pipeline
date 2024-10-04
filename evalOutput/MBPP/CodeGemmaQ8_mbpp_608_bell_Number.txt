@@ -1,0 +1,28 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: stack overflow
+stack traceback:
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	...	(skipping 124978 levels)
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in upvalue 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:8: in local 'bell_Number'
+	genOutput\MBPP\CodeGemmaQ8_mbpp_608_bell_Number.lua:12: in main chunk
+	[C]: in ?

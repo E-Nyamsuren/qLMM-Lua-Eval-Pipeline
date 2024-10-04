@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...Eval\CodeLlamaQ8_HumanEval_151_double_the_difference.lua:30: expected: 0, actual: 1.0
+stack traceback:
+	...Eval\CodeLlamaQ8_HumanEval_151_double_the_difference.lua:30: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

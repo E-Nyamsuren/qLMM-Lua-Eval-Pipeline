@@ -1,0 +1,37 @@
+-- Check if in given table of numbers, are any two numbers closer to each other than
+-- given threshold.
+-- >>> has_close_elements({1.0, 2.0, 3.0}, 0.5)
+-- false
+-- >>> has_close_elements({1.0, 2.8, 3.0, 4.0, 5.0, 2.0}, 0.3)
+-- true
+local function has_close_elements(numbers, threshold)
+	local sorted = {}
+	for _, num in ipairs(numbers) do
+		table.insert(sorted, num)
+	end
+	table.sort(sorted)
+	local prev = sorted[1]
+	for i = 2, #sorted do
+		if sorted[i] - prev <= threshold then
+			return true
+		end
+		prev = sorted[i]
+	end
+	return false
+end
+
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = has_close_elements
+    lu.assertEquals(candidate({1.0, 2.0, 3.9, 4.0, 5.0, 2.2}, 0.3), true)
+    lu.assertEquals(candidate({1.0, 2.0, 3.9, 4.0, 5.0, 2.2}, 0.05), false)
+    lu.assertEquals(candidate({1.0, 2.0, 5.9, 4.0, 5.0}, 0.95), true)
+    lu.assertEquals(candidate({1.0, 2.0, 5.9, 4.0, 5.0}, 0.8), false)
+    lu.assertEquals(candidate({1.0, 2.0, 3.0, 4.0, 5.0, 2.0}, 0.1), true)
+    lu.assertEquals(candidate({1.1, 2.2, 3.1, 4.1, 5.1}, 1.0), true)
+    lu.assertEquals(candidate({1.1, 2.2, 3.1, 4.1, 5.1}, 0.5), false)
+end
+
+os.exit(lu.LuaUnit.run())

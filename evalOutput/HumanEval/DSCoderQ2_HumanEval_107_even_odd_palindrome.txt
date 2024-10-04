@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...umanEval\DSCoderQ2_HumanEval_107_even_odd_palindrome.lua:43: 'end' expected (to close 'if' at line 21) near <eof>

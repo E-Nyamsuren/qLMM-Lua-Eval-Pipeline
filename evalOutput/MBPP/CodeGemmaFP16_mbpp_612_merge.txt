@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaFP16_mbpp_612_merge.lua:15: expected: {{"x", "a", "m"}, {"y", "b", "n"}}
+actual: {"x", "y", "a", "b", "m", "n"}
+stack traceback:
+	genOutput\MBPP\CodeGemmaFP16_mbpp_612_merge.lua:15: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

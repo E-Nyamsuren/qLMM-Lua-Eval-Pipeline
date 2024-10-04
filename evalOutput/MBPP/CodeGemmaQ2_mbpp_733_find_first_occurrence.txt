@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\MBPP\CodeGemmaQ2_mbpp_733_find_first_occurrence.lua:3: syntax error near 'suspicam'

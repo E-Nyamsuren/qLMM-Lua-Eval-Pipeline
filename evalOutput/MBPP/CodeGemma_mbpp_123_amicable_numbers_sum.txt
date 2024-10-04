@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemma_mbpp_123_amicable_numbers_sum.lua:28: expected: 504, actual: 0
+stack traceback:
+	genOutput\MBPP\CodeGemma_mbpp_123_amicable_numbers_sum.lua:28: in function 'test_humaneval'
+
+Ran 1 tests in 0.006 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...put\MBPP\CodeGemmaFP16_mbpp_445_index_multiplication.lua:7: attempt to perform arithmetic on a table value (field '?')
+stack traceback:
+	...put\MBPP\CodeGemmaFP16_mbpp_445_index_multiplication.lua:7: in local 'candidate'
+	...put\MBPP\CodeGemmaFP16_mbpp_445_index_multiplication.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,34 @@
+==== ==== STDOUT:
+10
+15
+15
+-16
+0
+0
+1
+-2
+0
+0
+0
+0
+0
+0
+0
+0
+1
+-1
+1
+-1
+1
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\HumanEval\CodeQwenQ2_HumanEval_99_closest_integer.lua:59: expected: -16, actual: -17
+stack traceback:
+	...ut\HumanEval\CodeQwenQ2_HumanEval_99_closest_integer.lua:59: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

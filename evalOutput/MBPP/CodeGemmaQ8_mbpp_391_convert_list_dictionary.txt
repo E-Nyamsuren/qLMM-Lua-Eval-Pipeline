@@ -1,0 +1,26 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\MBPP\CodeGemmaQ8_mbpp_391_convert_list_dictionary.lua:14: expected: 
+{
+    {S001={"Adina Park"=85}},
+    {S002={"Leyton Marsh"=98}},
+    {S003={"Duncan Boyle"=89}},
+    {S004={"Saim Richards"=92}}
+}
+actual: 
+{
+    S001="Adina Park",
+    S002="Leyton Marsh",
+    S003="Duncan Boyle",
+    S004="Saim Richards"
+}
+stack traceback:
+	...ut\MBPP\CodeGemmaQ8_mbpp_391_convert_list_dictionary.lua:14: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

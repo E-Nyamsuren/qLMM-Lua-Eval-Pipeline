@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderFP16_mbpp_74_is_samepatterns.lua:18: 'end' expected (to close 'function' at line 2) near <eof>

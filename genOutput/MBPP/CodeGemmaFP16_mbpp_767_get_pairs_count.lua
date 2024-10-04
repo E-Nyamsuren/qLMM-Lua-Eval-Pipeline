@@ -1,0 +1,25 @@
+-- Write a luathon function to count the number of pairs whose sum is equal to ‘sum’. The funtion gets as input a table of numbers and the sum,
+local function get_pairs_count(arr, sum)
+    local pairs_count = 0
+    local pairs = {}
+    for i = 1, #arr do
+        local complement = sum - arr[i]
+        if pairs[complement] then
+            pairs_count = pairs_count + pairs[complement]
+        end
+        pairs[arr[i]] = (pairs[arr[i]] or 0) + 1
+    end
+    return pairs_count
+end
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = get_pairs_count
+    lu.assertEquals(candidate({1, 1, 1, 1}, 2), 6)
+    lu.assertEquals(candidate({1, 5, 7, -1, 5}, 6), 3)
+    lu.assertEquals(candidate({1, -2, 3}, 1), 1)
+    lu.assertEquals(candidate({-1, -2, 3}, -3), 1)
+end
+
+os.exit(lu.LuaUnit.run())

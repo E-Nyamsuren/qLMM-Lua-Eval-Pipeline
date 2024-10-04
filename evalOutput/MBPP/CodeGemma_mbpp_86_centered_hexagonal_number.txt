@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...put\MBPP\CodeGemma_mbpp_86_centered_hexagonal_number.lua:68: 'end' expected (to close 'function' at line 2) near <eof>

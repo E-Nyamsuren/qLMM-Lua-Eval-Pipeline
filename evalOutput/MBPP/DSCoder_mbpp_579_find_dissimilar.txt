@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoder_mbpp_579_find_dissimilar.lua:29: expected: {3, 6, 7, 10}
+actual: {3, 6, 10, 7}
+stack traceback:
+	genOutput\MBPP\DSCoder_mbpp_579_find_dissimilar.lua:29: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

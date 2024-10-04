@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...umanEval\CodeGemmaQ2_HumanEval_7_filter_by_substring.lua:7: syntax error near 'vagu'

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...val\DSCoderQ2_HumanEval_16_count_distinct_characters.lua:21: 'end' expected (to close 'function' at line 6) near <eof>

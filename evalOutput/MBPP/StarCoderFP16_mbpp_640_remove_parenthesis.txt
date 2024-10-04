@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\MBPP\StarCoderFP16_mbpp_640_remove_parenthesis.lua:18: expected: "python"
+actual: {"python (chrome)"}
+stack traceback:
+	...utput\MBPP\StarCoderFP16_mbpp_640_remove_parenthesis.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

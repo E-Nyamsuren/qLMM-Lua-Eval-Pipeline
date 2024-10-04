@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testCountValidCoinTossSequences
+genOutput\MCEVAL\CodeQwen_Lua_16.lua:31: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\CodeQwen_Lua_16.lua:31: in function 'testCountValidCoinTossSequences'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_calculate_function_value
+genOutput\MCEVAL\StarCoderQ8_Lua_3.lua:24: attempt to call a nil value (field 'pow')
+stack traceback:
+	genOutput\MCEVAL\StarCoderQ8_Lua_3.lua:24: in function 'calculate_function_value'
+	genOutput\MCEVAL\StarCoderQ8_Lua_3.lua:37: in function 'test_calculate_function_value'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

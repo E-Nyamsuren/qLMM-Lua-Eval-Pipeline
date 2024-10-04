@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ8_mbpp_632_move_zero.lua:25: expected: {1, 2, 3, 4, 0, 0}
+actual: {0, 0, 4, 0, 0, 0, 0, 0}
+stack traceback:
+	genOutput\MBPP\StarCoderQ8_mbpp_632_move_zero.lua:25: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

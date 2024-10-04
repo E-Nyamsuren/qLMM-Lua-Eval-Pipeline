@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ2_mbpp_607_find_literals.lua:5: bad argument #2 to 'sub' (number expected, got nil)
+stack traceback:
+	genOutput\MBPP\DSCoderQ2_mbpp_607_find_literals.lua:5: in local 'candidate'
+	genOutput\MBPP\DSCoderQ2_mbpp_607_find_literals.lua:13: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

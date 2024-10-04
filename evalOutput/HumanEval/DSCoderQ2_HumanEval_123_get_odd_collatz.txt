@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\HumanEval\DSCoderQ2_HumanEval_123_get_odd_collatz.lua:34: expected: {1, 5, 7, 11, 13, 17}
+actual: {1.0, 5.0, 7.0, 11.0, 13.0, 14, 17.0}
+stack traceback:
+	...ut\HumanEval\DSCoderQ2_HumanEval_123_get_odd_collatz.lua:34: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

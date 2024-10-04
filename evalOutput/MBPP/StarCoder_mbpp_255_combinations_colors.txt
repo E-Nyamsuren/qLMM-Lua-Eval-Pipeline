@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoder_mbpp_255_combinations_colors.lua:10: attempt to add a 'table' with a 'string'
+stack traceback:
+	genOutput\MBPP\StarCoder_mbpp_255_combinations_colors.lua:10: in function <genOutput\MBPP\StarCoder_mbpp_255_combinations_colors.lua:4>
+	(...tail calls...)
+	genOutput\MBPP\StarCoder_mbpp_255_combinations_colors.lua:20: in local 'candidate'
+	genOutput\MBPP\StarCoder_mbpp_255_combinations_colors.lua:30: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

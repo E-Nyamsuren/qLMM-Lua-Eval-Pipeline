@@ -1,0 +1,44 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemma_mbpp_603_get_ludic.lua:20: expected: 
+{1, 2, 3, 5, 7}
+actual: 
+{
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    2,
+    4,
+    6,
+    8,
+    10,
+    3,
+    6,
+    9,
+    4,
+    8,
+    5,
+    10,
+    6,
+    7,
+    8,
+    9,
+    10
+}
+stack traceback:
+	genOutput\MBPP\CodeGemma_mbpp_603_get_ludic.lua:20: in function 'test_humaneval'
+
+Ran 1 tests in 0.003 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

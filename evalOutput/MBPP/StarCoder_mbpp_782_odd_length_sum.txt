@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoder_mbpp_782_odd_length_sum.lua:5: attempt to get length of a number value (field '?')
+stack traceback:
+	genOutput\MBPP\StarCoder_mbpp_782_odd_length_sum.lua:5: in local 'candidate'
+	genOutput\MBPP\StarCoder_mbpp_782_odd_length_sum.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

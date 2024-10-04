@@ -1,0 +1,17 @@
+==== ==== STDOUT:
+NO
+NO
+NO
+F
+Failed tests:
+-------------
+1) test_humaneval
+...tput\HumanEval\CodeQwenQ8_HumanEval_127_intersection.lua:49: expected: "YES"
+actual: "NO"
+stack traceback:
+	...tput\HumanEval\CodeQwenQ8_HumanEval_127_intersection.lua:49: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

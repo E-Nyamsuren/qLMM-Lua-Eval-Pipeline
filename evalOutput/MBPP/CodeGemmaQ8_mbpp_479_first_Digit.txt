@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaQ8_mbpp_479_first_Digit.lua:29: ')' expected (to close '(' at line 27) near 'lu'

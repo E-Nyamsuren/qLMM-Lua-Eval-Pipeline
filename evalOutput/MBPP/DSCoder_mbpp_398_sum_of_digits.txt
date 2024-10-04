@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoder_mbpp_398_sum_of_digits.lua:4: attempt to compare number with table
+stack traceback:
+	genOutput\MBPP\DSCoder_mbpp_398_sum_of_digits.lua:4: in local 'candidate'
+	genOutput\MBPP\DSCoder_mbpp_398_sum_of_digits.lua:15: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

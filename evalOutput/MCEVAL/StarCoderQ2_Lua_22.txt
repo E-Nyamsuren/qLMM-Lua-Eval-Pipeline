@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testFindIntegers
+genOutput\MCEVAL\StarCoderQ2_Lua_22.lua:26: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\StarCoderQ2_Lua_22.lua:26: in function 'testFindIntegers'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

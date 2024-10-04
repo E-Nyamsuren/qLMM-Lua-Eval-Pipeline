@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderQ8_mbpp_72_dif_Square.lua:6: 'do' expected near 'then'

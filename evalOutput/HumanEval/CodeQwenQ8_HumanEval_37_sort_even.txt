@@ -1,0 +1,52 @@
+==== ==== STDOUT:
+table: 000001D0FD126690
+table: 000001D0FD126C10
+table: 000001D0FD126990
+table: 000001D0FD126850
+table: 000001D0FD127290
+table: 000001D0FD127310
+table: 000001D0FD1335E0
+table: 000001D0FD133BE0
+table: 000001D0FD134020
+table: 000001D0FD1340A0
+table: 000001D0FD1341A0
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\HumanEval\CodeQwenQ8_HumanEval_37_sort_even.lua:37: expected: {-10, 3, -5, 2, -3, 3, 5, 0, 9, 1, 123}
+actual: {-10, -5, -3, 0, 1, 2, 3, 3, 5, 9, 123}
+List difference analysis:
+* lists A (actual) and B (expected) have the same size
+* lists A and B start differing at index 2
+* lists A and B are equal again from index 11
+* Common parts:
+  = A[1], B[1]: -10
+* Differing parts:
+  - A[2]: -5
+  + B[2]: 3
+  - A[3]: -3
+  + B[3]: -5
+  - A[4]: 0
+  + B[4]: 2
+  - A[5]: 1
+  + B[5]: -3
+  - A[6]: 2
+  + B[6]: 3
+  - A[7]: 3
+  + B[7]: 5
+  - A[8]: 3
+  + B[8]: 0
+  - A[9]: 5
+  + B[9]: 9
+  - A[10]: 9
+  + B[10]: 1
+* Common parts at the end of the lists
+  = A[11], B[11]: 123
+stack traceback:
+	genOutput\HumanEval\CodeQwenQ8_HumanEval_37_sort_even.lua:37: in function 'test_humaneval'
+
+Ran 1 tests in 0.004 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

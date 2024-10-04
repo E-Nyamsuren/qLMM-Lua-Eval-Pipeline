@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testMinTotalCost
+genOutput\MCEVAL\DSCoderQ2_Lua_36.lua:17: attempt to call a nil value (global 'min')
+stack traceback:
+	genOutput\MCEVAL\DSCoderQ2_Lua_36.lua:17: in function 'minTotalCost'
+	genOutput\MCEVAL\DSCoderQ2_Lua_36.lua:26: in function 'testMinTotalCost'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

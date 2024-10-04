@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...anEval\DSCoderQ2_HumanEval_151_double_the_difference.lua:34: 'end' expected (to close 'function' at line 12) near <eof>

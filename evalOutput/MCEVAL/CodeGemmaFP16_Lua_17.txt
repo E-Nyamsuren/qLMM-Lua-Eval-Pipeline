@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testFindLongestConsecutiveOnesLength
+genOutput\MCEVAL\CodeGemmaFP16_Lua_17.lua:14: invalid conversion '%b' to 'format'
+stack traceback:
+	genOutput\MCEVAL\CodeGemmaFP16_Lua_17.lua:14: in function 'find_longest_consecutive_ones_length'
+	genOutput\MCEVAL\CodeGemmaFP16_Lua_17.lua:34: in function 'testFindLongestConsecutiveOnesLength'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

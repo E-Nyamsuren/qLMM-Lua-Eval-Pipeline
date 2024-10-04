@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\StarCoderQ8_HumanEval_76_is_simple_power.lua:19: unexpected symbol near '*'

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoder_mbpp_734_sum_Of_Subarray_Prod.lua:5: ',' expected near 'to'

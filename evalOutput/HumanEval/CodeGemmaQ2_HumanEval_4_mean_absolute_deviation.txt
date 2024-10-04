@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...Eval\CodeGemmaQ2_HumanEval_4_mean_absolute_deviation.lua:9: syntax error near 'vagu'

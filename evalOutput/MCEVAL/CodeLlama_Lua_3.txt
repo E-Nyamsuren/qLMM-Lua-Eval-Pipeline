@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_calculate_function_value
+genOutput\MCEVAL\CodeLlama_Lua_3.lua:20: attempt to call a nil value (global 'cos')
+stack traceback:
+	genOutput\MCEVAL\CodeLlama_Lua_3.lua:20: in function 'calculate_function_value'
+	genOutput\MCEVAL\CodeLlama_Lua_3.lua:35: in function 'test_calculate_function_value'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

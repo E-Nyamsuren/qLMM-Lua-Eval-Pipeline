@@ -1,0 +1,24 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:6: stack overflow
+stack traceback:
+	...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:6: in upvalue 'max_sum_increasing_subseq'
+	...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:6: in upvalue 'max_sum_increasing_subseq'
+	...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:6: in upvalue 'max_sum_increasing_subseq'
+	...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:6: in upvalue 'max_sum_increasing_subseq'
+	...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:6: in upvalue 'max_sum_increasing_subseq'
+	...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:6: in upvalue 'max_sum_increasing_subseq'
+	...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:6: in upvalue 'max_sum_increasing_subseq'
+	...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:6: in upvalue 'max_sum_increasing_subseq'
+	...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:6: in upvalue 'max_sum_increasing_subseq'
+	...	(skipping 83316 levels)
+	...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:6: in local 'candidate'
+	...ut\MBPP\CodeGemma_mbpp_306_max_sum_increasing_subseq.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.045 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...tput\HumanEval\DSCoderFP16_HumanEval_103_rounded_avg.lua:23: invalid conversion '%b' to 'format'
+stack traceback:
+	...tput\HumanEval\DSCoderFP16_HumanEval_103_rounded_avg.lua:23: in local 'candidate'
+	...tput\HumanEval\DSCoderFP16_HumanEval_103_rounded_avg.lua:30: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

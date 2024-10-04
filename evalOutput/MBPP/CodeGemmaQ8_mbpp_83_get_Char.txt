@@ -1,0 +1,60 @@
+==== ==== STDOUT:
+m
+g
+j
+r
+m
+r
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+h
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaQ8_mbpp_83_get_Char.lua:61: expected: "f"
+actual: "i"
+stack traceback:
+	genOutput\MBPP\CodeGemmaQ8_mbpp_83_get_Char.lua:61: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

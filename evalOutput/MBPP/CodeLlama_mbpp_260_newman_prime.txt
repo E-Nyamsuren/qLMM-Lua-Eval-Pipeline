@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeLlama_mbpp_260_newman_prime.lua:12: attempt to index a nil value (global 'primes')
+stack traceback:
+	genOutput\MBPP\CodeLlama_mbpp_260_newman_prime.lua:12: in local 'candidate'
+	genOutput\MBPP\CodeLlama_mbpp_260_newman_prime.lua:28: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

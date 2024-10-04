@@ -1,0 +1,17 @@
+==== ==== STDOUT:
+table: 000002883F9E6FD0
+table: 000002883F9E6DD0
+table: 000002883F9E6C10
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\HumanEval\CodeQwenQ8_HumanEval_105_by_length.lua:34: expected: {"Eight", "Five", "Four", "Three", "Two", "Two", "One", "One"}
+actual: {"8", "5", "4", "3", "2", "2", "1", "1"}
+stack traceback:
+	genOutput\HumanEval\CodeQwenQ8_HumanEval_105_by_length.lua:34: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

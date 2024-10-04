@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...BPP\DSCoderFP16_mbpp_778_pack_consecutive_duplicates.lua:23: expected: {{0, 0}, {1}, {2}, {3}, {4, 4}, {5}, {6, 6, 6}, {7}, {8}, {9}, {4, 4}}
+actual: {{0}, {0, 1, 2, 3, 4}, {4, 5, 6}, {6}, {6, 7, 8, 9, 4}, {4}}
+stack traceback:
+	...BPP\DSCoderFP16_mbpp_778_pack_consecutive_duplicates.lua:23: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

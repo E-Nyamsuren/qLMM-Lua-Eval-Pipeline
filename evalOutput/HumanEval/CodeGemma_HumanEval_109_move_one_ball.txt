@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...tput\HumanEval\CodeGemma_HumanEval_109_move_one_ball.lua:26: attempt to compare nil with number
+stack traceback:
+	...tput\HumanEval\CodeGemma_HumanEval_109_move_one_ball.lua:26: in local 'candidate'
+	...tput\HumanEval\CodeGemma_HumanEval_109_move_one_ball.lua:41: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

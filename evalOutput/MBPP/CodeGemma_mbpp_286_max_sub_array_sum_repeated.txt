@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\MBPP\CodeGemma_mbpp_286_max_sub_array_sum_repeated.lua:43: 'end' expected (to close 'function' at line 2) near <eof>

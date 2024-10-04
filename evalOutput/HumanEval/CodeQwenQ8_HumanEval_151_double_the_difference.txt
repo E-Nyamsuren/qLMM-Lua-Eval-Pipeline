@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...nEval\CodeQwenQ8_HumanEval_151_double_the_difference.lua:26: unexpected symbol near '`'

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\StarCoderQ8_HumanEval_93_encode.lua:17: attempt to call a nil value (field 'find')
+stack traceback:
+	genOutput\HumanEval\StarCoderQ8_HumanEval_93_encode.lua:17: in local 'candidate'
+	genOutput\HumanEval\StarCoderQ8_HumanEval_93_encode.lua:35: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

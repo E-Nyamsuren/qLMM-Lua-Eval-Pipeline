@@ -1,0 +1,14 @@
+-- Write a function that returns the perimeter of a square given its side length as input.
+local function square_perimeter(a)
+ vagu suspicam suspicam suspicam accla suspicam suspicam accla suspicam suspicam accla suspicam suspicam accla suspicam suspicam accla suspicam suspicam suspicam suspicam suspicam suspicam suspicam suspicam suspicam suspicam vagu suspicam suspicam vagu suspicam vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu vagu
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = square_perimeter
+    lu.assertEquals(candidate(10), 40)
+    lu.assertEquals(candidate(5), 20)
+    lu.assertEquals(candidate(4), 16)
+end
+
+os.exit(lu.LuaUnit.run())

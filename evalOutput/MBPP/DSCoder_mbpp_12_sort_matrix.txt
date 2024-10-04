@@ -1,0 +1,16 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoder_mbpp_12_sort_matrix.lua:12: attempt to compare two nil values
+stack traceback:
+	genOutput\MBPP\DSCoder_mbpp_12_sort_matrix.lua:12: in function <genOutput\MBPP\DSCoder_mbpp_12_sort_matrix.lua:11>
+	[C]: in function 'table.sort'
+	genOutput\MBPP\DSCoder_mbpp_12_sort_matrix.lua:17: in local 'candidate'
+	genOutput\MBPP\DSCoder_mbpp_12_sort_matrix.lua:25: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

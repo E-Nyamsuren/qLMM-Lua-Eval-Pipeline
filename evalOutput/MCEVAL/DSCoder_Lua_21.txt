@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testIsSquare
+genOutput\MCEVAL\DSCoder_Lua_21.lua:14: attempt to call a nil value (global 'sum')
+stack traceback:
+	genOutput\MCEVAL\DSCoder_Lua_21.lua:14: in function 'Is_Square'
+	genOutput\MCEVAL\DSCoder_Lua_21.lua:33: in function 'testIsSquare'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

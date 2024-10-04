@@ -1,0 +1,24 @@
+==== ==== STDOUT:
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ2_mbpp_8_square_nums.lua:12: expected: {1, 4, 9, 16, 25, 36, 49, 64, 81, 100}
+actual: nil
+stack traceback:
+	genOutput\MBPP\DSCoderQ2_mbpp_8_square_nums.lua:12: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

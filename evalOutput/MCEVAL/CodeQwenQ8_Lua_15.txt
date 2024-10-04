@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testCountColoringMethods
+genOutput\MCEVAL\CodeQwenQ8_Lua_15.lua:24: attempt to perform arithmetic on a nil value (field '?')
+stack traceback:
+	genOutput\MCEVAL\CodeQwenQ8_Lua_15.lua:24: in function 'count_coloring_methods'
+	genOutput\MCEVAL\CodeQwenQ8_Lua_15.lua:34: in function 'testCountColoringMethods'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

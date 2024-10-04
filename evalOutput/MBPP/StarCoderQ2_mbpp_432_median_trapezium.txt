@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ2_mbpp_432_median_trapezium.lua:10: expected: 20, actual: nil
+stack traceback:
+	genOutput\MBPP\StarCoderQ2_mbpp_432_median_trapezium.lua:10: in function 'test_humaneval'
+
+Ran 1 tests in 0.003 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

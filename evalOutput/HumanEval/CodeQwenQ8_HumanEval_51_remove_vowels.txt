@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\CodeQwenQ8_HumanEval_51_remove_vowels.lua:28: unexpected symbol near '`'

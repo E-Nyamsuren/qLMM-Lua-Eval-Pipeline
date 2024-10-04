@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...umanEval\CodeQwenQ2_HumanEval_40_triples_sum_to_zero.lua:31: unexpected symbol near '`'

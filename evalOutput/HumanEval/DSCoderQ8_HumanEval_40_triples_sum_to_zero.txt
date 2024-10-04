@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...HumanEval\DSCoderQ8_HumanEval_40_triples_sum_to_zero.lua:19: syntax error near 'end'

@@ -1,0 +1,23 @@
+==== ==== STDOUT:
+22
+4
+-16
+-9
+11
+-12
+14
+-5
+18
+27
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoderFP16_mbpp_419_round_and_sum.lua:16: expected: 243, actual: nil
+stack traceback:
+	genOutput\MBPP\DSCoderFP16_mbpp_419_round_and_sum.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\HumanEval\DSCoderQ8_HumanEval_111_histogram.lua:41: expected: {a=2, b=2}
+actual: {{"b"}, {"a"}}
+stack traceback:
+	genOutput\HumanEval\DSCoderQ8_HumanEval_111_histogram.lua:41: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

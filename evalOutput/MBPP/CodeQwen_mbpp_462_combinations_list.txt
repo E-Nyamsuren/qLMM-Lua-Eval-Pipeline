@@ -1,0 +1,86 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwen_mbpp_462_combinations_list.lua:20: expected: 
+{
+    {},
+    {"orange"},
+    {"red"},
+    {"red", "orange"},
+    {"green"},
+    {"green", "orange"},
+    {"green", "red"},
+    {"green", "red", "orange"},
+    {"blue"},
+    {"blue", "orange"},
+    {"blue", "red"},
+    {"blue", "red", "orange"},
+    {"blue", "green"},
+    {"blue", "green", "orange"},
+    {"blue", "green", "red"},
+    {"blue", "green", "red", "orange"}
+}
+actual: 
+{
+    "",
+    "blue",
+    "green",
+    "greenblue",
+    "red",
+    "redblue",
+    "redgreen",
+    "redgreenblue",
+    "orange",
+    "orangeblue",
+    "orangegreen",
+    "orangegreenblue",
+    "orangered",
+    "orangeredblue",
+    "orangeredgreen",
+    "orangeredgreenblue"
+}
+List difference analysis:
+* lists A (actual) and B (expected) have the same size
+* lists A and B start differing at index 1
+* Differing parts:
+  - A[1]: ""
+  + B[1]: {}
+  - A[2]: "blue"
+  + B[2]: {"orange"}
+  - A[3]: "green"
+  + B[3]: {"red"}
+  - A[4]: "greenblue"
+  + B[4]: {"red", "orange"}
+  - A[5]: "red"
+  + B[5]: {"green"}
+  - A[6]: "redblue"
+  + B[6]: {"green", "orange"}
+  - A[7]: "redgreen"
+  + B[7]: {"green", "red"}
+  - A[8]: "redgreenblue"
+  + B[8]: {"green", "red", "orange"}
+  - A[9]: "orange"
+  + B[9]: {"blue"}
+  - A[10]: "orangeblue"
+  + B[10]: {"blue", "orange"}
+  - A[11]: "orangegreen"
+  + B[11]: {"blue", "red"}
+  - A[12]: "orangegreenblue"
+  + B[12]: {"blue", "red", "orange"}
+  - A[13]: "orangered"
+  + B[13]: {"blue", "green"}
+  - A[14]: "orangeredblue"
+  + B[14]: {"blue", "green", "orange"}
+  - A[15]: "orangeredgreen"
+  + B[15]: {"blue", "green", "red"}
+  - A[16]: "orangeredgreenblue"
+  + B[16]: {"blue", "green", "red", "orange"}
+stack traceback:
+	genOutput\MBPP\CodeQwen_mbpp_462_combinations_list.lua:20: in function 'test_humaneval'
+
+Ran 1 tests in 0.017 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

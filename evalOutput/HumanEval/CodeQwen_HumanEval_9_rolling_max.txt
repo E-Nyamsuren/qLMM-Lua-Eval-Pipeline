@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwen_HumanEval_9_rolling_max.lua:25: '}' expected (to close '{' at line 21) near 'function'

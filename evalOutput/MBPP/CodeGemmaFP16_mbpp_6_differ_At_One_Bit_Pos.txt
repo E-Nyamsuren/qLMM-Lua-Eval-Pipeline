@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\MBPP\CodeGemmaFP16_mbpp_6_differ_At_One_Bit_Pos.lua:16: unexpected symbol near '<'

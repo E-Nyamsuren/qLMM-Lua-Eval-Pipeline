@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\DSCoderFP16_HumanEval_89_encrypt.lua:19: attempt to sub a 'string' with a 'string'
+stack traceback:
+	genOutput\HumanEval\DSCoderFP16_HumanEval_89_encrypt.lua:19: in local 'candidate'
+	genOutput\HumanEval\DSCoderFP16_HumanEval_89_encrypt.lua:31: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

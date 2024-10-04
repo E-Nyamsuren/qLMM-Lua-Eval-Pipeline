@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...anEval\CodeGemmaFP16_HumanEval_41_car_race_collision.lua:46: unexpected symbol near '<'

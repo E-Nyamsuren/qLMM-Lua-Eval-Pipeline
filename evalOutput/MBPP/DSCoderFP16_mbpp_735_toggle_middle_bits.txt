@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderFP16_mbpp_735_toggle_middle_bits.lua:17: 'end' expected (to close 'function' at line 2) near <eof>

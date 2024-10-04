@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\MBPP\CodeGemmaFP16_mbpp_171_perimeter_pentagon.lua:6: unexpected symbol near '<'

@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...HumanEval\StarCoderFP16_HumanEval_10_make_palindrome.lua:53: 'end' expected (to close 'function' at line 11) near <eof>

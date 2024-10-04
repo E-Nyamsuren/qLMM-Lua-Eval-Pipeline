@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...HumanEval\CodeGemmaQ2_HumanEval_70_strange_sort_list.lua:12: syntax error near 'suspicful'

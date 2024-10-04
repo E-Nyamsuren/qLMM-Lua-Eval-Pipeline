@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoderFP16_mbpp_407_rearrange_bigger.lua:3: attempt to call a nil value (method 'split')
+stack traceback:
+	genOutput\MBPP\DSCoderFP16_mbpp_407_rearrange_bigger.lua:3: in local 'candidate'
+	genOutput\MBPP\DSCoderFP16_mbpp_407_rearrange_bigger.lua:34: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

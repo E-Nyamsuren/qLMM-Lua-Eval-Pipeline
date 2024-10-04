@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testClassifyInteger
+genOutput\MCEVAL\CodeGemmaQ8_Lua_26.lua:24: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\CodeGemmaQ8_Lua_26.lua:24: in function 'testClassifyInteger'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

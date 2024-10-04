@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\HumanEval\CodeLlamaQ8_HumanEval_161_solve.lua:35: expected: "4321"
+actual: "1234"
+stack traceback:
+	genOutput\HumanEval\CodeLlamaQ8_HumanEval_161_solve.lua:35: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

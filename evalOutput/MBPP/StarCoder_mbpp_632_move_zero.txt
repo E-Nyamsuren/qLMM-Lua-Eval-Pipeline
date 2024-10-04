@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoder_mbpp_632_move_zero.lua:14: bad argument #2 to 'remove' (position out of bounds)
+stack traceback:
+	genOutput\MBPP\StarCoder_mbpp_632_move_zero.lua:14: in local 'candidate'
+	genOutput\MBPP\StarCoder_mbpp_632_move_zero.lua:24: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

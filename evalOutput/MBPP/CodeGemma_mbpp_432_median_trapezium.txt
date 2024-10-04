@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemma_mbpp_432_median_trapezium.lua:11: expected: 20, actual: 350.0
+stack traceback:
+	genOutput\MBPP\CodeGemma_mbpp_432_median_trapezium.lua:11: in function 'test_humaneval'
+
+Ran 1 tests in 0.000 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

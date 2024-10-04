@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...tput\HumanEval\CodeGemmaFP16_HumanEval_9_rolling_max.lua:18: unexpected symbol near '<'

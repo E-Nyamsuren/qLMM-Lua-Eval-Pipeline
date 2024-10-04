@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemmaQ2_mbpp_6_differ_At_One_Bit_Pos.lua:3: syntax error near 'suspic'

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...\HumanEval\DSCoderQ2_HumanEval_6_parse_nested_parens.lua:12: attempt to get length of a function value (local 'group')
+stack traceback:
+	...\HumanEval\DSCoderQ2_HumanEval_6_parse_nested_parens.lua:12: in local 'candidate'
+	...\HumanEval\DSCoderQ2_HumanEval_6_parse_nested_parens.lua:31: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

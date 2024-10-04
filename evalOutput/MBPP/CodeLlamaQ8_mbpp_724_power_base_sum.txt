@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeLlamaQ8_mbpp_724_power_base_sum.lua:15: expected: 115, actual: 2.2222222222222
+stack traceback:
+	genOutput\MBPP\CodeLlamaQ8_mbpp_724_power_base_sum.lua:15: in function 'test_humaneval'
+
+Ran 1 tests in 0.005 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

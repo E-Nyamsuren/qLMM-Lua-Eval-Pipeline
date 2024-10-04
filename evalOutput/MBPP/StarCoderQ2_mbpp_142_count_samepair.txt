@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ2_mbpp_142_count_samepair.lua:11: expected: 3, actual: nil
+stack traceback:
+	genOutput\MBPP\StarCoderQ2_mbpp_142_count_samepair.lua:11: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+The ASCII code for 'A' is: 65
+F
+Failed tests:
+-------------
+1) testDisplayAsciiInfo
+genOutput\MCEVAL\CodeGemma_Lua_28.lua:23: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\CodeGemma_Lua_28.lua:23: in function 'testDisplayAsciiInfo'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

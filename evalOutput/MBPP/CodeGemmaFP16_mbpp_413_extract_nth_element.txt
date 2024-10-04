@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...tput\MBPP\CodeGemmaFP16_mbpp_413_extract_nth_element.lua:6: attempt to call a nil value (field 'insert')
+stack traceback:
+	...tput\MBPP\CodeGemmaFP16_mbpp_413_extract_nth_element.lua:6: in local 'candidate'
+	...tput\MBPP\CodeGemmaFP16_mbpp_413_extract_nth_element.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

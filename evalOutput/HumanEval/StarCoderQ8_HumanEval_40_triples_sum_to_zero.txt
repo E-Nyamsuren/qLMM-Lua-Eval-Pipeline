@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...manEval\StarCoderQ8_HumanEval_40_triples_sum_to_zero.lua:24: attempt to index a nil value (local 'l')
+stack traceback:
+	...manEval\StarCoderQ8_HumanEval_40_triples_sum_to_zero.lua:24: in local 'candidate'
+	...manEval\StarCoderQ8_HumanEval_40_triples_sum_to_zero.lua:41: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

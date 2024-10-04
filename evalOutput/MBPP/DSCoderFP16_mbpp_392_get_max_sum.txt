@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoderFP16_mbpp_392_get_max_sum.lua:27: expected: 106, actual: 262.0
+stack traceback:
+	genOutput\MBPP\DSCoderFP16_mbpp_392_get_max_sum.lua:27: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,24 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:8: stack overflow
+stack traceback:
+	genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:8: in upvalue 'get_max_sum'
+	...	(skipping 142827 levels)
+	genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:9: in local 'candidate'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_392_get_max_sum.lua:24: in function 'test_humaneval'
+
+Ran 1 tests in 0.100 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

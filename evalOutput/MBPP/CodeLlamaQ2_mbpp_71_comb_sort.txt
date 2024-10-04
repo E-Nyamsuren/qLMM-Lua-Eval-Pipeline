@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeLlamaQ2_mbpp_71_comb_sort.lua:7: attempt to compare nil with number
+stack traceback:
+	genOutput\MBPP\CodeLlamaQ2_mbpp_71_comb_sort.lua:7: in local 'candidate'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_71_comb_sort.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.003 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

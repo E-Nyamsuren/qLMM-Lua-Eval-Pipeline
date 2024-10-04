@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) testNewModuloFactorial
+genOutput\MCEVAL\CodeGemma_Lua_33.lua:28: expected: true, actual: false
+stack traceback:
+	genOutput\MCEVAL\CodeGemma_Lua_33.lua:28: in function 'testNewModuloFactorial'
+
+Ran 1 tests in 0.004 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

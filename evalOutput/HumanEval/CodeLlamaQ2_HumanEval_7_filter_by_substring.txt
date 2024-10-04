@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...umanEval\CodeLlamaQ2_HumanEval_7_filter_by_substring.lua:7: attempt to index a nil value (global 'vim')
+stack traceback:
+	...umanEval\CodeLlamaQ2_HumanEval_7_filter_by_substring.lua:7: in local 'candidate'
+	...umanEval\CodeLlamaQ2_HumanEval_7_filter_by_substring.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

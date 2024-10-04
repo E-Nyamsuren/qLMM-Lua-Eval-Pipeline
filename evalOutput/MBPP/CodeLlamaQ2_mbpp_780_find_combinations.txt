@@ -1,0 +1,17 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeLlamaQ2_mbpp_780_find_combinations.lua:13: attempt to perform arithmetic on a table value (local 'element')
+stack traceback:
+	genOutput\MBPP\CodeLlamaQ2_mbpp_780_find_combinations.lua:13: in upvalue 'recurse'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_780_find_combinations.lua:12: in upvalue 'recurse'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_780_find_combinations.lua:12: in local 'recurse'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_780_find_combinations.lua:18: in local 'candidate'
+	genOutput\MBPP\CodeLlamaQ2_mbpp_780_find_combinations.lua:26: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

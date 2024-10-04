@@ -1,0 +1,11 @@
+==== ==== STDOUT:
+A ASCII code is: 65
+B ASCII code is: 66
+0 ASCII code is: 48
+  ASCII code is: 32
+.
+Ran 1 tests in 0.001 seconds, 1 success, 0 failures
+OK
+
+
+==== ====STDERR:

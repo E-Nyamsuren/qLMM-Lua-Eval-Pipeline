@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...manEval\DSCoderQ2_HumanEval_20_find_closest_elements.lua:11: attempt to get length of a nil value (local 'sorted_numbers')
+stack traceback:
+	...manEval\DSCoderQ2_HumanEval_20_find_closest_elements.lua:11: in local 'candidate'
+	...manEval\DSCoderQ2_HumanEval_20_find_closest_elements.lua:26: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

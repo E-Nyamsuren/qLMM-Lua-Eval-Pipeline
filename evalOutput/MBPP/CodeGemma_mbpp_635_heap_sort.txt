@@ -1,0 +1,15 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeGemma_mbpp_635_heap_sort.lua:7: attempt to compare nil with number
+stack traceback:
+	genOutput\MBPP\CodeGemma_mbpp_635_heap_sort.lua:7: in local 'heapify'
+	genOutput\MBPP\CodeGemma_mbpp_635_heap_sort.lua:20: in local 'candidate'
+	genOutput\MBPP\CodeGemma_mbpp_635_heap_sort.lua:34: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

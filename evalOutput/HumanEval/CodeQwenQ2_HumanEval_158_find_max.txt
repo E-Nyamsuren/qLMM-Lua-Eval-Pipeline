@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\HumanEval\CodeQwenQ2_HumanEval_158_find_max.lua:29: <eof> expected near 'lu'

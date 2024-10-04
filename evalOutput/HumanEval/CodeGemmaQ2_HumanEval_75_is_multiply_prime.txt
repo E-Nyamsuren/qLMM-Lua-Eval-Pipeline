@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...HumanEval\CodeGemmaQ2_HumanEval_75_is_multiply_prime.lua:9: syntax error near 'suspicam'

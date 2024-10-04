@@ -1,0 +1,24 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:9: stack overflow
+stack traceback:
+	genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:9: in upvalue 'combinations_helper'
+	genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:9: in upvalue 'combinations_helper'
+	genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:9: in upvalue 'combinations_helper'
+	genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:9: in upvalue 'combinations_helper'
+	genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:9: in upvalue 'combinations_helper'
+	genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:9: in upvalue 'combinations_helper'
+	genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:9: in upvalue 'combinations_helper'
+	genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:9: in upvalue 'combinations_helper'
+	genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:9: in upvalue 'combinations_helper'
+	...	(skipping 99982 levels)
+	genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:13: in local 'candidate'
+	genOutput\MBPP\CodeQwen_mbpp_255_combinations_colors.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 19.919 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

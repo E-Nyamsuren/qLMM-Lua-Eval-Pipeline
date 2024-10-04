@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaFP16_mbpp_12_sort_matrix.lua:31: expected: {{1, 1, 1}, {1, 2, 3}, {2, 4, 5}}
+actual: {{3, 6, 9}, {12, 24, 30}, {11, 11, 11}}
+stack traceback:
+	genOutput\MBPP\CodeGemmaFP16_mbpp_12_sort_matrix.lua:31: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

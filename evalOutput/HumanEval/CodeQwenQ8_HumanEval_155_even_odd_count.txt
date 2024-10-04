@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\HumanEval\CodeQwenQ8_HumanEval_155_even_odd_count.lua:34: expected: {1, 0}
+actual: {0, 0}
+stack traceback:
+	...ut\HumanEval\CodeQwenQ8_HumanEval_155_even_odd_count.lua:34: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

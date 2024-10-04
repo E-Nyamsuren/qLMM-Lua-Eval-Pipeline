@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeQwen_mbpp_738_geometric_sum.lua:33: ')' expected (to close '(' at line 31) near 'lu'

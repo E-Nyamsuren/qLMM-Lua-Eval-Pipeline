@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\DSCoder_mbpp_6_differ_At_One_Bit_Pos.lua:3: attempt to index a nil value (global 'bit32')
+stack traceback:
+	genOutput\MBPP\DSCoder_mbpp_6_differ_At_One_Bit_Pos.lua:3: in local 'candidate'
+	genOutput\MBPP\DSCoder_mbpp_6_differ_At_One_Bit_Pos.lua:10: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

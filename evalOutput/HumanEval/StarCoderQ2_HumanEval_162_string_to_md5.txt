@@ -1,0 +1,28 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...ut\HumanEval\StarCoderQ2_HumanEval_162_string_to_md5.lua:9: module 'md5' not found:
+	no field package.preload['md5']
+	no file 'C:\Users\enyam\AppData\Local\Programs\Lua\bin\lua\md5.lua'
+	no file 'C:\Users\enyam\AppData\Local\Programs\Lua\bin\lua\md5\init.lua'
+	no file 'C:\Users\enyam\AppData\Local\Programs\Lua\bin\md5.lua'
+	no file 'C:\Users\enyam\AppData\Local\Programs\Lua\bin\md5\init.lua'
+	no file 'C:\Users\enyam\AppData\Local\Programs\Lua\bin\..\share\lua\5.4\md5.lua'
+	no file 'C:\Users\enyam\AppData\Local\Programs\Lua\bin\..\share\lua\5.4\md5\init.lua'
+	no file '.\md5.lua'
+	no file '.\md5\init.lua'
+	no file 'C:\Users\enyam\AppData\Local\Programs\Lua\bin'
+	no file 'C:\Users\enyam\AppData\Local\Programs\Lua\bin\md5.dll'
+	no file 'C:\Users\enyam\AppData\Local\Programs\Lua\bin\..\lib\lua\5.4\md5.dll'
+	no file 'C:\Users\enyam\AppData\Local\Programs\Lua\bin\loadall.dll'
+	no file '.\md5.dll'
+stack traceback:
+	...ut\HumanEval\StarCoderQ2_HumanEval_162_string_to_md5.lua:9: in local 'candidate'
+	...ut\HumanEval\StarCoderQ2_HumanEval_162_string_to_md5.lua:19: in function 'test_humaneval'
+
+Ran 1 tests in 0.008 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

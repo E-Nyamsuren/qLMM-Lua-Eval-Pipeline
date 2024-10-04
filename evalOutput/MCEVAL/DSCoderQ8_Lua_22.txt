@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testFindIntegers
+genOutput\MCEVAL\DSCoderQ8_Lua_22.lua:18: bad argument #1 to 'for iterator' (table expected, got number)
+stack traceback:
+	genOutput\MCEVAL\DSCoderQ8_Lua_22.lua:18: in function 'find_integers'
+	genOutput\MCEVAL\DSCoderQ8_Lua_22.lua:31: in function 'testFindIntegers'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

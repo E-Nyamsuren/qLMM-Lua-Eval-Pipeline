@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\DSCoderQ2_mbpp_75_find_tuples.lua:30: 'end' expected (to close 'for' at line 4) near <eof>

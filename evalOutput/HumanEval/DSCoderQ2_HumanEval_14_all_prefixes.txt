@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\HumanEval\DSCoderQ2_HumanEval_14_all_prefixes.lua:6: bad argument #2 to 'gmatch' (string expected, got no value)
+stack traceback:
+	genOutput\HumanEval\DSCoderQ2_HumanEval_14_all_prefixes.lua:6: in local 'candidate'
+	genOutput\HumanEval\DSCoderQ2_HumanEval_14_all_prefixes.lua:16: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

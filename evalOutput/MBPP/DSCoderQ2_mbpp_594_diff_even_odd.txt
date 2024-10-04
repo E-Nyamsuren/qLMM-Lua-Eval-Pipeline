@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\DSCoderQ2_mbpp_594_diff_even_odd.lua:21: expected: 3, actual: -3
+stack traceback:
+	genOutput\MBPP\DSCoderQ2_mbpp_594_diff_even_odd.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

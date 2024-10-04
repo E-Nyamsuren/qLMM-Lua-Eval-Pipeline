@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...utput\MBPP\StarCoderQ8_mbpp_463_max_subarray_product.lua:21: expected: 112, actual: 6
+stack traceback:
+	...utput\MBPP\StarCoderQ8_mbpp_463_max_subarray_product.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

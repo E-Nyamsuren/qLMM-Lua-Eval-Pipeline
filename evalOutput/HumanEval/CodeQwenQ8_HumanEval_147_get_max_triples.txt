@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\CodeQwenQ8_HumanEval_147_get_max_triples.lua:29: unexpected symbol near '`'

@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...put\MBPP\StarCoderFP16_mbpp_123_amicable_numbers_sum.lua:5: attempt to call a nil value (global 'sum_of_proper_divisors')
+stack traceback:
+	...put\MBPP\StarCoderFP16_mbpp_123_amicable_numbers_sum.lua:5: in local 'candidate'
+	...put\MBPP\StarCoderFP16_mbpp_123_amicable_numbers_sum.lua:18: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

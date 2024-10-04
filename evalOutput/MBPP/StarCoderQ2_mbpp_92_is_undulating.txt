@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+genOutput\MBPP\StarCoderQ2_mbpp_92_is_undulating.lua:6: attempt to get length of a number value (local 'n')
+stack traceback:
+	genOutput\MBPP\StarCoderQ2_mbpp_92_is_undulating.lua:6: in local 'candidate'
+	genOutput\MBPP\StarCoderQ2_mbpp_92_is_undulating.lua:21: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

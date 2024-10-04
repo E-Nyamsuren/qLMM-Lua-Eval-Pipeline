@@ -1,0 +1,24 @@
+-- Write a luathon function to check whether the two numbers differ at one bit position only or not.
+local function differ_At_One_Bit_Pos(a, b)
+	local count = 0
+	local c = a ^ b
+	while c > 0 do
+		count = count + 1
+		c = c & (c - 1)
+	end
+	return count == 1
+end
+
+lu = require('luaunit')
+
+function test_humaneval()
+local candidate = differ_At_One_Bit_Pos
+    lu.assertEquals(candidate(13, 9), true)
+    lu.assertEquals(candidate(15, 8), false)
+    lu.assertEquals(candidate(2, 4), false)
+    lu.assertEquals(candidate(2, 3), true)
+    lu.assertEquals(candidate(5, 1), true)
+    lu.assertEquals(candidate(1, 5), true)
+end
+
+os.exit(lu.LuaUnit.run())

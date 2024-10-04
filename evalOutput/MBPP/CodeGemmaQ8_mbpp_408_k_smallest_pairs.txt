@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeGemmaQ8_mbpp_408_k_smallest_pairs.lua:32: expected: {{1, 2}, {1, 4}}
+actual: {{2, 0}, {2, 1}}
+stack traceback:
+	genOutput\MBPP\CodeGemmaQ8_mbpp_408_k_smallest_pairs.lua:32: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

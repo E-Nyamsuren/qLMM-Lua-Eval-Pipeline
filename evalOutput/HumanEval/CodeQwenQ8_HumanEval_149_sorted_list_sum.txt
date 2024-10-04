@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...t\HumanEval\CodeQwenQ8_HumanEval_149_sorted_list_sum.lua:45: '}' expected (to close '{' at line 41) near 'function'

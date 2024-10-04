@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\StarCoderFP16_mbpp_64_subject_marks.lua:10: expected: {{"Social sciences", 82}, {"English", 88}, {"Science", 90}, {"Maths", 97}}
+actual: nil
+stack traceback:
+	genOutput\MBPP\StarCoderFP16_mbpp_64_subject_marks.lua:10: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...t\HumanEval\StarCoderFP16_HumanEval_71_triangle_area.lua:25: expected: 8.18, actual: 8.1815340859768
+stack traceback:
+	...t\HumanEval\StarCoderFP16_HumanEval_71_triangle_area.lua:25: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

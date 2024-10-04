@@ -1,0 +1,13 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwen_mbpp_406_find_Parity.lua:27: expected: false, actual: "Even"
+stack traceback:
+	genOutput\MBPP\CodeQwen_mbpp_406_find_Parity.lua:27: in function 'test_humaneval'
+
+Ran 1 tests in 0.003 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

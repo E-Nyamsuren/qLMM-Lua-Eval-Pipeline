@@ -1,0 +1,26 @@
+==== ==== STDOUT:
+F
+Failed tests:
+-------------
+1) test_humaneval
+...ut\MBPP\DSCoderFP16_mbpp_391_convert_list_dictionary.lua:17: expected: 
+{
+    {S001={"Adina Park"=85}},
+    {S002={"Leyton Marsh"=98}},
+    {S003={"Duncan Boyle"=89}},
+    {S004={"Saim Richards"=92}}
+}
+actual: 
+{
+    {85=85, S001="Adina Park"},
+    {98=98, S002="Leyton Marsh"},
+    {89=89, S003="Duncan Boyle"},
+    {92=92, S004="Saim Richards"}
+}
+stack traceback:
+	...ut\MBPP\DSCoderFP16_mbpp_391_convert_list_dictionary.lua:17: in function 'test_humaneval'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

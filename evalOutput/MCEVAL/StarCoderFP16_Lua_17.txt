@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) testFindLongestConsecutiveOnesLength
+genOutput\MCEVAL\StarCoderFP16_Lua_17.lua:14: attempt to call a nil value (global 'to_binary')
+stack traceback:
+	genOutput\MCEVAL\StarCoderFP16_Lua_17.lua:14: in function 'find_longest_consecutive_ones_length'
+	genOutput\MCEVAL\StarCoderFP16_Lua_17.lua:32: in function 'testFindLongestConsecutiveOnesLength'
+
+Ran 1 tests in 0.002 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

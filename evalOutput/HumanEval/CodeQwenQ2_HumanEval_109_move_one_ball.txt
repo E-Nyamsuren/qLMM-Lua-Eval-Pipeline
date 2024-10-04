@@ -1,0 +1,14 @@
+==== ==== STDOUT:
+E
+Tests with errors:
+------------------
+1) test_humaneval
+...put\HumanEval\CodeQwenQ2_HumanEval_109_move_one_ball.lua:24: bad argument #1 to 'concat' (table expected, got nil)
+stack traceback:
+	...put\HumanEval\CodeQwenQ2_HumanEval_109_move_one_ball.lua:24: in local 'candidate'
+	...put\HumanEval\CodeQwenQ2_HumanEval_109_move_one_ball.lua:33: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 error
+
+
+==== ====STDERR:

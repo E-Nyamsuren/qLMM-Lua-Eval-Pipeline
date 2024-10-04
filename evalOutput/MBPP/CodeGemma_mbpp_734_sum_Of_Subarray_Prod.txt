@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: genOutput\MBPP\CodeGemma_mbpp_734_sum_Of_Subarray_Prod.lua:27: '}' expected (to close '{' at line 23) near 'function'

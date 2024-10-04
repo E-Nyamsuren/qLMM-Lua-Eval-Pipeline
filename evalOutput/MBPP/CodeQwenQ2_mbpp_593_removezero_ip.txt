@@ -1,0 +1,28 @@
+==== ==== STDOUT:
+192.168.0.1
+192.168.0.0
+192.168.1.0
+192.168.1.1
+192.168.0.0
+192.168.0.0
+192.168.1.0
+192.168.1.1
+192.168.0.0
+192.168.0.0
+192.168.1.0
+192.168.1.1
+192.168.0.0
+192.168.0.0
+F
+Failed tests:
+-------------
+1) test_humaneval
+genOutput\MBPP\CodeQwenQ2_mbpp_593_removezero_ip.lua:34: expected: "216.8.94.196"
+actual: "216.08.094.196"
+stack traceback:
+	genOutput\MBPP\CodeQwenQ2_mbpp_593_removezero_ip.lua:34: in function 'test_humaneval'
+
+Ran 1 tests in 0.001 seconds, 0 successes, 1 failure
+
+
+==== ====STDERR:

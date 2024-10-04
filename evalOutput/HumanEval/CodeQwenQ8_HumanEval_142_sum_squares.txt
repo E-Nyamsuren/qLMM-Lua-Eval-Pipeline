@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...utput\HumanEval\CodeQwenQ8_HumanEval_142_sum_squares.lua:28: unexpected symbol near '`'

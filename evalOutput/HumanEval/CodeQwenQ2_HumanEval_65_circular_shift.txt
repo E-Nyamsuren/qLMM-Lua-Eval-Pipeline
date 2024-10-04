@@ -1,0 +1,5 @@
+==== ==== STDOUT:
+
+
+==== ====STDERR:
+lua: ...put\HumanEval\CodeQwenQ2_HumanEval_65_circular_shift.lua:41: ')' expected (to close '(' at line 39) near '='
