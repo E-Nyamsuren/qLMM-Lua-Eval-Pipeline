@@ -1,0 +1,3065 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Readable version of the 'MCEVAL - Python - Generation'</title>
+    <style>
+      
+                    body {
+                        background-color: #000;
+                        color: #fff;
+                        font-size: 20px;
+                    }
+                    
+                    .mainC {
+                        background-color: black;
+                        border: solid, 5px;
+                        margin-top: 15px; 
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+                    
+                    .section {
+                        margin-bottom: 50px;
+                    }
+                    
+                    .secLabel {
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                    
+    </style>
+  </head>
+  <body>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_1</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List
+ 
+def has_close_elements(numbers: List[float], threshold: float) -> bool:
+    """ Check if in given list of numbers, are any two numbers closer to each other than
+    given threshold.
+    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+    False
+    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+    True
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def check(has_close_elements):
+    assert has_close_elements([1.0, 2.0, 3.9, 4.0, 5.0, 2.2], 0.3) == True
+    assert has_close_elements([1.0, 2.0, 3.9, 4.0, 5.0, 2.2], 0.05) == False
+    assert has_close_elements([1.0, 2.0, 5.9, 4.0, 5.0], 0.95) == True
+    assert has_close_elements([1.0, 2.0, 5.9, 4.0, 5.0], 0.8) == False
+    assert has_close_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0], 0.1) == True
+    assert has_close_elements([1.1, 2.2, 3.1, 4.1, 5.1], 1.0) == True
+    assert has_close_elements([1.1, 2.2, 3.1, 4.1, 5.1], 0.5) == False
+ 
+check(has_close_elements)</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_2</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List
+ 
+ 
+def separate_paren_groups(paren_string: str) -> List[str]:
+    """ Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
+    separate those group into separate strings and return the list of those.
+    Separate groups are balanced (each open brace is properly closed) and not nested within each other
+    Ignore any spaces in the input string.
+    >>> separate_paren_groups('( ) (( )) (( )( ))')
+    ['()', '(())', '(()())']
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def check(separate_paren_groups):
+    assert separate_paren_groups('(()()) ((())) () ((())()())') == [
+    '(()())', '((()))', '()', '((())()())'
+    ]
+    assert separate_paren_groups('() (()) ((())) (((())))') == [
+    '()', '(())', '((()))', '(((())))'
+    ]
+    assert separate_paren_groups('(()(())((())))') == [
+    '(()(())((())))'
+    ]
+    assert separate_paren_groups('( ) (( )) (( )( ))') == ['()', '(())', '(()())']
+ 
+check(separate_paren_groups)</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_3</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def truncate_number(number: float) -> float:
+    """ Given a positive floating point number, it can be decomposed into
+    and integer part (largest integer smaller than given number) and decimals
+    (leftover part always smaller than 1).
+    
+    Return the decimal part of the number.
+    >>> truncate_number(3.5)
+    0.5
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def check(truncate_number):
+    assert truncate_number(3.5) == 0.5
+    assert abs(truncate_number(1.33) - 0.33) < 1e-6
+    assert abs(truncate_number(123.456) - 0.456) < 1e-6
+ 
+check(truncate_number)</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_4</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List
+ 
+ 
+def below_zero(operations: List[int]) -> bool:
+    """ You're given a list of deposit and withdrawal operations on a bank account that starts with
+    zero balance. Your task is to detect if at any point the balance of account fallls below zero, and
+    at that point function should return True. Otherwise it should return False.
+    >>> below_zero([1, 2, 3])
+    False
+    >>> below_zero([1, 2, -4, 5])
+    True
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def check(below_zero):
+    assert below_zero([]) == False
+    assert below_zero([1, 2, -3, 1, 2, -3]) == False
+    assert below_zero([1, 2, -4, 5, 6]) == False
+    assert below_zero([1, -1, 2, -2, 5, -5, 4, -4]) == False
+    assert below_zero([1, -1, 2, -2, 5, -5, 4, -5]) == True
+    assert below_zero([1, -2, 2, -2, 5, -5, 4, -4]) == True
+ 
+check(below_zero)</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_5</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List
+ 
+def mean_absolute_deviation(numbers: List[float]) -> float:
+    """ For a given list of input numbers, calculate Mean Absolute Deviation
+    around the mean of this dataset.
+    Mean Absolute Deviation is the average absolute difference between each
+    element and a centerpoint (mean in this case):
+    MAD = average | x - x_mean |
+    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])
+    1.0
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def check(mean_absolute_deviation):
+    assert abs(mean_absolute_deviation([1.0, 2.0, 3.0]) - 2.0/3.0) < 1e-6
+    assert abs(mean_absolute_deviation([1.0, 2.0, 3.0, 4.0]) - 1.0) < 1e-6
+    assert abs(mean_absolute_deviation([1.0, 2.0, 3.0, 4.0, 5.0]) - 6.0/5.0) < 1e-6
+    
+check(mean_absolute_deviation)</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_6</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def add(a: int, b: int) -> int:
+    """
+    Adds two integer numbers together.
+
+    Parameters:
+    a (int): The first number to be added.
+    b (int): The second number to be added.
+
+    Returns:
+    int: The sum of the two numbers.
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+# Test cases:
+# The following lines are not part of the function's implementation but are provided
+# for testing purposes.
+
+# Test case 1: Positive integers
+assert add(2, 3) == 5
+
+# Test case 2: A positive and a negative integer
+assert add(-1, 1) == 0
+
+# Test case 3: Two negative integers
+assert add(-4, -5) == -9
+
+# Test case 4: Zeroes
+assert add(0, 0) == 0
+
+# Test case 5: Large integers
+assert add(123456, 654321) == 777777
+
+print("All test cases passed.")</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_7</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def find_topmost_carpet(n, carpets, point) -> int:
+    """
+    Finds the topmost carpet covering a given point on the coordinate plane.
+
+    Args:
+    n (int): The total number of carpets.
+    carpets (list of tuples): A list containing n tuples, each representing a carpet's information.
+                              Each tuple contains four integers (a, b, g, k) where (a, b) is the
+                              coordinates of the bottom-left corner of the carpet and (g, k) are
+                              the lengths of the carpet along the x and y axis respectively.
+    point (tuple): A tuple containing two integers (x, y), the coordinates of the point to check.
+
+    Returns:
+    int: The number of the topmost carpet covering the point (x, y), or -1 if no carpet covers it.
+
+    Examples:
+    >>> find_topmost_carpet(3, [(1, 0, 2, 3), (0, 2, 3, 3), (2, 1, 3, 3)], (2, 2))
+    3
+    >>> find_topmost_carpet(3, [(1, 0, 2, 3), (0, 2, 3, 3), (2, 1, 3, 3)], (4, 5))
+    -1
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def check_find_topmost_carpet():
+    # Test case 1: Point is on topmost carpet (carpet 3)
+    assert find_topmost_carpet(3, [(1, 0, 2, 3), (0, 2, 3, 3), (2, 1, 3, 3)], (2, 2)) == 3
+
+    # Test case 2: Point is not covered by any carpet
+    assert find_topmost_carpet(3, [(1, 0, 2, 3), (0, 2, 3, 3), (2, 1, 3, 3)], (4, 5)) == -1
+
+    # Test case 3: Point is on the edge of the carpet (carpet 1)
+    assert find_topmost_carpet(2, [(1, 1, 3, 3), (4, 4, 2, 2)], (4, 1)) == 1
+
+    # Test case 4: Point is at the corner of the carpet (carpet 2)
+    assert find_topmost_carpet(2, [(1, 1, 3, 3), (4, 4, 2, 2)], (6, 4)) == 2
+
+    # Test case 5: Multiple carpets cover the point, but the last one is on top (carpet 4)
+    assert find_topmost_carpet(4, [(0, 0, 5, 5), (1, 1, 5, 5), (2, 2, 5, 5), (3, 3, 5, 5)], (4, 4)) == 4
+
+    # Test case 6: No carpets at all, should return -1
+    assert find_topmost_carpet(0, [], (0, 0)) == -1
+
+    # Test case 8: Point is covered by the first carpet and no others (carpet 1)
+    assert find_topmost_carpet(3, [(0, 0, 2, 2), (2, 2, 2, 2), (4, 4, 2, 2)], (1, 1)) == 1
+
+    print("All test cases passed!")
+
+
+# Run the test cases to ensure the function works as expected
+check_find_topmost_carpet()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_8</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List, Tuple
+
+def max_value_on_paths(N: int, grid_values: List[Tuple[int, int, int]]) -> int:
+    """
+    Calculate the maximum sum of values collected on two paths in an N x N grid.
+
+    This function utilizes dynamic programming to find two paths from the top-left corner to
+    the bottom-right corner of the grid which maximize the sum of the values collected. Each
+    value can be collected at most once, even if both paths pass through it.
+
+    Args:
+    - N (int): The size of the grid (N x N).
+    - grid_values (List[Tuple[int, int, int]]): A list of tuples where each tuple contains
+      the x-coordinate, y-coordinate, and value to be placed on the grid at that position.
+      The list is terminated by a tuple with all zeros.
+
+    Returns:
+    - int: The maximum sum of values collected on the two paths.
+
+    Examples:
+    >>> max_value_on_paths(2, [(1, 2, 1), (2, 1, 2), (0, 0, 0)])
+    3
+    >>> max_value_on_paths(8, [
+    ...     (2, 3, 13), (2, 6, 6), (3, 5, 7), (4, 4, 14),
+    ...     (5, 2, 21), (5, 6, 4), (6, 3, 15), (7, 2, 14),
+    ...     (0, 0, 0)])
+    67
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_max_value_on_paths():
+    # Test case 1: Small grid with clear path
+    assert max_value_on_paths(2, [(1, 2, 1), (2, 1, 2), (0, 0, 0)]) == 3
+    
+    # Test case 2: Example provided in the problem statement
+    assert max_value_on_paths(8, [
+        (2, 3, 13), (2, 6, 6), (3, 5, 7), (4, 4, 14),
+        (5, 2, 21), (5, 6, 4), (6, 3, 15), (7, 2, 14),
+        (0, 0, 0)]) == 67
+
+    print("All test cases passed!")
+
+# Run the test cases
+test_max_value_on_paths()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_9</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from itertools import permutations
+
+def find_number_combinations():
+    """
+    Generate all unique combinations of three numbers, each formed from the digits 1 to 9 without repetition,
+    such that the second number is twice the first and the third is three times the first.
+
+    Returns:
+        list of tuples: A sorted list of tuples, where each tuple contains three integers representing the
+                        valid number combinations in ascending order based on the first number.
+
+    Example:
+        >>> find_number_combinations()
+        [(123, 246, 369), (124, 248, 372), ...]
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_find_number_combinations():
+    # Call the function to get the combinations
+    combinations = find_number_combinations()
+
+    # Check that we have at least one valid combination
+    assert len(combinations) > 0, "There should be at least one valid combination."
+
+    # Iterate over each combination to perform further checks
+    for combo in combinations:
+        # Each combination should have exactly three numbers
+        assert len(combo) == 3, "Each combination should have three numbers."
+
+        # Check if numbers are 3-digit numbers
+        for num in combo:
+            assert 100 <= num <= 999, f"Each number should be a 3-digit number, got {num}."
+
+        # Check the 1:2:3 ratio
+        assert combo[1] == 2 * combo[0] and combo[2] == 3 * combo[0], "The numbers should be in a 1:2:3 ratio."
+
+    print("All test cases passed!")</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_10</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def sum_of_factorials_optimized(n: int) -> int:
+    """
+    Compute the cumulative sum of factorial values from 1 up to a specified integer n.
+
+    This function employs a more efficient method to calculate factorials by iteratively
+    multiplying the current number to the previous factorial result, thus avoiding redundant
+    calculations. It then accumulates the factorial of each number from 1 to n inclusively.
+
+    Args:
+    n (int): The upper limit of the range for which the factorial sum is to be calculated.
+             The value of n should be in the range of 1 to 50, inclusive.
+
+    Returns:
+    int: The sum of all factorial values from 1! to n!.
+
+    Examples:
+    >>> sum_of_factorials_optimized(3)
+    9
+    >>> sum_of_factorials_optimized(5)
+    153
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_sum_of_factorials_optimized():
+    assert sum_of_factorials_optimized(1) == 1, "Test case 1 failed: sum_of_factorials_optimized(1) should be 1."
+    assert sum_of_factorials_optimized(3) == 9, "Test case 2 failed: sum_of_factorials_optimized(3) should be 9."
+    assert sum_of_factorials_optimized(4) == 33, "Test case 3 failed: sum_of_factorials_optimized(4) should be 33."
+    assert sum_of_factorials_optimized(5) == 153, "Test case 4 failed: sum_of_factorials_optimized(5) should be 153."
+    assert sum_of_factorials_optimized(6) == 873, "Test case 5 failed: sum_of_factorials_optimized(6) should be 873."
+    assert sum_of_factorials_optimized(10) == 4037913, "Test case 6 failed: sum_of_factorials_optimized(10) should be 4037913."
+    print("All test cases passed.")
+
+# Call the test function to run the test cases
+test_sum_of_factorials_optimized()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_11</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def cantor_numbering(N: int) -> str:
+    """
+    Determines the numerator and denominator of the N-th term in the Cantor table.
+
+    Args:
+    - N (int): The position in the Cantor table to find the corresponding fraction for.
+
+    Returns:
+    - str: A string representation of the fraction at the N-th position in the Cantor table.
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_cantor_numbering():
+    # Test case 1: N = 1, the first element, should be "1/1"
+    assert cantor_numbering(1)=="1/1"
+
+    # Test case 2: N = 2, the second element, should be "1/2"
+    assert cantor_numbering(2)=="1/2"
+
+    # Test case 3: N = 6, the sixth element, should be "1/3"
+    assert cantor_numbering(6)=="1/3"
+
+    # Corrected test case: N = 7, the seventh element, should be "1/4"
+    assert cantor_numbering(7) == "1/4"
+
+    # Additional test case: N = 8, the eighth element, should be "2/3"
+    assert cantor_numbering(8) == "2/3"
+
+
+test_cantor_numbering()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_12</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def max_product(num_str: str, N: int, K: int) -> int:
+    """
+    Function name: max_product
+    Arguments:
+    num_str (str): A string representing the number string.
+    N (int): An integer representing the length of the number string.
+    K (int): An integer representing the number of multiplication signs to insert.
+    Return type: int (The function returns the maximum product that can be obtained by inserting Kmultiplication signs into the number string.)
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_max_product():
+    # Test case 1
+    num_str1 = "123"
+    N1 = 3
+    K1 = 1
+    expected_result1 = 36  # Corrected expected result: 1*23 = 23 or 12*3 = 36, max is 36
+    assert max_product(num_str1, N1,
+                       K1) == expected_result1, f"Test case 1 failed. Expected {expected_result1}, got {max_product(num_str1, N1, K1)}"
+
+    # Test case 2
+    num_str2 = "1234"
+    N2 = 4
+    K2 = 2
+    expected_result2 = 144  # Corrected expected result: 1*2*34 = 68 or 12*3*4 = 144, max is 144
+    assert max_product(num_str2, N2,
+                       K2) == expected_result2, f"Test case 2 failed. Expected {expected_result2}, got {max_product(num_str2, N2, K2)}"
+
+    # Test case 3
+    num_str3 = "051"
+    N3 = 3
+    K3 = 1
+    expected_result3 = 5  # 0*51 = 0 or 05*1 = 5, max is 5
+    assert max_product(num_str3, N3,
+                       K3) == expected_result3, f"Test case 3 failed. Expected {expected_result3}, got {max_product(num_str3, N3, K3)}"
+
+    # If no assertion is raised, all test cases passed
+    print("All test cases passed!")
+test_max_product()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_13</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List
+def calculate_scholarship(grades: List[int], leader: str, west: str, papers: int) -> int:
+    """
+    If the final average score is greater than 80 and one or more papers are published, a scholarship of 8000 will be added
+    If the final average score is greater than 85 points and the class evaluation is greater than 80 points, the scholarship will be increased by 4000 points
+    If the final average score is greater than 90 points, the scholarship will be increased by 2000
+    If the final average score is greater than 85 and the student is from the western region, the scholarship will be increased by 1000
+    If the final assessment of the class is greater than 80 points and the class leader is the class leader, the scholarship will be increased by 850 points
+
+    Parameters:
+    grades (list of int): A two-element list containing the student's academic grades [end of term average, class evaluation].
+    leader (str): A string ('Y' or 'N') indicating if the student is a class leader.
+    west (str): A string ('Y' or 'N') indicating if the student is from a western province.
+    papers (int): An integer representing the number of research papers published by the student.
+
+    Returns:
+    int: The total scholarship amount the student is eligible for.
+
+    Examples:
+    >>> calculate_scholarship([87, 82], 'Y', 'N', 0)
+    4850
+
+    >>> calculate_scholarship([88, 78], 'N', 'Y', 1)
+    9000
+    """
+
+</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_calculate_scholarship():
+    # Test case 1: Student meets multiple scholarship criteria
+    grades1 = [90, 85]  # Both grades are high
+    leader1 = 'Y'  # Is a leader
+    west1 = 'Y'  # Is from the West
+    papers1 = 2  # Has published papers
+    expected_scholarship1 = 13850  # Should receive multiple scholarships
+    assert calculate_scholarship(grades1, leader1, west1,
+                                 papers1) == expected_scholarship1, f"Test case 1 failed. Expected {expected_scholarship1}, got {calculate_scholarship(grades1, leader1, west1, papers1)}"
+
+    # Test case 2: Student meets one scholarship criteria
+    grades2 = [82, 70]  # Only the first grade is high enough
+    leader2 = 'N'  # Is not a leader
+    west2 = 'N'  # Is not from the West
+    papers2 = 1  # Has published papers
+    expected_scholarship2 = 8000  # Should receive scholarship for first grade and papers
+    assert calculate_scholarship(grades2, leader2, west2,
+                                 papers2) == expected_scholarship2, f"Test case 2 failed. Expected {expected_scholarship2}, got {calculate_scholarship(grades2, leader2, west2, papers2)}"
+
+    # Test case 3: Student does not meet any scholarship criteria
+    grades3 = [75, 75]  # Both grades are below the threshold
+    leader3 = 'N'  # Is not a leader
+    west3 = 'N'  # Is not from the West
+    papers3 = 0  # Has no published papers
+    expected_scholarship3 = 0  # Should not receive any scholarships
+    assert calculate_scholarship(grades3, leader3, west3,
+                                 papers3) == expected_scholarship3, f"Test case 3 failed. Expected {expected_scholarship3}, got {calculate_scholarship(grades3, leader3, west3, papers3)}"
+
+    # If no assertion is raised, all test cases passed
+    print("All test cases passed!")
+
+
+test_calculate_scholarship()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_14</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def verify_isbn(isbn: str) -> str:
+    """
+    Verify the correctness of a given ISBN number and correct it if necessary.
+
+    The function checks the provided ISBN number against the ISBN standard checksum calculation.
+    If the checksum is correct, the function returns "Right". If the checksum is incorrect,
+    the function returns the corrected ISBN number.
+
+    Args:
+    isbn: A string representing the ISBN number to be verified. The format should be 'x-xxx-xxxxx-x',
+          where 'x' is a digit, and the last 'x' could also be 'X' representing the checksum digit.
+
+    Returns:
+    A string that is either "Right" if the ISBN checksum is correct, or the corrected ISBN number
+    in the same format as the input if the checksum is incorrect.
+
+    Examples:
+    >>> verify_isbn("0-670-82162-4")
+    'Right'
+    
+    >>> verify_isbn("0-670-82162-0")
+    '0-670-82162-4'
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_verify_isbn():
+    # Test case 1: Correct ISBN number
+    assert verify_isbn("0-670-82162-4") == "Right", "Test case 1 failed"
+
+    # Test case 2: Incorrect ISBN number with wrong checksum digit
+    assert verify_isbn("0-670-82162-0") == "0-670-82162-4", "Test case 2 failed"
+
+    print("All test cases passed!")
+
+# Run the test cases
+test_verify_isbn()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_15</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def optimize_seating(M: int, N: int, K: int, L: int, D: int, chatting_pairs: list) -> (str, str):
+    """
+    Optimize the placement of aisles in a classroom to minimize the amount of chatting between students.
+
+    Args:
+    M (int): The number of rows in the classroom.
+    N (int): The number of columns in the classroom.
+    K (int): The number of horizontal aisles to add.
+    L (int): The number of vertical aisles to add.
+    D (int): The number of chatting pairs in the classroom.
+    chatting_pairs (list of tuples): A list of tuples, each containing the positions (Xi, Yi) and (Pi, Qi) of a chatting pair.
+
+    Returns:
+    (str, str): Two space-separated strings representing the optimal row and column indices for the aisles.
+
+    The function works by counting the number of chatting pairs that can be separated by adding an aisle in each possible position.
+    It then selects the most effective positions for aisles, aiming to separate as many chatting pairs as possible.
+
+    Examples:
+    - optimize_seating(4, 5, 1, 2, 3, [(4, 2, 4, 3), (2, 3, 3, 3), (2, 5, 2, 4)])
+    Returns: ('2', '2 4')
+
+    - optimize_seating(3, 3, 1, 1, 2, [(1, 2, 1, 3), (2, 1, 3, 1)])
+    Returns: ('2', '2')
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_optimize_seating():
+    test_cases = [
+        # Test case 1 from the provided example
+        {
+            'M': 4, 'N': 5, 'K': 1, 'L': 2, 'D': 3,
+            'chatting_pairs': [(4, 2, 4, 3), (2, 3, 3, 3), (2, 5, 2, 4)],
+            'expected': ('2', '2 4')
+        },
+        # Corrected Test case 2
+        {
+            'M': 5, 'N': 6, 'K': 2, 'L': 3, 'D': 4,
+            'chatting_pairs': [(1, 1, 1, 2), (2, 2, 3, 2), (4, 5, 4, 6), (5, 1, 5, 2)],
+            'expected': ('1 2', '1 2 5')  # Corrected expected output
+        },
+        # Test case 3
+        {
+            'M': 3, 'N': 3, 'K': 1, 'L': 1, 'D': 2,
+            'chatting_pairs': [(1, 2, 1, 3), (2, 1, 3, 1)],
+            'expected': ('2', '2')
+        },
+    ]
+
+    for i, test in enumerate(test_cases, 1):
+        row_output, col_output = optimize_seating(
+            test['M'], test['N'], test['K'], test['L'], test['D'], test['chatting_pairs']
+        )
+        assert row_output == test['expected'][0], f"Test case {i} failed: row_output {row_output} does not match expected {test['expected'][0]}"
+        assert col_output == test['expected'][1], f"Test case {i} failed: col_output {col_output} does not match expected {test['expected'][1]}"
+        print(f"Test case {i} passed.")
+
+# Run the test function
+test_optimize_seating()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_16</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def count_passing_ways(n: int, m: int) -> int:
+    """
+    Counts the number of different ways to pass a ball among 'n' students arranged in a circle 
+    such that after 'm' passes, the ball returns to the starting student.
+
+    The function uses dynamic programming to determine the number of passing sequences. Each student
+    can pass the ball either to the left neighbor or to the right neighbor.
+
+    Args:
+    n: The number of students standing in a circle.
+    m: The number of times the ball is passed.
+
+    Returns:
+    An integer representing the number of distinct passing ways that result in the ball
+    returning to the starting student after 'm' passes.
+
+    Cases:
+    >>> count_passing_ways(3, 3)
+    2
+    >>> count_passing_ways(5, 4)
+    6
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_count_passing_ways():
+    test_cases = [
+        # Test case 1: simple case
+        {
+            'n': 3,
+            'm': 1,
+            'expected': 0
+        },
+        # Test case 2: another simple case
+        {
+            'n': 4,
+            'm': 2,
+            'expected': 2
+        },
+        # Test case 3: larger number of students and passes
+        {
+            'n': 5,
+            'm': 3,
+            'expected': 0
+        },
+    ]
+
+    for i, test in enumerate(test_cases, 1):
+        result = count_passing_ways(test['n'], test['m'])
+        assert result == test['expected'], f"Test case {i} failed: result {result} does not match expected {test['expected']}"
+        print(f"Test case {i} passed with result {result}.")
+
+# Run the test function
+test_count_passing_ways()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_17</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List, Tuple
+def process_random_numbers(numbers: List[int]) -> Tuple[int, List[int]]:
+    """
+    Remove duplicate integers from the input list and return the sorted unique numbers.
+
+    The function first converts the input list of numbers into a set to remove any duplicates,
+    then sorts the resulting set of unique numbers. It returns a tuple containing the count
+    of unique numbers and a list of these unique numbers in ascending order.
+
+    Args:
+    numbers (List[int]): A list of integers, which may contain duplicates.
+
+    Returns:
+    Tuple[int, List[int]]: A tuple with two elements:
+        - An integer representing the count of unique numbers.
+        - A list of the unique numbers sorted in ascending order.
+
+    Examples:
+    >>> process_random_numbers([20, 40, 32, 67, 40, 20, 89, 300, 400, 15])
+    (8, [15, 20, 32, 40, 67, 89, 300, 400])
+
+    >>> process_random_numbers([5, 3, 5, 2, 1, 4, 1])
+    (5, [1, 2, 3, 4, 5])
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_process_random_numbers():
+    # Test case 1: Basic example with duplicates
+    assert process_random_numbers([20, 40, 32, 67, 40, 20, 89, 300, 400, 15]) == (8, [15, 20, 32, 40, 67, 89, 300, 400]), "Test case 1 failed"
+
+    # Test case 2: All elements are the same
+    assert process_random_numbers([1, 1, 1, 1]) == (1, [1]), "Test case 2 failed"
+
+    # Test case 3: No duplicates
+    assert process_random_numbers([3, 1, 4, 2]) == (4, [1, 2, 3, 4]), "Test case 3 failed"
+
+    # Test case 4: Random numbers with single element
+    assert process_random_numbers([42]) == (1, [42]), "Test case 4 failed"
+
+    # Test case 5: Empty list
+    assert process_random_numbers([]) == (0, []), "Test case 5 failed"
+
+    # Test case 6: Random numbers with negatives and zero
+    assert process_random_numbers([0, -1, -2, -1, 0, 3]) == (4, [-2, -1, 0, 3]), "Test case 6 failed"
+
+    # Test case 7: Large range of numbers
+    assert process_random_numbers(list(range(1000, 0, -1))) == (1000, list(range(1, 1001))), "Test case 7 failed"
+
+    print("All test cases passed!")
+
+# Run the test function
+test_process_random_numbers()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_18</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List, Tuple
+def max_happiness(n: int, m: int, items: List[Tuple[int, int]]) -> int:
+    """
+    Calculates the maximum total importance value of items that can be bought within a given budget.
+    
+    This function solves a variant of the 0-1 knapsack problem where each item has a price and an 
+    associated importance value. The goal is to maximize the sum of the importance values of a 
+    selection of items without the total price exceeding the budget.
+    
+    Args:
+    n (int): The total budget available for purchasing items.
+    m (int): The number of different items to choose from.
+    items (List[Tuple[int, int]]): A list of tuples, where each tuple contains two integers:
+        - The first integer represents the price of the item.
+        - The second integer represents the importance value of the item.
+    
+    Returns:
+    int: The maximum total importance value that can be achieved without exceeding the budget.
+    
+    Examples:
+    >>> max_happiness(1000, 5, [(800, 2), (400, 5), (300, 5), (400, 3), (200, 2)])
+    3900
+    
+    >>> max_happiness(50, 3, [(10, 1), (20, 2), (30, 3)])
+    80
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_max_happiness():
+    # Test case 1: Sample provided in the problem
+    assert max_happiness(1000, 5, [(800, 2), (400, 5), (300, 5), (400, 3), (200, 2)]) == 3900, "Test case 1 failed"
+
+    # Test case 2: Small budget with one item
+    assert max_happiness(50, 1, [(60, 3)]) == 0, "Test case 2 failed"
+
+    # Test case 4: Exact budget
+    assert max_happiness(100, 2, [(50, 2), (50, 3)]) == 250, "Test case 4 failed"
+
+    # Test case 5: No items
+    assert max_happiness(100, 0, []) == 0, "Test case 5 failed"
+
+    # Test case 6: All items exceed the budget
+    assert max_happiness(10, 3, [(20, 1), (30, 2), (40, 3)]) == 0, "Test case 6 failed"
+
+    # Test case 7: Multiple items with the same price and importance
+    assert max_happiness(100, 4, [(25, 2), (25, 2), (25, 2), (25, 2)]) == 200, "Test case 7 failed"
+
+    # Test case 8: Large number of items
+    assert max_happiness(1000, 10, [(100, i) for i in range(1, 11)]) == 5500, "Test case 8 failed"
+
+    print("All test cases passed!")
+
+# Run the test function
+test_max_happiness()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_19</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>
+def max_energy(beads):
+    """
+    Calculate the maximum energy that can be released by merging beads on a necklace.
+
+    The function takes a list of integers representing the energy beads on a necklace, where
+    each bead has a head and a tail value. The head value of each bead must match the tail
+    value of the next bead in the sequence. The necklace is circular, and merging two adjacent
+    beads releases energy equal to the product of the head value of the first bead, the matching
+    value, and the tail value of the second bead.
+
+    To find the maximum energy release, the function considers all possible orders of merging beads
+    and uses dynamic programming to compute the maximum energy obtainable.
+
+    Args:
+        beads: A list of integers where each integer represents the head value of a bead and
+               the tail value of the previous bead. The tail value of the last bead is assumed
+               to match the head value of the first bead due to the circular nature of the necklace.
+
+    Returns:
+        An integer representing the maximum energy that can be obtained by optimally merging all beads.
+
+    Examples:
+        >>> max_energy([2, 3, 5, 10])
+        710
+        >>> max_energy([1, 2, 3, 4])
+        48
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_max_energy():
+    assert max_energy([2, 3, 5, 10]) == 710, "Testcase 1 failed"
+    assert max_energy([1, 2, 3, 4]) == 80, "Testcase 2 failed"
+    assert max_energy([4, 4, 4, 4]) == 192, "Testcase 3 failed"
+    assert max_energy([30, 40, 50, 60]) == 372000, "Testcase 4 failed"
+    print("All testcases passed")
+
+# Call the test function
+test_max_energy()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_20</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List 
+def polynomial_to_string(n: int, coeffs: List[int]) -> str:
+    """
+    Converts a list of polynomial coefficients into a formatted string representation.
+
+    The function takes in the highest degree `n` of the polynomial and a list of coefficients `coeffs`,
+    which are ordered from the highest degree term to the constant term. It returns a string that
+    represents the polynomial with the following rules:
+    - Terms with a coefficient of zero are omitted.
+    - The sign of each term is determined (+ for positive, - for negative), with no leading '+' for the first term.
+    - The absolute value of the coefficient is shown unless it's 1 and the term includes the variable `x`.
+    - The variable part is formatted based on its degree; `x^degree` for degree > 1, `x` for degree 1, and
+      nothing for degree 0 (constant term).
+    - Terms are joined without additional spaces, starting with the highest degree term.
+
+    Args:
+        n (int): The highest degree of the polynomial.
+        coeffs (List[int]): A list of coefficients, starting with the coefficient of the highest degree term.
+
+    Returns:
+        str: The string representation of the polynomial.
+
+    Examples:
+        >>> polynomial_to_string(5, [100, -1, 1, -3, 0, 10])
+        '100x^5-x^4+x^3-3x^2+10'
+
+        >>> polynomial_to_string(3, [-50, 0, 0, 1])
+        '-50x^3+1'
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_polynomial_to_string():
+    test_cases = [
+        (4, [3, -2, 0, 1, -5], "3x^4-2x^3+x-5"),
+        (2, [0, 4, -1], "+4x-1"),
+        (0, [7], "7"),
+        (3, [1, -1, 0, 1], "x^3-x^2+1"),
+    ]
+
+    for i, (n, coeffs, expected) in enumerate(test_cases):
+        result = polynomial_to_string(n, coeffs)
+
+        assert result == expected, f"Test case {i + 1} failed: expected {expected}, got {result}"
+        print(f"Test case {i + 1} passed: expected {expected}, got {result}")
+
+
+test_polynomial_to_string()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_21</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List, Tuple
+def select_volunteers(n: int, m: int, applicants: List[Tuple[int, int]]) -> Tuple[int, List[Tuple[int, int]]]:
+    """
+    Selects and determines the interview score cutoff and the list of applicants who qualify for the interview process.
+    
+    The function sorts the applicants based on their test scores in descending order. If multiple applicants have the same score,
+    they are then sorted by their registration number in ascending order. The interview score cutoff is calculated based on 150%
+    of the planned number of recruits, rounded down. All applicants with scores equal to or higher than the cutoff are considered
+    qualified for the interview.
+    
+    Args:
+    - n (int): The total number of applicants.
+    - m (int): The planned number of volunteers to be recruited.
+    - applicants (List[Tuple[int, int]]): A list of tuples where each tuple contains the registration number and test score of an applicant.
+    
+    Returns:
+    - Tuple[int, List[Tuple[int, int]]]: A tuple containing the interview score cutoff and a list of tuples, each of which includes
+      the registration number and test score of qualified applicants.
+    
+    Examples:
+    >>> select_volunteers(6, 3, [(1000, 90), (3239, 88), (2390, 95), (7231, 84), (1005, 95), (1001, 88)])
+    (88, [(1005, 95), (2390, 95), (1000, 90), (1001, 88), (3239, 88)])
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_select_volunteers():
+    # Define test cases
+    test_cases = [
+        (6, 3, [(1000, 90), (3239, 88), (2390, 95), (7231, 84), (1005, 95), (1001, 88)],
+         (88, [(1005, 95), (2390, 95), (1000, 90), (1001, 88), (3239, 88)])),
+        (5, 3, [(2000, 70), (2001, 80), (2002, 90), (2003, 85), (2004, 90)],
+         (80, [(2002, 90), (2004, 90), (2003, 85), (2001, 80)])),
+        (8, 4, [(1234, 60), (2345, 75), (3456, 85), (4567, 85), (5678, 90), (6789, 100), (7890, 65), (8901, 70)],
+         (70, [(6789, 100), (5678, 90), (3456, 85), (4567, 85), (2345, 75), (8901, 70)])),
+    ]
+
+    # Run test cases
+    for i, (n, m, applicants, expected) in enumerate(test_cases):
+        interview_line_score, final_applicants = select_volunteers(n, m, applicants)
+        assert (interview_line_score, final_applicants) == expected, f"Test case {i + 1} failed"
+        print(f"Test case {i + 1} passed")
+
+# Run the test function
+test_select_volunteers()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_22</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def decode(encoded: str, original: str, message: str) -> str:
+    """
+    Decodes an encrypted message using a cipher derived from a known encoded-original pair.
+    
+    The function builds a mapping from encoded letters to their original letters and uses this
+    mapping to decode a given encrypted message. If a contradiction is found during mapping
+    construction, or not all letters are represented in the mapping, the function returns "Failed".
+    
+    Args:
+    encoded (str): A string representing the encoded information.
+    original (str): A string representing the original information corresponding to the encoded string.
+    message (str): A string representing the encrypted message to be decoded.
+    
+    Returns:
+    str: The decoded message if successful, or "Failed" if the decoding is not possible.
+    
+    Examples:
+    >>> decode("AA", "AB", "EOWIE")
+    'Failed'    
+    >>> decode("MSRTZCJKPFLQYVAWBINXUEDGHOOILSMIJFRCOPPQCEUNYDUMPP", "YIZSDWAHLNOVFUCERKJXQMGTBPPKOIYKANZWPLLVWMQJFGQYLL", "FLSO")
+    'NOIP'
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_decode():
+    # Test case 1: Contradiction in mapping
+    assert decode("AA", "AB", "EOWIE") == "Failed", "Test case 1 failed"
+
+    # Test case 2: Not all letters are represented
+    assert decode("QWERTYUIOPLKJHGFDSAZXCVBN", "ABCDEFGHIJKLMNOPQRSTUVWXY", "DSLIEWO") == "Failed", "Test case 2 failed"
+
+    # Test case 3: Successful decoding
+    assert decode("MSRTZCJKPFLQYVAWBINXUEDGHOOILSMIJFRCOPPQCEUNYDUMPP", "YIZSDWAHLNOVFUCERKJXQMGTBPPKOIYKANZWPLLVWMQJFGQYLL", "FLSO") == "NOIP", "Test case 3 failed"
+    
+    # Test case 4: Character in message not in mapping
+    assert decode("ABCDEFGHIJKLM", "NOPQRSTUVWXYZ", "UVWXYZ") == "Failed", "Test case 4 failed"
+
+    # Test case 5: Empty strings
+    assert decode("", "", "") == "Failed", "Test case 5 failed"
+
+    print("All test cases passed!")
+
+# Call the test function to run the test cases
+test_decode()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_23</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def largest_prime_factor(n: int) -> int:
+    """
+    Find the largest prime factor of a given positive integer.
+    
+    The integer is assumed to be the product of exactly two distinct prime numbers. 
+    The function iterates through potential factors starting from the smallest prime (2) 
+    and checks if they are a factor of 'n'. If a factor is found, the function returns 
+    the division of 'n' by this factor, which is the larger prime factor. If no factors 
+    are found up to the square root of 'n', then 'n' itself is a prime number and is 
+    returned as the largest prime factor.
+    
+    Args:
+    n (int): The positive integer to factorize, which is the product of two distinct primes.
+    
+    Returns:
+    int: The larger of the two prime factors of 'n'.
+    
+    Examples:
+    >>> largest_prime_factor(21)
+    7
+    >>> largest_prime_factor(15)
+    5
+    """
+   </pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_largest_prime_factor():
+    test_cases = [
+        # Test case 1: composite number
+        {
+            'n': 35,  # 5 * 7
+            'expected': 7
+        },
+        # Test case 2: prime number itself
+        {
+            'n': 29,
+            'expected': 29
+        },
+        # Test case 3: composite number with a square of a prime
+        {
+            'n': 49,  # 7 * 7
+            'expected': 7
+        },
+        # Test case 4: large composite number
+        {
+            'n': 2 * 2 * 3 * 3 * 7 * 11,  # prime factors are 2, 3, 7, 11
+            'expected': 11
+        },
+    ]
+
+    for i, test in enumerate(test_cases, 1):
+        result = largest_prime_factor(test['n'])
+        assert result == test['expected'], f"Test case {i} failed: result {result} does not match expected {test['expected']}"
+        print(f"Test case {i} passed with result {result}.")
+
+# Run the test function
+test_largest_prime_factor()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_24</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def count_partitions(n: int, k: int, x: int) -> int:
+    """
+    Count the number of ways to partition an integer n into k parts,
+    where each part is at least x and order of parts does not matter.
+
+    Parameters:
+    n (int): The integer to be partitioned.
+    k (int): The number of parts to divide n into.
+    x (int): The minimum value for each part.
+
+    Returns:
+    int: The number of distinct partitioning ways.
+
+    Examples:
+    >>> count_partitions(7, 3, 1)
+    4
+    >>> count_partitions(6, 2, 1)
+    3
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_count_partitions():
+    # Test case 1: Simple case
+    result = count_partitions(7, 3, 1)
+    assert result == 4, f"Expected 4, got {result}"
+
+    # Test case 2: Another simple case
+    result = count_partitions(6, 2, 1)
+    assert result == 3, f"Expected 3, got {result}"
+
+    # Test case 3: Partitioning into a larger number of parts
+    result = count_partitions(8, 4, 1)
+    assert result == 5, f"Expected 5, got {result}"
+
+    print("All test cases passed successfully!")
+
+
+# Call the test function to run the test cases
+test_count_partitions()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_25</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def count_sequences(n: int, last: int, memo: dict) -> int:
+    """
+    Calculate the number of valid sequences that can be formed according to specific rules.
+    
+    Each sequence starts with a given number 'n', and a new number can be appended to the sequence
+    if it is a positive integer and not greater than half the last number in the sequence. This
+    function uses memoization to store previously calculated results to optimize performance.
+    
+    Args:
+        n (int): The starting number of the sequence.
+        last (int): The last number in the current sequence.
+        memo (dict): A dictionary used for memoization, storing the number of valid sequences
+                     for each 'last' value encountered.
+    
+    Returns:
+        int: The total number of valid sequences that can be formed starting with 'n'.
+    
+    Examples:
+        >>> count_sequences(1, 1, {})
+        1
+        >>> count_sequences(6, 6, {})
+        6
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_count_sequences():
+    test_cases = [
+        (6, 6),
+        (1, 1),
+        (10, 14)
+    ]
+
+    for i, (n, expected) in enumerate(test_cases):
+        memo = {}
+        result = count_sequences(n, n, memo)
+        assert result == expected, f"Test case {i+1} failed: expected {expected}, got {result}"
+        print(f"Test case {i+1} passed: n = {n}, expected = {expected}, got = {result}")
+
+# Call the test function
+test_count_sequences()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_26</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from math import gcd
+def count_coprime_pairs(x0: int, y0: int) -> int:
+    """
+    Counts the number of pairs of positive integers (P, Q) such that P and Q have x0 as their greatest common divisor (GCD)
+    and y0 as their least common multiple (LCM).
+
+    Args:
+    x0 (int): The GCD that each pair (P, Q) must have.
+    y0 (int): The LCM that each pair (P, Q) must have.
+
+    Returns:
+    int: The count of all possible pairs (P, Q) that meet the specified criteria.
+
+    The function iterates through all possible factors 'a' of the quotient 'y0 / x0'. For each factor 'a',
+    it calculates the corresponding factor 'b' such that 'a * b = y0 / x0'. It then checks if 'a' and 'b'
+    are co-prime (their GCD is 1) because P and Q can only be multiples of 'x0' by co-prime factors to maintain
+    the GCD as 'x0'. If 'a' and 'b' are co-prime, the count is incremented by 1 if 'a' is the same as 'b',
+    else by 2 to account for both (P, Q) and (Q, P) pairs.
+
+    Example Cases:
+
+    >>> count_coprime_pairs(3, 60)
+    4
+    >>> count_coprime_pairs(2, 50)
+    0
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_count_coprime_pairs():
+    test_cases = [
+        (3, 60, 4),   # The example from the problem statement
+        (2, 50, 2), 
+        (6, 180, 8),  # 180/6 = 30, factors are (1, 30), (2, 15), (3, 10), (5, 6), (6, 5), (10, 3), (15, 2), (30, 1)
+    ]
+
+    for i, (x0, y0, expected) in enumerate(test_cases):
+        result = count_coprime_pairs(x0, y0)
+        assert result == expected, f"Test case {i+1} failed: expected {expected}, got {result}"
+        print(f"Test case {i+1} passed: x0 = {x0}, y0 = {y0}, expected = {expected}, got = {result}")
+
+# Call the test function
+test_count_coprime_pairs()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_27</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def preorder_traversal(inorder: str, postorder: str) -> str:
+    """
+    Reconstructs the binary tree from its inorder and postorder traversals and
+    returns the preorder traversal as a string.
+
+    Args:
+    inorder (str): The inorder traversal of the binary tree.
+    postorder (str): The postorder traversal of the binary tree.
+
+    Returns:
+    str: The preorder traversal of the binary tree.
+
+    Example:
+    >>> preorder_traversal('BADC', 'BDCA')
+    'ABCD'
+    >>> preorder_traversal('A', 'A')
+    'A'
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_preorder_traversal():
+    # Test case 1
+    inorder1 = "BADC"
+    postorder1 = "BDCA"
+    expected_preorder1 = "ABCD"
+    assert preorder_traversal(inorder1, postorder1) == expected_preorder1
+    print(f"Test case 1 passed. Preorder: {preorder_traversal(inorder1, postorder1)}")
+
+    # Test case 2
+    inorder2 = "DBGEACF"
+    postorder2 = "DGEBFCA"
+    expected_preorder2 = "ABDEGCF"
+    assert preorder_traversal(inorder2, postorder2) == expected_preorder2
+    print(f"Test case 2 passed. Preorder: {preorder_traversal(inorder2, postorder2)}")
+
+    # Test case 3
+    inorder3 = "A"
+    postorder3 = "A"
+    expected_preorder3 = "A"
+    assert preorder_traversal(inorder3, postorder3) == expected_preorder3
+    print(f"Test case 3 passed. Preorder: {preorder_traversal(inorder3, postorder3)}")
+
+# Run the test function
+test_preorder_traversal()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_28</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from collections import deque
+from typing import Union
+def string_transformation(A: str, B: str, rules: list) -> Union[int, str]:
+    """
+    Perform string transformation from A to B using a set of transformation rules.
+
+    This function takes an initial string A and a target string B, along with a list
+    of transformation rules, and attempts to transform A into B using the rules.
+    A Breadth-First Search (BFS) algorithm is used to explore the possible transformations
+    up to a maximum of 10 steps. If A can be transformed into B within 10 steps, the function
+    returns the minimum number of steps required. If it's not possible, the function returns
+    "NO ANSWER!".
+
+    Parameters:
+    A (str): The initial string to be transformed.
+    B (str): The target string to be achieved.
+    rules (list of tuples): A list of transformation rules, where each rule is a tuple
+                            containing the source substring (to be replaced) and the
+                            target substring (to replace with).
+
+    Returns:
+    Union[int, str]: The minimum number of transformation steps if possible, otherwise "NO ANSWER!".
+
+    Examples:
+    >>> string_transformation("abcd", "xyz", [("abc", "xu"), ("ud", "y"), ("y", "yz")])
+    3
+    >>> string_transformation("aaa", "bbbb", [("a", "b"), ("aa", "bb"), ("aaa", "bbb")])
+    'NO ANSWER!'
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_string_transformation():
+    # Test case 1
+    A1 = "abcd"
+    B1 = "xyz"
+    rules1 = [("abc", "xu"), ("ud", "y"), ("y", "yz")]
+    expected_result1 = 3
+    assert string_transformation(A1, B1, rules1) == expected_result1, "Test case 1 failed"
+
+    # Test case 2
+    A2 = "aaa"
+    B2 = "bbbb"
+    rules2 = [("a", "b"), ("aa", "bb"), ("aaa", "bbb")]
+    expected_result2 = "NO ANSWER!"
+    assert string_transformation(A2, B2, rules2) == expected_result2, "Test case 2 failed"
+
+    # Test case 3
+    A3 = "hello"
+    B3 = "world"
+    rules3 = [("h", "w"), ("e", "o"), ("l", "r"), ("lol", "ldr")]
+    expected_result3 = "NO ANSWER!"
+    assert string_transformation(A3, B3, rules3) == expected_result3, "Test case 3 failed"
+
+    print("All test cases passed!")
+
+# Run the test function
+test_string_transformation()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_29</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def find_min_n_greater_than_k(k: int) -> int:
+    """
+    Calculate the smallest positive integer n such that the sum of the harmonic series
+    up to 1/n is greater than a given positive integer k.
+
+    The harmonic series is defined as S_n = 1 + 1/2 + 1/3 + ... + 1/n.
+
+    Args:
+    - k (int): A positive integer representing the threshold value the harmonic series sum must exceed.
+
+    Returns:
+    - int: The smallest integer n for which the harmonic series sum S_n exceeds the threshold k.
+
+    Examples:
+    >>> find_min_n_greater_than_k(1)
+    2
+    >>> find_min_n_greater_than_k(3)
+    11
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_find_min_n_greater_than_k():
+    # Test case 1: k = 1, expected result is 2
+
+    assert find_min_n_greater_than_k(1) == 2, "Test case 1 failed."
+
+    # Test case 2: k = 3, expected result is 11
+    assert find_min_n_greater_than_k(3) == 11, "Test case 2 failed."
+    # Test case 3: k = 5, expected result is 83
+    assert find_min_n_greater_than_k(5) == 83, "Test case 3 failed."
+
+    print("All test cases passed.")
+
+
+# Run the test function
+test_find_min_n_greater_than_k()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_30</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def is_prime(num: int) -> bool:
+    """
+    Determine whether a given integer is a prime number.
+
+    A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. The function checks for primality by eliminating non-prime numbers using several tests. First, it handles edge cases for numbers less than or equal to 1, which are not prime, and small numbers (2 and 3) which are prime. It then checks for divisibility by 2 and 3. For larger numbers, it uses a 6k +/- 1 optimization to test for factors up to the square root of the number.
+
+    Args:
+    num (int): The integer to check for primality.
+
+    Returns:
+    bool: True if `num` is a prime number, False otherwise.
+
+    Cases:
+    >>> is_prime(2)
+    True
+    >>> is_prime(15)
+    False
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_is_prime():
+    # Test case 1: Test a prime number
+    prime_number = 29
+    assert is_prime(prime_number) == True, f"Test case 1 failed: {prime_number} is a prime number."
+
+    # Test case 2: Test a non-prime number
+    non_prime_number = 21  # 21 = 3 * 7, so it's not prime
+    assert is_prime(non_prime_number) == False, f"Test case 2 failed: {non_prime_number} is not a prime number."
+
+    # Test case 3: Test a number less than 2 (should not be prime)
+    less_than_two = 1
+    assert is_prime(less_than_two) == False, f"Test case 3 failed: {less_than_two} is not a prime number."
+
+    # Test case 4: Test another prime number
+    another_prime_number = 97
+    assert is_prime(another_prime_number) == True, f"Test case 4 failed: {another_prime_number} is a prime number."
+
+    # Test case 5: Test zero (should not be prime)
+    zero = 0
+    assert is_prime(zero) == False, f"Test case 5 failed: {zero} is not a prime number."
+
+    print("All test cases passed.")
+
+# Run the test function
+test_is_prime()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_31</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from collections import deque
+def generate_numbers(n, rules) -> int:
+    """
+    Generate all unique numbers from the given number by applying transformation rules.
+
+    Each rule allows a single digit to be transformed into another. A breadth-first search
+    (BFS) is used to explore all possible transformations. The function returns the count
+    of unique numbers that can be generated from the original number, including the number itself.
+
+    Args:
+    - n (int): The original integer number to transform.
+    - rules (list of tuples): A list of transformation rules, where each rule is represented
+                              as a tuple (x, y) indicating that digit x can be transformed into y.
+
+    Returns:
+    - int: The total count of unique numbers that can be generated.
+
+    Cases:
+    >>> generate_numbers(234, [(2, 5), (3, 6)])
+    4
+    >>> generate_numbers(100, [(1, 9)])
+    2
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_generate_numbers():
+    # Test case 1
+    n1, k1 = 234, 2
+    rules1 = [(2, 5), (3, 6)]
+    assert generate_numbers(n1, rules1) == 4, "Test case 1 failed"
+
+    # Test case 2
+    n2, k2 = 123, 3
+    rules2 = [(1, 9), (2, 8), (3, 7)]
+    assert generate_numbers(n2, rules2) == 8, "Test case 2 failed"
+
+    # Test case 3
+    n3, k3 = 999, 1
+    rules3 = [(9, 1)]
+    assert generate_numbers(n3, rules3) == 8, "Test case 3 failed"
+
+    print("All test cases passed!")
+
+# Call the test function
+test_generate_numbers()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_32</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def check_scenario(scenario: str, liar_count: set, statements: dict, days_of_week: set) -> bool:
+    """
+    Evaluates the consistency of a scenario where one participant is the criminal based on the given statements.
+
+    This function takes a potential criminal's name (scenario) and a set of liars (liar_count) and checks if
+    the statements made by all participants are consistent with this scenario, disregarding any statements
+    about the day of the week.
+
+    Parameters:
+    - scenario (str): The name of the participant being tested as the potential criminal.
+    - liar_count (set): A set of names of participants who are assumed to be liars.
+    - statements (dict): A dictionary mapping participant names to lists of their respective statements.
+    - days_of_week (set): A set of strings representing the days of the week.
+
+    Returns:
+    - bool: True if the scenario is consistent with the statements, False otherwise.
+
+    Test Cases:
+    >>> check_scenario("ALICE", {"BOB", "CHARLIE"}, {"ALICE": ["I am guilty."], "BOB": ["ALICE is not guilty."], "CHARLIE": []}, {"MONDAY", "TUESDAY"})
+    True
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_check_scenario():
+    # Define a set of days of the week for the test cases
+    days_of_week = set(["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"])
+
+    # Test case 1: Simple case where the scenario is correct
+    statements_test1 = {
+        "ALICE": ["I am not guilty.", "BOB is guilty."],
+        "BOB": ["ALICE is not guilty.", "Today is MONDAY"],
+        "CHARLIE": ["I am guilty."]
+    }
+    scenario_test1 = "CHARLIE"
+    liar_count_test1 = {"ALICE", "BOB"}
+    assert check_scenario(scenario_test1, liar_count_test1, statements_test1, days_of_week) == False, "Test case 1 failed"
+
+    # Test case 2: Scenario with contradictory statements
+    statements_test2 = {
+        "ALICE": ["I am guilty."],
+        "BOB": ["I am not guilty.", "ALICE is guilty."],
+        "CHARLIE": ["I am not guilty.", "Today is TUESDAY"]
+    }
+    scenario_test2 = "ALICE"
+    liar_count_test2 = {"BOB", "CHARLIE"}
+    assert check_scenario(scenario_test2, liar_count_test2, statements_test2, days_of_week) == False, "Test case 2 failed"
+
+    # Test case 3: Scenario where the statements are ambiguous
+    statements_test3 = {
+        "ALICE": ["I am not guilty.", "Today is WEDNESDAY"],
+        "BOB": ["I am not guilty.", "CHARLIE is guilty."],
+        "CHARLIE": ["BOB is not guilty."]
+    }
+    scenario_test3 = "BOB"
+    liar_count_test3 = {"ALICE", "CHARLIE"}
+    assert check_scenario(scenario_test3, liar_count_test3, statements_test3, days_of_week) == False, "Test case 3 failed"
+
+    print("All test cases passed.")
+
+# Run the test function
+test_check_scenario()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_33</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def calculate_score(system: int, points: str) -> list:
+    """
+    Calculate the score of a series of ping-pong games based on the provided scoring system.
+
+    This function takes in the desired scoring system (either 11 or 21 points) and a string 
+    representing the sequence of points won by the player ('W') and the opponent ('L'). 
+    The function processes the string and returns a list of game scores formatted as "player_score:opponent_score".
+
+    The game is considered finished when one player reaches the system's required number of points 
+    (11 or 21) with at least a 2-point lead. If the sequence of points ends in the middle of a game, 
+    that game's current score is also included in the output.
+
+    Args:
+    - system (int): The number of points required to win a game (either 11 or 21).
+    - points (str): A string of 'W' and 'L' characters denoting points won by the player and opponent.
+
+    Returns:
+    - list: A list of strings representing the score of each game.
+
+    Cases:
+    >>> calculate_score(11, "WWWWWWWWWWL")
+    ["10:1"]
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_calculate_score():
+    # Test case 1: A single game in both systems, with a clear winner.
+    points = "WWWWWWWWWWL"
+    expected_11 = ["10:1"]
+    expected_21 = ["10:1"]
+    assert calculate_score(11, points) == expected_11, "Test case 1 (11-point) failed"
+    assert calculate_score(21, points) == expected_21, "Test case 1 (21-point) failed"
+
+    # Test case 2: Multiple games, some completed and one in progress.
+    points = "WWLWWLWWLWWLWE"
+    expected_11 = ["9:4"]
+    expected_21 = ["9:4"]
+    assert calculate_score(11, points) == expected_11, "Test case 2 (11-point) failed"
+    assert calculate_score(21, points) == expected_21, "Test case 2 (21-point) failed"
+
+    # Test case 3: A longer sequence with many games and a final unfinished game.
+    points = "WWLWLWLWLWLLWLWLWLWLWWLWWLWWLWLE"
+    expected_11 = ['12:10', '5:4']
+    expected_21 = ['17:14']
+    assert calculate_score(11, points) == expected_11, "Test case 3 (11-point) failed"
+    assert calculate_score(21, points) == expected_21, "Test case 3 (21-point) failed"
+
+    print("All test cases passed!")
+
+# Run the test function
+test_calculate_score()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_34</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def catalan_number(n: int) -> int:
+    """
+    Calculate the nth Catalan number.
+
+    The function computes the nth Catalan number using dynamic programming. Catalan numbers are a sequence of natural 
+    numbers that have many applications in combinatorial mathematics, including the counting of certain types of lattice paths, 
+    the number of expressions containing n pairs of parentheses which are correctly matched, the number of different ways n+1 
+    factors can be completely parenthesized, and more.
+
+    Args:
+    - n (int): The position in the Catalan number sequence to compute (must be non-negative).
+
+    Returns:
+    - int: The nth Catalan number.
+
+    Cases:
+      catalan_number(0) -> 1
+      catalan_number(3) -> 5
+      catalan_number(5) -> 42
+    Note:
+    The computation is based on the recursive formula:
+    C(n) = C(0)C(n-1) + C(1)C(n-2) + ... + C(n-1)C(0)
+    where C(0) is 1.
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_catalan_number():
+    # Test case 1: The first Catalan number (base case)
+    n1 = 0
+    expected_output1 = 1
+    assert catalan_number(n1) == expected_output1, f"Test case 1 failed: expected {expected_output1}, got {catalan_number(n1)}"
+
+    # Test case 2: The third Catalan number
+    n2 = 3
+    expected_output2 = 5
+    assert catalan_number(n2) == expected_output2, f"Test case 2 failed: expected {expected_output2}, got {catalan_number(n2)}"
+
+    # Test case 3: The fifth Catalan number
+    n3 = 5
+    expected_output3 = 42
+    assert catalan_number(n3) == expected_output3, f"Test case 3 failed: expected {expected_output3}, got {catalan_number(n3)}"
+
+    print("All test cases passed!")
+
+# Run the test function
+test_catalan_number()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_35</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List
+def count_apples_reachable(apple_heights: List[int], tao_reach: int) -> int:
+    """
+    Calculate the number of apples that Tao Tao can reach.
+
+    Args:
+    apple_heights (List[int]): The heights of apples from the ground (in centimeters).
+    tao_reach (int): The maximum height Tao Tao can reach with her hand stretched upwards (in centimeters).
+
+    Returns:
+    int: The number of apples Tao Tao can reach with or without standing on a 30cm stool.
+
+    This function iterates over the list of apple heights and counts how many of them are within Tao Tao's reach,
+    considering an additional 30cm that the stool provides.
+
+    Example cases:
+       count_apples_reachable([100, 120, 130, 140, 150, 150, 140, 130, 120, 110], 120) -> returns 10
+       count_apples_reachable([200, 190, 180, 170, 160, 150, 140, 135, 130, 131], 100) -> returns 0
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+import unittest
+
+class TestTaoTaoApplePicking(unittest.TestCase):
+    def test_count_apples_reachable(self):
+        # Test case 1: Tao Tao can reach all apples
+        apples_1 = [100, 105, 110, 115, 120, 125, 130, 135, 140, 145]
+        tao_reach_1 = 120
+        self.assertEqual(count_apples_reachable(apples_1, tao_reach_1), 10)
+
+        # Test case 2: Tao Tao can't reach any apples
+        apples_2 = [200, 200, 200, 200, 200, 200, 200, 200, 200, 200]
+        tao_reach_2 = 100
+        self.assertEqual(count_apples_reachable(apples_2, tao_reach_2), 0)
+
+        # Test case 3: Tao Tao can reach some of the apples
+        apples_3 = [160, 150, 140, 170, 180, 190, 160, 150, 145, 155]
+        tao_reach_3 = 115
+        self.assertEqual(count_apples_reachable(apples_3, tao_reach_3), 2)
+
+# To run the tests
+if __name__ == '__main__':
+    unittest.main()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_36</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List, Tuple
+def remaining_trees_after_clearing(l: int, areas: List[Tuple[int, int]]) -> int:
+    """
+    Calculate the number of remaining trees along a road after specific areas have been cleared.
+
+    The road is represented as a straight line of length 'l' and is initially filled with trees.
+    Each area scheduled for clearing is specified as a pair of integers (start, end), representing
+    the inclusive range along the road where the trees will be removed.
+
+    Args:
+    - l (int): The length of the road.
+    - areas (List[Tuple[int, int]]): A list of tuples where each tuple represents a cleared area on the road.
+    
+    Returns:
+    - int: The total number of trees remaining along the road after the specified areas have been cleared.
+    
+    Examples:
+    - remaining_trees_after_clearing(10, [(2, 5), (7, 9)]) will return 5    
+    - remaining_trees_after_clearing(100, [(10, 90)]) will return 20.
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_remaining_trees_after_clearing():
+    test_cases = [
+        (500, [(150, 300), (100, 200), (470, 471)], 298),
+        (1000, [(0, 100), (200, 300), (400, 500), (600, 700), (800, 900)], 496),
+        (10, [(3, 4), (7, 9)], 6),
+    ]
+
+    for i, (l, areas, expected) in enumerate(test_cases, 1):
+        result = remaining_trees_after_clearing(l, areas)
+        assert result == expected, f"Test case {i} failed: expected {expected}, got {result}"
+        print(f"Test case {i} passed.")
+
+
+test_remaining_trees_after_clearing()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_37</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List, Tuple 
+def max_herb_value(T: int, M: int, herbs: List[Tuple[int, int]]) -> int:
+    """
+    Calculate the maximum total value of herbs that can be picked within a given time limit.
+
+    This function solves a variation of the 0/1 knapsack problem where the goal is to maximize
+    the total value of herbs picked without exceeding the time limit. Each herb can be picked
+    at most once and has an associated time cost and value.
+
+    Args:
+    - T (int): The total time available for picking herbs.
+    - M (int): The number of different herbs in the cave.
+    - herbs (List[Tuple[int, int]]): A list of tuples, where each tuple contains two integers
+      representing the time required to pick the herb and the herb's value, respectively.
+
+    Returns:
+    - int: The maximum total value of herbs that can be picked within the time limit.
+
+    Examples:
+    - max_herb_value(70, 3, [(71, 100), (69, 1), (1, 2)]) -> 3
+    - max_herb_value(5, 3, [(5, 10), (4, 7), (6, 12)]) -> 10
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_max_herb_value():
+    # Test case 1: Given example in the problem statement
+    T1, M1 = 70, 3
+    herbs1 = [(71, 100), (69, 1), (1, 2)]
+    expected1 = 3
+    assert max_herb_value(T1, M1,
+                          herbs1) == expected1, f"Test case 1 failed: expected {expected1}, got {max_herb_value(T1, M1, herbs1)}"
+
+    # Test case 2: Multiple herbs can be picked within the time limit
+    T2, M2 = 10, 4
+    herbs2 = [(1, 10), (2, 15), (3, 20), (4, 30)]
+    expected2 = 75  # We can pick herbs with time 1, 2 and 3 to get maximum value 10 + 15 + 20
+    assert max_herb_value(T2, M2,
+                          herbs2) == expected2, f"Test case 2 failed: expected {expected2}, got {max_herb_value(T2, M2, herbs2)}"
+
+    # Test case 3: Only one herb can be picked due to time constraint
+    T3, M3 = 5, 3
+    herbs3 = [(5, 10), (4, 7), (6, 12)]
+    expected3 = 10  # We can only pick the first herb
+    assert max_herb_value(T3, M3,
+                          herbs3) == expected3, f"Test case 3 failed: expected {expected3}, got {max_herb_value(T3, M3, herbs3)}"
+
+    # If all tests pass, print this:
+    print("All test cases passed!")
+test_max_herb_value()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_38</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List
+def min_remaining_space(V: int, n: int, volumes: List[int]) -> int:
+    """
+    Calculate the minimum remaining space in a box after trying to fit a number of items with given volumes.
+    
+    This function uses a dynamic programming approach to determine the maximum volume that can be occupied
+    in the box by any subset of the given items. It then returns the difference between the box's total capacity
+    and this maximum occupied volume, which is the minimum remaining space.
+
+    Args:
+    - V (int): The total capacity of the box.
+    - n (int): The number of items to consider for packing into the box.
+    - volumes (List[int]): A list of the volumes of the n items.
+
+    Returns:
+    - int: The minimum remaining space in the box after fitting the items.
+
+    Examples:
+    - min_remaining_space(24, 6, [8, 3, 12, 7, 9, 7]) -> 0
+    - min_remaining_space(5, 3, [6, 7, 8]) -> 5
+
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_min_remaining_space():
+    # Test case 1: Sample provided in the problem statement where all items can fit perfectly
+    V1, n1 = 24, 6
+    volumes1 = [8, 3, 12, 7, 9, 7]
+    expected1 = 0
+    assert min_remaining_space(V1, n1,
+                               volumes1) == expected1, f"Test case 1 failed: expected {expected1}, got {min_remaining_space(V1, n1, volumes1)}"
+
+    # Test case 2: Some space is expected to remain in the box
+    V2, n2 = 10, 4
+    volumes2 = [3, 5, 3, 2]
+    expected2 = 0  # Possible packing: 3, 5, and 3, leaves 2 units of space
+    assert min_remaining_space(V2, n2,
+                               volumes2) == expected2, f"Test case 2 failed: expected {expected2}, got {min_remaining_space(V2, n2, volumes2)}"
+
+    # Test case 3: No items can fit due to the items being larger than the box capacity
+    V3, n3 = 5, 3
+    volumes3 = [6, 7, 8]
+    expected3 = 5  # No items fit, so all 5 units of space remain
+    assert min_remaining_space(V3, n3,
+                               volumes3) == expected3, f"Test case 3 failed: expected {expected3}, got {min_remaining_space(V3, n3, volumes3)}"
+
+    # If all tests pass, print this:
+    print("All test cases passed!")
+
+
+# Run the test function
+test_min_remaining_space()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_39</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def calculate_arrangements(n, m, a) -> int:
+    """
+    Compute the number of ways to arrange m pots of flowers using up to n types,
+    where the ith type can have at most a[i] pots, and the arrangement must be in
+    increasing order of flower types.
+
+    Args:
+    - n (int): The number of flower types available.
+    - m (int): The total number of flower pots to arrange.
+    - a (list of int): A list where a[i] is the maximum number of pots for the ith type of flower.
+
+    Returns:
+    - int: The number of distinct arrangements modulo (10^6 + 7).
+
+    Examples:
+    - calculate_arrangements(2, 4, [3, 2]) returns 2.
+    - calculate_arrangements(3, 3, [1, 2, 3]) returns 6.
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_calculate_arrangements():
+    # Helper function to compare expected and actual results
+    def assert_equal(actual, expected, message):
+        assert actual == expected, message
+
+    # Test Case 1
+    n, m, a = 2, 4, [3, 2]
+    expected = 2
+    assert_equal(calculate_arrangements(n, m, a), expected, f"Test Case 1 failed: expected {expected}, got {calculate_arrangements(n, m, a)}")
+
+    # Test Case 2
+    n, m, a = 3, 3, [1, 2, 3]
+    expected = 6
+    assert_equal(calculate_arrangements(n, m, a), expected, f"Test Case 2 failed: expected {expected}, got {calculate_arrangements(n, m, a)}")
+
+    # Test Case 3
+    n, m, a = 1, 5, [5]
+    expected = 1
+    assert_equal(calculate_arrangements(n, m, a), expected, f"Test Case 3 failed: expected {expected}, got {calculate_arrangements(n, m, a)}")
+
+    print("All tests passed!")
+
+if __name__ == "__main__":
+    test_calculate_arrangements()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_40</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def vigenere_decrypt(key: str, ciphertext: str) -> str:
+    """
+    Decrypts a ciphertext encrypted with the Vigenère cipher using the provided key.
+    
+    The Vigenère cipher is a method of encrypting alphabetic text by using a series of
+    Caesar ciphers based on the letters of a keyword. This function reverses the process
+    to recover the original plaintext from the ciphertext.
+
+    Args:
+        key (str): The encryption key used to encrypt the original plaintext.
+                   This key should consist only of alphabetic characters.
+        ciphertext (str): The encrypted text that needs to be decrypted.
+                          The ciphertext should consist only of alphabetic characters.
+
+    Returns:
+        str: The decrypted plaintext corresponding to the input ciphertext.
+
+    Examples:
+        >>> vigenere_decrypt("CompleteVictory", "Yvqgpxaimmklongnzfwpvxmniytm")
+        'Wherethereisawillthereisaway'
+
+        >>> vigenere_decrypt("ABC", "DEF")
+        'DCB'
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_vigenere_decrypt():
+    # Test case 1: Example provided in the problem statement
+    key1 = "CompleteVictory"
+    ciphertext1 = "Yvqgpxaimmklongnzfwpvxmniytm"
+    expected_plaintext1 = "Wherethereisawillthereisaway"
+    assert vigenere_decrypt(key1, ciphertext1) == expected_plaintext1, "Test case 1 failed"
+
+    # Test case 2: All uppercase characters
+    key2 = "ABC"
+    ciphertext2 = "DEF"
+    expected_plaintext2 = "DDD"
+    assert vigenere_decrypt(key2, ciphertext2) == expected_plaintext2, "Test case 2 failed"
+
+    # Test case 3: All lowercase characters
+    key3 = "xyz"
+    ciphertext3 = "abc"
+    expected_plaintext3 = "ddd"
+    assert vigenere_decrypt(key3, ciphertext3) == expected_plaintext3, "Test case 3 failed"
+
+    # Test case 4: Mixed case characters
+    key4 = "MiXeD"
+    ciphertext4 = "JpOeR"
+    expected_plaintext4 = "XhRaO"
+    assert vigenere_decrypt(key4, ciphertext4) == expected_plaintext4, "Test case 4 failed"
+
+    # Test case 5: Key shorter than ciphertext
+    key5 = "short"
+    ciphertext5 = "PqrsPqrsPq"
+    expected_plaintext5 = "XjdbWykeYx"
+    assert vigenere_decrypt(key5, ciphertext5) == expected_plaintext5, "Test case 5 failed"
+
+    print("All test cases passed!")
+
+# Run the test function
+test_vigenere_decrypt()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_41</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def mod_inverse(a, b):
+    """
+    Calculate the modular multiplicative inverse of `a` modulo `b`.
+    
+    This function finds an integer `x` such that (a * x) % b == 1, provided that
+    `a` and `b` are coprime (i.e., gcd(a, b) == 1). It uses the Extended Euclidean
+    Algorithm to compute the inverse. If `a` and `b` are not coprime, the modular
+    inverse does not exist, and the function returns `None`.
+    
+    Args:
+      a (int): The integer whose modular inverse is to be found.
+      b (int): The modulus with respect to which the inverse is sought.
+    
+    Returns:
+      int: The modular inverse of `a` modulo `b` if it exists, otherwise `None`.
+    
+    Examples:
+      >>> mod_inverse(3, 10)
+      7
+
+      >>> mod_inverse(42, 2017)
+      None
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_mod_inverse():
+    test_cases = [
+        (3, 10),  # Test case 1: gcd(3, 10) = 1, inverse should be 7
+        (17, 3120),  # Test case 2: gcd(17, 3120) = 1, inverse should be 2753
+        (42, 2017),  # Test case 3: gcd(42, 2017) = 1, inverse should be 1969
+    ]
+    expected_results = [
+        7,  # Expected result for test case 1
+        2753,  # Expected result for test case 2
+        1969,  # Expected result for test case 3
+    ]
+
+    for i, (a, b) in enumerate(test_cases):
+        actual_result = mod_inverse(a, b)
+        expected_result = expected_results[i]
+        assert actual_result == expected_result, f"Test case {i+1} failed: expected {expected_result}, got {actual_result}"
+        print(f"Test case {i+1} passed: a={a}, b={b}, x0={actual_result}")
+
+# Run the test function
+test_mod_inverse()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_42</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def find_most_unhappy_day(schedule) -> int:
+    """
+    Calculate the day of the week when Jinjin is most unhappy based on her schedule.
+    
+    Jinjin is unhappy if the total hours spent in school and extra classes exceed 8 hours in a day. 
+    The function finds the day when her unhappiness is the greatest, which is the day when the total
+    hours are the farthest above the threshold. If there are multiple days with the same level of 
+    maximum unhappiness, the earliest day is returned. If Jinjin is not unhappy on any day, the 
+    function returns 0.
+    
+    Args:
+        schedule (list[tuple[int, int]]): A list of 7 tuples, where each tuple represents the 
+                                           number of hours spent at school and in extra classes
+                                           for each day of the week, respectively.
+                                           
+    Returns:
+        int: The day of the week when Jinjin is most unhappy (1-7 for Monday to Sunday) or 0 
+             if she is never unhappy.
+    
+    Cases:
+    >>> find_most_unhappy_day([(5, 3), (6, 2), (7, 2), (5, 3), (5, 4), (0, 4), (0, 6)])
+    3
+    >>> find_most_unhappy_day([(4, 3), (4, 3), (4, 3), (4, 3), (4, 3), (0, 3), (0, 2)])
+    0
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_find_most_unhappy_day():
+    # Test case 1: Provided example where Jinjin is most unhappy on Wednesday
+    schedule1 = [
+        (5, 3),
+        (6, 2),
+        (7, 2),
+        (5, 3),
+        (5, 4),
+        (0, 4),
+        (0, 6)
+    ]
+    assert find_most_unhappy_day(schedule1) == 3, "Test case 1 failed"
+
+    # Test case 2: Jinjin is never unhappy
+    schedule2 = [
+        (4, 3),
+        (4, 3),
+        (4, 3),
+        (4, 3),
+        (4, 3),
+        (0, 3),
+        (0, 2)
+    ]
+    assert find_most_unhappy_day(schedule2) == 0, "Test case 2 failed"
+
+    # Test case 3: Jinjin is most unhappy on Monday and Thursday, but Monday should be returned
+    schedule3 = [
+        (6, 3),
+        (6, 2),
+        (6, 2),
+        (6, 3),
+        (6, 2),
+        (0, 3),
+        (0, 2)
+    ]
+    assert find_most_unhappy_day(schedule3) == 1, "Test case 3 failed"
+
+    print("All test cases passed.")
+
+# Run the test function
+test_find_most_unhappy_day()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_43</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from itertools import permutations
+def next_permutation(perm: list) -> bool:
+    """
+    Transforms the input permutation to the next permutation in lexicographic order.
+    
+    The function finds the first number from the end that is smaller than the number following it 
+    and swaps it with the smallest number that is larger and comes after it. Then it reverses the 
+    order of numbers after the original first smaller number. If the input is the last permutation 
+    (in descending order), the function returns False, indicating no next permutation is possible.
+    
+    Args:
+    perm (list): A list of integers representing the current permutation.
+    
+    Returns:
+    bool: True if the permutation was successfully transformed, False if it was the last permutation.
+    
+    Examples:
+    >>> next_permutation([1, 2, 3])
+    True
+    >>> [1, 2, 3]
+    [1, 3, 2]
+    
+    >>> next_permutation([3, 2, 1])
+    False
+    >>> [3, 2, 1]
+    [3, 2, 1]
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_next_permutation():
+    # Test case 1: ordinary case
+    perm1 = [1, 2, 3]
+    assert next_permutation(perm1) == True, "Test case 1 failed: next_permutation([1, 2, 3]) should return True"
+    assert perm1 == [1, 3, 2], "Test case 1 failed: perm1 should be [1, 3, 2]"
+    
+    # Test case 2: last permutation, should return False
+    perm2 = [3, 2, 1]
+    assert next_permutation(perm2) == False, "Test case 2 failed: next_permutation([3, 2, 1]) should return False"
+    assert perm2 == [3, 2, 1], "Test case 2 failed: perm2 should be [3, 2, 1] (unchanged)"
+    
+    # Test case 3: permutation with repeated elements
+    perm3 = [1, 5, 1]
+    assert next_permutation(perm3) == True, "Test case 3 failed: next_permutation([1, 5, 1]) should return True"
+    assert perm3 == [5, 1, 1], "Test case 3 failed: perm3 should be [5, 1, 1]"
+
+    # Test case 4: permutation with all elements equal
+    perm4 = [1, 1, 1]
+    assert next_permutation(perm4) == False, "Test case 4 failed: next_permutation([1, 1, 1]) should return False"
+    assert perm4 == [1, 1, 1], "Test case 4 failed: perm4 should be [1, 1, 1] (unchanged)"
+    
+    # Test case 5: permutation with only one element
+    perm5 = [42]
+    assert next_permutation(perm5) == False, "Test case 5 failed: next_permutation([42]) should return False"
+    assert perm5 == [42], "Test case 5 failed: perm5 should be [42] (unchanged)"
+    
+    print("All test cases passed.")
+
+# Run the test function
+test_next_permutation()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_44</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>from typing import List
+def jinjin_savings_plan(budgets: List[int]) -> int:
+    """
+    Calculates the total amount of money Jinjin will have by the end of the year
+    after following her savings plan with her mother. Each month, she can save
+    multiples of 100 from her pocket money (300 per month) if she predicts having
+    at least 100 units remaining after expenses. The saved money will gain 20%
+    interest at the end of the year.
+
+    Parameters:
+    budgets (List[int]): A list of 12 integers representing Jinjin's monthly budget.
+
+    Returns:
+    int: The total amount of money Jinjin will have at the end of the year after interest.
+         If Jinjin runs out of money in any given month, returns the negative value of
+         that month (-X, where X is the month number).
+
+    Examples:
+    >>> jinjin_savings_plan([290, 230, 280, 200, 300, 170, 340, 50, 90, 80, 200, 60])
+    -7
+    
+    >>> jinjin_savings_plan([290, 230, 280, 200, 300, 170, 330, 50, 90, 80, 200, 60])
+    1580
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_jinjin_savings_plan():
+    # Test case 1: Jinjin runs out of money in July (the 7th month)
+    budgets1 = [290, 230, 280, 200, 300, 170, 340, 50, 90, 80, 200, 60]
+    assert jinjin_savings_plan(budgets1) == -7, "Test case 1 failed"
+
+    # Test case 2: Jinjin has 1580 units of currency by the end of the year
+    budgets2 = [290, 230, 280, 200, 300, 170, 330, 50, 90, 80, 200, 60]
+    assert jinjin_savings_plan(budgets2) == 1580, "Test case 2 failed"
+
+    # Test case 3: Jinjin manages her budget perfectly and has a specific amount by the end
+    budgets3 = [300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300]
+    assert jinjin_savings_plan(budgets3) == 0, "Test case 3 failed"
+
+    # Test case 4: Jinjin does not need to save any money and spends exactly the amount she receives
+    budgets4 = [300, 290, 280, 270, 260, 250, 240, 230, 220, 210, 200, 190]
+    assert jinjin_savings_plan(budgets4) == 780, "Test case 4 failed"
+
+    # Test case 5: Jinjin runs out of money in the first month
+    budgets5 = [350, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200]
+    assert jinjin_savings_plan(budgets5) == -1, "Test case 5 failed"
+
+    print("All test cases passed.")
+
+
+# Run the test function
+test_jinjin_savings_plan()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_45</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>import heapq
+from typing import List 
+
+def minimum_cost_to_merge_fruits(fruit_counts: List[int]) -> int:
+    """
+    Calculates the minimum total cost to merge multiple heaps of fruits into a single heap.
+    The cost of merging two heaps is equal to the sum of their weights. The function utilizes
+    a greedy algorithm with a min-heap (priority queue) to ensure the smallest heaps are merged first,
+    minimizing the total cost.
+
+    Parameters:
+    fruit_counts (List[int]): A list of integers representing the counts of each type of fruit.
+
+    Returns:
+    int: The minimum total cost required to merge all heaps of fruits.
+
+    Examples:
+    >>> minimum_cost_to_merge_fruits([1, 2, 9])
+    15
+    >>> minimum_cost_to_merge_fruits([10, 20, 30, 40, 50])
+    300 .
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_minimum_cost_to_merge_fruits():
+    # Test case 1: As provided in the problem statement example
+    fruits1 = [1, 2, 9]
+    assert minimum_cost_to_merge_fruits(fruits1) == 15, "Test case 1 failed"
+
+    # Test case 2: Simple case with only two types of fruits
+    fruits2 = [5, 5]
+    assert minimum_cost_to_merge_fruits(fruits2) == 10, "Test case 2 failed"
+
+    # Test case 3: More complex case with multiple types of fruits
+    fruits3 = [10, 20, 30, 40, 50]
+    assert minimum_cost_to_merge_fruits(fruits3) == 330, "Test case 3 failed"
+
+    # Test case 4: Case with fruits having the same count
+    fruits4 = [3, 3, 3, 3]
+    assert minimum_cost_to_merge_fruits(fruits4) == 24, "Test case 4 failed"
+
+    # Test case 5: Case with a single type of fruit
+    fruits5 = [7]
+    assert minimum_cost_to_merge_fruits(fruits5) == 0, "Test case 5 failed"
+
+    print("All test cases passed.")
+
+# Run the test function
+test_minimum_cost_to_merge_fruits()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_46</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def minimum_students_to_leave(heights):
+    """
+    Calculate the minimum number of students that need to leave to form a choir formation.
+    A choir formation is defined such that for some position 'i', the heights of students
+    increase from the start to 'i' and decrease from 'i' to the end of the formation.
+
+    Args:
+    heights (List[int]): A list of student heights.
+
+    Returns:
+    int: The minimum number of students that need to leave.
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_minimum_students_to_leave():
+    # Test case 1: Provided example
+    assert minimum_students_to_leave([186, 186, 150, 200, 160, 130, 197, 220]) == 4, "Test case 1 failed"
+
+    # Test case 2: All students have the same height
+    assert minimum_students_to_leave([150, 150, 150, 150, 150]) == 4, "Test case 2 failed"
+
+    # Test case 3: Students are already in a choir formation
+    assert minimum_students_to_leave([130, 150, 170, 190, 170, 150, 130]) == 0, "Test case 3 failed"
+
+    # Test case 4: Students are in strictly increasing order
+    assert minimum_students_to_leave([130, 135, 140, 145, 150, 155]) == 0, "Test case 4 failed"
+
+    # Test case 5: Students are in strictly decreasing order
+    assert minimum_students_to_leave([155, 150, 145, 140, 135, 130]) == 0, "Test case 5 failed"
+
+    # Test case 6: Optimal choir formation is not including the first or last student
+    assert minimum_students_to_leave([200, 180, 190, 170, 210, 160, 220]) == 3, "Test case 6 failed"
+
+    print("All test cases passed!")
+
+# Run the test function
+test_minimum_students_to_leave()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_47</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def sort_students(student_scores):
+    """
+    Sorts a list of students based on their scores. The students are sorted primarily by their total score (descending),
+    then by their Chinese score (descending), and finally by their student number (ascending) in case of a tie.
+    
+    Args:
+    student_scores (list): A list of tuples, where each tuple consists of (student_number, total_score, Chinese_score).
+    
+    Returns:
+    list: A list of tuples sorted according to the above rules.
+    
+    Examples:
+    >>> sort_students([(1, 237, 90), (2, 244, 87), (3, 258, 78), (4, 264, 88), (5, 215, 67), (6, 265, 78)])
+    [(6, 265, 78), (4, 264, 88), (3, 258, 78), (2, 244, 87), (1, 237, 90), (5, 215, 67)]
+    
+    >>> sort_students([(1, 300, 100), (2, 300, 99), (3, 299, 98), (4, 298, 97), (5, 297, 96)])
+    [(1, 300, 100), (2, 300, 99), (3, 299, 98), (4, 298, 97), (5, 297, 96)]
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_sort_students():
+    # Test case 1
+    input_scores = [(1, 237, 90), (2, 244, 87), (3, 258, 78), (4, 264, 88), (5, 215, 67), (6, 265, 78)]
+    expected_output = [(6, 265, 78), (4, 264, 88), (3, 258, 78), (2, 244, 87), (1, 237, 90), (5, 215, 67)]
+    assert sort_students(input_scores) == expected_output, "Test case 1 failed"
+
+    # Test case 2
+    input_scores = [(1, 258, 80), (2, 264, 88), (3, 258, 90), (4, 244, 87), (5, 258, 78), (6, 264, 88), (7, 220, 67), (8, 265, 78)]
+    expected_output = [(8, 265, 78), (2, 264, 88), (6, 264, 88), (3, 258, 90), (1, 258, 80), (5, 258, 78), (4, 244, 87), (7, 220, 67)]
+    assert sort_students(input_scores) == expected_output, "Test case 2 failed"
+
+    # Test case 3
+    input_scores = [(1, 300, 100), (2, 300, 100), (3, 299, 99), (4, 298, 98), (5, 297, 97)]
+    expected_output = [(1, 300, 100), (2, 300, 100), (3, 299, 99), (4, 298, 98), (5, 297, 97)]
+    assert sort_students(input_scores) == expected_output, "Test case 3 failed"
+
+    print("All test cases passed!")
+
+# Run the test function
+test_sort_students()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_48</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def min_groups(w, n, prices):
+    """
+    Determines the minimum number of groups needed to distribute souvenirs with a constraint on the group's total price.
+    
+    The souvenirs are grouped in pairs such that the total price of each group does not exceed the limit `w`. 
+    The function aims to minimize the number of groups created under this constraint.
+    
+    Args:
+    w (int): The maximum allowed sum of prices for any group of souvenirs.
+    n (int): The total number of souvenirs.
+    prices (list): A list of integers representing the price of each souvenir.
+    
+    Returns:
+    int: The minimum number of groups required to distribute all souvenirs.
+
+    Examples:
+    >>> min_groups(100, 9, [90, 20, 20, 30, 50, 60, 70, 80, 90])
+    6
+    >>> min_groups(80, 4, [30, 30, 20, 10])
+    2
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_min_groups():
+    # Test case 1
+    w1 = 100
+    n1 = 9
+    prices1 = [90, 20, 20, 30, 50, 60, 70, 80, 90]
+    expected_output1 = 6
+    assert min_groups(w1, n1, prices1) == expected_output1, "Test case 1 failed"
+
+    # Test case 2
+    w2 = 200
+    n2 = 5
+    prices2 = [80, 120, 60, 40, 100]
+    expected_output2 = 3
+    assert min_groups(w2, n2, prices2) == expected_output2, "Test case 2 failed"
+
+    # Test case 3
+    w3 = 80
+    n3 = 4
+    prices3 = [30, 30, 20, 10]
+    expected_output3 = 2
+    assert min_groups(w3, n3, prices3) == expected_output3, "Test case 3 failed"
+
+    print("All test cases passed!")
+
+# Run the test function
+test_min_groups()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_49</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def hanoi_double_iterative(n: int) -> int:
+    """
+    Calculate the minimum number of moves required to solve the double-disc Hanoi Towers problem for n pairs of discs.
+    
+    This function implements an iterative algorithm to determine the minimum number of moves necessary to transfer
+    2n discs from the A pole to the C pole in a double-disc Hanoi Towers setup, following the rules that only one disc 
+    can be moved at a time and no disc may be placed on top of a smaller disc. The function uses a known recursive relation 
+    and iteratively computes the total number of moves for n pairs of discs.
+    
+    Args:
+    n (int): The number of disc pairs (each of two identical discs) on the A pole.
+
+    Returns:
+    int: The minimum number of moves required to transfer all the discs from the A pole to the C pole.
+
+    Cases:
+    - For n=1, the function should return 2.
+    - For n=2, the function should return 6.
+    - For n=3, the function should return 14.
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+def test_hanoi_double_iterative():
+    # Test case 1: n = 1
+    assert hanoi_double_iterative(1) == 2, "Test case 1 failed"
+
+    # Test case 2: n = 2
+    assert hanoi_double_iterative(2) == 6, "Test case 2 failed"
+
+    # Test case 3: n = 3
+    assert hanoi_double_iterative(3) == 14, "Test case 3 failed"
+
+    # Additional test cases can be added based on computed or known results
+    # Test case 4: n = 4 (computed using the formula)
+    assert hanoi_double_iterative(4) == 30, "Test case 4 failed"
+
+    # Test case 5: n = 5 (computed using the formula)
+    assert hanoi_double_iterative(5) == 62, "Test case 5 failed"
+
+    # Test case 6: Large n, n = 10 (computed using the formula or a trusted source)
+    assert hanoi_double_iterative(10) == 2046, "Test case 6 failed"
+
+    print("All test cases passed!")
+
+
+# Run the test function
+test_hanoi_double_iterative()</pre>
+      </div>
+    </div>
+    <div class="mainC">
+      <div class="section">
+        <label class="secLabel">
+          name
+        </label>
+        <pre>mceval_Python_50</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          prompt
+        </label>
+        <pre>def total_smoked_cigarettes(n, k):
+    """
+    Calculates the total number of cigarettes Peter can smoke.
+    Peter starts with n cigarettes and can exchange k butts for one new cigarette.
+    The function takes two arguments, n and k, where n is the initial number of cigarettes,
+    and k is the number of cigarette butts needed to exchange for one new cigarette.
+    The function returns the total number of cigarettes Peter can smoke.
+    Example:
+    >>> total_smoked_cigarettes(4, 3)
+        5
+    >>> total_smoked_cigarettes(10, 3)
+        14
+    """</pre>
+      </div>
+      <div class="section">
+        <label class="secLabel">
+          tests
+        </label>
+        <pre>
+assert total_smoked_cigarettes(4, 3) == 5
+assert total_smoked_cigarettes(10, 3) == 14
+assert total_smoked_cigarettes(1, 2) == 1  # Peter cannot exchange butts as he starts with less than k
+assert total_smoked_cigarettes(20, 4) == 26
+assert total_smoked_cigarettes(0, 5) == 0  # Peter starts with no cigarettes</pre>
+      </div>
+    </div>
+  </body>
+</html>

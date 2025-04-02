@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: ...\HumanEval\DSCoderQ2_HumanEval_7_filter_by_substring.lua:25: 'end' expected (to close 'function' at line 6) near <eof>

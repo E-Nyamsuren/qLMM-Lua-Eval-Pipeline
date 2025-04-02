@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MCEVAL\CodeGemma_Lua_23.lua:43: unexpected symbol near '<'

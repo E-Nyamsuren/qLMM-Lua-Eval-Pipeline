@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MBPP\CodeGemmaQ2_mbpp_732_replace_specialchar.lua:3: ')' expected near 'pessi'

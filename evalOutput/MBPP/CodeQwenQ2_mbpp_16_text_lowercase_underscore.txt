@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: ...ut\MBPP\CodeQwenQ2_mbpp_16_text_lowercase_underscore.lua:8: <eof> expected near 'lu'

@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MBPP\DSCoderQ2_mbpp_247_lps.lua:13: unexpected symbol near ']'

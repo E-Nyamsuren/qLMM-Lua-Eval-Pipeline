@@ -7,14 +7,21 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<|im_end|>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<|im_end|>"
+            ],
             "qBits": 4,
+            "passK": 10,
             "skip": 0
         },
         {
@@ -24,14 +31,21 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<|EOT|>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<|EOT|>"
+            ],
             "qBits": 4,
+            "passK": 10,
             "skip": 0
         },
         {
@@ -41,9 +55,15 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
+                "\n--",
+                "\n\n",
+                "</s>"
+            ],
+            "py_eos": [
+                "\ndef ",
                 "\n--",
                 "\n\n",
                 "</s>"
@@ -52,6 +72,7 @@
             "suf": "_<SUF>",
             "pre": "_<PRE>",
             "qBits": 4,
+            "passK": 10,
             "skip": 0
         },
         {
@@ -61,9 +82,15 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
+                "\n--",
+                "\n\n",
+                "<eos>"
+            ],
+            "py_eos": [
+                "\ndef ",
                 "\n--",
                 "\n\n",
                 "<eos>"
@@ -72,6 +99,7 @@
             "suf": "<|fim_suffix|>",
             "pre": "<|fim_prefix|>",
             "qBits": 4,
+            "passK": 10,
             "skip": 0
         },
         {
@@ -81,14 +109,21 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<|endoftext|>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<|endoftext|>"
+            ],
             "qBits": 4,
+            "passK": 10,
             "skip": 0
         },
 
@@ -99,15 +134,22 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<|im_end|>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<|im_end|>"
+            ],
             "qBits": 2,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
         {
             "name": "DSCoderQ2",
@@ -116,15 +158,22 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<|EOT|>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<|EOT|>"
+            ],
             "qBits": 2,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
         {
             "name": "CodeLlamaQ2",
@@ -133,9 +182,15 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
+                "\n--",
+                "\n\n",
+                "</s>"
+            ],
+            "py_eos": [
+                "\ndef ",
                 "\n--",
                 "\n\n",
                 "</s>"
@@ -144,7 +199,8 @@
             "suf": "_<SUF>",
             "pre": "_<PRE>",
             "qBits": 2,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
         {
             "name": "CodeGemmaQ2",
@@ -153,9 +209,15 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
+                "\n--",
+                "\n\n",
+                "<eos>"
+            ],
+            "py_eos": [
+                "\ndef ",
                 "\n--",
                 "\n\n",
                 "<eos>"
@@ -164,7 +226,8 @@
             "suf": "<|fim_suffix|>",
             "pre": "<|fim_prefix|>",
             "qBits": 2,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
         {
             "name": "StarCoderQ2",
@@ -173,14 +236,22 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [              "\nlocal",
+            "lua_eos": [
+                "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<|endoftext|>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<|endoftext|>"
+            ],
             "qBits": 2,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
 
         {
@@ -190,15 +261,22 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<|im_end|>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<|im_end|>"
+            ],
             "qBits": 8,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
         {
             "name": "DSCoderQ8",
@@ -207,15 +285,22 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<|EOT|>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<|EOT|>"
+            ],
             "qBits": 8,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
         {
             "name": "CodeLlamaQ8",
@@ -224,9 +309,15 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
+                "\n--",
+                "\n\n",
+                "</s>"
+            ],
+            "py_eos": [
+                "\ndef ",
                 "\n--",
                 "\n\n",
                 "</s>"
@@ -235,7 +326,8 @@
             "suf": "_<SUF>",
             "pre": "_<PRE>",
             "qBits": 8,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
         {
             "name": "CodeGemmaQ8",
@@ -244,9 +336,15 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
+                "\n--",
+                "\n\n",
+                "<eos>"
+            ],
+            "py_eos": [
+                "\ndef ",
                 "\n--",
                 "\n\n",
                 "<eos>"
@@ -255,7 +353,8 @@
             "suf": "<|fim_suffix|>",
             "pre": "<|fim_prefix|>",
             "qBits": 8,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
         {
             "name": "StarCoderQ8",
@@ -264,15 +363,22 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<|endoftext|>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<|endoftext|>"
+            ],
             "qBits": 8,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
 
         {
@@ -282,15 +388,22 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<|EOT|>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<|EOT|>"
+            ],
             "qBits": 16,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
         {
             "name": "CodeGemmaFP16",
@@ -299,15 +412,22 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<eos>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<eos>"
+            ],
             "qBits": 16,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         },
         {
             "name": "StarCoderFP16",
@@ -316,18 +436,25 @@
             "max_tokens": 1024,
             "temp": 0.1,
             "top_k": 1,
-            "eos": [
+            "lua_eos": [
                 "\nlocal",
                 "\nfunction",
                 "\n--",
                 "\n\n",
                 "<|endoftext|>"
             ],
+            "py_eos": [
+                "\ndef ",
+                "\n--",
+                "\n\n",
+                "<|endoftext|>"
+            ],
             "qBits": 16,
-            "skip": 0
+            "passK": 10,
+            "skip": 1
         }
     ],
-    "benchmarks": [
+    "luabenchmarks": [
         {
             "name": "HumanEval",
             "id": "lua_humaneval.json",
@@ -343,6 +470,26 @@
         {
             "name": "MCEVAL",
             "id": "lua_mceval.json",
+            "sample": "None",
+            "skip": 0
+        }
+    ],
+    "pybenchmarks": [
+        {
+            "name": "HumanEval",
+            "id": "python_humaneval.json",
+            "sample": "None",
+            "skip": 0
+        },
+        {
+            "name": "MBPP",
+            "id": "python_mbpp.json",
+            "sample": "None",
+            "skip": 0
+        },
+        {
+            "name": "MCEVAL",
+            "id": "python_mceval.json",
             "sample": "None",
             "skip": 0
         }

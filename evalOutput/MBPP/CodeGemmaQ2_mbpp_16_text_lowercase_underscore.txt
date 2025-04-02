@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: ...t\MBPP\CodeGemmaQ2_mbpp_16_text_lowercase_underscore.lua:3: syntax error near 'suspicimus'

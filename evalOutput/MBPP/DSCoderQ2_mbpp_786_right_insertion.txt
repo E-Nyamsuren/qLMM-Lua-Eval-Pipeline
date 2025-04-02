@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MBPP\DSCoderQ2_mbpp_786_right_insertion.lua:23: 'end' expected (to close 'while' at line 5) near <eof>

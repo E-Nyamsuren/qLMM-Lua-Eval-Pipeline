@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MBPP\CodeLlamaQ8_mbpp_765_is_polite.lua:58: 'then' expected near '='

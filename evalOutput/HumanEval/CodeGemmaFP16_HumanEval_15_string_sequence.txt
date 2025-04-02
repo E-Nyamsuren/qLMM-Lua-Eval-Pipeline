@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: ...HumanEval\CodeGemmaFP16_HumanEval_15_string_sequence.lua:13: unexpected symbol near '<'

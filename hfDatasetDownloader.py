@@ -7,6 +7,10 @@ from pathlib import Path
 load_dotenv()
 
 from airium import Airium
+import pandas as pd
+import re
+
+basePath = Path(os.getenv("BENCHMARK_PATH"))
 
 # [SC] a function to generate readable html summary of a dataset
 def create_html(myDf, colNames, htmlPath, title=""):
@@ -62,9 +66,105 @@ def create_html(myDf, colNames, htmlPath, title=""):
         f.write(bytes(html, encoding='utf8'))
 
 
-import pandas as pd
+pyStopTokens = list(("\ndef ", "\n--", "\n\n"))
 
-basePath = Path(os.getenv("BENCHMARK_PATH"))
+# [SC] download HumanEval Python dataset
+pyHeDf = pd.read_parquet("hf://datasets/openai/openai_humaneval/openai_humaneval/test-00000-of-00001.parquet")
+# [SC] Make compliant with the MultiPL-E format
+pyHeDf = pyHeDf.assign(name=None)
+pyHeDf = pyHeDf.assign(language="python")
+pyHeDf = pyHeDf.assign(tests=None)
+pyHeDf = pyHeDf.assign(stop_tokens=None)
+for index, evalCase in pyHeDf.iterrows():
+    # [SC] add the name field
+    taskId = evalCase["task_id"].replace("/", "_")
+    pyHeDf.at[index, "name"] = taskId
+    pyHeDf.at[index, "name"] = f"{taskId}_py"
+
+    # [SC] add the function invoke line for testing
+    testStr = f"\n{evalCase["test"]}\ncheck({evalCase["entry_point"]})"
+    pyHeDf.at[index, "tests"] = testStr
+
+    # [SC] add the stopwords
+    pyHeDf.at[index, "stop_tokens"] = pyStopTokens
+# [SC] locally store as a json file
+pyHeDf.to_json(basePath / "python_humaneval.json", orient="records", lines=True)
+# [SC] locally store as a pretty json
+pyHeDf.to_json(basePath / "python_humaneval_pretty.json", orient="records", indent=2, lines=True)
+# [SC] create a readable html file of the dataset
+create_html(pyHeDf, ["task_id", "prompt", "canonical_solution", "test", "entry_point", "name", "tests"], basePath / "python_humaneval.html", "HumanEval - Python")
+
+# [SC] download MBPP Python dataset
+pyMbppDf = pd.read_parquet("hf://datasets/google-research-datasets/mbpp/full/prompt-00000-of-00001.parquet")
+pyMbppDf = pd.concat([pyMbppDf, pd.read_parquet("hf://datasets/google-research-datasets/mbpp/full/test-00000-of-00001.parquet")], ignore_index = True)
+pyMbppDf = pd.concat([pyMbppDf, pd.read_parquet("hf://datasets/google-research-datasets/mbpp/full/validation-00000-of-00001.parquet")], ignore_index = True)
+pyMbppDf = pd.concat([pyMbppDf, pd.read_parquet("hf://datasets/google-research-datasets/mbpp/full/train-00000-of-00001.parquet")], ignore_index = True)
+# [SC] Make compliant with the MultiPL-E format
+pyMbppDf = pyMbppDf.assign(name=None)
+pyMbppDf = pyMbppDf.assign(language="python")
+pyMbppDf = pyMbppDf.assign(prompt=None)
+pyMbppDf = pyMbppDf.assign(tests=None)
+pyMbppDf = pyMbppDf.assign(stop_tokens=None)
+for index, evalCase in pyMbppDf.iterrows():
+    # [SC] add the name field
+    pyMbppDf.at[index, "name"] = f"mbpp_py_{evalCase["task_id"]}"
+
+    # [SC] extract current prompt text
+    textStr = evalCase["text"].replace("Write a function", "Write a python function")
+    textStr = textStr.replace("write a function", "write a python function")
+    # [SC] extract function name
+    funcName = 'myfunc'
+    # [SC] hardcoded solutions for assertion statements that contain unnecessary brackets
+    if evalCase["task_id"] == 769:
+        funcName = "Diff"
+    elif evalCase["task_id"] == 927:
+        funcName = "max_height"
+    else:
+        funcName = re.findall(r'assert\s([^\(]+)', evalCase["test_list"][0])[0]
+    # [SC] create new prompt that includes instructions as comments and a target function name
+    pyMbppDf.at[index, "prompt"] = f"# {textStr}\ndef {funcName}("
+
+    # [SC] generate a single test string that can be directly attached to the generated code
+    testStr = ""
+    if evalCase["test_setup_code"]:
+        testStr += f"\n{evalCase["test_setup_code"]}"
+    for testLineStr in evalCase["test_list"]:
+        testStr += f"\n{testLineStr}"
+    if evalCase["challenge_test_list"].size > 0:
+        for testLineStr in evalCase["challenge_test_list"]:
+            testStr += f"\n{testLineStr}"
+    pyMbppDf.at[index, "tests"] = testStr
+
+    # [SC] add the stopwords
+    pyMbppDf.at[index, "stop_tokens"] = pyStopTokens
+# [SC] locally store as a json file
+pyMbppDf.to_json(basePath / "python_mbpp.json", orient="records", lines=True)
+# [SC] locally store as a pretty json
+pyMbppDf.to_json(basePath / "python_mbpp_pretty.json", orient="records", indent=2, lines=True)
+# [SC] create a readable html file of the dataset
+create_html(pyMbppDf, ["name", "prompt", "tests"], basePath / "python_mbpp.html", "MBPP - Python")
+
+# [SC] download MCEVAL Python dataset
+pyMcGenDf = pd.read_json("hf://datasets/Multilingual-Multimodal-NLP/McEval/generation/Python.jsonl", lines=True)
+pyMcGenDf = pyMcGenDf.assign(name=None)
+pyMcGenDf = pyMcGenDf.assign(tests=None)
+pyMcGenDf = pyMcGenDf.assign(stop_tokens=None)
+for index, evalCase in pyMcGenDf.iterrows():
+    # [SC] add the name field
+    taskId = evalCase["task_id"].replace("/", "_")
+    pyMcGenDf.at[index, "name"] = f"mceval_{taskId}"
+    # [SC] add the tests field
+    pyMcGenDf.at[index, "tests"] = f"\n{evalCase["test"]}"
+    # [SC] add the stopwords
+    pyMcGenDf.at[index, "stop_tokens"] = pyStopTokens
+# [SC] locally store as a json file
+pyMcGenDf.to_json(basePath / "python_mceval.json", orient="records", lines=True)
+# [SC] locally store as a pretty json
+pyMcGenDf.to_json(basePath / "python_mceval_pretty.json", orient="records", indent=2, lines=True)
+# [SC] create a readable html file of the dataset
+create_html(pyMcGenDf, ["name", "prompt", "tests"],
+            basePath / "python_mceval.html", "MCEVAL - Python - Generation")
+
 
 # [SC] download MultiPL-E HumanEval Lua dataset
 heDf = pd.read_parquet("hf://datasets/nuprl/MultiPL-E/humaneval-lua/test-00000-of-00001.parquet")

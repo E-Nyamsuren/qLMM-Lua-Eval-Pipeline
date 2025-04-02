@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: ...nEval\CodeGemmaFP16_HumanEval_40_triples_sum_to_zero.lua:27: unexpected symbol near '<'

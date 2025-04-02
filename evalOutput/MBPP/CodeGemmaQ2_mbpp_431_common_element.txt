@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MBPP\CodeGemmaQ2_mbpp_431_common_element.lua:4: syntax error near 'overla'

@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MBPP\CodeQwen_mbpp_747_lcs_of_three.lua:33: ')' expected (to close '(' at line 31) near 'lu'

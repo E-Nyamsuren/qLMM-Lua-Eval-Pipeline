@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MBPP\StarCoder_mbpp_392_get_max_sum.lua:11: 'do' expected near ','

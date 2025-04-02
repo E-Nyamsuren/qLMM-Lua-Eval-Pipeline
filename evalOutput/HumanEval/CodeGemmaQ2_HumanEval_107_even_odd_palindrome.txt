@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: ...anEval\CodeGemmaQ2_HumanEval_107_even_odd_palindrome.lua:17: syntax error near 'suspicam'

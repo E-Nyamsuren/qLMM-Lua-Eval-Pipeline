@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: ...tput\HumanEval\CodeQwen_HumanEval_112_reverse_delete.lua:27: unexpected symbol near '`'

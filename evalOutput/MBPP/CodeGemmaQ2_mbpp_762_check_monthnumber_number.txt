@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: ...t\MBPP\CodeGemmaQ2_mbpp_762_check_monthnumber_number.lua:3: 'then' expected near 'suspicam'

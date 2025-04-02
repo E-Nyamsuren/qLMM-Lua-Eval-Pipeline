@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MBPP\DSCoderQ2_mbpp_229_re_arrange_array.lua:12: '=' expected near ')'

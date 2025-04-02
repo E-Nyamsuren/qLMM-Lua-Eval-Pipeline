@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MBPP\DSCoderQ2_mbpp_103_eulerian_num.lua:10: unexpected symbol near ')'

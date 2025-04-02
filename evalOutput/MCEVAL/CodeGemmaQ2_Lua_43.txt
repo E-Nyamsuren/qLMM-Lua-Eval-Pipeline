@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MCEVAL\CodeGemmaQ2_Lua_43.lua:12: syntax error near 'pessi'

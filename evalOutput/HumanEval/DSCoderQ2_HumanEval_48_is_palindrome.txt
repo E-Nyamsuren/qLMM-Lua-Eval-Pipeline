@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: ...utput\HumanEval\DSCoderQ2_HumanEval_48_is_palindrome.lua:27: 'end' expected (to close 'function' at line 10) near <eof>

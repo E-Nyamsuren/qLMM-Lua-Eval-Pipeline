@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MBPP\CodeGemmaQ2_mbpp_290_max_length.lua:3: syntax error near 'suspicimus'

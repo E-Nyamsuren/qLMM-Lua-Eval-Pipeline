@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: genOutput\MBPP\DSCoder_mbpp_440_find_adverb_position.lua:83: unfinished string near '"'

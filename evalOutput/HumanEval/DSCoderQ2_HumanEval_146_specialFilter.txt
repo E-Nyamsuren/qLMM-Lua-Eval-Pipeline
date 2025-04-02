@@ -1,5 +1,0 @@
-==== ==== STDOUT:
-
-
-==== ====STDERR:
-lua: ...tput\HumanEval\DSCoderQ2_HumanEval_146_specialFilter.lua:15: ')' expected near '('
